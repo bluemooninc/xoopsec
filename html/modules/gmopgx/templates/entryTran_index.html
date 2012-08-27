@@ -1,0 +1,130 @@
+<h3><{$smarty.const._MD_GMOPAYMENT_TITLE_ENTRYTRAN}></h3>
+<p>
+    <{$smarty.const._MD_GMOPAYMENT_DESC_ENTRYTRAN}>
+</p>
+
+<ul>
+    <li>
+        <{$smarty.const._MD_GMOPAYMENT_MEMBERID}>(MemberID)
+        ID:<{$xoops_userid}> ( <{$xoops_userid|xoops_user:"user_name"}> )
+    </li>
+</ul>
+
+<form id="list" name="list" method="post" action="<{$xoops_url}>/modules/gmopgx/entryTran/submit">
+
+    <table class="outer">
+        <tr>
+            <th><{$smarty.const._MD_GMOPAYMENT_CARDSEQ}></th>
+            <th><{$smarty.const._MD_GMOPAYMENT_CARDNAME}></th>
+            <th><{$smarty.const._MD_GMOPAYMENT_CARDNO}></th>
+            <th><{$smarty.const._MD_GMOPAYMENT_EXPIRE}></th>
+            <th><{$smarty.const._MD_GMOPAYMENT_HOLDERNAME}></th>
+            <!-- <th><{$smarty.const._MD_GMOPAYMENT_DEFAULTFLAG}></th> -->
+        </tr>
+        <{foreach item=val from=$ListData}>
+        <tr>
+            <th>
+                <input id="CardSeq_<{$val.CardSeq}>" type="radio" value="<{$val.CardSeq}>" name="CardSeq" <{if
+                $val.DefaultFlag==1}>checked="checked"<{/if}> />
+            </th>
+            <td><{$val.CardName}></td>
+            <td><{$val.CardNo}></td>
+            <td><{$val.Expire}></td>
+            <td><{$val.HolderName}></td>
+            <!--
+            <td><{$val.CardSeq}></td>
+            <td><{$val.DefaultFlag}></td>
+            -->
+        </tr>
+        <{/foreach}>
+    </table>
+    <br />
+    <table class="outer">
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_ORDERID}>(OrderID
+            </th>
+            <td>
+                <input name="OrderID" type="hidden" value="<{$OrderID}>"/>
+                <input name="JobCd" type="hidden" value="CAPTURE"/>
+                <{$OrderID}>
+            </td>
+        </tr>
+    <!--
+         <tr>
+           <th>
+             <{$smarty.const._MD_GMOPAYMENT_JOBCD}>(JobCd)
+           <td>
+             <select name="JobCd" tabindex="12">
+               <option value="AUTH"><{$smarty.const._MD_GMOPAYMENT_JOBCD_AUTH}></option>
+               <option value="CHECK"><{$smarty.const._MD_GMOPAYMENT_JOBCD_CHECK}></option>
+               <option value="CAPTURE"><{$smarty.const._MD_GMOPAYMENT_JOBCD_CAPTURE}></option>
+             </select>
+           </td>
+         </tr>
+         <tr>
+           <th>
+             <{$smarty.const._MD_GMOPAYMENT_ITEMCODE}>(ItemCode)
+           </th>
+           <td>
+             <input name="ItemCode" type="text" maxlength="7" size="10" tabindex="13" />
+           </td>
+         </tr>
+        -->
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_AMOUNT}>(Amount)
+            </th>
+            <td>
+                <input name="Amount" type="hidden" value="<{$PayAmount}>"/>
+                <{$PayAmount}>
+            </td>
+        </tr>
+        <!--
+        <tr>
+          <th>
+            <{$smarty.const._MD_GMOPAYMENT_TAX}>(Tax)
+          </th>
+          <td>
+            <input name="Tax" type="text" maxlength="7" size="10" tabindex="15" class="num" />
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <{$smarty.const._MD_GMOPAYMENT_TDFLAG}>(TdFlag)
+          </th>
+          <td>
+            <label for="isSecure">
+              <input name="TdFlag" type="radio" value="1" id="isSecure" tabindex="16" /><{$smarty.const._MD_GMOPAYMENT_TDFLAG_SECURE}>
+            </label>
+            <label for="isNotSecure">
+              <input name="TdFlag" type="radio" value="0" id="isNotSecure" checked="checked" tabindex="17" /><{$smarty.const._MD_GMOPAYMENT_TDFLAG_NOSECURE}>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <{$smarty.const._MD_GMOPAYMENT_TDTENANTNAME}>(TdTenantName)
+          </th>
+          <td>
+            <input name="TdTenantName" type="text" tabindex="18" />
+          </td>
+        </tr>
+        -->
+        <tr>
+            <td colspan="2" class="foot" align="center">
+                <input id="button1" type="button" value="<{$smarty.const._MD_GMOPAYMENT_SUBMIT}>"/>
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="method" value="submit"/>
+</form>
+<a href="saveCard"><{$smarty.const._MD_GMOPAYMENT_TITLE_ADDCARD}></a>
+<script>
+    $(function () {
+        $('#button1').click(function () {
+            $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/entryTran/submit');
+            $('#list').submit();
+        });
+    });
+</script>

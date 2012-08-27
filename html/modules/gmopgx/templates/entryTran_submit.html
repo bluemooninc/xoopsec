@@ -1,0 +1,106 @@
+<h3><{$smarty.const._MD_GMOPAYMENT_TITLE_ENTRYTRAN}></h3>
+<p>
+<{$smarty.const._MD_GMOPAYMENT_DONE_ENTRYTRAN}>
+
+<h3><{$smarty.const._MD_GMOPAYMENT_TITLE_EXECTRAN}></h3>
+<p>
+    <{$smarty.const._MD_GMOPAYMENT_DESC_EXECTRAN}>
+</p>
+
+<form id="list" name="list" method="post" action="<{$xoops_url}>/modules/gmopgx/execTran/submit">
+
+    <table class="outer">
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_ACCESSID}>(AccessID)
+            </th>
+            <td>
+                <input name="AccessID" type="text" value="<{$ListData.accessId}>" tabindex="11" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_ACCESSPASS}>(AccessPass)
+                <td>
+                    <input name="AccessPass" type="text" value="<{$ListData.accessPass}>" tabindex="12" />
+                </td>
+        </tr>
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_ORDERID}>(OrderID)
+            </th>
+            <td>
+                <input name="OrderID" type="text" maxlength="27" value="<{$ListData.orderId}>" tabindex="13" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_CARDSEQ}>(CardSeq)
+            </th>
+            <td>
+                <input name="CardSeq" type="text" maxlength="2" size="5" class="num" tabindex="13" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_PAYMETHOD}>
+            </th>
+            <td>
+                <select name="PayMethod" tabindex="14">
+                    <option value="1"><{$smarty.const._MD_GMOPAYMENT_PAYMETHOD1}></option>
+                    <option value="2"><{$smarty.const._MD_GMOPAYMENT_PAYMETHOD2}></option>
+                    <option value="3"><{$smarty.const._MD_GMOPAYMENT_PAYMETHOD3}></option>
+                    <option value="4"><{$smarty.const._MD_GMOPAYMENT_PAYMETHOD4}></option>
+                    <option value="5"><{$smarty.const._MD_GMOPAYMENT_PAYMETHOD5}></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_PAYTIMES}>
+            </th>
+            <td>
+                <input name="PayTimes" type="text" value="1" maxlength="3" class="num" size="5" tabindex="15" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_CLIENTFIELD1}>(ClientField1)
+            </th>
+            <td>
+                <input name="ClientField1" type="text" maxlength="100" tabindex="16" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_CLIENTFIELD2}>(ClientField2)
+            </th>
+            <td>
+                <input name="ClientField2" type="text" maxlength="100" tabindex="16" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <{$smarty.const._MD_GMOPAYMENT_CLIENTFIELD3}>(ClientField3)
+            </th>
+            <td>
+                <input name="ClientField2" type="text" maxlength="100" tabindex="16" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="foot" align="center">
+                <input id="button1" type="button" value="<{$smarty.const._MD_GMOPAYMENT_RESISTER}>" />
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="method" value="submit" />
+</form>
+<script>
+    $(function(){
+        $('#button1').click(function() {
+            $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/execTran/submit');
+            $('#list').submit();
+        });
+    });
+</script>
+</p>

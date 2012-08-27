@@ -1,0 +1,65 @@
+<h3><{$smarty.const._MD_GMOPAYMENT_TITLE_SEARCHCARD}></h3>
+<p>
+    <{$smarty.const._MD_GMOPAYMENT_DONE_SEARCHCARD}>
+</p>
+
+<table class="outer">
+    <tr>
+        <th>
+            <{$smarty.const._MD_GMOPAYMENT_MEMBERID}>(MemberID)
+        </th>
+        <td>
+            ID:<{$xoops_userid}> ( <{$xoops_userid|xoops_user:"user_name"}> )
+        </td>
+    </tr>
+    <{foreach item=val from=$ListData}>
+    <tr>
+        <th>
+            <{$smarty.const._MD_GMOPAYMENT_CARDSEQ}>(CardSeq)
+        </th>
+        <td>
+            <{$val.CardSeq}>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <{$smarty.const._MD_GMOPAYMENT_EXPIRE}>(Expire)
+        </th>
+        <td>
+            <{$val.CardSeq}>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <{$smarty.const._MD_GMOPAYMENT_CARDNO}>(CardNo)
+        </th>
+        <td>
+            <{$val.CardNo}>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <{$smarty.const._MD_GMOPAYMENT_CARDNAME}>(CardName)
+        </th>
+        <td>
+            <{$val.CardName}>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <{$smarty.const._MD_GMOPAYMENT_HOLDERNAME}>(HolderName)
+        </th>
+        <td>
+            <{$val.HolderName}>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <{$smarty.const._MD_GMOPAYMENT_DEFAULTFLAG}>(DefaultFlag)
+        </th>
+        <td>
+            <{$val.DefaultFlag}>
+        </td>
+    </tr>
+    <{/foreach}>
+</table>

@@ -1,0 +1,37 @@
+<{$breadcrumb}>
+<br />
+
+<{* Display category or module advertisement *}>
+
+	<{if $category.cat_advertisement != ''}>
+		<div id="myshop_publicite-category"><{$category.cat_advertisement}></div>
+
+	<{elseif $mod_pref.advertisement != ''}>
+	<div id="myshop_publicite"><{$mod_pref.advertisement}></div>
+	<{/if}>
+
+<br />
+<h2><{$smarty.const._MYSHOP_RATETHISPRODUCT}></h2>
+<br />
+<table border="0" cellpadding="1" cellspacing="0" width="80%" align="center">
+<tr>
+	<td>
+		<h3><{$product.product_title}></h3>
+		<ul>
+			<li><{$smarty.const._MYSHOP_VOTEONCE}></li>
+			<li><{$smarty.const._MYSHOP_RATINGSCALE}></li>
+			<li><{$smarty.const._MYSHOP_BEOBJECTIVE}></li>
+			<li><{$smarty.const._MYSHOP_DONOTVOTE}></li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+		<form method="post" action="<{$smarty.const.MYSHOP_URL}>rate-product.php">
+		<input type="hidden" name="product_id" id="product_id" value="<{$product.product_id}>" />
+		<select name="rating" id="rating"><option value="--">--</option><option value='10'>10</option><option value='9'>9</option><option value='8'>8</option><option value='7'>7</option><option value='6'>6</option><option value='5'>5</option><option value='4'>4</option><option value='3'>3</option><option value='2'>2</option><option value='1'>1</option></select>&nbsp;&nbsp;
+        <input type="submit" name="btnsubmit" id="btnsubmit" value="<{$smarty.const._MYSHOP_RATEIT}>" /> <input type='button' value="<{$smarty.const._CANCEL}>" onclick="location='<{$smarty.const.MYSHOP_URL}>product.php?product_id=<{$product.product_id}>'" />
+      	</form>
+   	</td>
+</tr>
+</table>

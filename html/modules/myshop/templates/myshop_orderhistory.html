@@ -1,0 +1,28 @@
+<{$breadcrumb}>
+<br/>
+
+<{* Display category or module advertisement *}>
+
+<{if $mod_pref.advertisement != ''}>
+<div id="myshop_publicite"><{$mod_pref.advertisement}></div>
+<{/if}>
+
+<br/>
+
+<h2><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>box.png" alt="" border="0"/><{$smarty.const._MI_MYSHOP_SMNAME1_2}></h2>
+<div class="myshop_alphabet"><{foreach item=letter from=$alphabet}><a href="#<{$letter}>"><{$letter}></a> <{/foreach}>
+</div>
+<table>
+    <th><{$smarty.const._MYSHOP_CMD_ID}></th>
+    <th><{$smarty.const._MYSHOP_CMD_DATE}></th>
+    <th><{$smarty.const._MYSHOP_PRICE}></th>
+    <th><{$smarty.const._MYSHOP_DETAILS}></th>
+    <{foreach key=initiale item=ol from=$orderList}>
+    <tr>
+        <td align="right"><a href="caddy.php?op=purchased&amp;cmd_id=<{$ol.id}>"><{$ol.id}></a></td>
+        <td><{$ol.date}></td>
+        <td align="right">&yen;<{$ol.total|number_format}></td>
+        <td><{$ol.state}></td>
+    </tr>
+    <{/foreach}>
+</table>

@@ -1,0 +1,19 @@
+<h2><{$smarty.const._MD_MYLIST}></h2>
+
+<{if $reserved}>
+<table class="outer">
+<tr>
+  <th><{$smarty.const._MD_ORDER_DATE}></th><th><{$smarty.const._MD_TITLE}></th>
+  <th></th>
+</tr>
+<{foreach from=$reserved item=r}>
+<tr class="<{cycle values="even, odd"}>">
+  <td><{$r.rdate_fmt}></td>
+  <td><a href="event.php?eid=<{$r.eid}><{if $r.exid}>&amp;sub=<{$r.exid}><{/if}>"><{$r.edate_fmt}>: <{$r.title}></a></td>
+  <td><{if $r.cancel}><a href="reserv.php?op=cancel&amp;rvid=<{$r.rvid}>&amp;key=<{$r.confirm}>"><{$smarty.const._MD_CANCEL}></a><{/if}></td>
+</tr>
+<{/foreach}>
+</table>
+<{else}>
+<div class='evnote'><{$smarty.const._MD_NODATA}></div>
+<{/if}>

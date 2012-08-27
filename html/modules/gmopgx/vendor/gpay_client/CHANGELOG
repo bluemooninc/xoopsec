@@ -1,0 +1,25 @@
+* 3.109.107 at 2012-03-16
+-auかんたん決済対応
+
+* 3.108.106 at 2011-03-14
+-Paypayl多通貨対応
+
+* 3.107.105
+-Webmoney追加
+
+* 3.106.104
+-Paypal追加
+
+* 3.105.103
+-TradedCardインターフェースのパラメータにDefaultFlagとHolderNameを追加
+
+* 3.100.102
+-payeasyのwebAPI戻り値EncryptReceiptNoを取得するように修正
+
+* 3.100.101
+-3Dセキュア表示店舗名のエンコードをEUCJPに変更
+-shopMailAdressのミススペル対応 正しいスペルのメソッドを追加
+-承認番号取得メソッドを、getApprovalNo()に統一
+
+* 3.100.100
+-初版リリース

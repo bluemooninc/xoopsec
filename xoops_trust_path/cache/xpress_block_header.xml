@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<block_header>&lt;!-- XPressME added block header --&gt;
+	&lt;!-- from bloginfo('stylesheet_url') --&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;http://www.xoopsec.com/modules/xpress/wp-content/themes/xpress_default/style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;http://www.xoopsec.com/modules/xpress/wp-content/themes/xpress_default/blocks/block_style.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+	&lt;!-- from wp_head() --&gt;
+		&lt;style type=&quot;text/css&quot;&gt;.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}&lt;/style&gt;
+
+	&lt;!-- from wp_footer() --&gt;
+	
+&lt;!-- end of XPressME added block header --&gt;
+</block_header>

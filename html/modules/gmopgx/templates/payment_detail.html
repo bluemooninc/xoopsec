@@ -1,0 +1,99 @@
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.js"></script>
+<h3><{$smarty.const._MD_GMOPGX_MODULE_TITLE}></h3>
+
+<form method="post" action="<{$xoops_url}>/modules/gmopgx/default/search">
+<div align="right">
+<{$smarty.const._MD_GMOPGX_TABLE_STATUS}>
+<select name="status">
+<option value="">---</option>
+<option value="0"<{if $status===0}> selected="selected"<{/if}>><{$smarty.const._MD_GMOPGX_TABLE_STATUS_0}></option>
+<option value="1"<{if $status==1}> selected="selected"<{/if}>><{$smarty.const._MD_GMOPGX_TABLE_STATUS_1}></option>
+<option value="2"<{if $status==2}> selected="selected"<{/if}>><{$smarty.const._MD_GMOPGX_TABLE_STATUS_2}></option>
+</select>
+&nbsp;
+<{$smarty.const._MD_GMOPGX_TABLE_TITLE}>
+<input type="text" name="subject" size="25" value="<{$subject|xoops_escape}>" />
+&nbsp;
+<input type="submit" name="subbtn" value="<{$smarty.const._SEARCH}>" />
+</form>
+</div>
+<br />
+<div id="dialog" title="<{$smarty.const._MD_GMOPGX_DIALOG_DELETE}>">
+	<p>  
+		<{$smarty.const._MD_GMOPGX_DIALOG_DELETE_DESC}>
+	</p>
+</div> 
+<form id="list" name="list" method="post" action="<{$xoops_url}>/modules/gmopgx/dafault/index">
+
+<table class="outer">
+<tr>
+<th width="36"><{$smarty.const._MD_GMOPGX_TABLE_STATUS}></th>
+<th><{$smarty.const._MD_GMOPGX_TABLE_TITLE}></th>
+<th><{$smarty.const._MD_GMOPGX_TABLE_DATE}></th>
+<th><{$smarty.const._DELETE}></th>
+</tr>
+	<tr>
+	<td class="head" align="center">
+	<{if $ListData.status==0}>
+		<img src="<{$smarty.const.XOOPS_MODULE_URL}>/message/images/email.png" alt="<{$smarty.const._MD_MESSAGE_TEMPLATE16}>" title="<{$smarty.const._MD_MESSAGE_TEMPLATE16}>" />
+	<{elseif $ListData.status==1}>
+		<img src="<{$smarty.const.XOOPS_MODULE_URL}>/message/images/email_open.png" alt="<{$smarty.const._MD_MESSAGE_TEMPLATE17}>" title="<{$smarty.const._MD_MESSAGE_TEMPLATE17}>" />
+	<{elseif $ListData.status==2}>
+		<img src="<{$smarty.const.XOOPS_MODULE_URL}>/message/images/email_lock.png" alt="<{$smarty.const._MD_MESSAGE_TEMPLATE19}>" title="<{$smarty.const._MD_MESSAGE_TEMPLATE19}>" />
+	<{/if}>
+	</td>
+	<td class="even">
+		<h4><{$ListData.title}></h4><{$ListData.message}>
+	</td>
+	<td class="even">
+		<{$ListData.utime|xoops_formattimestamp:l}>
+	</td>
+	<td class="odd" align="center">
+	<{if $ListData.status==1}>
+		<input type="checkbox" name="delmsg[]" value="<{$ListData.id}>" />
+	<{/if}>
+	</td>
+	</tr>
+<tr>
+<td colspan="5" class="foot" align="center">
+<input type="hidden" name="id" value="<{$ListData.id}>" />
+<input id="button1" type="button" value="<{$smarty.const._DELETE}>" />
+<input id="button2" type="button" value="<{$smarty.const._EDIT}>" />
+</td></tr>
+</table>
+<input type="hidden" name="inout" value="in" />
+</form>
+<div class="pagenavi" align="center"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+<script>
+$(function(){
+    $('#button1').click(function() {
+        $('#dialog').dialog('open');  
+    });
+    $('#button2').click(function() {
+        $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/default/edit');
+        $('#list').submit();
+    });
+    $('#dialog').dialog({  
+        autoOpen: false,  // hide dialog  
+        bgiframe: true,   // for IE6  
+        resizable: false,  
+        height: 140,  
+        modal: true,  
+        overlay: {  
+          backgroundColor: '#000',  
+          opacity: 0.5  
+        },  
+        buttons: {  
+          OK: function() {  
+              $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/default/delete');
+              $('#list').submit();
+          },  
+          Cancel: function() {  
+            $(this).dialog('close');  
+          }  
+        }  
+      });
+});
+</script>
+  

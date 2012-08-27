@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html language="en">
+<head>
+<title>Event Guide module helps</title>
+<style>
+.outer { background-color: #808080; }
+td,th { padding: 4px; background: #e8e8e8;}
+.head th  { padding: 4px; background: #d0d0d0; }
+.bnf { color: #008000; }
+.note { font-size: 80%; color: #800000; padding: 0.5em;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+<!-- 本中文化由 http://www.cyai.net/ 阿佳所提供，請勿隨意刪除或修改任何版權資訊 -->
+<a name="form">
+<h2>報名申請表格項目編輯</h2>
+</a> <strong>受理報名</strong> 時所要出現的表單輸入方式
+  可以任意指定新增需要的項目與設定。
+<blockquote class="bnf"> 每一行為一個項目
+    <p />  
+  可選擇種類有text、checkbox、radio、textarea、select、hidden、const<br />
+  引數：有「+」和「=」 </blockquote>
+<ul>
+  <li>加上"*" 為必填項目。</li>
+  <li>加上"#" 可於表格後方加上描述或是備註。</li>
+  <li>利用"," 為區隔指令的記號。如需要再引數里使用這個符號必須以HTML的特殊記號。</li>
+  <li>"+" 為 (checkbox, radio, select) 此三項的預選項目(checked)。</li>
+</ul>
+<h3>範例：</h3>
+<blockquote>
+  <form>
+    <table border="0" cellspacing="1" cellpadding="4" bgcolor="#808080">
+      <tr class="hd">
+        <th>新增內容</th>
+        <th>表單形態</th>
+      </tr>
+      <tr>
+        <td>姓名*</td>
+        <td>姓名*
+          <input name='samp1' /></td>
+      </tr>
+      <tr>
+        <td>姓名*,size=5</td>
+        <td>姓名*
+          <input name='samp2' size=5 /></td>
+      </tr>
+      <tr>
+        <td>姓名*,size=5,#備註</td>
+        <td>姓名*
+          <input name='samp3' size=5 />
+          備註</td>
+      </tr>
+      <tr>
+        <td>選項,radio,項目1+,項目2,項目3</td>
+        <td>選項
+          <input type='radio' name='samp4' value='1' checked />
+          項目1 &nbsp;
+          <input type='radio' name='samp4' value='2' />
+          項目2 &nbsp;
+          <input type='radio' name='samp4' value='3' />
+          項目3 &nbsp; </td>
+      </tr>
+      <tr>
+        <td>選項,checkbox,項目1+,項目2,項目3</td>
+        <td>選項
+          <input type='checkbox' name='samp5_1' checked />
+          項目1 &nbsp;
+          <input type='checkbox' name='samp5_2' />
+          項目2 &nbsp;
+          <input type='checkbox' name='samp5_3' />
+          項目3 &nbsp; </td>
+      </tr>
+      <tr>
+        <td>選項,select,項目1,項目2,項目3</td>
+        <td>選項
+          <select name='samp6'>
+            <option>項目1</option>
+            <option>項目2</option>
+            <option>項目3</option>
+          </select></td>
+      </tr>
+      <tr class="even">
+	<td>項目名,const,値</td>
+	<td>項目名 値 (The value display and handle to input value)</td>
+      </tr>
+      <tr>
+	<td>項目名,hidden,値</td>
+	<td><em>(not display in form - present only input values)</em></td>
+      </tr>
+      <tr>
+        <td>#說明文或備註</td>
+        <td>說明文或備註</td>
+      </tr>
+    </table>
+  </form>
+  <dl>
+    <dd></dd>
+  </dl>
+  <hr>
+  <address>
+    Nobuhiro Yasutomi &lt;<a href="mailto:nobuhiro.yasutomi@nifty.ne.jp">nobuhiro.yasutomi@nifty.ne.jp</a>&gt;
+  </address>
+  MySite Users <a href="http://myht.org/">http://myht.org/</a><br/>
+  $Id: help.html,v 1.4 2009-05-24 06:05:13 nobu Exp $ </blockquote>
+</body>
+</html>

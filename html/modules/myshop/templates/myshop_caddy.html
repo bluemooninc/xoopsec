@@ -1,0 +1,149 @@
+<{$breadcrumb}>
+<br/>
+<{if $mod_pref.advertisement != ''}>
+<div id="myshop_publicite"><{$mod_pref.advertisement}></div><{/if}>
+
+<br/>
+
+<h2><{$smarty.const._MI_MYSHOP_SMNAME1}></h2>
+
+<{if $emptyCart}>
+<i><{$smarty.const._MYSHOP_CART_IS_EMPTY}></i>
+<{if $isCartExists}>
+<br/><a href="<{$smarty.const.MYSHOP_URL}>caddy.php?op=reload"><{$smarty.const._MYSHOP_RELOAD_PERSISTENT}></a>
+<{/if}>
+<{else}>
+<form method="post" name="frmUpdate" id="frmUpdate" action="<{$smarty.const.MYSHOP_URL}>caddy.php"
+      style="margin:0; padding:0; border: 0px; display: inline;">
+
+    <table class="outer">
+        <tr>
+            <th align="center"><{$smarty.const._MYSHOP_ITEMS}></th>
+            <th align="center"><{$smarty.const._MYSHOP_UNIT_PRICE}></th>
+            <th align="center"><{$smarty.const._MYSHOP_QUANTITY}></th>
+            <{if !$purchased}>
+            <!--
+            <th align="center"><{$smarty.const._MYSHOP_CART1}></th>
+            <th align="center"><{$smarty.const._MYSHOP_CART2}></th>
+            -->
+            <th align="center"><{$smarty.const._MYSHOP_CART3}></th>
+            <th align="center"><{$smarty.const._MYSHOP_SHIPPING_PRICE}></th>
+            <{/if}>
+            <th align="center"><{$smarty.const._MYSHOP_PRICE}></th>
+        </tr>
+        <{foreach item=product from=$caddieProducts}>
+        <tr class="<{cycle values='odd,even'}>">
+            <td>
+                <a href="<{$product.product_url_rewrited}>" title="<{$product.product_href_title}>">
+                    <!-- <{$product.number}> -->
+                    <{$product.product_title}>
+                    <{if $product.reduction != ''}>
+                        <sup style="color: #FF0000;">
+                            <{$product.reduction}>
+                        </sup>
+                    <{/if}>
+                </a>
+            </td>
+            <td align="right">
+                <{if $product.reduction != ''}>
+                <{$product.discountedPriceFormated}>
+                <{else}>
+                <{$product.unitBasePriceFormated}>
+                <{/if}>
+            </td>
+            <{if $purchased}>
+            <td align="right">
+                <{$product.product_qty}>
+            </td>
+            <{else}>
+            <td align="center">
+                <input type="text" name="qty_<{$product.number}>" id="qty_<{$product.number}>"
+                       value="<{$product.product_qty}>" size="3"/>
+            </td>
+            <!--
+            <td align="right"><{$product.discountedPriceWithQuantityFormated}></td>
+            <td align="right"><{$product.vatRate}></td>
+            -->
+            <td align="right"><{$product.vatAmountFormated}></td>
+            <td align="right"><{$product.discountedShippingFormated}></td>
+            <{/if}>
+            <td align="right"><{$product.totalPriceFormated}></td>
+            <{if !$purchased}>
+            <td>
+                <a href="<{$smarty.const.MYSHOP_URL}>caddy.php?op=delete&product_id=<{$product.number}>"
+                <{$confirm_delete_item}> title="<{$smarty.const._MYSHOP_REMOVE_ITEM}>">
+                <img src="<{$smarty.const.MYSHOP_IMAGES_URL}>cartdelete.png" alt="<{$smarty.const._MYSHOP_REMOVE_ITEM}>"
+                     border="0"/>
+            </td>
+            <{/if}>
+        </tr>
+        <{/foreach}>
+
+        <tr>
+            <td colspan="3"><h3><{$smarty.const._MYSHOP_TOTAL}></h3></td>
+            <!--<td align="right"><{$commandAmount}></td>-->
+            <{if !$purchased}>
+            <td align="right" valign="middle"><{$vatAmount}></td>
+            <td align="right" valign="middle"><{$shippingAmount}></td>
+            <td colspan="2" align="right" valign="middle" class="head"><{$commandAmountTTC}></td>
+            <{/if}>
+        </tr>
+        <{if !$purchased}>
+        <tr>
+            <td colspan="7">
+                <{$smarty.const._MYSHOP_QTE_MODIFIED}>
+                <input type="hidden" name="op" id="op" value="update"/>
+                <input type="submit" name="btnUpdate" id="btnUpdate" value="<{$smarty.const._MYSHOP_UPDATE}>"/>
+</form>
+
+<form method="post" name="frmEmpty" id="frmEmpty"
+      action="<{$smarty.const.MYSHOP_URL}>caddy.php" <{$confEmpty}> style="margin:0; padding:0; border: 0px; display: inline;">
+<input type="hidden" name="op" id="op" value="empty"/>
+<input type="submit" name="btnEmpty" id="btnEmpty" value="<{$smarty.const._MYSHOP_EMPTY_CART}>"/>
+</form>
+
+<form method="post" name="frmGoOn" id="frmGoOn" action="<{$goOn}>"
+      style="margin:0; padding:0; border: 0px; display: inline;">
+    <input type="submit" name="btnGoOn" id="btnGoOn" value="<{$smarty.const._MYSHOP_GO_ON}>"/>
+</form>
+<{if $showOrderButton}>
+<form method="post" name="frmCheckout" id="frmCheckout" action="<{$smarty.const.MYSHOP_URL}>checkout.php"
+      style="margin:0; padding:0; border: 0px; display: inline;">
+    <input type="submit" name="btnCheckout" id="btnCheckout" value="<{$smarty.const._MYSHOP_CHECKOUT}>"/>
+</form>
+<{/if}>
+</td>
+</tr>
+<{/if}>
+</table>
+
+<{if $showRegistredOnly && trim($restrict_orders_text) != ''}>
+<br/>
+<div class="myshop_alert">
+    <{$restrict_orders_text}>
+</div>
+<{/if}>
+
+<{if $discountsCount > 0}>
+<div class="myshop_discounts">
+    <h3><{$smarty.const._MYSHOP_CART4}></h3>
+    <ul>
+        <{foreach item=product from=$caddieProducts}>
+        <{if $product.reduction != ''}>
+        <li class="myshop_discount-description"><sup style="color: #FF0000;"><{$product.number}></sup>
+            <{$product.reduction}>
+        </li>
+        <{/if}>
+        <{/foreach}>
+    </ul>
+
+    <{if count($discountsDescription) > 0}>
+    <ul>
+        <{foreach item=discount from=$discountsDescription}>
+        <li class="myshop_discount-description"><{$discount}></li>
+        <{/foreach}>
+    </ul>
+    <{/if}>
+</div>
+<{/if}>
+<{/if}>

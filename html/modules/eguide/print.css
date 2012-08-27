@@ -1,0 +1,18 @@
+/* summary table style */
+.evhead { font-size: 18pt; font-weight: bold; padding-bottom: 0.5em; }
+.evtitle { font-size: 12pt; font-weight: bold; }
+.evinfo { font-size: 10pt; text-align: right; }
+.even,.odd, .head th { font-size: 10pt; }
+.head { background-color: #ccc; white-space: nowrap; }
+th, td { padding: 4px; }
+.even td { border-bottom: dashed 1px; }
+.outer { border: solid 1px #000000; border-spacing: 1px; }
+.evtbl { border-spacing: 1px; border: solid 1px; }
+body { width: 700px; height: 100%; line-height: 150%; }
+.catbox { float: right; margin: 1em; }
+.num { text-align: right; width: 1.5em; padding-right: 0.5em;}
+img { border: 0px; }
+.evmark { display: none; }
+a { text-decoration: none; }
+.header { text-align: center; margin-bottom: 2em; }
+.footer { text-align: center; margin-top: 2em; }

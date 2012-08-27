@@ -1,0 +1,9 @@
+<h3><{$smarty.const._MD_GMOPAYMENT_TITLE_MEMBERSAVE}></h3>
+<p>
+<{$smarty.const._MD_GMOPAYMENT_DESC_MEMBERSAVE}>
+</p>
+<form method="post" action="<{$xoops_url}>/modules/gmopgx/memberSave/submit">
+        <{$xoops_userid}>
+        <{$xoops_userid|xoops_user:"user_name"}>
+<input name="submit" type="submit" value="submit" />
+</form>

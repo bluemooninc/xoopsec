@@ -1,0 +1,29 @@
+/* for eguide module */
+.error { color: #ff0000; font-weight: bold; text-align: left; }
+.evhead { color: #800000; font-size: 120%; font-weight: bold; text-align: left;}
+.evmark { float: right; color: #000000; }
+.evinfo { font-size: 75%; text-align: left;}
+.evprop { font-size: 90%; font-weight: bold; text-align: left; color: #004060; padding-left: 2em; }
+.evbody { text-align: left; }
+.evlink { font-size: 90%; text-align: right;}
+.evline { font-size: 90%; text-align: left;}
+.evnote { font-size: 110%; text-align: center; font-weight: bold; color: #c00000; }
+.evtitle {
+   color: #000080; font-size: 110%;
+   font-weight: bold; text-align: left;
+   padding-bottom: 0.5em;
+}
+.evtbl th { text-align: left; vertical-align: top; }
+.event, .evform, .evlist, .entform { border-bottom: solid thin #c0c0c0; padding: 1em; }
+.evms td { background-color: #ffeeee; padding: 5px; }
+.evms th { text-align: left; }
+.evop td { background-color: #ffccff; padding: 5px; }
+.catbox { float: right; }
+.evform th em, .evform em,.entform th em, .entform em
+  { color: #cc0000; font-weight: bold; }
+.evform td.head { width: 10em; }
+.entform { background-color: #eeeeff; }
+h2 { color: #800000; }
+h3 { color: #002040; margin-bottom: 0px;}
+#itemhelper, #itemhelper input, #itemhelper button,
+#itemhelper select { font-size: 90%; }

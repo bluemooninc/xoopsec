@@ -1,0 +1,111 @@
+<h3><{$smarty.const._MD_GMOPAYMENT_TITLE_SAVECARD}></h3>
+<p>
+<{$smarty.const._MD_GMOPAYMENT_DESC_SAVECARD}>
+</p>
+
+<form id="list" name="list" method="post" action="<{$xoops_url}>/modules/gmopgx/saveCard/submit">
+
+<table class="outer">
+  <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_MEMBERID}>(MemberID)
+    </th>
+    <td>
+      ID:<{$xoops_userid}> ( <{$xoops_userid|xoops_user:"user_name"}> )
+    </td>
+  </tr>
+  <{*
+  <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_CARDSEQ}>(CardSeq)
+    </th>
+    <td>
+      <input name="CardSeq" type="text" maxlength="2" size="5" class="num" tabindex="12" />
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_SEQMODE}>(SeqMode)
+    </th>
+    <td>
+      <label for="seq0">
+      <input name="SeqMode" id="seq0" type="radio" value="0" checked="checked" tabindex="13" /><{$smarty.const._MD_GMOPAYMENT_SECMODE0}>
+      </label>
+      <label for="seq1">
+      <input name="SeqMode" id="seq1" type="radio" value="1" tabindex="14" /><{$smarty.const._MD_GMOPAYMENT_SECMODE1}>
+      </label>
+    </td>
+  </tr>
+  *}>
+  <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_EXPIRE}>(Expire)
+    </th>
+    <td>
+      <input name="Expire" type="text" maxlength="4" size="5" tabindex="15" />
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_CARDNO}>(CardNo)
+    </th>
+    <td>
+      <input name="CardNo" type="text" maxlength="16" size="20" tabindex="16" />
+    </td>
+  </tr>
+<!--   
+  <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_CARDPASS}>(CardPass)
+    </th>
+    <td>
+      <input name="CardPass" type="text" maxlength="20" size="20" tabindex="16" />
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_CARDNAME}>(CardName)
+    </th>
+    <td>
+      <input name="CardName" type="text" maxlength="10" size="10" tabindex="17" />
+    </td>
+  </tr>
+-->
+    <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_HOLDERNAME}>(HolderName)
+    </th>
+    <td>
+      <input name="HolderName" type="text" maxlength="50" size="30" tabindex="18" />
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <{$smarty.const._MD_GMOPAYMENT_DEFAULTFLAG}>(DefaultFlag)
+    </th>
+    <td>
+      <label for="def1">
+        <input name="DefaultFlag" id="def1" type="radio" value="1" checked="checked" tabindex="19" /><{$smarty.const._MD_GMOPAYMENT_DO}>
+      </label>
+      <label for="def0">
+        <input name="DefaultFlag" id="def0" type="radio" value="0" tabindex="20" /><{$smarty.const._MD_GMOPAYMENT_DONOT}>
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="foot" align="center">
+      <input id="button1" type="button" value="<{$smarty.const._MD_GMOPAYMENT_RESISTER}>" />
+    </td>
+  </tr>
+</table>
+<input type="hidden" name="method" value="submit" />
+</form>
+<script>
+$(function(){
+    $('#button1').click(function() {
+        $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/saveCard/submit');
+        $('#list').submit();
+    });
+});
+</script>

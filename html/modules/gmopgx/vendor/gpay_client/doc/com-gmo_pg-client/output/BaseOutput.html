@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class BaseOutput</title>
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> BaseOutput</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">author:</span> GMO PaymentGateway</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">see:</span> <a href="_com---gmo_pg---client---output---outputPackageInfo.php.html">outputPackageInfo.php</a></li>
+				<li><span class="field">abstract:</span> <strong>出力パラメータ 基底クラス</strong></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_com---gmo_pg---client---output---BaseOutput.php.html">/com/gmo_pg/client/output/BaseOutput.php</a> (line <span class="field">15</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AlterTranOutput.html">AlterTranOutput</a>
+					</td>
+					<td>
+											<strong>取引変更 出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AuCancelReturnOutput.html">AuCancelReturnOutput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済決済取消　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AuSalesOutput.html">AuSalesOutput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済売上確定　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="CancelTranPaypalOutput.html">CancelTranPaypalOutput</a>
+					</td>
+					<td>
+											<strong>Paypal払い戻し 出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ChangeTranOutput.html">ChangeTranOutput</a>
+					</td>
+					<td>
+											<strong>金額変更 出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="DeleteAuOpenIDOutput.html">DeleteAuOpenIDOutput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済OpenID解除　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="DeleteCardOutput.html">DeleteCardOutput</a>
+					</td>
+					<td>
+											<strong>カード削除 出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="DeleteMemberOutput.html">DeleteMemberOutput</a>
+					</td>
+					<td>
+											<strong>会員削除　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranAuOutput.html">EntryTranAuOutput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済取引登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranCvsOutput.html">EntryTranCvsOutput</a>
+					</td>
+					<td>
+											<strong>コンビニ取引登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranEdyOutput.html">EntryTranEdyOutput</a>
+					</td>
+					<td>
+											<strong>モバイルEdy取引登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranOutput.html">EntryTranOutput</a>
+					</td>
+					<td>
+											<strong>取引登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranPayEasyOutput.html">EntryTranPayEasyOutput</a>
+					</td>
+					<td>
+											<strong>PayEasy取引登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranPaypalOutput.html">EntryTranPaypalOutput</a>
+					</td>
+					<td>
+											<strong>Paypal取引登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranSuicaOutput.html">EntryTranSuicaOutput</a>
+					</td>
+					<td>
+											<strong>モバイルSuica取引登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranWebmoneyOutput.html">EntryTranWebmoneyOutput</a>
+					</td>
+					<td>
+											<strong>Webmoney取引登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranAuOutput.html">ExecTranAuOutput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済決済実行　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranCvsOutput.html">ExecTranCvsOutput</a>
+					</td>
+					<td>
+											<strong>コンビニ決済実行　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranEdyOutput.html">ExecTranEdyOutput</a>
+					</td>
+					<td>
+											<strong>モバイルEdy決済実行　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranOutput.html">ExecTranOutput</a>
+					</td>
+					<td>
+											<strong>決済実行　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranPayEasyOutput.html">ExecTranPayEasyOutput</a>
+					</td>
+					<td>
+											<strong>PayEasy決済実行　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranPaypalOutput.html">ExecTranPaypalOutput</a>
+					</td>
+					<td>
+											<strong>Paypal決済実行　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranSuicaOutput.html">ExecTranSuicaOutput</a>
+					</td>
+					<td>
+											<strong>モバイルSuica決済実行　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranWebmoneyOutput.html">ExecTranWebmoneyOutput</a>
+					</td>
+					<td>
+											<strong>Webmoney決済実行　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SaveCardOutput.html">SaveCardOutput</a>
+					</td>
+					<td>
+											<strong>カード登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SaveMemberOutput.html">SaveMemberOutput</a>
+					</td>
+					<td>
+											<strong>会員登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SearchCardOutput.html">SearchCardOutput</a>
+					</td>
+					<td>
+											<strong>カード照会　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SearchMemberOutput.html">SearchMemberOutput</a>
+					</td>
+					<td>
+											<strong>会員照会　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SearchTradeMultiOutput.html">SearchTradeMultiOutput</a>
+					</td>
+					<td>
+											<strong>取引照会マルチ　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SearchTradeOutput.html">SearchTradeOutput</a>
+					</td>
+					<td>
+											<strong>取引照会　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="TdVerifyOutput.html">TdVerifyOutput</a>
+					</td>
+					<td>
+											<strong>3D認証後決済　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="TradedCardOutput.html">TradedCardOutput</a>
+					</td>
+					<td>
+											<strong>取引後カード登録　出力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="UpdateMemberOutput.html">UpdateMemberOutput</a>
+					</td>
+					<td>
+											<strong>会員更新　出力パラメータクラス</strong>
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$errList" title="details" class="var-name">$errList</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">BaseOutput</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">BaseOutput</span>
+										<a href="#BaseOutput" title="details" class="method-name">BaseOutput</a>
+											([<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getErrList" title="details" class="method-name">&amp;getErrList</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isErrorOccurred" title="details" class="method-name">isErrorOccurred</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setErrList" title="details" class="method-name">setErrList</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$errList</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$errList</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#toString" title="details" class="method-name">toString</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$errList" id="$errList"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$errList</span>
+						(line <span class="line-number">20</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> エラー情報リスト ErrHolderオブジェクトの配列</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">36</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	
+	<div class="method-signature">
+		<span class="method-result">BaseOutput</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="AlterTranOutput.html#method__construct">AlterTranOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="AuCancelReturnOutput.html#method__construct">AuCancelReturnOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="AuSalesOutput.html#method__construct">AuSalesOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="CancelTranPaypalOutput.html#method__construct">CancelTranPaypalOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ChangeTranOutput.html#method__construct">ChangeTranOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="DeleteAuOpenIDOutput.html#method__construct">DeleteAuOpenIDOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="DeleteCardOutput.html#method__construct">DeleteCardOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="DeleteMemberOutput.html#method__construct">DeleteMemberOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranAuOutput.html#method__construct">EntryTranAuOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranCvsOutput.html#method__construct">EntryTranCvsOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranEdyOutput.html#method__construct">EntryTranEdyOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranOutput.html#method__construct">EntryTranOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranPayEasyOutput.html#method__construct">EntryTranPayEasyOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranPaypalOutput.html#method__construct">EntryTranPaypalOutput::__construct()</a>
+							</li>
+					<li>
+				<a href="EntryTranSuicaOutput.html#method__construct">EntryTranSuicaOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranWebmoneyOutput.html#method__construct">EntryTranWebmoneyOutput::__construct()</a>
+							</li>
+					<li>
+				<a href="ExecTranAuOutput.html#method__construct">ExecTranAuOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranCvsOutput.html#method__construct">ExecTranCvsOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranEdyOutput.html#method__construct">ExecTranEdyOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranOutput.html#method__construct">ExecTranOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranPayEasyOutput.html#method__construct">ExecTranPayEasyOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranPaypalOutput.html#method__construct">ExecTranPaypalOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranSuicaOutput.html#method__construct">ExecTranSuicaOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranWebmoneyOutput.html#method__construct">ExecTranWebmoneyOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SaveCardOutput.html#method__construct">SaveCardOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SaveMemberOutput.html#method__construct">SaveMemberOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SearchCardOutput.html#method__construct">SearchCardOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SearchMemberOutput.html#method__construct">SearchMemberOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SearchTradeMultiOutput.html#method__construct">SearchTradeMultiOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SearchTradeOutput.html#method__construct">SearchTradeOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="TdVerifyOutput.html#method__construct">TdVerifyOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="TradedCardOutput.html#method__construct">TradedCardOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="UpdateMemberOutput.html#method__construct">UpdateMemberOutput::__construct()</a>
+								: コンストラクタ
+							</li>
+				</ul>
+	</div>
+<a name="methodBaseOutput" id="BaseOutput"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor BaseOutput</span> (line <span class="line-number">27</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	
+	<div class="method-signature">
+		<span class="method-result">BaseOutput</span>
+		<span class="method-name">
+			BaseOutput
+		</span>
+					([<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetErrList" id="getErrList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getErrList</span> (line <span class="line-number">58</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラー情報リスト取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> エラーリスト</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			&amp;getErrList
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisErrorOccurred" id="isErrorOccurred"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">isErrorOccurred</span> (line <span class="line-number">75</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラー発生判定</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> エラー発生フラグ(true=エラーあり)</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isErrorOccurred
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetErrList" id="setErrList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setErrList</span> (line <span class="line-number">67</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラー情報リストを設定</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setErrList
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$errList</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$errList</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$errList</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$errList</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoString" id="toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toString</span> (line <span class="line-number">86</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">文字列表現</p>
+<p class="description"><p>現在の各パラメータを、パラメータ名=値&amp;パラメータ名=値の形式で取得します。</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 出力パラメータの文字列表現</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toString
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="AlterTranOutput.html#methodtoString">AlterTranOutput::toString()</a>
+								: AlterTranOutput文字列表現取得
+							</li>
+					<li>
+				<a href="AuCancelReturnOutput.html#methodtoString">AuCancelReturnOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="AuSalesOutput.html#methodtoString">AuSalesOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="CancelTranPaypalOutput.html#methodtoString">CancelTranPaypalOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ChangeTranOutput.html#methodtoString">ChangeTranOutput::toString()</a>
+								: AlterTranOutput文字列表現取得
+							</li>
+					<li>
+				<a href="DeleteAuOpenIDOutput.html#methodtoString">DeleteAuOpenIDOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="DeleteCardOutput.html#methodtoString">DeleteCardOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="DeleteMemberOutput.html#methodtoString">DeleteMemberOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="EntryTranAuOutput.html#methodtoString">EntryTranAuOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="EntryTranCvsOutput.html#methodtoString">EntryTranCvsOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="EntryTranEdyOutput.html#methodtoString">EntryTranEdyOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="EntryTranOutput.html#methodtoString">EntryTranOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="EntryTranPayEasyOutput.html#methodtoString">EntryTranPayEasyOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="EntryTranPaypalOutput.html#methodtoString">EntryTranPaypalOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="EntryTranSuicaOutput.html#methodtoString">EntryTranSuicaOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="EntryTranWebmoneyOutput.html#methodtoString">EntryTranWebmoneyOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ExecTranAuOutput.html#methodtoString">ExecTranAuOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ExecTranCvsOutput.html#methodtoString">ExecTranCvsOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ExecTranEdyOutput.html#methodtoString">ExecTranEdyOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ExecTranOutput.html#methodtoString">ExecTranOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ExecTranPayEasyOutput.html#methodtoString">ExecTranPayEasyOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ExecTranPaypalOutput.html#methodtoString">ExecTranPaypalOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ExecTranSuicaOutput.html#methodtoString">ExecTranSuicaOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="ExecTranWebmoneyOutput.html#methodtoString">ExecTranWebmoneyOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="SaveCardOutput.html#methodtoString">SaveCardOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="SaveMemberOutput.html#methodtoString">SaveMemberOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="SearchCardOutput.html#methodtoString">SearchCardOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="SearchMemberOutput.html#methodtoString">SearchMemberOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="SearchTradeMultiOutput.html#methodtoString">SearchTradeMultiOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="SearchTradeOutput.html#methodtoString">SearchTradeOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="TdVerifyOutput.html#methodtoString">TdVerifyOutput::toString()</a>
+								: TdVerifyOutputの文字列表現
+							</li>
+					<li>
+				<a href="TradedCardOutput.html#methodtoString">TradedCardOutput::toString()</a>
+								: 文字列表現
+							</li>
+					<li>
+				<a href="UpdateMemberOutput.html#methodtoString">UpdateMemberOutput::toString()</a>
+								: 文字列表現
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 13 Mar 2012 10:26:48 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

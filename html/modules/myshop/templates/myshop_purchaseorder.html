@@ -1,0 +1,24 @@
+<{* WARNING *}>
+<{* ********************************************************************************************** *}>
+<{* ****** DO NOT USE ANYHTING ELSE THAN JPEG OR PNG PICTURES OR THE PDF WILL NOT BE CREATED ****** *}>
+<{* ****** This is a template for a PDF so you can only use the following html tags  :       ****** *}>
+<{* h1, h2, h3, h4, h5, h6, b, u, i, a, img, p, br, strong, em, font, blockquote, li, ul, ol, hr, td, th, tr, table, sup, sub, small *}>
+<{* PURCHASE ORDER *}>
+
+<br />
+<table border="0">
+<tr>
+	<td><b><{$smarty.const._MYSHOP_TITLE}></b></td>
+	<td width="50" align="center"><b><{$smarty.const._MYSHOP_PRICE}></b></td>
+	<td width="50"><b><{$smarty.const._MYSHOP_QUANTITY}></b></td>
+	<td width="50"><b><{$smarty.const._MYSHOP_TOTAL}></b></td>
+</tr>
+<{foreach item=product from=$products}>
+<tr>
+	<td><{$product.product_title|strip_tags|wordwrap:100|nl2br}></td>
+	<td width="50" align="right"><{if $product.product_discount_price_ttc != 0}><{$product.product_discount_price_ttc}><{else}><{$product.product_price_ttc}><{/if}></td>
+	<td width="50">x </td>
+	<td width="50" align="right">= </td>
+</tr>
+<{/foreach}>
+</table>

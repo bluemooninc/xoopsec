@@ -1,0 +1,47 @@
+
+<h2><{$smarty.const._MYSHOP_BILL}></h2>
+<br />
+<div class="myshop_otherinf">
+	<{$smarty.const._DATE}> : <{$order.cmd_date|date_format:"%d/%m/%Y"}>
+	<br /><{$smarty.const._MYSHOP_COMMAND}> : <{$order.cmd_id}>
+	<br /><br /><{$order.cmd_firstname}> <{$order.cmd_lastname}>
+	<br /><{$order.cmd_adress}>
+	<br /><{$order.cmd_zip}> <{$order.cmd_town}>
+	<br /><{$order.cmd_country_label}>
+	<br /><br /><{$order.cmd_telephone}> - <{$order.cmd_email}>
+</div>
+
+<br /><br />
+<table border="0" id="myshop_caddy" width="90%">
+<tr>
+	<th align="center"><{$smarty.const._MYSHOP_ITEMS}></th>
+	<th align="center"><{$smarty.const._MYSHOP_QUANTITY}></th>
+	<th align="center"><{$smarty.const._MYSHOP_PRICE}></th>
+	<th align="center"><{$smarty.const._MYSHOP_SHIPPING_PRICE}></th>
+</tr>
+<{foreach item=product from=$products}>
+<tr>
+	<td>
+		<div class="myshop_producttitle"><{$product.product_recommended_picture}><a href="<{$product.product_url_rewrited}>" title="<{$product.product_href_title}>"><{$product.product_title}></a></div>
+		<div class="myshop_productauthor"><{if $product.product_joined_manufacturers != ''}><{$smarty.const._MYSHOP_BY}> <{$product.product_joined_manufacturers}><{/if}></div>
+	</td>
+	<td align="right"><div class="myshop_productprice"><{$product.product_caddy.caddy_qte}></div></td>
+	<td align="right"><div class="myshop_productprice"><{$product.product_caddy.caddy_price_fordisplay}></div></td>
+	<td align="right"><{$product.product_caddy.caddy_shipping_fordisplay}></td>
+</tr>
+<{/foreach}>
+<tr class="myshop_carttotal">
+	<td><h3><{$smarty.const._MYSHOP_TOTAL}><h3></td>
+	<td>&nbsp;</td>
+	<td  align="right" valign="middle"><{$order.cmd_total_fordisplay}></td>	
+	<td align="right" valign="middle"><{$order.cmd_shipping_fordisplay}></td>
+</tr>
+</table>
+
+<{if $order.cmd_text_fordisplay != ''}>
+	<div class="myshop_discounts">
+		<h4><{$smarty.const._MYSHOP_CART4}></h4>
+			<{$order.cmd_text_fordisplay}>
+	</div>
+<{/if}>
+

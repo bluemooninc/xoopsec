@@ -1,0 +1,34 @@
+<{include file="db:eguide_item.html"}>
+<{if $errors}>
+<{foreach from=$errors item=msg}>
+<div class="error"><{$msg}></div>
+<{/foreach}>
+<{/if}>
+<{if $message}>
+<div class="entform">
+  <div class="evnote"><{$message}></div>
+</div>
+<{elseif $form}>
+<a name="form"></a>
+<div class="entform">
+<div class="evtitle"><{$smarty.const._MD_RESERV_REGISTER}></div>
+<form action="entry.php" method="post">
+<table class="outer" align="center" cellspacing="1" border="0">
+<tr><th colspan="2"><{$event.date}> &nbsp; <{$event.title}></th></tr>
+<tr class="<{cycle values="even,odd"}>"><td class="head"><{$smarty.const._MD_EMAIL}></td><td><input size="40" name="email" value="<{$form.email}>"/>
+</td></tr>
+<{foreach from=$form.items item=fm}>
+<tr class="<{$fm.attr}> <{cycle values="even,odd"}>"><td class="head"><{$fm.label}></td><td><{$fm.value}><{$fm.comment}></td></tr>
+<{/foreach}>
+</table>
+<input type="hidden" name="eid" value="<{$form.eid}>" />
+<{if $event.exid}>
+<input type="hidden" name="sub" value="<{$event.exid}>" />
+<{/if}>
+<{if $form.note}>
+  <div align='right'><{$form.note}></div>
+<{/if}>
+<p style="text-align: center;"><input type="submit" value="<{$smarty.const._MD_ORDER_SEND}>" /></p>
+</form>
+</div>
+<{/if}>

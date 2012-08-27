@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link rel="stylesheet" type="text/css" media="all" href="print.css" />
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+</head>
+<body>
+<div class="header"><img src="<{$xoops_url}>/images/logo.gif" alt="<{$xoops_sitename}>"/></div>
+<{include file="db:eguide_item.html"}>
+<{if $list}>
+<div class="evlist">
+<div class="evtitle"><{$smarty.const._MD_RESERV_LIST}></div>
+<table class="outer" align="center" width="100%">
+<tr class="head"><th></th><{foreach from=$labels item=lab}><th><{$lab}></th><{/foreach}></tr>
+<{foreach from=$list item=order key=nc}>
+<tr class="<{cycle values="even, odd"}>">
+  <td class="num"><{$nc}></td>
+<{foreach from=$order item=value}>
+  <td><{$value}></td><{/foreach}>
+<{/foreach}>
+<tr >
+</table>
+</div>
+<{/if}>
+<div class="footer">
+<div><{$lang_comefrom}></div>
+<div><a href="<{$smarty.const.EGUIDE_URL}>/"><{$smarty.const.EGUIDE_URL}>/</a></div>
+<br/>
+<div><{$smarty.const._MD_URLFOREVENT}></div>
+<div><a href="<{$smarty.const.EGUIDE_URL}>/event.php?eid=<{$event.eid}><{if $event.exid}>&sub=<{$event.exid}><{/if}>"><{$smarty.const.EGUIDE_URL}>/event.php?eid=<{$event.eid}><{if $event.exid}>&amp;sub=<{$event.exid}><{/if}></a></div>
+</div>
+</body>
+</html>

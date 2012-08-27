@@ -1,0 +1,704 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html language="en">
+<head>
+<title>Event Guide module helps</title>
+<style>
+.outer { background-color: #808080; }
+td,th { padding: 4px; background: #e8e8e8;}
+.head th  { padding: 4px; background: #d0d0d0; }
+.bnf { color: #008000; }
+</style>
+</head>
+<body>
+<style>
+.note { font-size: 90%; color: #800000; padding: 0.5em;}
+</style>
+  <h4>Event Guide module</h4>
+  <ul>
+  <li><a href="#summary">Summary</a></li>
+  <li><a href="#roleplay">Using Steps</a></li>
+  <li><a href="#functions">Functions</a></li>
+  <li><a href="#config">Event Configuration</a></li>
+  <li><a href="#form">Additional fileld Formats</a></li>
+  <li><a href="#plugins">Reservation limit plugins</a></li>
+  <li><a href="#changes">Changes</a></li>
+  </ul>
+
+  <hr>
+
+  <a name="summary"></a><h5>Summary</h5>
+
+  Event guide module will display event guidance
+  and reservations for the event.
+  The modules has functions as follows:
+<ul>
+  <li>Event reservations</li>
+  <li>Configurable reservation forms - register id by email address</li>
+  <li>Display event automatically in time - change display and allow reservations</li>
+  <li>Adminster reservations and get data in CSV format</li>
+  <li>Mail to send to persons who have made reservations</li>
+  <li>New event notification to registered users</li>
+</ul>
+
+  <a name="roleplay"></a><h5>Using Steps</h5>
+
+  <ol>
+    <li>Install this module</li>
+      <div class="note">
+      XOOPS at [Admin Menu - System - Modules Admin]
+      to install "event guide" module.<br />
+      module setup for event guide if you want.
+      [Admin Menu - Event Guide - module setup]
+      </div>
+    <li>Register New event</li>
+      <div class="note">
+      Write event guide document and register it.
+      The reservation form can be changed afterwards.
+      </div>
+    <li>Event reservations</li>
+      <div class="note">
+      Reservation list and Adminstrators can login with  user permissions via the "Adminstration" link.
+      </div>
+  </ol>
+
+
+  <a name="functions"></a><h5>Functions</h5>
+
+  <h6>Event Registration and Display</h6>
+
+    <ol>
+      <li>Show Summary Listed</li>
+      <li>Blocks (Date and Title list)</li>
+      <li>Show all (with reservation form)</li>
+      <div class='note'>
+      When user with Admin permission or event poster - will display administration links.
+      </div>
+    </ol>
+
+  <h6>Event Edit</h6>
+
+    <ol>
+      <li>New Event Registration - allow admin or setup group</li>
+      <li>Reservations</li>
+	<ul>
+	  <li>Approve reservation request</li>
+	  <li>Summary display</li>
+	    <ul>
+	       <li>counting items in radio, check, select field</li>
+	       <li>Display reservation list (for Display, for Print)</li>
+      <div class="note">
+      Reservations need approval (auto approve disabled), Here to approve.
+      <br />
+      All Reservation information to display and Edit, Delete operation
+      to be chosen from item "more" link.
+      NOTE: Be careful to be match form field when you edit information.
+      </div>
+	       <li>get data in CSV format</li>
+	    </ul>
+	  <li>Sending Mail to reservation persons</li>
+	</ul>
+    </ol>
+
+  <h6>Admin functions</h6>
+
+    <ol>
+      <li><a href="#config">Event Configuration</a></li>
+      <li>Event operations</li>
+      <li>Notify new event registered users</li>
+    </ol>
+
+  <a name="config"></a><h5>Event Configuration</h5>
+
+  Event Guide module setup items as follow:
+  
+  <blockquote>
+    <table border="0" cellspacing="1" cellpadding="4" bgcolor="#808080">
+      <tr class="hd"><th>Item</th><th>value</th><th>description</th></tr>
+      <tr class="even">
+	<th align="left">Group of Event Post</th>
+	<td>Group (<u>Regsiter Users</u>)</td>
+	<td>Set a group the owner permited to administration for own evnet.</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Notify mail to Admin</th>
+	<td>No/<u>Yes</u>/Always</td>
+	<td>Notification mail to admin when Event registerd or updated.
+	No = No notifcation.
+	Yes = Notify except operation user.
+	Always = Notify with operation user.
+	</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Admin Group for Notification</th>
+	<td><u>Yes</u>/No</td>
+	<td>The group is received admin notification mail</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Do you need to approve New Event</th>
+	<td>Yes/<u>No</u></td>
+	<td>Need to approve New Event by site administrator</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Display additional items in list</th>
+	<td>field counts (<u>3</u>)</td>
+	<td>Display items entry order additional form</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Display list items in a page</th>
+	<td>line counts (<u>50</u>)</td>
+	<td>How many item lines in a page</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Display events in top page</th>
+	<td>Event counts (<u>10</u>)</td>
+	<td>Number of listed events in top page</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Show Multiple Entry</th>
+	<td><u>Yes</u>/No</td>
+	<td>When event has multiple entry, show each entris. YES - display each entries. NO - Only show recenet entry.</td>
+      </tr>
+      <tr class="even">
+	<th align="left">User requested notification of new event</th>
+	<td><u>Yes</u>/No</td>
+	<td>YES - Enable notification mail, NO - disable.</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Event entry need to LOGIN</th>
+	<td><u>No</u>/Yes/Both</td>
+	<td>Only login user can be reservation event (Not use email address).
+	  When select "Both", email address input field exist only guest user.
+	</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Has confirm page</th>
+	<td><u>Yes</u>/No</td>
+	<td>Display confirm page when reservation submit</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Additional item options</th>
+	<td>(none)</td>
+	<td>Additional item optional settings.
+	  <ul>
+	    <li>label_persons=label (label for multiple person reservation)</li>
+	    <li>reply_tpl_suffix=suffix (suffix of reply mail template filename)</li>
+	    <li>reply_extension=label (label for reply mail template extension)</li>
+	    <li>export_charset=UTF-8 (using CSV output coding system)</li>
+	    <li>size=60 (text input default size)</li>
+	    <li>cols=40 (textarea default columns)</li>
+	    <li>rows=5 (textarea default rows)</li>
+	  </ul>
+	  See "<a href="#form_options">Additional item options</a>" more details.
+	  
+	</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Close Time Before (min)</th>
+	<td><u>60</u></td>
+	<td>Event entry close time before setting minits.</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Expire Time</th>
+	<td><u>1440</u> (was 1day, 24 hours)</td>
+	<td>Event expired on top page when after event start time in minites.</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Persons default value</th>
+	<td><u>10</u></td>
+	<td>Reservation persons in event post form</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Date Foramt</th>
+	<td><u>D, d M Y</u></td>
+	<td>Open Event Date(Time) display format. Using PHP date function format.</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Use Other moudle plugins</th>
+	<td>Yes/<u>No</u></td>
+	<td>Internal Control accept entry form other modules</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Current entry level mark</th>
+	<td>0,[Close]<br/>50,[Empty]<br/>100,[Many]<br/>101,[Full]<br/></td>
+	<td>The mark mean of how many entry in current. Show mark correspond parcentage. (xx,yy mean less than xx% showup yy. And '0,yy' mean out of date mark)</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Time Table Labels</th>
+	<td>(none)</td>
+	<td>Set starting time in Settings collection page. e.g.: 08:00,14:00,16:00</td>
+      </tr>
+      <tr class="odd">
+	<th align="left">Item List in export reservations</th>
+	<td><u>*</u></td>
+	<td>Item `name' or `number' seperated comma(,). Astarisk(*) mean left items. e.g.: 3,4,0,2,*</td>
+      </tr>
+      <tr class="even">
+	<th align="left">Allow Comments</th>
+	<td><u>Yes</u>/No</td>
+	<td>Allow Comments for event<p>Following sets standard comment function in XOOPS</p></td>
+      </tr>
+
+    </table>
+  </blockquote>
+
+  <a name="form_options"></a><h6>Additional item options</h6>
+  <dl>
+    <dt>label_persons (label for multiple person reservation)</dt>
+    <dd>This option setting for a reservation accept multiple persons.
+      Set item name(label) to input how many.
+      <p class="note">For example setting as
+	"<tt>label_persons=Persons</tt>". In additional item like as
+	"Persons,select,1,2,3,4" that make to recommand numeric choice field.
+      </p>
+      Only value setting in this config, Assume set for this "label_persons=" option.
+      This is compatible before eguide 2.5.
+    </dd>
+    <dt>reply_tpl_suffix (suffix of reply mail template filename)</dt>
+    <dd>
+      Use for alternative reply mail template. Using filename added setting value for auto reply email. For example:
+      <pre>reply_tpl_suffix=A</pre>
+      mean using replay template
+      <tt>language/&lt;lang&gt;/mail_template/{accept|order}<b>A</b>.tpl</tt>
+      file. "reply_extension" for indirect by addition items value. In this variable set suffix to direct.
+    </dd>
+    <dt>reply_extension (label for reply mail template extension)</dt>
+    <dd>
+      This option using for switch reply mail tamplate.
+      
+
+      <div class="note">This option setting item name(label) for template file name extension.
+	<p>For example, setting in preferences "<tt>reply_extension=OrderForm</tt>", In Additional Items include like "OrderForm,hidden,A" field. This event reservation switch reply mail template file.</p>
+	<p>In this case(the value as "A") using template file name assume <tt>language/&lt;lang&gt;/mail_template/{accept|order}<b>A</b>.tpl</tt> and using it.</p>
+	<p>Additional value for file name, that is store value in reservation. In international using, recommand the value make alpha-numeric only. Because sometime there is encoding problem.<br/>If there is no mail template in additional name, using default mail template.</p>
+      </div>
+    </dd>
+    <dt>export_charset (using CSV output coding system)</dt>
+    <dd>Default value as export_charset=UTF-8 (that is defined _MD_EXPORT_CHARSET resource)</dd>
+    <dt>size (text input default size)</dt>
+    <dd>Default value as size=60</dd>
+    <dt>cols, rows (textarea default columns/rows)</dt>
+    <dd>Default value as cols=40, rows=5</dd>
+
+    <dt>eguide_plugins (set active reservation plugins)</dt>
+    <dd>
+      Set reservation control plugins name list.
+      List name with comma(",") when multiple plugin use.
+      When this option set disable module name plugins activate.
+      You want module name plugin activate, include the name in this list.
+    </dd>
+
+    <dt>use_fckeditor (use FCKeditor edit event description)</dt>
+    <dd>
+      When this option setting, FCKeditor (HTML WYSIWYG editor) using in event edit page.
+      You need install FCKeditor at XOOPS_URL/common/fckeditor/ folder.
+      When setting value to "Basic", you can use simple toolbar.
+    </dd>
+    <dt>bound_time (Bundary time as the last day)</dt>
+    <dd>
+      The event start before stting this, display the day before date and more 24 hours (or 12 hours).
+      Setting time format as "<tt>HH:MM</tt>".
+      <p>For example, setting "<tt>bound_time=03:00</tt>", a event start "2009-12-15 01:00" to be display "2009-12-14 25:00". The bound time work correct from <tt>00:01</tt> to <tt>11:59</tt>.</p>
+    </dd>
+    <dt>reply_subject (Reply mail subject)</dt>
+    <dt>from_name (Replay mail from name)</dt>
+    <dd>
+      For reply mail by this module, override setting value.
+      Default using define in language resource.
+    </dd>
+    <dt>enable_copy (Enable copy funciton event article)</dt>
+    <dd>
+      <tt>enable_copy=yes</tt>
+      Add "New Event" checkbox when edit event article.
+      When checked the checkbox to store that new event.
+    </dd>
+    <dt>email_repeat_check (Enable confirm input Email Address)</dt>
+    <dd>
+      <tt>email_repeat_check=yes</tt>
+      When an application for the event,
+      confirm email address to add a field to verify that it matches the address.
+     </dd>
+  </dl>
+
+  <a name="form"></a><h5>Additional fields Format</h5>
+  <strong>In Reservation</strong>
+  Additonal items set to FORM when used order to make reservation.
+  These additional items are setup with the following formats:
+  <blockquote>
+      line ::= ["!"]item-name["*"][,type[,argument...]]<p />
+      type ::= {text|checkbox|radio|textarea|select|hidden|const}<br />
+      argument ::= [value ["+"] "="] label
+  </blockquote>
+  <ul>
+    <li>"!" means the item is displayed to the public.</li>
+       <div class="note">
+       Additionally, form top of line marked "!"  - reservation list is displayed.
+       If there is no "!" marked items, the list is not displayed.
+       </div>
+    <li>"*" means you need input something.</li>
+    <li>"#" is a message in the FORM (displayed comments).</li>
+    <li>"," is a delimiter. Include part of strings, using escape in "\".</li>
+    <li>value equivalent label when it suppressed.</li>
+    <li>"+" Selected items (checkbox, radio, select) default value.</li>
+    <li>Other arguments to be default value in text items(text, textarea).</li>
+    <li>A part of argument makes attribute in inputs (text: "size=n", textarea: "cols=n" "rows=n").</li>
+    <li>Using "prop=string" argument, makes any attributes in input.</li>
+  </ul>
+
+  <h6>examples:</h6>
+
+  <form>
+    <table border="0" cellspacing="1" cellpadding="4" bgcolor="#808080">
+      <tr bgcolor="#d0d0d0"><th>setup</th><th>Displayed form</th></tr>
+      <tr class="even"><td>Name*</td><td>Name* <input name='samp1' /></td></tr>
+      <tr class="odd"><td>Name*,size=5</td><td>Name* <input name='samp2' size=5 /></td></tr>
+      <tr class="even"><td>Name*,size=10,value,#comment text</td><td>Name* <input name='samp3' size='10' value='value'/> comment text</td></tr>
+      <tr class="odd"><td>Selection,radio,Item1+,Item2,Item3</td><td>Selection <input type='radio' name='samp4' value='1' checked /> Item1 &nbsp; <input type='radio' name='samp4' value='2' /> Item2 &nbsp; <input type='radio' name='samp4' value='3' /> Item3 &nbsp; </td></tr>
+      <tr class="even"><td>Selection,checkbox,Item1+,Item2,Item3</td><td>Selection <input type='checkbox' name='samp5_1' checked /> Item1 &nbsp; <input type='checkbox' name='samp5_2' /> Item2 &nbsp; <input type='checkbox' name='samp5_3' /> Item3 &nbsp; </td></tr>
+      <tr class="odd"><td>Selection,select,Item1,Item2,Item3</td><td>Selection <select name='samp6'><option>Item1</option><option>Item2</option><option>Item3</option></select></td></tr>
+      <tr class="even"><td>Label,const,value</td><td>Label value (The value display and handle to input value)</td></tr>
+      <tr class="odd"><td>Label,hidden,value</td><td><em>(not display in form - present only input values)</em></td></tr>
+      <tr class="even"><td>#message text</td><td>message text</td></tr>
+    </table>
+  </form>
+  <h6>Releated reservation forms</h6>
+  <dl>
+    <dt>Mulitiple persons reservation</dt>
+    <dd>
+      You want handle multiple persons reservation on a evnet,
+      you need settings as following:
+      <ul>
+	<li>Number of persons input field in "Additional items" (example: "<tt>Persons,select,1,2,3,4,5</tt>")</li>
+	<li>Module Preferences "Label of persons" setting the fields label. (set in exmaple "<tt>Persons</tt>")</li>
+      </ul>
+    </dd>
+    <dt>Redirect After Reservation URL</dt>
+    <dd>
+      This is use when custom page display after reservation. That URL include following variables:
+      <tt>{X_EID}</tt> (event id), <tt>{X_SUB}</tt> (event extra id), <tt>{X_RVID}</tt> (reservation id).
+      This variables use handle to get event information.
+      You can use for post processing reservations.
+    </dd>
+  </dl>
+
+  <a name="plugins"></a><h5>Reservation limit plugins</h5>
+
+  <p>Event Guide module can use plugins for control reservations.
+  It provide more complex contition for reservations.
+  There is sample "dlimit" plugin that control same user can limited number of reservation in a day.
+  Using this plugin reservation to need login.
+  </p>
+
+  <p>This plugin activate set module preferences "Additional item options"
+  add like following.</p>
+  <pre>eguide_plugins=dlimit
+max_register_in_day=1
+max_register_in_future=2
+</pre>
+  <dl>
+    <dt>eguide_plugins</dt>
+    <dd>Activate plugins.
+      Comma seperated if multiple.</dd>
+    <dt>max_register_in_day</dt>
+    <dd>Number of reservation in a day. Default value is 1. No limitation as 0.</dd>
+    <dt>max_register_in_future</dt>
+    <dd>Number of total reservation in active event.
+      A event to starting time has come when next reservation to be accept.
+      Default value is 0 that is no limitation.</dd>
+  </ul>
+
+  <a name="multidate"></a><h5>Handling for multiple open event</h5>
+
+  <p>Event Guide handle the content of same event, open two or more times.
+    This settings to "Repeat Open" in event registration form.
+  </p>
+
+  <p>You want more detail settings, you send "Preview" one time.
+    There is expand and edit more detail items.
+  </p>
+
+  <p>In addition, the event is registered once to do detailed
+    specification and it sets it on "Edit Open Date" page.
+  </p>
+
+  <h6>Note to multiple open event editing</h6>
+
+  <ul>
+    <li>When edit mutiple open event,  careful to change the master event date.
+      The open date keeps interval each other.</li>
+    <li>Wen time is omitted by the date specification,
+      specified same time of the starting date.</li>
+  </ul>
+
+  <a name="update"></a><h5>Module Update</h5>
+  
+  <ul>
+    <li>When Event Guide module update, You need Module update in Module Manager in admin page.</li>
+    <li>Reservation Data format convertion</li>
+    <div class="note">In eguide 2.31 later internal data format changing.
+      If you need read out past reservation data,
+      there is data format convertion program <a href="../../admin/conv230.php">admin/conv230.php</a>. That page to show convertion button if there is need
+      convert data.
+    </div>
+  </ul>
+
+  <a name="duplication"></a><h5>Module duplicate</h5>
+
+  <p>eguide 2.4 later module is duplicatable (sorry not yet D3).
+    There is command line utility proguram for duplicate module.
+    "eguide/duplicate.php" is duplicate eguide module how many you want.
+    (This command support only Unix-like system)
+  </p>
+  <p>Example use this:</p>
+  <pre>
+    $ <u>cd modules/eguide</u>
+    $ <u>php duplicate.php event ticket class</u>
+    Duplicate: event
+    Duplicate: ticket
+    Duplicate: class
+  </pre>
+
+  <a name="changes"></a><h5>Changes</h5>
+
+<dl>
+  <dt>2011/09/10 eguide 2.64 released</dt>
+  <dd>
+    <ul>
+      <li>Fix notification email register/cancel not work</li>
+    </ul>
+  </dd>
+  <dt>2010/10/10 eguide 2.63 released</dt>
+  <dd>
+    <ul>
+      <li>Fix replace for month/week name by local language string (2.63a)</li>
+      <li>Add email confirm options (email_repeat_check)</li>
+      <li>Support altsys language manager</li>
+      <li>Fix miscalculate in reservation summary</li>
+      <li>Fix redirect_header out absolute path (for mobile)</li>
+    </ul>
+  </dd>
+  
+  <dt>2010/05/16 eguide 2.62 released</dt>
+  <dd>
+    <ul>
+      <li>Fix version string (2.62a)</li>
+      <li>Enable localization for month name in event date</li>
+      <li>Fix block function conflict when module duplicated</li>
+      <li>Fix Excel(XML) format malfunction over 40 records</li>
+    </ul>
+  </dd>
+  <dt>2010/04/04 eguide 2.61 released</dt>
+  <dd>
+    <ul>
+      <li>Show reservation data when cancel confirm</li>
+      <li>Add language/portuguese resouces (thx leco1)</li>
+      <li>Add select option "Both" for "Event entry need to LOGIN" in preferences</li>
+      <li>Remove limitation for excel(XML) format download.</li>
+    </ul>
+  </dd>
+  <dt>2010/02/27 eguide 2.6 released</dt>
+  <dd>
+    <ul>
+      <li>add list type select in block options</li>
+      <li>change admin.php form to hide some fields</li>
+      <li>fix new event notification email tags not set</li>
+      <li>option variables "reply_tpl_suffix" added</li>
+      <li>redirect make to handle option variables</li>
+      <li>add description for "Reservation limit plugins" in help.html</li>
+      <li>add blocks for expired event</li>
+      <li>add for "dlimit" plugins to limit total reservations (max_register_in_future)</li>
+      <li>Reservation button label to change by action</li>
+      <li>Allow {X_NAME} replace by user varibale</li>
+      <li>add option variable "module_css" for assign module local stylesheet</li>
+    </ul>
+  </dd>
+  <dt>2009/12/24 eguide 2.56 released</dt>
+  <dd>
+    <ul>
+      <li>fix EVENT_TITLE mail variable setting</li>
+      <li>dlimit plugins support bound_time options</li>
+      <li>blocks support bound_time</li>
+      <li>add enable_copy options</li>
+    </ul>
+  </dd>
+  <dt>2009/12/20 eguide 2.55 released</dt>
+  <dd>
+    <ul>
+      <li>More "Additional item options"
+        <ul>
+	  <li>bound_time=01:00 -- Bound time as last day</li>
+	  <li>reply_subject=Subject -- Replay email subject</li>
+	  <li>from_name=Sender -- Reply from name</li>
+	</ul>
+      </li>
+      <li>Email subject redefine with email vars.</li>
+      <li>Reply email variable EVENT_DATE defined</li>
+    </ul>
+  </dd>
+  <dt>2009/10/04 eguide 2.54 released</dt>
+  <dd>
+    <ul>
+      <li>Time Table Labels apply to event date time selection</li>
+      <li>FCKeditor (use_fckeditor={Basic|Default}) option added</li>
+      <li>fix cancel page for new event mail notification</li>
+      <li>fix in additional item at printable comment with comma</li>
+      <li>event editing start time accept "HH:MM" format</li>
+      <li>reservation control plugins control by option variable</li>
+      <li>fix my reservation page ancker mistake</li>
+      <li>fix block descption edit style mistake</li>
+      <li>fix mutiple date editing template</li>
+    </ul>
+  </dd>
+  <dt>2009/05/24 eguide 2.53 released</dt>
+  <dd>
+    <ul>
+      <li>Add context value for XOOPS Search module (thx tes)</li>
+      <li>Add description to variable in block template</li>
+    </ul>
+  </dd>
+  <dt>2009/03/09 eguide 2.52 released</dt>
+  <dd>
+    <ul>
+      <li>Describe more "REFERER errors" in reservation failer.</li>
+      <li>Add detail show reservation. (thx uhouho)</li>
+      <li>Fix repeat opening event mistake datetime. (thx uhouho)</li>
+    </ul>
+  </dd>
+  <dt>2009/03/09 eguide 2.52 released</dt>
+  <dd>
+    <ul>
+      <li>Describe more "REFERER errors" in reservation failer.</li>
+      <li>Add detail show reservation. (thx uhouho)</li>
+      <li>Fix repeat opening event mistake datetime. (thx uhouho)</li>
+    </ul>
+  </dd>
+  <dt>2008/10/19 eguide 2.51 released</dt>
+  <dd>
+    <ul>
+      <li>Add {RVID} tags in reply mail template (accept.tpl)</li>
+      <li>Add CSV output coding system options (export_charset)</li>
+      <li>follow altsys 0.6 template/blocks admin</li>
+      <li>Revised Admin Interface by Gigamaster</li>
+      <li>Fix category image field not stored (thx Gigamaster)</li>
+      <li>Fix event active editing not work in admin list (thx Gigamaster)</li>
+      <li>Assign category discription in smarty variable</li>
+    </ul>
+  </dd>
+  <dt>2008/07/22 eguide 2.5 released</dt>
+  <dd>
+    <ul>
+      <li>Add item options "reply_extension" as switch reply mail template</li>
+      <li>Apply "Additional item options" in defaults</li>
+      <li>Change preferences "Label of persons" to "Additional item options"</li>
+      <li>Not display category select button if there is no categires</li>
+      <li>Add no data language resources for admin page</li>
+      <li>Fix using template set mistake.</li>
+    </ul>
+  </dd>
+  <dt>2008/02/16 eguide 2.42 released</dt>
+  <dd>
+    <ul>
+      <li>fix checkbox failer</li>
+      <li>Add addtional field input helper (JavaScript)</li>
+      <li>Fix admin menu link</li>
+    </ul>
+  </dd>
+  <dt>2008/02/11 eguide 2.41 released</dt>
+  <dd>
+    <ul>
+      <li>Fix conflict with pico module</li>
+    </ul>
+  </dd>
+  <dt>2008/02/05 eguide 2.4 released</dt>
+  <dd>
+    <ul>
+      <li>Categories enhancement (two level, sort order, importer, block)</li>
+      <li>Fix JavaScript check failer</li>
+      <li>Enable confirm page in default</li>
+      <li>Add duplicatable function</li>
+      <li>Fix excel template (remove hard code kanji)</li>
+      <li>Using newer altsys (0.5later) function</li>
+      <li>Arrangement of language resource (Separation main/common)</li>
+      <li>add resource language/spanish (thx Gerardo)</li>
+    </ul>
+  </dd>
+  <dt>2007/12/31 eguide 2.31 released</dt>
+  <dd>
+    <ul>
+      <li>text field quote(') handle bug fixed</li>
+      <li>add const type</li>
+      <li>variables handle in redirect URL</li>
+      <li>multiple category selecting in index.php (e.g. cat=1,2,3)</li>
+      <li>fix JavaScript mistake (thx souhalt)</li>
+      <li>fix rendering mistake when occurrence errors (thx souhalt)</li>
+      <li>Ignore mail sending status except reservation user</li>
+      <li>Using altsys module when exists</li>
+      <li>Internal Reservation data format changes (refactoring)</li>
+      <li>Fix extra date editing failer when after start time (thx Jens)</li>
+      <li>add breadcrumbs (xoops_breadcrumbs) smarty variable setting</li>
+    </ul>
+  </dd>
+  <dt>2007/03/03 eguide 2.3 released</dt>
+  <dd>
+    <ul>
+      <li>Add setting notifiy to operation user self.</li>
+      <li>Add update notification to admin with poster</li>
+      <li>fix stop admin mail when disable setting in preference</li>
+      <li>fix notification mail for register users</li>
+      <li>eguide 2.24 released</li>
+      <li>fix compat in PHP5/MySQL5 (mylist.php failer, etc)</li>
+      <li>fix complex value-label behavier item in checkbox/radio</li>
+      <li>update tchinese resources (thanks jax)</li>
+      <li>suppress space(nbsp) when setting value at additional items typed checkbox/radio</li>
+    </ul>
+  </dd>
+  <dt>2006/10/14 eguide 2.23 released</dt>
+  <dd>
+    <ul>
+      <li>fix month name index typo in japanese/german/tchinese</li>
+    </ul>
+  </dd>
+  <dt>2006/10/14 eguide 2.21 released</dt>
+  <dd>
+    <ul>
+      <li>fix some language resources</li>
+      <li>add language/tchinese resources (by jimmy9522 at twpug.net)</li>
+      <li>fix poster uname mistake when summary CSV output</li>
+    </ul>
+  </dd>
+  <dt>2006/08/29 eguide 2.2 released</dt>
+  <dd>
+    <ul>
+      <li>make display simple uname CSV format output</li>
+      <li>add category filter in blocks</li>
+      <li>add filling mark in block when show details</li>
+      <li>new event block shows next event in multiple</li>
+      <li>fix template: not display _MD_RESERV_FORM (as "Reservation Here") when reservation disable</li>
+      <li>add language/german resources (from Jens Havelberg)</li>
+    </ul>
+  </dd>
+  <dt>2006/08/17 eguide 2.1 released</dt>
+  <dd>
+    <ul>
+      <li>add redirect url setting after reservation</li>
+      <li>revised escape in additional items and extent "prop" attribute (from Craig Taylor)</li>
+      <li>fix template: not display close time when reservation disable</li>
+    </ul>
+  </dd>
+  <dd>2006/08/13 eguide 2.01 released</dd>
+  <dd>
+    <ul>
+      <li>fix mistake resources</li>
+      <li>fix cancel failer when login user do cancel</li>
+    </ul>
+  </dd>
+  <dt>2006/08/03 eguide 2.0 released</dt>
+  <p/>
+  <dt><a href="changes.html">Changes before 2.0</a></dt>
+</dl>
+
+<hr>
+<address>Nobuhiro Yasutomi &lt;<a href="mailto:nobuhiro.yasutomi@nifty.ne.jp">nobuhiro.yasutomi@nifty.ne.jp</a>&gt;</address>
+MySite Users <a href="http://myht.org/">http://myht.org/</a><br/>
+$Id: help.html,v 1.70 2011-09-10 02:45:21 nobu Exp $
+</body>
+</html>

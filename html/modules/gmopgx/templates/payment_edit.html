@@ -1,0 +1,72 @@
+<h3><{$smarty.const._MD_GMOPGX_MODULE_TITLE}></h3>
+<form id="list" name="list" method="post" action="<{$xoops_url}>/modules/gmopgx/default/update">
+<input type="hidden" name="PME_sys_sfn[0]" value="3" />
+<input type="hidden" name="PME_sys_sfn[1]" value="4" />
+<input type="hidden" name="PME_sys_sfn[2]" value="0" />
+<input type="hidden" name="PME_sys_cur_tab" value="PME_dhtml_tab0" />
+<input type="hidden" name="PME_sys_qfn" value="" />
+<input type="hidden" name="PME_sys_rec" value="1" />
+<input type="hidden" name="PME_sys_fm" value="0" />
+<input type="hidden" name="PME_sys_fl" value="0" />
+<table class="pme-main" summary="ddde6e_gmopgx_payment">
+<!-- 
+<tr class="pme-row-0">
+<td class="pme-key-0">ID</td>
+<td class="pme-value-0">
+<input class="pme-input-0" type="text" disabled name="PME_data_id" size="8" maxlength="8" value="0" /></td>
+</tr>
+<tr class="pme-row-1">
+<td class="pme-key-1">Uid</td>
+<td class="pme-value-1">
+<input class="pme-input-1" type="text" name="PME_data_uid" size="8" maxlength="8" value="0" /></td>
+</tr>
+ -->
+<tr class="pme-row-0">
+<td class="pme-key-0">Title</td>
+<td class="pme-value-0">
+	<input class="pme-input-0" type="text" name="PME_data_title" size="60" maxlength="100" value="<{$ListData.title}>" />
+</td>
+</tr>
+<tr class="pme-row-1">
+<td class="pme-key-1">Message</td>
+<td class="pme-value-1">
+	<textarea class="pme-input-1" name="PME_data_message" rows="5" cols="50" wrap="virtual"><{$ListData.message}></textarea>
+</td>
+</tr>
+<!-- 
+<tr class="pme-row-0">
+<td class="pme-key-0">Utime</td>
+<td class="pme-value-0">
+<input class="pme-input-0" type="text" name="PME_data_utime" size="11" maxlength="11" value="0" /></td>
+</tr>
+<tr class="pme-row-1">
+<td class="pme-key-1">Status</td>
+<td class="pme-value-1">
+<input class="pme-input-1" type="text" name="PME_data_status" size="1" maxlength="1" value="0" /></td>
+</tr>
+ -->
+</table>
+<hr size="1" class="pme-hr" />
+<table summary="navigation" class="pme-navigation">
+<tr class="pme-navigation">
+<td class="pme-buttons">
+<{if $ListData.id}>
+<input type="hidden" name="id" value="<{$ListData.id}>" />
+<{/if}>
+<input id="button1" type="button" value="<{$smarty.const._MD_GMOPGX_TABLE_UPDATE}>" />
+<input id="button2" type="button" value="<{$smarty.const._MD_GMOPGX_TABLE_CLOSE}>" />
+</td>
+</tr></table>
+</form>
+<script>
+$(function(){
+    $('#button1').click(function() {
+        $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/default/update');
+        $('#list').submit();
+    });
+    $('#button2').click(function() {
+        $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/default/index');
+        $('#list').submit();
+    });
+});
+</script>

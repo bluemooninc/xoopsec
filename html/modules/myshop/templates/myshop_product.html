@@ -1,0 +1,331 @@
+<{$breadcrumb}>
+<br/>
+
+<{* Display category or module advertisement *}>
+
+<{if $category.cat_advertisement != ''}>
+<div id="myshop_publicite-category"><{$category.cat_advertisement}></div>
+
+<{elseif $mod_pref.advertisement != ''}>
+<div id="myshop_publicite"><{$mod_pref.advertisement}></div>
+<{/if}>
+
+<br/>
+
+<{* PRODUCT INFORMATION *}>
+
+<table cellspacing="0">
+    <tr>
+        <td colspan="2" class="myshop_producttitle_view-product"><h2>
+            <{$product.product_recommended_picture}><{$product.product_title}></h2></td>
+    </tr>
+    <tr>
+        <td class="myshop_productthumb-big">
+            <{if $product.product_thumb_full_url != ''}>
+            <a href="javascript:openWithSelfMain('<{$smarty.const.MYSHOP_URL}>media.php?product_id=<{$product.product_id}>&type=picture', '',<{$smarty.const.MYSHOP_POPUP_MEDIA_WIDTH}>, <{$smarty.const.MYSHOP_POPUP_MEDIA_HEIGHT}>);"
+               title="<{$product.product_href_title}>">
+                <img src="<{$product.product_thumb_full_url}>" alt="<{$product.product_href_title}>"/>
+            </a>
+            <{/if}>
+        </td>
+        <td>
+            <div class="">
+                <{if $product.product_sku != ''}>
+                <span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_NUMBER}></span>:
+                <{$product.product_sku}>
+                <{/if}>
+                <{if $product.product_extraid != ''}>
+                <{$smarty.const._MYSHOP_EXTRA_ID}>: <{$product.product_extraid}>
+                <{/if}>
+            </div>
+            <{if $product_joined_manufacturers != ''}>
+            <div class="myshop_productauthor_view-product">
+                <img src="<{$smarty.const.MYSHOP_IMAGES_URL}>manufacturers.png" alt="" border="0"/>
+                <span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_BY}></span>
+                <{$product_joined_manufacturers}>
+            </div>
+            <{/if}>
+            <!-- Price box -->
+            <{if $mod_pref.use_price}>
+            <div class="myshop_productprice_view-product">
+                <div class="myshop_view-product_price">
+                    <{if $product.product_stock > 0 }>
+                    <span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_PRICE}></span>:
+                    <{if $product.product_discount_price_ttc != ''}>
+                    <s><{$product.product_price_ttc}></s> <{$product.product_discount_price_ttc}>
+                    <{else}>
+                    <{$product.product_price_ttc}>
+                    <{/if}>
+                    <a class="btn btn-primary btn-large"
+                       href="<{$smarty.const.MYSHOP_URL}>caddy.php?op=addproduct&product_id=<{$product.product_id}>"
+                       title="<{$smarty.const._MYSHOP_ADD_TO_CART}>">
+                        <i class="icon-white icon-shopping-cart"></i>
+                        <{$smarty.const._MYSHOP_ADD_TO_CART}>
+                    </a>
+                    <{if $product.product_ecotaxe != 0}>
+                    <br/><span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_ECOTAXE}></span>
+                    : <{$product.product_ecotaxe_formated}>
+                    <{/if}>
+                    <{else}>
+                    <{$mod_pref.nostock_msg}>
+                    <{/if}>
+                </div>
+                <div class="myshop_view-product_shipping-price">
+                    <{if $product.product_shipping_price != 0}>
+                        <span class="myshop_productdescription-contentTitles">
+                            <{$smarty.const._MYSHOP_SHIPPING_PRICE}>
+                        </span>: <{$product.product_shipping_price_formated}>
+                    <{/if}>
+                </div>
+            </div>
+            <{else}>
+            <br/>
+            <{/if}>
+            <!-- /Price box -->
+            <div class="myshop_productdate">
+                <span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_DATE}></span> :
+                <{$product.product_date}>
+                <{if $product.product_delivery_time > 0}>
+                <br/><span
+                    class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_DELIVERY_TIME}></span> :
+                <{$product.product_delivery_time}> <{$smarty.const._MYSHOP_DAYS}>
+                <{/if}>
+            </div>
+            <div class="myshop_productlangue"><span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_STORE}></span>:
+                <{$product.product_store.store_name}>
+            </div>
+            <{if $product.product_attachment != ''}>
+            <a href="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$product.product_attachment}>" target="_blank"><img
+                    src="<{$smarty.const.MYSHOP_IMAGES_URL}>attach.gif" alt=""/> <{$smarty.const._MYSHOP_ATTACHED_FILE}></a>
+            <{/if}>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <!-- product summary-->
+            <{if $product.product_summary != ''}>
+            <table width="100%" cellspacing="0">
+
+                <tr>
+                    <td class="myshop_catdescription">
+                        <div class="myshop_productssummary_view-product"><h3><{$smarty.const._MYSHOP_SUMMARY}></h3>
+                            <{$product.product_summary}>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+            <{/if}>
+            <!-- /product summary-->
+
+            <!-- product description -->
+            <{if $product.product_description!= ''}>
+            <table width="100%" cellspacing="0">
+
+                <tr>
+                    <td class="myshop_catdescription">
+                        <div class="myshop_description_view-product"><h3><{$smarty.const._MYSHOP_DESCRIPTION}></h3>
+                            <{$product.product_description}>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+            <{/if}>
+
+            <{if $product.product_width != '' && $product.product_weight != 0 && $product.product_url != ''}>
+            <div class="myshop_otherinf"><h3><{$smarty.const._MYSHOP_OTHER_INFORMATIONS}></h3>
+
+                <div><{if $product.product_width != ''}><span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_FORMAT}></span>:
+                    <{$product.product_width}> x <{$product.product_length}> <{$product.product_unitmeasure1}><{/if}>
+                </div>
+                <div><{if $product.product_weight != 0}><span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_WEIGHT}></span>:
+                    <{$product.product_weight}> <{$product.product_unitmeasure2}><{/if}>
+                </div>
+                <div><{if $product.product_url != ''}><span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_SITEURL}></span>:
+                    <a href="<{$product.product_url}>" target="_blank"><{$smarty.const._MYSHOP_URL}></a><{/if}>
+                </div>
+            </div>
+            <{/if}>
+
+            <{if count($product.attached_files) > 0}>
+            <div class="myshop_otherinf"><h3><{$smarty.const._MYSHOP_ATTACHED_FILES}></h3>
+                <{if $product.attached_mp3_count > 0}>
+                <div><span class="myshop_productdescription-contentTitles"><{$smarty.const._MYSHOP_MUSIC}></span>
+                    <{$product.attached_mp3_html_code}>
+                </div>
+                <{/if}>
+                <{if $product.attached_non_mp3_count > 0}>
+                <br/>
+
+                <div>
+                    <{foreach item=attachedFile from=$product.attached_files}>
+                    <{if !$attachedFile.file_is_mp3}>
+                    <span class="myshop_productdescription-contentTitles"><a
+                            href="javascript:openWithSelfMain('<{$smarty.const.MYSHOP_URL}>media.php?product_id=<{$product.product_id}>&type=attachment&file_id=<{$attachedFile.file_id}>', '',<{$smarty.const.MYSHOP_POPUP_MEDIA_WIDTH}>, <{$smarty.const.MYSHOP_POPUP_MEDIA_HEIGHT}>);"
+                            rel="nofollow"><{$attachedFile.file_description}></a></span><br/>
+                    <{/if}>
+                    <{/foreach}>
+                </div>
+                <{/if}>
+            </div>
+            <{/if}>
+
+        </td>
+    </tr>
+</table>
+
+
+<{* RELATED PRODUCTS *}>
+<{if count($product_related_products) > 0}>
+<div id="myshop_related">
+    <h2><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>box.png" alt="<{$smarty.const._MYSHOP_CART}>" border="0"/><{$smarty.const._MYSHOP_RELATED_PRODUCTS}>
+    </h2>
+
+    <table align='center' class="myshop_categorylist">
+        <tr>
+            <{foreach item=oneitem from=$product_related_products}>
+            <td valign="top" align="center">
+                <div class="myshop_productthumb"><a href="<{$oneitem.product_url_rewrited}>"
+                                                    title="<{$oneitem.product_href_title}>"><{if
+                    $oneitem.product_thumb_url}><img src="<{$oneitem.product_thumb_full_url}>"
+                                                     alt="<{$oneitem.product_href_title}>"/></a><{/if}>
+                </div>
+                <a href="<{$oneitem.product_url_rewrited}>" title="<{$oneitem.product_href_title}>"><{$product.product_recommended_picture}><b><{$oneitem.product_title}></b></a>
+
+                <div class="myshop_productprice"><{$smarty.const._MYSHOP_PRICE}>: <a
+                        href="<{$smarty.const.MYSHOP_URL}>caddy.php?op=addproduct&product_id=<{$oneitem.product_id}>"
+                        title="<{$smarty.const._MYSHOP_ADD_TO_CART}>"><{if $oneitem.product_discount_price_ttc !=
+                    ''}><{$oneitem.product_discount_price_ttc}><{else}><{$oneitem.product_price_ttc}><{/if}>
+                    <{$smarty.const._MYSHOP_ADD_TO_CART}>
+                </a></div>
+            </td>
+            <{if $oneitem.count is div by 4}>
+        </tr>
+        <tr>
+            <{/if}>
+            <{/foreach}>
+        </tr>
+    </table>
+</div>
+<{/if}>
+
+<{* OTHER PRODUCTS *}>
+<{if $showprevnextlink  || $summarylast > 0 || $summarycategory > 0 || $better_together > 0}>
+<div id="myshop_otherproducts">
+    <{if $previous_product_id != 0 || $next_product_id != 0}>
+    <h2><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>box.png" alt="" border="0"/><{$smarty.const._MYSHOP_OTHER_PRODUCTS}>
+    </h2>
+    <{/if}>
+    <{if $previous_product_id != 0}>
+    <br/><a href="<{$previous_product_url_rewrited}>" title="<{$previous_product_href_title}>"><img
+        src="<{$smarty.const.MYSHOP_IMAGES_URL}>go-previous.png" alt="" border="0"/>
+    <{$smarty.const._MYSHOP_PREVIOUS_PRODUCT}>: <{$previous_product_title}></a>
+    <{/if}>
+
+    <{if $next_product_id != 0}>
+    <br/><a href="<{$next_product_url_rewrited}>" title="<{$next_product_href_title}>"><img
+        src="<{$smarty.const.MYSHOP_IMAGES_URL}>go-next.png" alt="" border="0"/> <{$smarty.const._MYSHOP_NEXT_PRODUCT}>:
+    <{$next_product_title}></a>
+    <{/if}>
+
+    <{if $better_together > 0 && $bestwith}>
+    <br/><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>star_on.png" alt="" border="0"/>
+    <{$smarty.const._MYSHOP_BEST_WITH}> <a href="<{$bestwith.product_url_rewrited}>"
+                                           title="<{$bestwith.product_href_title}>"><{$bestwith.product_title}></a>
+    <{/if}>
+
+    <{if count($product_all_categs) > 0}>
+    <h2><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>box.png" alt="" border="0"/><{$smarty.const._MYSHOP_RECENT_CATEGS}>
+    </h2>
+    <table border='0' cellspacing='5' cellpadding='0' align='center' class="myshop_lastproducts">
+        <{foreach item=oneitem from=$product_all_categs}>
+        <tr>
+            <td><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>arrow-black2.png" alt="" border="0"/><a
+                    href="<{$oneitem.last_categs_product_url_rewrited}>"
+                    title="<{$oneitem.last_categs_product_href_title}>"><{$oneitem.last_categs_product_title}></a></td>
+        </tr>
+        <{/foreach}>
+        </tr>
+    </table>
+    <{/if}>
+
+    <{if count($product_current_categ) > 0}>
+    <h2><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>box.png" alt="" border="0"/><{$smarty.const._MYSHOP_RECENT_CATEG}>
+    </h2>
+    <table border='0' cellspacing='5' cellpadding='0' align='center' class="myshop_lastproducts">
+        <{foreach item=oneitem from=$product_current_categ}>
+        <tr>
+            <td><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>arrow-black2.png" alt="" border="0" width="13" height="7"/><a
+                    href="<{$oneitem.last_categ_product_url_rewrited}>"
+                    title="<{$oneitem.last_categ_product_href_title}>"><{$oneitem.last_categ_product_title}></a></td>
+        </tr>
+        <{/foreach}>
+        </tr>
+    </table>
+    <{/if}>
+</div>
+<{/if}>
+
+<{* CADDY *}>
+
+<div id="myshop_caddy" align="right">
+    <br/>
+    <a href="<{$smarty.const.MYSHOP_URL}>caddy.php" title="<{$smarty.const._MYSHOP_CART}>"><img
+            src="<{$smarty.const.MYSHOP_IMAGES_URL}>cart.png" alt="<{$smarty.const._MYSHOP_CART}>" border="0"/></a>&nbsp;
+    <{if $mod_pref.rss}>
+    <a href="<{$smarty.const.MYSHOP_URL}>rss.php" title="<{$smarty.const._MYSHOP_RSS_FEED}>"><img
+            src="<{$smarty.const.MYSHOP_IMAGES_URL}>feed.png" alt="<{$smarty.const._MYSHOP_RSS_FEED}>" border="0"/></a>&nbsp;
+    <{/if}>
+    <a href="<{$baseurl}>&op=print" rel="nofollow" target="_blank" title="<{$smarty.const._MYSHOP_PRINT_VERSION}>"><img
+            src="<{$smarty.const.MYSHOP_IMAGES_URL}>print.png" alt="<{$smarty.const._MYSHOP_PRINT_VERSION}>"
+            border="0"/></a>&nbsp;
+    <a href="<{$mail_link}>" rel="nofollow" target="_blank" title="<{$smarty.const._MYSHOP_TELLAFRIEND}>"><img
+            src="<{$smarty.const.MYSHOP_IMAGES_URL}>email_send.png" alt="<{$smarty.const._MYSHOP_TELLAFRIEND}>"
+            border="0"/></a>&nbsp;
+    <{if $mod_pref.isAdmin}>
+    <a href="<{$smarty.const.MYSHOP_URL}>admin/index.php?op=products&action=edit&id=<{$product.product_id}>"
+       target="_blank" title="<{$smarty.const._EDIT}>"><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>edit.png"
+                                                            alt="<{$smarty.const._EDIT}>"/></a>
+    &nbsp;<a href="<{$smarty.const.MYSHOP_URL}>admin/index.php?op=products&action=confdelete&id=<{$product.product_id}>"
+             title="<{$smarty.const._DELETE}>"><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>delete.png"
+                                                    alt="<{$smarty.const._DELETE}>"/></a>
+    <{/if}>
+    <{if $canChangeQuantity}><a href="<{$baseurl}>&stock=add" title="<{$ProductStockQuantity}>"><img
+        src="<{$smarty.const.MYSHOP_IMAGES_URL}>product_add.png" alt="<{$ProductStockQuantity}>"/></a> <{if
+    $product.product_stock -1 > 0}><a href="<{$baseurl}>&stock=substract" title="<{$ProductStockQuantity}>"><img
+        src="<{$smarty.const.MYSHOP_IMAGES_URL}>product_delete.png" alt="<{$ProductStockQuantity}>"/></a><{/if}><{/if}>
+</div>
+<br/>
+
+<{* VOTES *}>
+
+<{if $canRateProducts}>
+<div class="myshop_rating">
+    <{$smarty.const._MYSHOP_RATINGC}> <{$product.product_rating_formated}> (<{$product.product_votes_count}>)
+    <{if $userCanRate}>
+    - <a href="<{$smarty.const.MYSHOP_URL}>rate-product.php?product_id=<{$product.product_id}>"
+         title="<{$smarty.const._MYSHOP_RATETHISPRODUCT}>"><{$smarty.const._MYSHOP_RATETHISPRODUCT}></a>
+    <{/if}>
+</div>
+<{/if}>
+
+<{* <{$product.product_category.cat_footer}> *}>
+
+<{* COMMENTS *}>
+
+<div style="text-align: center; padding: 3px; margin:3px;">
+    <{$commentsnav}>
+    <{$lang_notice}>
+</div>
+
+<div style="margin:3px; padding: 3px;">
+    <{if $comment_mode == "flat"}>
+    <{include file="db:legacy_comments_flat.html"}>
+    <{elseif $comment_mode == "thread"}>
+    <{include file="db:legacy_comments_thread.html"}>
+    <{elseif $comment_mode == "nest"}>
+    <{include file="db:legacy_comments_nest.html"}>
+    <{/if}>
+</div>
+<{include file='db:legacy_notification_select.html'}>

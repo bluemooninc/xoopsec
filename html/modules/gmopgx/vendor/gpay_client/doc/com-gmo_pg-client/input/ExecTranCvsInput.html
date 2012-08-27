@@ -1,0 +1,3799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class ExecTranCvsInput</title>
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> ExecTranCvsInput</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description"><strong>コンビニ決済実行　入力パラメータクラス</strong></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> GMO PaymentGateway</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">see:</span> <a href="_com---gmo_pg---client---input---inputPackageInfo.php.html">inputPackageInfo.php</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_com---gmo_pg---client---input---ExecTranCvsInput.php.html">/com/gmo_pg/client/input/ExecTranCvsInput.php</a> (line <span class="field">13</span>)
+		</p>
+		
+				
+		<pre><a href="BaseInput.html">BaseInput</a>
+   |
+   --ExecTranCvsInput</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																																																																																																																																																																																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$accessId" title="details" class="var-name">$accessId</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$accessPass" title="details" class="var-name">$accessPass</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$clientField1" title="details" class="var-name">$clientField1</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$clientField2" title="details" class="var-name">$clientField2</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$clientField3" title="details" class="var-name">$clientField3</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$clientFieldFlag" title="details" class="var-name">$clientFieldFlag</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$convenience" title="details" class="var-name">$convenience</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$customerKana" title="details" class="var-name">$customerKana</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$customerName" title="details" class="var-name">$customerName</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$mailAddress" title="details" class="var-name">$mailAddress</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$memberNo" title="details" class="var-name">$memberNo</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$orderId" title="details" class="var-name">$orderId</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$paymentTermDay" title="details" class="var-name">$paymentTermDay</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp1" title="details" class="var-name">$receiptsDisp1</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp2" title="details" class="var-name">$receiptsDisp2</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp3" title="details" class="var-name">$receiptsDisp3</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp4" title="details" class="var-name">$receiptsDisp4</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp5" title="details" class="var-name">$receiptsDisp5</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp6" title="details" class="var-name">$receiptsDisp6</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp7" title="details" class="var-name">$receiptsDisp7</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp8" title="details" class="var-name">$receiptsDisp8</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp9" title="details" class="var-name">$receiptsDisp9</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp10" title="details" class="var-name">$receiptsDisp10</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp11" title="details" class="var-name">$receiptsDisp11</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp12" title="details" class="var-name">$receiptsDisp12</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$receiptsDisp13" title="details" class="var-name">$receiptsDisp13</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$registerDisp1" title="details" class="var-name">$registerDisp1</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$registerDisp2" title="details" class="var-name">$registerDisp2</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$registerDisp3" title="details" class="var-name">$registerDisp3</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$registerDisp4" title="details" class="var-name">$registerDisp4</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$registerDisp5" title="details" class="var-name">$registerDisp5</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$registerDisp6" title="details" class="var-name">$registerDisp6</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$registerDisp7" title="details" class="var-name">$registerDisp7</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$registerDisp8" title="details" class="var-name">$registerDisp8</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$reserveNo" title="details" class="var-name">$reserveNo</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$shopMailAddress" title="details" class="var-name">$shopMailAddress</a>
+				</div>
+																<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$telNo" title="details" class="var-name">$telNo</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">ExecTranCvsInput</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">ExecTranCvsInput</span>
+										<a href="#ExecTranCvsInput" title="details" class="method-name">ExecTranCvsInput</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAccessId" title="details" class="method-name">getAccessId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getAccessPass" title="details" class="method-name">getAccessPass</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getClientField1" title="details" class="method-name">getClientField1</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getClientField2" title="details" class="method-name">getClientField2</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getClientField3" title="details" class="method-name">getClientField3</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getConvenience" title="details" class="method-name">getConvenience</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getCustomerKana" title="details" class="method-name">getCustomerKana</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getCustomerName" title="details" class="method-name">getCustomerName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getMailAddress" title="details" class="method-name">getMailAddress</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getMemberNo" title="details" class="method-name">getMemberNo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getOrderId" title="details" class="method-name">getOrderId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$Integer</span>
+										<a href="#getPaymentTermDay" title="details" class="method-name">getPaymentTermDay</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp1" title="details" class="method-name">getReceiptsDisp1</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp2" title="details" class="method-name">getReceiptsDisp2</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp3" title="details" class="method-name">getReceiptsDisp3</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp4" title="details" class="method-name">getReceiptsDisp4</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp5" title="details" class="method-name">getReceiptsDisp5</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp6" title="details" class="method-name">getReceiptsDisp6</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp7" title="details" class="method-name">getReceiptsDisp7</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp8" title="details" class="method-name">getReceiptsDisp8</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp9" title="details" class="method-name">getReceiptsDisp9</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp10" title="details" class="method-name">getReceiptsDisp10</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp11" title="details" class="method-name">getReceiptsDisp11</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp12" title="details" class="method-name">getReceiptsDisp12</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReceiptsDisp13" title="details" class="method-name">getReceiptsDisp13</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getRegisterDisp1" title="details" class="method-name">getRegisterDisp1</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getRegisterDisp2" title="details" class="method-name">getRegisterDisp2</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getRegisterDisp3" title="details" class="method-name">getRegisterDisp3</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getRegisterDisp4" title="details" class="method-name">getRegisterDisp4</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getRegisterDisp5" title="details" class="method-name">getRegisterDisp5</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getRegisterDisp6" title="details" class="method-name">getRegisterDisp6</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getRegisterDisp7" title="details" class="method-name">getRegisterDisp7</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getRegisterDisp8" title="details" class="method-name">getRegisterDisp8</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getReserveNo" title="details" class="method-name">getReserveNo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getShopMailAddress" title="details" class="method-name">getShopMailAddress</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getShopMailAdress" title="details" class="method-name">getShopMailAdress</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$String</span>
+										<a href="#getTelNo" title="details" class="method-name">getTelNo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setAccessId" title="details" class="method-name">setAccessId</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$accessId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setAccessPass" title="details" class="method-name">setAccessPass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$accessPass</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setClientField1" title="details" class="method-name">setClientField1</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$clientField1</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setClientField2" title="details" class="method-name">setClientField2</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$clientField2</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setClientField3" title="details" class="method-name">setClientField3</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$clientField3</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setConvenience" title="details" class="method-name">setConvenience</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setCustomerKana" title="details" class="method-name">setCustomerKana</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setCustomerName" title="details" class="method-name">setCustomerName</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setDefaultValues" title="details" class="method-name">setDefaultValues</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setInputValues" title="details" class="method-name">setInputValues</a>
+											(<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setMailAddress" title="details" class="method-name">setMailAddress</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setMemberNo" title="details" class="method-name">setMemberNo</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setOrderId" title="details" class="method-name">setOrderId</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$orderId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setPaymentTermDay" title="details" class="method-name">setPaymentTermDay</a>
+											(<span class="var-type">$Integer</span>&nbsp;<span class="var-name">$Integer</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp1" title="details" class="method-name">setReceiptsDisp1</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp2" title="details" class="method-name">setReceiptsDisp2</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp3" title="details" class="method-name">setReceiptsDisp3</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp4" title="details" class="method-name">setReceiptsDisp4</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp5" title="details" class="method-name">setReceiptsDisp5</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp6" title="details" class="method-name">setReceiptsDisp6</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp7" title="details" class="method-name">setReceiptsDisp7</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp8" title="details" class="method-name">setReceiptsDisp8</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp9" title="details" class="method-name">setReceiptsDisp9</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp10" title="details" class="method-name">setReceiptsDisp10</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp11" title="details" class="method-name">setReceiptsDisp11</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp12" title="details" class="method-name">setReceiptsDisp12</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReceiptsDisp13" title="details" class="method-name">setReceiptsDisp13</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRegisterDisp1" title="details" class="method-name">setRegisterDisp1</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRegisterDisp2" title="details" class="method-name">setRegisterDisp2</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRegisterDisp3" title="details" class="method-name">setRegisterDisp3</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRegisterDisp4" title="details" class="method-name">setRegisterDisp4</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRegisterDisp5" title="details" class="method-name">setRegisterDisp5</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRegisterDisp6" title="details" class="method-name">setRegisterDisp6</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRegisterDisp7" title="details" class="method-name">setRegisterDisp7</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setRegisterDisp8" title="details" class="method-name">setRegisterDisp8</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setReserveNo" title="details" class="method-name">setReserveNo</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setShopMailAddress" title="details" class="method-name">setShopMailAddress</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setShopMailAdress" title="details" class="method-name">setShopMailAdress</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setTelNo" title="details" class="method-name">setTelNo</a>
+											(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#toString" title="details" class="method-name">toString</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$accessId" id="$accessId"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$accessId</span>
+						(line <span class="line-number">18</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> 取引ID。GMO-PGが払い出した、取引を特定するID</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$accessPass" id="$accessPass"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$accessPass</span>
+						(line <span class="line-number">23</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> 取引パスワード。取引IDと対になるパスワード</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$clientField1" id="$clientField1"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$clientField1</span>
+						(line <span class="line-number">213</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> 加盟店自由項目1</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$clientField2" id="$clientField2"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$clientField2</span>
+						(line <span class="line-number">218</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> 加盟店自由項目</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$clientField3" id="$clientField3"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$clientField3</span>
+						(line <span class="line-number">223</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> 加盟店自由項目3</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$clientFieldFlag" id="$clientFieldFlag"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$clientFieldFlag</span>
+						(line <span class="line-number">228</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> 加盟店自由項目返却フラグ</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$convenience" id="$convenience"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$convenience</span>
+						(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">支払先コンビニコード</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$customerKana" id="$customerKana"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$customerKana</span>
+						(line <span class="line-number">46</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリガナ</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$customerName" id="$customerName"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$customerName</span>
+						(line <span class="line-number">40</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">氏名</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$mailAddress" id="$mailAddress"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$mailAddress</span>
+						(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">メールアドレス</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$memberNo" id="$memberNo"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$memberNo</span>
+						(line <span class="line-number">82</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">会員番号</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$orderId" id="$orderId"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$orderId</span>
+						(line <span class="line-number">28</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> オーダーID。加盟店様が発番した、取引を表すID</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$paymentTermDay" id="$paymentTermDay"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$paymentTermDay</span>
+						(line <span class="line-number">70</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">支払期限日数</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp1" id="$receiptsDisp1"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp1</span>
+						(line <span class="line-number">136</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内1</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp2" id="$receiptsDisp2"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp2</span>
+						(line <span class="line-number">142</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内2</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp3" id="$receiptsDisp3"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp3</span>
+						(line <span class="line-number">148</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内3</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp4" id="$receiptsDisp4"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp4</span>
+						(line <span class="line-number">154</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内4</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp5" id="$receiptsDisp5"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp5</span>
+						(line <span class="line-number">160</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内5</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp6" id="$receiptsDisp6"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp6</span>
+						(line <span class="line-number">166</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内6</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp7" id="$receiptsDisp7"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp7</span>
+						(line <span class="line-number">172</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内7</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp8" id="$receiptsDisp8"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp8</span>
+						(line <span class="line-number">178</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内8</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp9" id="$receiptsDisp9"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp9</span>
+						(line <span class="line-number">184</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内9</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp10" id="$receiptsDisp10"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp10</span>
+						(line <span class="line-number">190</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内10</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp11" id="$receiptsDisp11"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp11</span>
+						(line <span class="line-number">196</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp12" id="$receiptsDisp12"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp12</span>
+						(line <span class="line-number">202</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先電話番号</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$receiptsDisp13" id="$receiptsDisp13"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$receiptsDisp13</span>
+						(line <span class="line-number">208</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先受付時間</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$registerDisp1" id="$registerDisp1"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registerDisp1</span>
+						(line <span class="line-number">88</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース1</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$registerDisp2" id="$registerDisp2"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registerDisp2</span>
+						(line <span class="line-number">94</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース2</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$registerDisp3" id="$registerDisp3"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registerDisp3</span>
+						(line <span class="line-number">100</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース3</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$registerDisp4" id="$registerDisp4"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registerDisp4</span>
+						(line <span class="line-number">106</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース4</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$registerDisp5" id="$registerDisp5"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registerDisp5</span>
+						(line <span class="line-number">112</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース5</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$registerDisp6" id="$registerDisp6"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registerDisp6</span>
+						(line <span class="line-number">118</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース6</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$registerDisp7" id="$registerDisp7"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registerDisp7</span>
+						(line <span class="line-number">124</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース7</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$registerDisp8" id="$registerDisp8"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registerDisp8</span>
+						(line <span class="line-number">130</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース8</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$reserveNo" id="$reserveNo"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$reserveNo</span>
+						(line <span class="line-number">76</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">予約番号</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$shopMailAddress" id="$shopMailAddress"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$shopMailAddress</span>
+						(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店メールアドレス(正)</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$telNo" id="$telNo"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$telNo</span>
+						(line <span class="line-number">52</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">電話番号</p>
+	
+	
+		
+		
+
+</div>
+
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="BaseInput.html">BaseInput</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="BaseInput.html#var$log">BaseInput::$log</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">244</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	
+	<div class="method-signature">
+		<span class="method-result">ExecTranCvsInput</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="BaseInput.html#method__construct">BaseInput::__construct()</a></dt>
+						<dd>コンストラクタ</dd>
+					</dl>
+			
+	</div>
+<a name="methodExecTranCvsInput" id="ExecTranCvsInput"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor ExecTranCvsInput</span> (line <span class="line-number">235</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	
+	<div class="method-signature">
+		<span class="method-result">ExecTranCvsInput</span>
+		<span class="method-name">
+			ExecTranCvsInput
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAccessId" id="getAccessId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAccessId</span> (line <span class="line-number">316</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">取引ID取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 取引ID</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAccessId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAccessPass" id="getAccessPass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAccessPass</span> (line <span class="line-number">324</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">取引パスワード取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 取引パスワード</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAccessPass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetClientField1" id="getClientField1"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getClientField1</span> (line <span class="line-number">651</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店自由項目1取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 加盟店自由項目1</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getClientField1
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetClientField2" id="getClientField2"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getClientField2</span> (line <span class="line-number">659</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店自由項目2取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 加盟店自由項目2</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getClientField2
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetClientField3" id="getClientField3"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getClientField3</span> (line <span class="line-number">667</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店自由項目3取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 加盟店自由項目3</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getClientField3
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetConvenience" id="getConvenience"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getConvenience</span> (line <span class="line-number">341</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">支払先コンビニコードを取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 支払先コンビニコード</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getConvenience
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCustomerKana" id="getCustomerKana"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCustomerKana</span> (line <span class="line-number">360</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリガナを取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリガナ</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getCustomerKana
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCustomerName" id="getCustomerName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCustomerName</span> (line <span class="line-number">350</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">氏名を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 氏名</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getCustomerName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMailAddress" id="getMailAddress"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMailAddress</span> (line <span class="line-number">380</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">メールアドレスを取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> メールアドレス</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getMailAddress
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMemberNo" id="getMemberNo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMemberNo</span> (line <span class="line-number">427</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">会員番号を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 会員番号</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getMemberNo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetOrderId" id="getOrderId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getOrderId</span> (line <span class="line-number">332</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">オーダーID取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> オーダーID</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getOrderId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPaymentTermDay" id="getPaymentTermDay"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPaymentTermDay</span> (line <span class="line-number">409</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">支払期限日数を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 支払期限日数</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$Integer</span>
+		<span class="method-name">
+			getPaymentTermDay
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp1" id="getReceiptsDisp1"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp1</span> (line <span class="line-number">513</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内1を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内1</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp1
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp2" id="getReceiptsDisp2"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp2</span> (line <span class="line-number">524</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内2を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内2</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp2
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp3" id="getReceiptsDisp3"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp3</span> (line <span class="line-number">535</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内3を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内3</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp3
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp4" id="getReceiptsDisp4"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp4</span> (line <span class="line-number">545</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内4を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内4</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp4
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp5" id="getReceiptsDisp5"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp5</span> (line <span class="line-number">556</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内5を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内5</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp5
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp6" id="getReceiptsDisp6"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp6</span> (line <span class="line-number">566</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内6を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内6</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp6
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp7" id="getReceiptsDisp7"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp7</span> (line <span class="line-number">576</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内7を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp7
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp8" id="getReceiptsDisp8"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp8</span> (line <span class="line-number">587</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内8を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内8</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp8
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp9" id="getReceiptsDisp9"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp9</span> (line <span class="line-number">597</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内9を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内9</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp9
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp10" id="getReceiptsDisp10"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp10</span> (line <span class="line-number">607</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内10を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お客様へのご案内10</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp10
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp11" id="getReceiptsDisp11"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp11</span> (line <span class="line-number">618</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お問合せ先</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp11
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp12" id="getReceiptsDisp12"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp12</span> (line <span class="line-number">629</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先電話番号を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お問合せ先電話番号</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp12
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReceiptsDisp13" id="getReceiptsDisp13"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReceiptsDisp13</span> (line <span class="line-number">639</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先受付時間を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> お問合せ先受付時間</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReceiptsDisp13
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegisterDisp1" id="getRegisterDisp1"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRegisterDisp1</span> (line <span class="line-number">437</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース1を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリースペース1</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getRegisterDisp1
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegisterDisp2" id="getRegisterDisp2"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRegisterDisp2</span> (line <span class="line-number">447</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース2を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリースペース2</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getRegisterDisp2
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegisterDisp3" id="getRegisterDisp3"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRegisterDisp3</span> (line <span class="line-number">457</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース3を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリースペース3</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getRegisterDisp3
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegisterDisp4" id="getRegisterDisp4"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRegisterDisp4</span> (line <span class="line-number">466</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース4を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリースペース4</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getRegisterDisp4
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegisterDisp5" id="getRegisterDisp5"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRegisterDisp5</span> (line <span class="line-number">476</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース5を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリースペース5</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getRegisterDisp5
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegisterDisp6" id="getRegisterDisp6"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRegisterDisp6</span> (line <span class="line-number">485</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース6を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリースペース6</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getRegisterDisp6
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegisterDisp7" id="getRegisterDisp7"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRegisterDisp7</span> (line <span class="line-number">494</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース7を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリースペース7</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getRegisterDisp7
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegisterDisp8" id="getRegisterDisp8"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRegisterDisp8</span> (line <span class="line-number">503</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース8を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フリースペース8</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getRegisterDisp8
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReserveNo" id="getReserveNo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getReserveNo</span> (line <span class="line-number">418</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">予約番号を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 予約番号</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getReserveNo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetShopMailAddress" id="getShopMailAddress"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getShopMailAddress</span> (line <span class="line-number">400</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店メールアドレスを取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 加盟店メールアドレス(正)</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getShopMailAddress
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetShopMailAdress" id="getShopMailAdress"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getShopMailAdress</span> (line <span class="line-number">390</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店メールアドレスを取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 加盟店メールアドレス</li>
+				<li><span class="field">deprecated:</span> 下位互換のためのメソッドです。getShopMailAddress()をご利用下さい。</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getShopMailAdress
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTelNo" id="getTelNo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTelNo</span> (line <span class="line-number">370</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">電話番号を取得します。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 電話番号</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$String</span>
+		<span class="method-name">
+			getTelNo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetAccessId" id="setAccessId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAccessId</span> (line <span class="line-number">676</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">取引ID設定</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setAccessId
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$accessId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$accessId</span><span class="var-description">: 取引ID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAccessPass" id="setAccessPass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAccessPass</span> (line <span class="line-number">685</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">取引パスワードを設定</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setAccessPass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$accessPass</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$accessPass</span><span class="var-description">: 取引パスワード</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetClientField1" id="setClientField1"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setClientField1</span> (line <span class="line-number">989</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店自由項目1設定</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setClientField1
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$clientField1</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$clientField1</span><span class="var-description">: 加盟店自由項目1</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetClientField2" id="setClientField2"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setClientField2</span> (line <span class="line-number">998</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店自由項目2設定</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setClientField2
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$clientField2</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$clientField2</span><span class="var-description">: 加盟店自由項目2</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetClientField3" id="setClientField3"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setClientField3</span> (line <span class="line-number">1007</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店自由項目3設定</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setClientField3
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$clientField3</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$clientField3</span><span class="var-description">: 加盟店自由項目3</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetConvenience" id="setConvenience"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setConvenience</span> (line <span class="line-number">704</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">支払先コンビニコードを格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setConvenience
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: 支払先コンビニコード</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCustomerKana" id="setCustomerKana"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setCustomerKana</span> (line <span class="line-number">722</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリガナを格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setCustomerKana
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリガナ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCustomerName" id="setCustomerName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setCustomerName</span> (line <span class="line-number">713</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">氏名を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setCustomerName
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: 氏名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDefaultValues" id="setDefaultValues"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDefaultValues</span> (line <span class="line-number">251</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">デフォルト値を設定する</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setDefaultValues
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="BaseInput.html#methodsetDefaultValues">BaseInput::setDefaultValues()</a></dt>
+						<dd>デフォルト値を設定する</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetInputValues" id="setInputValues"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setInputValues</span> (line <span class="line-number">261</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">入力パラメータ群の値を設定する</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setInputValues
+		</span>
+					(<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="BaseInput.html#methodsetInputValues">BaseInput::setInputValues()</a></dt>
+						<dd>入力パラメータ群の値を設定する</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetMailAddress" id="setMailAddress"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMailAddress</span> (line <span class="line-number">740</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">メールアドレスを格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setMailAddress
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: メールアドレス</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMemberNo" id="setMemberNo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMemberNo</span> (line <span class="line-number">788</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">会員番号を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setMemberNo
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: 会員番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOrderId" id="setOrderId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setOrderId</span> (line <span class="line-number">694</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">オーダーID設定</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setOrderId
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$orderId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$orderId</span><span class="var-description">: オーダーID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPaymentTermDay" id="setPaymentTermDay"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setPaymentTermDay</span> (line <span class="line-number">770</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">支払期限日数を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPaymentTermDay
+		</span>
+					(<span class="var-type">$Integer</span>&nbsp;<span class="var-name">$Integer</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$Integer</span>
+				<span class="var-name">$Integer</span><span class="var-description">: 支払期限日数</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp1" id="setReceiptsDisp1"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp1</span> (line <span class="line-number">869</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内1を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp1
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内1</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp2" id="setReceiptsDisp2"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp2</span> (line <span class="line-number">878</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内2を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp2
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内2</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp3" id="setReceiptsDisp3"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp3</span> (line <span class="line-number">887</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内3を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp3
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内3</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp4" id="setReceiptsDisp4"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp4</span> (line <span class="line-number">896</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内4を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp4
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内4</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp5" id="setReceiptsDisp5"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp5</span> (line <span class="line-number">905</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内5を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp5
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内5</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp6" id="setReceiptsDisp6"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp6</span> (line <span class="line-number">914</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内6を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp6
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内6</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp7" id="setReceiptsDisp7"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp7</span> (line <span class="line-number">923</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内7を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp7
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内7</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp8" id="setReceiptsDisp8"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp8</span> (line <span class="line-number">932</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内8を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp8
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内8</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp9" id="setReceiptsDisp9"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp9</span> (line <span class="line-number">941</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内9を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp9
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内9</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp10" id="setReceiptsDisp10"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp10</span> (line <span class="line-number">950</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お客様へのご案内10を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp10
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お客様へのご案内10</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp11" id="setReceiptsDisp11"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp11</span> (line <span class="line-number">959</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp11
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お問合せ先</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp12" id="setReceiptsDisp12"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp12</span> (line <span class="line-number">968</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先電話番号を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp12
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お問合せ先電話番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReceiptsDisp13" id="setReceiptsDisp13"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReceiptsDisp13</span> (line <span class="line-number">977</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">お問合せ先受付時間を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReceiptsDisp13
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: お問合せ先受付時間</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegisterDisp1" id="setRegisterDisp1"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRegisterDisp1</span> (line <span class="line-number">797</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース1を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRegisterDisp1
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリースペース1</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegisterDisp2" id="setRegisterDisp2"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRegisterDisp2</span> (line <span class="line-number">806</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース2を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRegisterDisp2
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリースペース2</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegisterDisp3" id="setRegisterDisp3"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRegisterDisp3</span> (line <span class="line-number">815</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース3を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRegisterDisp3
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリースペース3</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegisterDisp4" id="setRegisterDisp4"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRegisterDisp4</span> (line <span class="line-number">824</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース4を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRegisterDisp4
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリースペース4</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegisterDisp5" id="setRegisterDisp5"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRegisterDisp5</span> (line <span class="line-number">833</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース5を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRegisterDisp5
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリースペース5</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegisterDisp6" id="setRegisterDisp6"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRegisterDisp6</span> (line <span class="line-number">842</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース6を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRegisterDisp6
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリースペース6</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegisterDisp7" id="setRegisterDisp7"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRegisterDisp7</span> (line <span class="line-number">851</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース7を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRegisterDisp7
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリースペース7</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegisterDisp8" id="setRegisterDisp8"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRegisterDisp8</span> (line <span class="line-number">860</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フリースペース8を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRegisterDisp8
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: フリースペース8</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetReserveNo" id="setReserveNo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setReserveNo</span> (line <span class="line-number">779</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">予約番号を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setReserveNo
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: 予約番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetShopMailAddress" id="setShopMailAddress"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setShopMailAddress</span> (line <span class="line-number">760</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店メールアドレスを格納します。(正)</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setShopMailAddress
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: 加盟店メールアドレス</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetShopMailAdress" id="setShopMailAdress"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setShopMailAdress</span> (line <span class="line-number">750</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">加盟店メールアドレスを格納します。</p>
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> 下位互換のためのメソッドです。setShopMailAddress()をご利用下さい。</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setShopMailAdress
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: 加盟店メールアドレス</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTelNo" id="setTelNo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setTelNo</span> (line <span class="line-number">731</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">電話番号を格納します。</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setTelNo
+		</span>
+					(<span class="var-type">$String</span>&nbsp;<span class="var-name">$String</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$String</span>
+				<span class="var-name">$String</span><span class="var-description">: 電話番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoString" id="toString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">toString</span> (line <span class="line-number">1016</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">文字列表現</p>
+<p class="description"><p>URLのパラメータ文字列の形式の文字列を生成する</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 接続文字列表現</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="BaseInput.html">BaseInput</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodBaseInput">BaseInput::BaseInput()</a></span><br>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#method__construct">BaseInput::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodconvertParamsMap">BaseInput::convertParamsMap()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodencodeStr">BaseInput::encodeStr()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodgetIntegerValue">BaseInput::getIntegerValue()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodgetParameterValue">BaseInput::getParameterValue()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodgetStringValue">BaseInput::getStringValue()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodnullToEmpty">BaseInput::nullToEmpty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodsetDefaultValues">BaseInput::setDefaultValues()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="BaseInput.html#methodsetInputValues">BaseInput::setInputValues()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 13 Mar 2012 10:26:54 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

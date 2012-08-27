@@ -1,0 +1,26 @@
+<{$breadcrumb}>
+<br />
+<div align='center'>
+	<{if $mod_pref.advertisement != ''}><div id="myshop_publicite"><{$mod_pref.advertisement}></div><{/if}>
+
+<h2><{$smarty.const._MI_MYSHOP_SMNAME4}></h2>
+</div>
+
+<table width="100%" cellspacing="0">
+  <tr>
+    <td class="page-curl_01">
+<div class="myshop_cat-map">	
+<ul>
+<{foreach item=category from=$categories}>
+	<li><a href="<{$category.cat_url_rewrited}>" title="<{$category.cat_href_title}>"><{$category.cat_title}></a></li>
+<{/foreach}>
+</ul>
+</div>
+	</td>
+  </tr>
+</table>
+
+
+<{* ********************************************* NOTIFICATION ******************************************* *}>
+<{include file='db:legacy_notification_select.html'}>
+<{* ******************************************** /NOTIFICATION ******************************************* *}>

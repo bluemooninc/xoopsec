@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>phpDocumentor Parser Errors and Warnings</title>
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+											</head>
+		<body>
+						<a href="#Post-parsing">Post-parsing</a><br>
+<a href="#AlterTran.php">AlterTran.php</a><br>
+<a href="#AlterTranInput.php">AlterTranInput.php</a><br>
+<a href="#AlterTranOutput.php">AlterTranOutput.php</a><br>
+<a href="#AuCancelReturn.php">AuCancelReturn.php</a><br>
+<a href="#AuCancelReturnInput.php">AuCancelReturnInput.php</a><br>
+<a href="#AuCancelReturnOutput.php">AuCancelReturnOutput.php</a><br>
+<a href="#AuReceiveAuthInput.php">AuReceiveAuthInput.php</a><br>
+<a href="#AuReceiveOpenIDInput.php">AuReceiveOpenIDInput.php</a><br>
+<a href="#AuSales.php">AuSales.php</a><br>
+<a href="#AuSalesInput.php">AuSalesInput.php</a><br>
+<a href="#AuSalesOutput.php">AuSalesOutput.php</a><br>
+<a href="#AuStartInput.php">AuStartInput.php</a><br>
+<a href="#BaseInput.php">BaseInput.php</a><br>
+<a href="#BaseOutput.php">BaseOutput.php</a><br>
+<a href="#BaseTran.php">BaseTran.php</a><br>
+<a href="#CancelTranPaypal.php">CancelTranPaypal.php</a><br>
+<a href="#CancelTranPaypalInput.php">CancelTranPaypalInput.php</a><br>
+<a href="#CancelTranPaypalOutput.php">CancelTranPaypalOutput.php</a><br>
+<a href="#ChangeTran.php">ChangeTran.php</a><br>
+<a href="#ChangeTranInput.php">ChangeTranInput.php</a><br>
+<a href="#ChangeTranOutput.php">ChangeTranOutput.php</a><br>
+<a href="#ConnectUrlMap.php">ConnectUrlMap.php</a><br>
+<a href="#Cryptgram.php">Cryptgram.php</a><br>
+<a href="#DeleteAuOpenID.php">DeleteAuOpenID.php</a><br>
+<a href="#DeleteAuOpenIDInput.php">DeleteAuOpenIDInput.php</a><br>
+<a href="#DeleteAuOpenIDOutput.php">DeleteAuOpenIDOutput.php</a><br>
+<a href="#DeleteCard.php">DeleteCard.php</a><br>
+<a href="#DeleteCardInput.php">DeleteCardInput.php</a><br>
+<a href="#DeleteCardOutput.php">DeleteCardOutput.php</a><br>
+<a href="#DeleteMember.php">DeleteMember.php</a><br>
+<a href="#DeleteMemberInput.php">DeleteMemberInput.php</a><br>
+<a href="#DeleteMemberOutput.php">DeleteMemberOutput.php</a><br>
+<a href="#EntryExecTran.php">EntryExecTran.php</a><br>
+<a href="#EntryExecTranAu.php">EntryExecTranAu.php</a><br>
+<a href="#EntryExecTranAuInput.php">EntryExecTranAuInput.php</a><br>
+<a href="#EntryExecTranAuOutput.php">EntryExecTranAuOutput.php</a><br>
+<a href="#EntryExecTranCvs.php">EntryExecTranCvs.php</a><br>
+<a href="#EntryExecTranCvsInput.php">EntryExecTranCvsInput.php</a><br>
+<a href="#EntryExecTranCvsOutput.php">EntryExecTranCvsOutput.php</a><br>
+<a href="#EntryExecTranEdy.php">EntryExecTranEdy.php</a><br>
+<a href="#EntryExecTranEdyInput.php">EntryExecTranEdyInput.php</a><br>
+<a href="#EntryExecTranEdyOutput.php">EntryExecTranEdyOutput.php</a><br>
+<a href="#EntryExecTranInput.php">EntryExecTranInput.php</a><br>
+<a href="#EntryExecTranOutput.php">EntryExecTranOutput.php</a><br>
+<a href="#EntryExecTranPayEasy.php">EntryExecTranPayEasy.php</a><br>
+<a href="#EntryExecTranPayEasyInput.php">EntryExecTranPayEasyInput.php</a><br>
+<a href="#EntryExecTranPayEasyOutput.php">EntryExecTranPayEasyOutput.php</a><br>
+<a href="#EntryExecTranPaypal.php">EntryExecTranPaypal.php</a><br>
+<a href="#EntryExecTranPaypalInput.php">EntryExecTranPaypalInput.php</a><br>
+<a href="#EntryExecTranPaypalOutput.php">EntryExecTranPaypalOutput.php</a><br>
+<a href="#EntryExecTranSuica.php">EntryExecTranSuica.php</a><br>
+<a href="#EntryExecTranSuicaInput.php">EntryExecTranSuicaInput.php</a><br>
+<a href="#EntryExecTranSuicaOutput.php">EntryExecTranSuicaOutput.php</a><br>
+<a href="#EntryExecTranWebmoney.php">EntryExecTranWebmoney.php</a><br>
+<a href="#EntryExecTranWebmoneyInput.php">EntryExecTranWebmoneyInput.php</a><br>
+<a href="#EntryExecTranWebmoneyOutput.php">EntryExecTranWebmoneyOutput.php</a><br>
+<a href="#EntryTran.php">EntryTran.php</a><br>
+<a href="#EntryTranAu.php">EntryTranAu.php</a><br>
+<a href="#EntryTranAuInput.php">EntryTranAuInput.php</a><br>
+<a href="#EntryTranAuOutput.php">EntryTranAuOutput.php</a><br>
+<a href="#EntryTranCvs.php">EntryTranCvs.php</a><br>
+<a href="#EntryTranCvsInput.php">EntryTranCvsInput.php</a><br>
+<a href="#EntryTranCvsOutput.php">EntryTranCvsOutput.php</a><br>
+<a href="#EntryTranEdy.php">EntryTranEdy.php</a><br>
+<a href="#EntryTranEdyInput.php">EntryTranEdyInput.php</a><br>
+<a href="#EntryTranEdyOutput.php">EntryTranEdyOutput.php</a><br>
+<a href="#EntryTranInput.php">EntryTranInput.php</a><br>
+<a href="#EntryTranOutput.php">EntryTranOutput.php</a><br>
+<a href="#EntryTranPayEasy.php">EntryTranPayEasy.php</a><br>
+<a href="#EntryTranPayEasyInput.php">EntryTranPayEasyInput.php</a><br>
+<a href="#EntryTranPayEasyOutput.php">EntryTranPayEasyOutput.php</a><br>
+<a href="#EntryTranPaypal.php">EntryTranPaypal.php</a><br>
+<a href="#EntryTranPaypalInput.php">EntryTranPaypalInput.php</a><br>
+<a href="#EntryTranPaypalOutput.php">EntryTranPaypalOutput.php</a><br>
+<a href="#EntryTranSuica.php">EntryTranSuica.php</a><br>
+<a href="#EntryTranSuicaInput.php">EntryTranSuicaInput.php</a><br>
+<a href="#EntryTranSuicaOutput.php">EntryTranSuicaOutput.php</a><br>
+<a href="#EntryTranWebmoney.php">EntryTranWebmoney.php</a><br>
+<a href="#EntryTranWebmoneyInput.php">EntryTranWebmoneyInput.php</a><br>
+<a href="#EntryTranWebmoneyOutput.php">EntryTranWebmoneyOutput.php</a><br>
+<a href="#ErrHolder.php">ErrHolder.php</a><br>
+<a href="#ExecTran.php">ExecTran.php</a><br>
+<a href="#ExecTranAu.php">ExecTranAu.php</a><br>
+<a href="#ExecTranAuInput.php">ExecTranAuInput.php</a><br>
+<a href="#ExecTranAuOutput.php">ExecTranAuOutput.php</a><br>
+<a href="#ExecTranCvs.php">ExecTranCvs.php</a><br>
+<a href="#ExecTranCvsInput.php">ExecTranCvsInput.php</a><br>
+<a href="#ExecTranCvsOutput.php">ExecTranCvsOutput.php</a><br>
+<a href="#ExecTranEdy.php">ExecTranEdy.php</a><br>
+<a href="#ExecTranEdyInput.php">ExecTranEdyInput.php</a><br>
+<a href="#ExecTranEdyOutput.php">ExecTranEdyOutput.php</a><br>
+<a href="#ExecTranInput.php">ExecTranInput.php</a><br>
+<a href="#ExecTranOutput.php">ExecTranOutput.php</a><br>
+<a href="#ExecTranPayEasy.php">ExecTranPayEasy.php</a><br>
+<a href="#ExecTranPayEasyInput.php">ExecTranPayEasyInput.php</a><br>
+<a href="#ExecTranPayEasyOutput.php">ExecTranPayEasyOutput.php</a><br>
+<a href="#ExecTranPaypal.php">ExecTranPaypal.php</a><br>
+<a href="#ExecTranPaypalInput.php">ExecTranPaypalInput.php</a><br>
+<a href="#ExecTranPaypalOutput.php">ExecTranPaypalOutput.php</a><br>
+<a href="#ExecTranSuica.php">ExecTranSuica.php</a><br>
+<a href="#ExecTranSuicaInput.php">ExecTranSuicaInput.php</a><br>
+<a href="#ExecTranSuicaOutput.php">ExecTranSuicaOutput.php</a><br>
+<a href="#ExecTranWebmoney.php">ExecTranWebmoney.php</a><br>
+<a href="#ExecTranWebmoneyInput.php">ExecTranWebmoneyInput.php</a><br>
+<a href="#ExecTranWebmoneyOutput.php">ExecTranWebmoneyOutput.php</a><br>
+<a href="#GPayException.php">GPayException.php</a><br>
+<a href="#IgnoreCaseMap.php">IgnoreCaseMap.php</a><br>
+<a href="#JobCode.php">JobCode.php</a><br>
+<a href="#Log.php">Log.php</a><br>
+<a href="#LogFormatter.php">LogFormatter.php</a><br>
+<a href="#Method.php">Method.php</a><br>
+<a href="#ParamParser.php">ParamParser.php</a><br>
+<a href="#PaypalStartParam.php">PaypalStartParam.php</a><br>
+<a href="#RedirectUtil.php">RedirectUtil.php</a><br>
+<a href="#SaveCard.php">SaveCard.php</a><br>
+<a href="#SaveCardInput.php">SaveCardInput.php</a><br>
+<a href="#SaveCardOutput.php">SaveCardOutput.php</a><br>
+<a href="#SaveMember.php">SaveMember.php</a><br>
+<a href="#SaveMemberInput.php">SaveMemberInput.php</a><br>
+<a href="#SaveMemberOutput.php">SaveMemberOutput.php</a><br>
+<a href="#SearchCard.php">SearchCard.php</a><br>
+<a href="#SearchCardInput.php">SearchCardInput.php</a><br>
+<a href="#SearchCardOutput.php">SearchCardOutput.php</a><br>
+<a href="#SearchMember.php">SearchMember.php</a><br>
+<a href="#SearchMemberInput.php">SearchMemberInput.php</a><br>
+<a href="#SearchMemberOutput.php">SearchMemberOutput.php</a><br>
+<a href="#SearchTrade.php">SearchTrade.php</a><br>
+<a href="#SearchTradeInput.php">SearchTradeInput.php</a><br>
+<a href="#SearchTradeMulti.php">SearchTradeMulti.php</a><br>
+<a href="#SearchTradeMultiInput.php">SearchTradeMultiInput.php</a><br>
+<a href="#SearchTradeMultiOutput.php">SearchTradeMultiOutput.php</a><br>
+<a href="#SearchTradeOutput.php">SearchTradeOutput.php</a><br>
+<a href="#TdVerify.php">TdVerify.php</a><br>
+<a href="#TdVerifyInput.php">TdVerifyInput.php</a><br>
+<a href="#TdVerifyOutput.php">TdVerifyOutput.php</a><br>
+<a href="#TradedCard.php">TradedCard.php</a><br>
+<a href="#TradedCardInput.php">TradedCardInput.php</a><br>
+<a href="#TradedCardOutput.php">TradedCardOutput.php</a><br>
+<a href="#UpdateMember.php">UpdateMember.php</a><br>
+<a href="#UpdateMemberInput.php">UpdateMemberInput.php</a><br>
+<a href="#UpdateMemberOutput.php">UpdateMemberOutput.php</a><br>
+<a href="#WebmoneyStartParam.php">WebmoneyStartParam.php</a><br>
+<a name="AcsParam.php"></a>
+<h1>AcsParam.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "AcsParam", use another DocBlock to document the file<br>
+<a name="AlterTran.php"></a>
+<h1>AlterTran.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 48</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\AlterTran.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AlterTranInput.php"></a>
+<h1>AlterTranInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 320</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\AlterTranInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AlterTranOutput.php"></a>
+<h1>AlterTranOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 233</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\AlterTranOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuCancelReturn.php"></a>
+<h1>AuCancelReturn.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 44</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\AuCancelReturn.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuCancelReturnInput.php"></a>
+<h1>AuCancelReturnInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 240</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\AuCancelReturnInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuCancelReturnOutput.php"></a>
+<h1>AuCancelReturnOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 209</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\AuCancelReturnOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuReceiveAuthInput.php"></a>
+<h1>AuReceiveAuthInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 215</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\AuReceiveAuthInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuReceiveOpenIDInput.php"></a>
+<h1>AuReceiveOpenIDInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 90</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\AuReceiveOpenIDInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuSales.php"></a>
+<h1>AuSales.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 44</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\AuSales.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuSalesInput.php"></a>
+<h1>AuSalesInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 240</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\AuSalesInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuSalesOutput.php"></a>
+<h1>AuSalesOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 159</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\AuSalesOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="AuStartInput.php"></a>
+<h1>AuStartInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 140</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\AuStartInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="BaseInput.php"></a>
+<h1>BaseInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 165</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\BaseInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="BaseOutput.php"></a>
+<h1>BaseOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 99</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\BaseOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="BaseTran.php"></a>
+<h1>BaseTran.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 17</b> - Unknown tag "@created" used<br>
+<b>Warning on line 235</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\BaseTran.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="CancelTranPaypal.php"></a>
+<h1>CancelTranPaypal.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 41</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\CancelTranPaypal.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="CancelTranPaypalInput.php"></a>
+<h1>CancelTranPaypalInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 230</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\CancelTranPaypalInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="CancelTranPaypalOutput.php"></a>
+<h1>CancelTranPaypalOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 131</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\CancelTranPaypalOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ChangeTran.php"></a>
+<h1>ChangeTran.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 48</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ChangeTran.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ChangeTranInput.php"></a>
+<h1>ChangeTranInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 241</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ChangeTranInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ChangeTranOutput.php"></a>
+<h1>ChangeTranOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 232</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ChangeTranOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ConnectUrlMap.php"></a>
+<h1>ConnectUrlMap.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 1</b> - Page-level DocBlock precedes "require_once 'com/gmo_pg/client/common/IgnoreCaseMap.php'", use another DocBlock to document the source element<br>
+<b>Warning on line 17</b> - Unknown tag "@created" used<br>
+<b>Warning on line 98</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\common\ConnectUrlMap.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="Cryptgram.php"></a>
+<h1>Cryptgram.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 16</b> - Unknown tag "@created" used<br>
+<b>Warning on line 104</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\common\Cryptgram.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteAuOpenID.php"></a>
+<h1>DeleteAuOpenID.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 44</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\DeleteAuOpenID.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteAuOpenIDInput.php"></a>
+<h1>DeleteAuOpenIDInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 140</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\DeleteAuOpenIDInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteAuOpenIDOutput.php"></a>
+<h1>DeleteAuOpenIDOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 109</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\DeleteAuOpenIDOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteCard.php"></a>
+<h1>DeleteCard.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\DeleteCard.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteCardInput.php"></a>
+<h1>DeleteCardInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 206</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\DeleteCardInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteCardOutput.php"></a>
+<h1>DeleteCardOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 81</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\DeleteCardOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteMember.php"></a>
+<h1>DeleteMember.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\DeleteMember.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteMemberInput.php"></a>
+<h1>DeleteMemberInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 140</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\DeleteMemberInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="DeleteMemberOutput.php"></a>
+<h1>DeleteMemberOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 84</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\DeleteMemberOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTran.php"></a>
+<h1>EntryExecTran.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 18</b> - Unknown tag "@created" used<br>
+<b>Warning on line 185</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryExecTran.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranAu.php"></a>
+<h1>EntryExecTranAu.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 132</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryExecTranAu.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranAuInput.php"></a>
+<h1>EntryExecTranAuInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 440</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryExecTranAuInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranAuOutput.php"></a>
+<h1>EntryExecTranAuOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 207</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryExecTranAuOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranCvs.php"></a>
+<h1>EntryExecTranCvs.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 18</b> - Unknown tag "@created" used<br>
+<b>Warning on line 136</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryExecTranCvs.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranCvsInput.php"></a>
+<h1>EntryExecTranCvsInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 842</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryExecTranCvsInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranCvsOutput.php"></a>
+<h1>EntryExecTranCvsOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 334</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryExecTranCvsOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranEdy.php"></a>
+<h1>EntryExecTranEdy.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 18</b> - Unknown tag "@created" used<br>
+<b>Warning on line 136</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryExecTranEdy.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranEdyInput.php"></a>
+<h1>EntryExecTranEdyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 397</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryExecTranEdyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranEdyOutput.php"></a>
+<h1>EntryExecTranEdyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 315</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryExecTranEdyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranInput.php"></a>
+<h1>EntryExecTranInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 539</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryExecTranInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranOutput.php"></a>
+<h1>EntryExecTranOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 414</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryExecTranOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranPayEasy.php"></a>
+<h1>EntryExecTranPayEasy.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 18</b> - Unknown tag "@created" used<br>
+<b>Warning on line 136</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryExecTranPayEasy.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranPayEasyInput.php"></a>
+<h1>EntryExecTranPayEasyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 784</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryExecTranPayEasyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranPayEasyOutput.php"></a>
+<h1>EntryExecTranPayEasyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 349</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryExecTranPayEasyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranPaypal.php"></a>
+<h1>EntryExecTranPaypal.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 16</b> - Unknown tag "@created" used<br>
+<b>Warning on line 132</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryExecTranPaypal.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranPaypalInput.php"></a>
+<h1>EntryExecTranPaypalInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 304</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryExecTranPaypalInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranPaypalOutput.php"></a>
+<h1>EntryExecTranPaypalOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 219</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryExecTranPaypalOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranSuica.php"></a>
+<h1>EntryExecTranSuica.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 18</b> - Unknown tag "@created" used<br>
+<b>Warning on line 136</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryExecTranSuica.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranSuicaInput.php"></a>
+<h1>EntryExecTranSuicaInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 447</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryExecTranSuicaInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranSuicaOutput.php"></a>
+<h1>EntryExecTranSuicaOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 315</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryExecTranSuicaOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranWebmoney.php"></a>
+<h1>EntryExecTranWebmoney.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 16</b> - Unknown tag "@created" used<br>
+<b>Warning on line 132</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryExecTranWebmoney.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranWebmoneyInput.php"></a>
+<h1>EntryExecTranWebmoneyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 337</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryExecTranWebmoneyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryExecTranWebmoneyOutput.php"></a>
+<h1>EntryExecTranWebmoneyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 270</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryExecTranWebmoneyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTran.php"></a>
+<h1>EntryTran.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 81</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryTran.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranAu.php"></a>
+<h1>EntryTranAu.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 65</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryTranAu.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranAuInput.php"></a>
+<h1>EntryTranAuInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 215</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryTranAuInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranAuOutput.php"></a>
+<h1>EntryTranAuOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 109</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryTranAuOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranCvs.php"></a>
+<h1>EntryTranCvs.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 65</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryTranCvs.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranCvsInput.php"></a>
+<h1>EntryTranCvsInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 200</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryTranCvsInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranCvsOutput.php"></a>
+<h1>EntryTranCvsOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 108</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryTranCvsOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranEdy.php"></a>
+<h1>EntryTranEdy.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 65</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryTranEdy.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranEdyInput.php"></a>
+<h1>EntryTranEdyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 199</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryTranEdyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranEdyOutput.php"></a>
+<h1>EntryTranEdyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 108</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryTranEdyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranInput.php"></a>
+<h1>EntryTranInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 295</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryTranInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranOutput.php"></a>
+<h1>EntryTranOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 107</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryTranOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranPayEasy.php"></a>
+<h1>EntryTranPayEasy.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 66</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryTranPayEasy.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranPayEasyInput.php"></a>
+<h1>EntryTranPayEasyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 199</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryTranPayEasyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranPayEasyOutput.php"></a>
+<h1>EntryTranPayEasyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 108</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryTranPayEasyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranPaypal.php"></a>
+<h1>EntryTranPaypal.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 65</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryTranPaypal.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranPaypalInput.php"></a>
+<h1>EntryTranPaypalInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 227</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryTranPaypalInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranPaypalOutput.php"></a>
+<h1>EntryTranPaypalOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 124</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryTranPaypalOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranSuica.php"></a>
+<h1>EntryTranSuica.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 66</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryTranSuica.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranSuicaInput.php"></a>
+<h1>EntryTranSuicaInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 199</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryTranSuicaInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranSuicaOutput.php"></a>
+<h1>EntryTranSuicaOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 108</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryTranSuicaOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranWebmoney.php"></a>
+<h1>EntryTranWebmoney.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 65</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\EntryTranWebmoney.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranWebmoneyInput.php"></a>
+<h1>EntryTranWebmoneyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 178</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\EntryTranWebmoneyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="EntryTranWebmoneyOutput.php"></a>
+<h1>EntryTranWebmoneyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 124</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\EntryTranWebmoneyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ErrHolder.php"></a>
+<h1>ErrHolder.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 11</b> - DocBlock would be page-level, but precedes class "ErrHolder", use another DocBlock to document the file<br>
+<b>Warning on line 11</b> - Unknown tag "@created" used<br>
+<a name="ExecTran.php"></a>
+<h1>ExecTran.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ExecTran.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranAu.php"></a>
+<h1>ExecTranAu.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 44</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ExecTranAu.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranAuInput.php"></a>
+<h1>ExecTranAuInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 515</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ExecTranAuInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranAuOutput.php"></a>
+<h1>ExecTranAuOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 159</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ExecTranAuOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranCvs.php"></a>
+<h1>ExecTranCvs.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 44</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ExecTranCvs.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranCvsInput.php"></a>
+<h1>ExecTranCvsInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 1094</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ExecTranCvsInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranCvsOutput.php"></a>
+<h1>ExecTranCvsOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 314</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ExecTranCvsOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranEdy.php"></a>
+<h1>ExecTranEdy.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 44</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ExecTranEdy.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranEdyInput.php"></a>
+<h1>ExecTranEdyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 432</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ExecTranEdyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranEdyOutput.php"></a>
+<h1>ExecTranEdyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 288</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ExecTranEdyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranInput.php"></a>
+<h1>ExecTranInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 552</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ExecTranInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranOutput.php"></a>
+<h1>ExecTranOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 461</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ExecTranOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranPayEasy.php"></a>
+<h1>ExecTranPayEasy.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 44</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ExecTranPayEasy.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranPayEasyInput.php"></a>
+<h1>ExecTranPayEasyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 1017</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ExecTranPayEasyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranPayEasyOutput.php"></a>
+<h1>ExecTranPayEasyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 340</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ExecTranPayEasyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranPaypal.php"></a>
+<h1>ExecTranPaypal.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ExecTranPaypal.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranPaypalInput.php"></a>
+<h1>ExecTranPaypalInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 314</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ExecTranPaypalInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranPaypalOutput.php"></a>
+<h1>ExecTranPaypalOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 155</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ExecTranPaypalOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranSuica.php"></a>
+<h1>ExecTranSuica.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 44</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ExecTranSuica.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranSuicaInput.php"></a>
+<h1>ExecTranSuicaInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 506</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ExecTranSuicaInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranSuicaOutput.php"></a>
+<h1>ExecTranSuicaOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 288</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ExecTranSuicaOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranWebmoney.php"></a>
+<h1>ExecTranWebmoney.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\ExecTranWebmoney.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranWebmoneyInput.php"></a>
+<h1>ExecTranWebmoneyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 410</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\ExecTranWebmoneyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ExecTranWebmoneyOutput.php"></a>
+<h1>ExecTranWebmoneyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 231</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\ExecTranWebmoneyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="GPayException.php"></a>
+<h1>GPayException.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - DocBlock would be page-level, but precedes class "GPayException", use another DocBlock to document the file<br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<a name="IgnoreCaseMap.php"></a>
+<h1>IgnoreCaseMap.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 172</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\common\IgnoreCaseMap.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="JobCode.php"></a>
+<h1>JobCode.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<a name="Log.php"></a>
+<h1>Log.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 248</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\common\Log.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="LogFormatter.php"></a>
+<h1>LogFormatter.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - DocBlock would be page-level, but precedes class "LogFormatter", use another DocBlock to document the file<br>
+<b>Warning on line 14</b> - Unknown tag "@created" used<br>
+<a name="Method.php"></a>
+<h1>Method.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<a name="ParamParser.php"></a>
+<h1>ParamParser.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - Unknown tag "@created" used<br>
+<b>Warning on line 89</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\common\ParamParser.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="PaypalStartParam.php"></a>
+<h1>PaypalStartParam.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "PaypalStartParam", use another DocBlock to document the file<br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<a name="RedirectUtil.php"></a>
+<h1>RedirectUtil.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 18</b> - Unknown tag "@created" used<br>
+<b>Warning on line 39</b> - Unknown tag "@reutnr" used<br>
+<b>Warning on line 82</b> - Unknown tag "@reutnr" used<br>
+<b>Warning on line 125</b> - Unknown tag "@reutnr" used<br>
+<b>Warning on line 168</b> - Unknown tag "@reutnr" used<br>
+<b>Warning on line 212</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\common\RedirectUtil.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SaveCard.php"></a>
+<h1>SaveCard.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\SaveCard.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SaveCardInput.php"></a>
+<h1>SaveCardInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 341</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\SaveCardInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SaveCardOutput.php"></a>
+<h1>SaveCardOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 1</b> - Page-level DocBlock precedes "require_once 'com/gmo_pg/client/output/BaseOutput.php'", use another DocBlock to document the source element<br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 129</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\SaveCardOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SaveMember.php"></a>
+<h1>SaveMember.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\SaveMember.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SaveMemberInput.php"></a>
+<h1>SaveMemberInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 17</b> - Unknown tag "@vars" used<br>
+<b>Warning on line 167</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\SaveMemberInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SaveMemberOutput.php"></a>
+<h1>SaveMemberOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 83</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\SaveMemberOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchCard.php"></a>
+<h1>SearchCard.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\SearchCard.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchCardInput.php"></a>
+<h1>SearchCardInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 191</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\SearchCardInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchCardOutput.php"></a>
+<h1>SearchCardOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 327</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\SearchCardOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchMember.php"></a>
+<h1>SearchMember.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\SearchMember.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchMemberInput.php"></a>
+<h1>SearchMemberInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 146</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\SearchMemberInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchMemberOutput.php"></a>
+<h1>SearchMemberOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 109</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\SearchMemberOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchTrade.php"></a>
+<h1>SearchTrade.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\SearchTrade.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchTradeInput.php"></a>
+<h1>SearchTradeInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 140</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\SearchTradeInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchTradeMulti.php"></a>
+<h1>SearchTradeMulti.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\SearchTradeMulti.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchTradeMultiInput.php"></a>
+<h1>SearchTradeMultiInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 171</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\SearchTradeMultiInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchTradeMultiOutput.php"></a>
+<h1>SearchTradeMultiOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 401</b> - Unknown tag "@return　string" used<br>
+<b>Warning on line 992</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\SearchTradeMultiOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="SearchTradeOutput.php"></a>
+<h1>SearchTradeOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 310</b> - Unknown tag "@return　string" used<br>
+<b>Warning on line 574</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\SearchTradeOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="TdVerify.php"></a>
+<h1>TdVerify.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 41</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\TdVerify.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="TdVerifyInput.php"></a>
+<h1>TdVerifyInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 116</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\TdVerifyInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="TdVerifyOutput.php"></a>
+<h1>TdVerifyOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 138</b> - Unknown tag "@reutrn" used<br>
+<b>Warning on line 359</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\TdVerifyOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="TradedCard.php"></a>
+<h1>TradedCard.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\TradedCard.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="TradedCardInput.php"></a>
+<h1>TradedCardInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 167</b> - Unknown tag "@retrun" used<br>
+<b>Warning on line 284</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\TradedCardInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="TradedCardOutput.php"></a>
+<h1>TradedCardOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 131</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\TradedCardOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="UpdateMember.php"></a>
+<h1>UpdateMember.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 1</b> - Page-level DocBlock precedes "require_once 'com/gmo_pg/client/output/UpdateMemberOutput.php'", use another DocBlock to document the source element<br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+<b>Warning on line 42</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\tran\UpdateMember.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="UpdateMemberInput.php"></a>
+<h1>UpdateMemberInput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 166</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\input\UpdateMemberInput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="UpdateMemberOutput.php"></a>
+<h1>UpdateMemberOutput.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 12</b> - Unknown tag "@created" used<br>
+<b>Warning on line 84</b> - File "C:\Mulpay\workspace\au\Mulpay-trunk-GpClientPHP\release\src\com\gmo_pg\client\output\UpdateMemberOutput.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="WebmoneyStartParam.php"></a>
+<h1>WebmoneyStartParam.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - DocBlock would be page-level, but precedes class "WebmoneyStartParam", use another DocBlock to document the file<br>
+<b>Warning on line 13</b> - Unknown tag "@created" used<br>
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 13 Mar 2012 10:26:59 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

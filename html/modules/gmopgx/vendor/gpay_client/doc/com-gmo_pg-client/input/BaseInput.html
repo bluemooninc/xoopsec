@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class BaseInput</title>
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+
+<h2 class="class-name"><img src="../../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> BaseInput</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description"><strong>API入力パラメータ基底クラス</strong></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> GMO PaymentGateway</li>
+				<li><span class="field">version:</span> 1.0</li>
+				<li><span class="field">see:</span> <a href="_com---gmo_pg---client---input---inputPackageInfo.php.html">inputPackageInfo.php</a></li>
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_com---gmo_pg---client---input---BaseInput.php.html">/com/gmo_pg/client/input/BaseInput.php</a> (line <span class="field">15</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AlterTranInput.html">AlterTranInput</a>
+					</td>
+					<td>
+											<strong>取引変更入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AuCancelReturnInput.html">AuCancelReturnInput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済決済取消　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AuReceiveAuthInput.html">AuReceiveAuthInput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済オーソリ認証結果取得　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AuReceiveOpenIDInput.html">AuReceiveOpenIDInput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済OpenID認証結果取得　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AuSalesInput.html">AuSalesInput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済売上確定　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="AuStartInput.html">AuStartInput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済OpenID連携　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="CancelTranPaypalInput.html">CancelTranPaypalInput</a>
+					</td>
+					<td>
+											<strong>Paypal払い戻し入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ChangeTranInput.html">ChangeTranInput</a>
+					</td>
+					<td>
+											<strong>金額変更入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="DeleteAuOpenIDInput.html">DeleteAuOpenIDInput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済OpenID解除　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="DeleteCardInput.html">DeleteCardInput</a>
+					</td>
+					<td>
+											<strong>カード削除入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="DeleteMemberInput.html">DeleteMemberInput</a>
+					</td>
+					<td>
+											<strong>会員削除 入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranAuInput.html">EntryTranAuInput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済取引登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranCvsInput.html">EntryTranCvsInput</a>
+					</td>
+					<td>
+											<strong>コンビニ取引登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranEdyInput.html">EntryTranEdyInput</a>
+					</td>
+					<td>
+											<strong>モバイルEdy取引登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranInput.html">EntryTranInput</a>
+					</td>
+					<td>
+											<strong>取引登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranPayEasyInput.html">EntryTranPayEasyInput</a>
+					</td>
+					<td>
+											<strong>PayEasy取引登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranPaypalInput.html">EntryTranPaypalInput</a>
+					</td>
+					<td>
+											<strong>Paypal取引登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranSuicaInput.html">EntryTranSuicaInput</a>
+					</td>
+					<td>
+											<strong>モバイルSuica取引登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="EntryTranWebmoneyInput.html">EntryTranWebmoneyInput</a>
+					</td>
+					<td>
+											<strong>Webmoney取引登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranAuInput.html">ExecTranAuInput</a>
+					</td>
+					<td>
+											<strong>auかんたん決済決済実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranCvsInput.html">ExecTranCvsInput</a>
+					</td>
+					<td>
+											<strong>コンビニ決済実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranEdyInput.html">ExecTranEdyInput</a>
+					</td>
+					<td>
+											<strong>モバイルEdy決済実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranInput.html">ExecTranInput</a>
+					</td>
+					<td>
+											<strong>決済実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranPayEasyInput.html">ExecTranPayEasyInput</a>
+					</td>
+					<td>
+											<strong>PayEasy決済実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranPaypalInput.html">ExecTranPaypalInput</a>
+					</td>
+					<td>
+											<strong>Paypal決済実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranSuicaInput.html">ExecTranSuicaInput</a>
+					</td>
+					<td>
+											<strong>モバイルSuica決済実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="ExecTranWebmoneyInput.html">ExecTranWebmoneyInput</a>
+					</td>
+					<td>
+											<strong>Webmoney決済実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SaveCardInput.html">SaveCardInput</a>
+					</td>
+					<td>
+											<strong>カード登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SaveMemberInput.html">SaveMemberInput</a>
+					</td>
+					<td>
+											<strong>会員登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SearchCardInput.html">SearchCardInput</a>
+					</td>
+					<td>
+											<strong>カード照会　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SearchMemberInput.html">SearchMemberInput</a>
+					</td>
+					<td>
+											<strong>会員照会　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SearchTradeInput.html">SearchTradeInput</a>
+					</td>
+					<td>
+											<strong>取引照会　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="SearchTradeMultiInput.html">SearchTradeMultiInput</a>
+					</td>
+					<td>
+											<strong>取引照会マルチ　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="TdVerifyInput.html">TdVerifyInput</a>
+					</td>
+					<td>
+											<strong>3D認証後取引実行　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="TradedCardInput.html">TradedCardInput</a>
+					</td>
+					<td>
+											<strong>取引後カード登録　入力パラメータクラス</strong>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="UpdateMemberInput.html">UpdateMemberInput</a>
+					</td>
+					<td>
+											<strong>会員情報更新　入力パラメータクラス</strong>
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../common/Log.html">Log</a></span>
+					<a href="#$log" title="details" class="var-name">$log</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">BaseInput</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">BaseInput</span>
+										<a href="#BaseInput" title="details" class="method-name">BaseInput</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#convertParamsMap" title="details" class="method-name">convertParamsMap</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#encodeStr" title="details" class="method-name">encodeStr</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$obj</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getIntegerValue" title="details" class="method-name">getIntegerValue</a>
+											(<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$defaultValue</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getParameterValue" title="details" class="method-name">getParameterValue</a>
+											(<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$defaultValue</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getStringValue" title="details" class="method-name">getStringValue</a>
+											(<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$defaultValue</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#nullToEmpty" title="details" class="method-name">nullToEmpty</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$obj</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setDefaultValues" title="details" class="method-name">setDefaultValues</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setInputValues" title="details" class="method-name">setInputValues</a>
+											(<span class="var-type">params</span>&nbsp;<span class="var-name">$params</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$log" id="$log"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../common/Log.html">Log</a></span>
+			<span class="var-name">$log</span>
+						(line <span class="line-number">20</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+		
+		
+
+</div>
+
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">36</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	
+	<div class="method-signature">
+		<span class="method-result">BaseInput</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="AlterTranInput.html#method__construct">AlterTranInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="AuCancelReturnInput.html#method__construct">AuCancelReturnInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="AuReceiveAuthInput.html#method__construct">AuReceiveAuthInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="AuReceiveOpenIDInput.html#method__construct">AuReceiveOpenIDInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="AuSalesInput.html#method__construct">AuSalesInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="AuStartInput.html#method__construct">AuStartInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="CancelTranPaypalInput.html#method__construct">CancelTranPaypalInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ChangeTranInput.html#method__construct">ChangeTranInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="DeleteAuOpenIDInput.html#method__construct">DeleteAuOpenIDInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="DeleteCardInput.html#method__construct">DeleteCardInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="DeleteMemberInput.html#method__construct">DeleteMemberInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranAuInput.html#method__construct">EntryTranAuInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranCvsInput.html#method__construct">EntryTranCvsInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranEdyInput.html#method__construct">EntryTranEdyInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranInput.html#method__construct">EntryTranInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranPayEasyInput.html#method__construct">EntryTranPayEasyInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranPaypalInput.html#method__construct">EntryTranPaypalInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranSuicaInput.html#method__construct">EntryTranSuicaInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="EntryTranWebmoneyInput.html#method__construct">EntryTranWebmoneyInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranAuInput.html#method__construct">ExecTranAuInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranCvsInput.html#method__construct">ExecTranCvsInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranEdyInput.html#method__construct">ExecTranEdyInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranInput.html#method__construct">ExecTranInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranPayEasyInput.html#method__construct">ExecTranPayEasyInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranPaypalInput.html#method__construct">ExecTranPaypalInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranSuicaInput.html#method__construct">ExecTranSuicaInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="ExecTranWebmoneyInput.html#method__construct">ExecTranWebmoneyInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SaveCardInput.html#method__construct">SaveCardInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SaveMemberInput.html#method__construct">SaveMemberInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SearchCardInput.html#method__construct">SearchCardInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SearchMemberInput.html#method__construct">SearchMemberInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SearchTradeInput.html#method__construct">SearchTradeInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="SearchTradeMultiInput.html#method__construct">SearchTradeMultiInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="TdVerifyInput.html#method__construct">TdVerifyInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="TradedCardInput.html#method__construct">TradedCardInput::__construct()</a>
+								: コンストラクタ
+							</li>
+					<li>
+				<a href="UpdateMemberInput.html#method__construct">UpdateMemberInput::__construct()</a>
+								: コンストラクタ
+							</li>
+				</ul>
+	</div>
+<a name="methodBaseInput" id="BaseInput"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor BaseInput</span> (line <span class="line-number">27</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	
+	<div class="method-signature">
+		<span class="method-result">BaseInput</span>
+		<span class="method-name">
+			BaseInput
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconvertParamsMap" id="convertParamsMap"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">convertParamsMap</span> (line <span class="line-number">119</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">入力パラメータ変換</p>
+<p class="description"><p>パラメータのarrayからIgnoreCaseMapを生成して返す。</p><p></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			convertParamsMap
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodencodeStr" id="encodeStr"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">encodeStr</span> (line <span class="line-number">56</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">指定のオブジェクトのURLエンコード文字列表現取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 変換後の文字列</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			encodeStr
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$obj</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$obj</span><span class="var-description">: 変換対象オブジェクト</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIntegerValue" id="getIntegerValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getIntegerValue</span> (line <span class="line-number">102</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">入力パラメータ数値取得</p>
+<p class="description"><p>$nameパラメータを返却する。値が数値以外の場合、nullを返却する。</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 入力パラメータの値</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getIntegerValue
+		</span>
+					(<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$defaultValue</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: パラメータ名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$defaultValue</span><span class="var-description">: デフォルト値</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetParameterValue" id="getParameterValue"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getParameterValue</span> (line <span class="line-number">72</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">入力パラメータ値取得</p>
+<p class="description"><p>指定のパラメータが見つからなかったときはデフォルト値を返す</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getParameterValue
+		</span>
+					(<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$defaultValue</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: パラメータ名</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$defaultValue</span><span class="var-description">: デフォルト値</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetStringValue" id="getStringValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getStringValue</span> (line <span class="line-number">87</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">入力パラメータ値取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 入力パラメータの値</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getStringValue
+		</span>
+					(<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>&nbsp;<span class="var-name">$params</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$defaultValue</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../common/IgnoreCaseMap.html">IgnoreCaseMap</a></span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: パラメータ名</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$defaultValue</span><span class="var-description">: デフォルト値</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnullToEmpty" id="nullToEmpty"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">nullToEmpty</span> (line <span class="line-number">147</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">文字列がnullだったら空、それ以外なら元の文字列を返す</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 変換後の文字列</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			nullToEmpty
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$obj</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$obj</span><span class="var-description">: 変換対象オブジェクト</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDefaultValues" id="setDefaultValues"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDefaultValues</span> (line <span class="line-number">154</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">デフォルト値を設定する</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setDefaultValues
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="AuCancelReturnInput.html#methodsetDefaultValues">AuCancelReturnInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="AuReceiveAuthInput.html#methodsetDefaultValues">AuReceiveAuthInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="AuReceiveOpenIDInput.html#methodsetDefaultValues">AuReceiveOpenIDInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="AuSalesInput.html#methodsetDefaultValues">AuSalesInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="AuStartInput.html#methodsetDefaultValues">AuStartInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="CancelTranPaypalInput.html#methodsetDefaultValues">CancelTranPaypalInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="DeleteAuOpenIDInput.html#methodsetDefaultValues">DeleteAuOpenIDInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="DeleteCardInput.html#methodsetDefaultValues">DeleteCardInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="DeleteMemberInput.html#methodsetDefaultValues">DeleteMemberInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="EntryTranAuInput.html#methodsetDefaultValues">EntryTranAuInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="EntryTranCvsInput.html#methodsetDefaultValues">EntryTranCvsInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="EntryTranEdyInput.html#methodsetDefaultValues">EntryTranEdyInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="EntryTranInput.html#methodsetDefaultValues">EntryTranInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="EntryTranPayEasyInput.html#methodsetDefaultValues">EntryTranPayEasyInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="EntryTranPaypalInput.html#methodsetDefaultValues">EntryTranPaypalInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="EntryTranSuicaInput.html#methodsetDefaultValues">EntryTranSuicaInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="EntryTranWebmoneyInput.html#methodsetDefaultValues">EntryTranWebmoneyInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="ExecTranAuInput.html#methodsetDefaultValues">ExecTranAuInput::setDefaultValues()</a>
+								: デフォルト値設定
+							</li>
+					<li>
+				<a href="ExecTranCvsInput.html#methodsetDefaultValues">ExecTranCvsInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="ExecTranEdyInput.html#methodsetDefaultValues">ExecTranEdyInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="ExecTranInput.html#methodsetDefaultValues">ExecTranInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="ExecTranPayEasyInput.html#methodsetDefaultValues">ExecTranPayEasyInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="ExecTranPaypalInput.html#methodsetDefaultValues">ExecTranPaypalInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="ExecTranSuicaInput.html#methodsetDefaultValues">ExecTranSuicaInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="ExecTranWebmoneyInput.html#methodsetDefaultValues">ExecTranWebmoneyInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="SaveCardInput.html#methodsetDefaultValues">SaveCardInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="SaveMemberInput.html#methodsetDefaultValues">SaveMemberInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="SearchCardInput.html#methodsetDefaultValues">SearchCardInput::setDefaultValues()</a>
+								: デフォルト値設定する
+							</li>
+					<li>
+				<a href="SearchMemberInput.html#methodsetDefaultValues">SearchMemberInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="SearchTradeInput.html#methodsetDefaultValues">SearchTradeInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="SearchTradeMultiInput.html#methodsetDefaultValues">SearchTradeMultiInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="TdVerifyInput.html#methodsetDefaultValues">TdVerifyInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="TradedCardInput.html#methodsetDefaultValues">TradedCardInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+					<li>
+				<a href="UpdateMemberInput.html#methodsetDefaultValues">UpdateMemberInput::setDefaultValues()</a>
+								: デフォルト値を設定する
+							</li>
+				</ul>
+	</div>
+<a name="methodsetInputValues" id="setInputValues"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setInputValues</span> (line <span class="line-number">162</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">入力パラメータ群の値を設定する</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setInputValues
+		</span>
+					(<span class="var-type">params</span>&nbsp;<span class="var-name">$params</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">params</span>
+				<span class="var-name">$params</span><span class="var-description">: 入力パラメータ</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="AlterTranInput.html#methodsetInputValues">AlterTranInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="AuCancelReturnInput.html#methodsetInputValues">AuCancelReturnInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="AuReceiveAuthInput.html#methodsetInputValues">AuReceiveAuthInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="AuReceiveOpenIDInput.html#methodsetInputValues">AuReceiveOpenIDInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="AuSalesInput.html#methodsetInputValues">AuSalesInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="AuStartInput.html#methodsetInputValues">AuStartInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="CancelTranPaypalInput.html#methodsetInputValues">CancelTranPaypalInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ChangeTranInput.html#methodsetInputValues">ChangeTranInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="DeleteAuOpenIDInput.html#methodsetInputValues">DeleteAuOpenIDInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="DeleteCardInput.html#methodsetInputValues">DeleteCardInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="DeleteMemberInput.html#methodsetInputValues">DeleteMemberInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="EntryTranAuInput.html#methodsetInputValues">EntryTranAuInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="EntryTranCvsInput.html#methodsetInputValues">EntryTranCvsInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="EntryTranEdyInput.html#methodsetInputValues">EntryTranEdyInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="EntryTranInput.html#methodsetInputValues">EntryTranInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="EntryTranPayEasyInput.html#methodsetInputValues">EntryTranPayEasyInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="EntryTranPaypalInput.html#methodsetInputValues">EntryTranPaypalInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="EntryTranSuicaInput.html#methodsetInputValues">EntryTranSuicaInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="EntryTranWebmoneyInput.html#methodsetInputValues">EntryTranWebmoneyInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ExecTranAuInput.html#methodsetInputValues">ExecTranAuInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ExecTranCvsInput.html#methodsetInputValues">ExecTranCvsInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ExecTranEdyInput.html#methodsetInputValues">ExecTranEdyInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ExecTranInput.html#methodsetInputValues">ExecTranInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ExecTranPayEasyInput.html#methodsetInputValues">ExecTranPayEasyInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ExecTranPaypalInput.html#methodsetInputValues">ExecTranPaypalInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ExecTranSuicaInput.html#methodsetInputValues">ExecTranSuicaInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="ExecTranWebmoneyInput.html#methodsetInputValues">ExecTranWebmoneyInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="SaveCardInput.html#methodsetInputValues">SaveCardInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="SaveMemberInput.html#methodsetInputValues">SaveMemberInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="SearchCardInput.html#methodsetInputValues">SearchCardInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="SearchMemberInput.html#methodsetInputValues">SearchMemberInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="SearchTradeInput.html#methodsetInputValues">SearchTradeInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="SearchTradeMultiInput.html#methodsetInputValues">SearchTradeMultiInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="TdVerifyInput.html#methodsetInputValues">TdVerifyInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="TradedCardInput.html#methodsetInputValues">TradedCardInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+					<li>
+				<a href="UpdateMemberInput.html#methodsetInputValues">UpdateMemberInput::setInputValues()</a>
+								: 入力パラメータ群の値を設定する
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 13 Mar 2012 10:26:48 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
