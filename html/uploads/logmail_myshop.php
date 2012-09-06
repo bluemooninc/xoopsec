@@ -3377,3 +3377,47 @@ Template name : command_client_verified.tpl
 Email subject : オンライン決済の認証が済みました。
 Recipient(s) : bm2@d4.dion.ne.jp
 Transmited variables : ,6
+------------------------------------------------------------------------------------------------------------------------
+28/08/2012 13:54:42
+Template name : command_client.tpl
+Email subject : Thank you for your order on the website XOOPS Cube Site
+Recipient(s) : bm2@d4.dion.ne.jp
+Transmited variables : 麦のごちそう                                                  1      452.9        350
+
+
+配送料・手数料 350 円
+注文合計 453 円
+,7,酒井,,品川区大井2-3-20-503,140-0014,東京都,Japan,03-5743-3580,bm2@d4.dion.ne.jp,http://localhost/gmopg/html/modules/myshop/invoice.php?id=7&pass=f39c74211ec0f2536a4cb7817616171b,::1,いいえ
+------------------------------------------------------------------------------------------------------------------------
+28/08/2012 13:54:42
+Template name : command_shop.tpl
+Email subject : New purchase on the site
+Recipient(s) : bm2@d4.dion.ne.jp
+Transmited variables : 麦のごちそう                                                  1      452.9        350
+
+
+配送料・手数料 350 円
+注文合計 453 円
+,7,酒井,,品川区大井2-3-20-503,140-0014,東京都,Japan,03-5743-3580,bm2@d4.dion.ne.jp,http://localhost/gmopg/html/modules/myshop/invoice.php?id=7&pass=f39c74211ec0f2536a4cb7817616171b,::1,いいえ
+------------------------------------------------------------------------------------------------------------------------
+28/08/2012 14:02:47
+Template name : command_client.tpl
+Email subject : Thank you for your order on the website XOOPS Cube Site
+Recipient(s) : bm2@d4.dion.ne.jp
+Transmited variables : 麦のごちそう                                                  1      452.9        350
+
+
+配送料・手数料 350 円
+注文合計 453 円
+,8,酒井,,品川区大井2-3-20-503,140-0014,東京都,Japan,03-5743-3580,bm2@d4.dion.ne.jp,http://localhost/gmopg/html/modules/myshop/invoice.php?id=8&pass=95465c0af5dcf4ed89982ead2f8ad180,::1,いいえ
+------------------------------------------------------------------------------------------------------------------------
+28/08/2012 14:02:47
+Template name : command_shop.tpl
+Email subject : New purchase on the site
+Recipient(s) : bm2@d4.dion.ne.jp
+Transmited variables : 麦のごちそう                                                  1      452.9        350
+
+
+配送料・手数料 350 円
+注文合計 453 円
+,8,酒井,,品川区大井2-3-20-503,140-0014,東京都,Japan,03-5743-3580,bm2@d4.dion.ne.jp,http://localhost/gmopg/html/modules/myshop/invoice.php?id=8&pass=95465c0af5dcf4ed89982ead2f8ad180,::1,いいえ
