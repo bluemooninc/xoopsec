@@ -7,10 +7,10 @@
  */
 include_once dirname(dirname(__FILE__))."/class/bmcart_session.php";
 
-function b_bmcart_checked_items_show()
+function b_bmcart_checkedItems_show()
 {
 	// For Category Selector
-	$handler = xoops_getmodulehandler("checked_items", "bmcart");
+	$handler = xoops_getmodulehandler("checkedItems", "bmcart");
 	$itemHandler = xoops_getmodulehandler("item", "bmcart");
 	$imageHandler = xoops_getmodulehandler("itemImages", "bmcart");
 	$criteria = new CriteriaCompo();

@@ -3,7 +3,7 @@ if (!defined('XOOPS_ROOT_PATH')) exit();
 /*
  * {Dirname}_{Filename} : Naming convention for Model
  */
-class bmcart_checked_itemsObject extends XoopsSimpleObject
+class bmcart_checkedItemsObject extends XoopsSimpleObject
 {
     public function __construct()
     {
@@ -14,11 +14,11 @@ class bmcart_checked_itemsObject extends XoopsSimpleObject
     }
 }
 
-class bmcart_checked_itemsHandler extends XoopsObjectGenericHandler
+class bmcart_checkedItemsHandler extends XoopsObjectGenericHandler
 {
-    public $mTable = 'bmcart_checked_items';
+    public $mTable = 'bmcart_checkedItems';
     public $mPrimary = 'uid,item_id';
-    public $mClass = 'bmcart_checked_itemsObject';
+    public $mClass = 'bmcart_checkedItemsObject';
     public $id;
 
     public function __construct(&$db)

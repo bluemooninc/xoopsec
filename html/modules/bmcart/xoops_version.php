@@ -79,11 +79,11 @@ $modversion['blocks'][2] = array(
 	'show_all_module' => false
 );
 $modversion['blocks'][3] = array(
-	'file' => "bmcart_checked_items.php",
-	'name' => _MI_BMCART_BLOCK_CHECKED_ITEMS,
-	'description' => _MI_BMCART_BLOCK_CHECKED_ITEMS_DESC,
-	'show_func' => "b_bmcart_checked_items_show",
-	'template' => 'bmcart_block_checked_items.html',
+	'file' => "bmcart_checkedItems.php",
+	'name' => _MI_BMCART_BLOCK_checkedItems,
+	'description' => _MI_BMCART_BLOCK_checkedItems_DESC,
+	'show_func' => "b_bmcart_checkedItems_show",
+	'template' => 'bmcart_block_checkedItems.html',
 	'visible_any' => true,
 	'show_all_module' => false
 );

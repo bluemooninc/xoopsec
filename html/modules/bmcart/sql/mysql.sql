@@ -98,7 +98,7 @@ CREATE TABLE {prefix}_{dirname}_orderItems (
 ##
 ## Check history
 ##
-CREATE TABLE {prefix}_{dirname}_checked_items (
+CREATE TABLE {prefix}_{dirname}_checkedItems (
   `uid` int(8) unsigned NOT NULL,
   `item_id` int(8) unsigned NOT NULL,
   `category_id` int(8) unsigned NOT NULL,

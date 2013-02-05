@@ -56,7 +56,7 @@ class bmcart_session{
 	 * @param $uid
 	 */
 	public function setCheckedItems($checkedItems,$uid){
-		$checkedHandler =& xoops_getModuleHandler('checked_items','bmcart');
+		$checkedHandler =& xoops_getModuleHandler('checkedItems','bmcart');
 		foreach($checkedItems as $object){
 			$checkedObject = $checkedHandler->get(array($uid,$object->getVar('item_id')));
 			if(!$checkedObject){

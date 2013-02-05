@@ -82,7 +82,7 @@ class Model_Item extends AbstractModel {
 	{
 		$this->myHandler =& xoops_getModuleHandler('item');
 		$object = $this->myHandler->get($item_id);
-		$checkedHandler =& xoops_getModuleHandler('checked_items');
+		$checkedHandler =& xoops_getModuleHandler('checkedItems');
 		$uid = Legacy_Utils::getUid();
 		$checkedObject = $checkedHandler->get(array($uid,$item_id));
 		if (!$checkedObject){
