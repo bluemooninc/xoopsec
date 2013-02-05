@@ -5,7 +5,7 @@ require_once XOOPS_MODULE_PATH . "/bmcart/class/ActionFrame.class.php";
 
 $root = XCube_Root::getSingleton();
 
-$actionName = xoops_getrequest('action') ? xoops_getrequest('action') : "ItemList";
+$actionName = xoops_getrequest('action') ? xoops_getrequest('action') : "CategoryList";
 
 $moduleRunner = new bmcart_ActionFrame(true);
 $moduleRunner->setActionName($actionName);
