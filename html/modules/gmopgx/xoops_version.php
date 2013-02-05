@@ -14,6 +14,7 @@ $modversion["dirname"] = basename(dirname(__FILE__));
 $modversion['hasMain'] = 1;
 $modversion['version'] = 0.03;
 $modversion['hasAdmin'] = 1;
+$modversion['image'] = "gmopg.png";
 $modversion['adminindex'] = "admin/index.php";
 $modversion['adminmenu'] = "admin/menu.php";
 $modDir = XOOPS_URL . "/modules/" . $modversion["dirname"];
