@@ -29,12 +29,12 @@ class Controller_searchCard extends AbstractAction{
 
 	public function index(){
         global $xoopsUser;
-        $this->listdata = gmopg::get_listdata($xoopsUser->getVar('uid'));
+        $this->listdata = gmopg::get_listdata($xoopsUser->getVar('uid')."-".$xoopsUser->getVar('uname'));
     }
 	public function submit(){
         global $xoopsUser;
         if( isset( $_POST['submit'] ) ){
-            $this->listdata = gmopg::get_listdata($xoopsUser->getVar('uid'));
+            $this->listdata = gmopg::get_listdata($xoopsUser->getVar('uid')."-".$xoopsUser->getVar('uname'));
 		}
 	}
 }

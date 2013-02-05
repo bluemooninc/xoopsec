@@ -33,7 +33,9 @@ class Xupdate_Ftp_ extends Xupdate_Ftp_Abstract {
 
 		$key = new Crypt_RSA();
 		$key->setPassword( $ftp_pass );
-		$key->loadKey( $this->mod_config['SSH_key'] );
+		if ($this->mod_config['SSH_key']) { // if 'SSH_key' is empty so PHP make Fatal error
+			$key->loadKey( $this->mod_config['SSH_key'] );
+		}
 		$port = (int)$this->mod_config['SSH_port'];
 
 		//phpseclib
@@ -104,7 +106,7 @@ class Xupdate_Ftp_ extends Xupdate_Ftp_Abstract {
 	 *
 	 * @return	void
 	 **/
-	public function quit() {
+	public function quit($force=false) {
 		$this->sftp->disconnect();
 	}
 

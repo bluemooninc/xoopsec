@@ -23,7 +23,7 @@ $basename = basename($dirname);
 // Define a basic manifesto.
 //
 $modversion['name'] = _MI_XUPDATE_LANG_XUPDATE;
-$modversion['version'] = '0.08';//alpha3
+$modversion['version'] = '0.36';
 $modversion['description'] = _MI_XUPDATE_DESC_XUPDATE;
 $modversion['author'] = _MI_XUPDATE_LANG_AUTHOR;
 $modversion['credits'] = _MI_XUPDATE_LANG_CREDITS;
@@ -55,6 +55,7 @@ $modversion['legacy_installer'] = array(
 $modversion['disable_legacy_2nd_installer'] = false;
 
 $modversion['sqlfile']['mysql'] = 'sql/mysql.sql';
+$modversion['sqlfile']['pdo_pgsql'] = 'sql/pdo_pgsql.sql';
 $modversion['tables'] = array(
 //	  '{prefix}_{dirname}_xxxx',
 ##[cubson:tables]
@@ -75,10 +76,7 @@ $modversion['templates'] = array(
 */
 ##[cubson:templates]
 		//array('file' => '{dirname}_admin_storeview.html','admin' => 'adminmenu'),
-		array('file' => '{dirname}_store_delete.html','description' => _MI_XUPDATE_TPL_STORE_DELETE),
-		array('file' => '{dirname}_store_edit.html','description' => _MI_XUPDATE_TPL_STORE_EDIT),
-		array('file' => '{dirname}_store_list.html','description' => _MI_XUPDATE_TPL_STORE_LIST),
-		array('file' => '{dirname}_store_view.html','description' => _MI_XUPDATE_TPL_STORE_VIEW),
+		array('file' => '{dirname}_modulestore_inc.html','description' => _MI_XUPDATE_TPL_MODULESTORE_INC),
 ##[/cubson:templates]
 );
 
@@ -98,6 +96,13 @@ $modversion['adminmenu'] = array(
 			'show'	=> true,
 			'absolute' => false
 	),
+//	array(
+//		'title'		=> _MI_XUPDATE_ADMENU_PACKAGE,
+//		'link'	=> 'admin/index.php?action=PackageStore',
+//		'keywords'	=> _MI_XUPDATE_ADMENU_PACKAGE,
+//		'show'	=> true,
+//		'absolute' => false
+//	),
 	array(
 		'title'		=> _MI_XUPDATE_ADMENU_MODULE,
 		'link'	=> 'admin/index.php?action=ModuleStore',
@@ -117,6 +122,13 @@ $modversion['adminmenu'] = array(
 		'title'		=> _MI_XUPDATE_ADMENU_THEMEFINDER,
 		'link'	=> 'admin/index.php?action=ThemeFinder',
 		'keywords'	=> _MI_XUPDATE_ADMENU_THEMEFINDER,
+		'show'	=> true,
+		'absolute' => false
+	),
+	array(
+		'title'		=> _MI_XUPDATE_ADMENU_PRELOAD,
+		'link'	=> 'admin/index.php?action=PreloadStore',
+		'keywords'	=> _MI_XUPDATE_ADMENU_PRELOAD,
 		'show'	=> true,
 		'absolute' => false
 	)
@@ -178,10 +190,11 @@ $modversion['config'] = array(
 		'name'		=> 'ftp_method' ,
 		'title'		=> '_MI_XUPDATE_FTP_METHOD',
 		'description'	=> '_MI_XUPDATE_FTP_METHODDSC',
-		'formtype'	=> 'select',
+		'formtype'	=> defined('_MI_LEGACY_DETAILED_VERSION')? (version_compare(_MI_LEGACY_DETAILED_VERSION, 'CorePack 20121230', '>=')? 'radio' : (version_compare(_MI_LEGACY_DETAILED_VERSION, 'CorePack 20120825', '>=')? 'radio_br' : 'select')) : 'select',
 		'valuetype'	=> 'int',
-		'default'	=> '0',
-		'options'	=> array( '_MI_XUPDATE_CUSTOM_FTP' => 0,
+		'default'	=> '4',
+		'options'	=> array( '_MI_XUPDATE_DIRECT' => 4,
+						'_MI_XUPDATE_CUSTOM_FTP' => 0,
 						'_MI_XUPDATE_PHP_FTP' => 1,
 						'_MI_XUPDATE_CUSTOM_SFTP' => 2,
 						'_MI_XUPDATE_CUSTOM_SSH2' => 3
@@ -196,6 +209,16 @@ $modversion['config'] = array(
 		'valuetype'	=> 'int' ,
 		'default'	=> 0 ,
 		'options'	=> array()
+	) ,
+
+	array(
+			'name'		=> 'FTP_server' ,
+			'title'		=> '_MI_XUPDATE_FTP_SERVER',
+			'description'	=> '_MI_XUPDATE_FTP_SERVERDSC',
+			'formtype'	=> 'text',
+			'valuetype'	=> 'string',
+			'default'	=> '127.0.0.1',
+			'options'	=> array(),
 	) ,
 
 	array(
@@ -239,6 +262,36 @@ $modversion['config'] = array(
 	) ,
 
 	array(
+		'name'		=> 'php_perm' ,
+		'title'		=> '_MI_XUPDATE_PHP_PERM',
+		'description'	=> '_MI_XUPDATE_PHP_PERMDSC',
+		'formtype'	=> 'text',
+		'valuetype'	=> 'string',
+		'default'	=> '',
+		'options'	=> array(),
+	) ,
+
+	array(
+		'name'          => 'tag_dirname' ,
+		'title'         => '_MI_XUPDATE_TAG_DIRNAME' ,
+		'description'   => '_MI_XUPDATE_TAG_DIRNAMEDSC' ,
+		'formtype'      => 'server_module',
+		'valuetype'     => 'text',
+		'default'       => '',
+		'options'       => array('none','tag')
+	) ,
+
+	array(
+		'name'          => 'xelfinder_dirname' ,
+		'title'         => '_MI_XUPDATE_XEL_DIRNAME' ,
+		'description'   => '_MI_XUPDATE_XEL_DIRNAMEDSC' ,
+		'formtype'      => 'text',
+		'valuetype'     => 'string',
+		'default'       => 'xelfinder',
+		'options'       => array()
+	) ,
+
+	array(
 		'name'		=> 'Show_debug',
 		'title'		=> '_MI_XUPDATE_DEBUG' ,
 		'description'	=> '',
@@ -247,6 +300,7 @@ $modversion['config'] = array(
 		'default'	=> 0 ,
 		'options'	=> array(),
 	) ,
+
 	array(
 		'name'		=> 'Theme_download_Url_format',
 		'title'		=> '_MI_XUPDATE_FTP_THEME_URL' ,
@@ -256,6 +310,26 @@ $modversion['config'] = array(
 		'default'	=> 'http://cmsthemefinder.com/modules/lica/index.php?controller=download&id=%u',
 		'options'	=> array(),
 	) ,
+
+	array(
+		'name'		=> 'stores_json_url',
+		'title'		=> '_MI_XUPDATE_FTP_STORE_URL' ,
+		'description'	=> '',
+		'formtype'	=> 'text',
+		'valuetype'	=> 'string',
+		'default'	=> 'http://xoopscube.net/uploads/xupdatemaster/stores_json_V1.txt',
+		'options'	=> array(),
+	) ,
+
+	array(
+			'name'		=> 'show_disabled_store',
+			'title'		=> '_MI_XUPDATE_SHOW_DISABLED_STORE' ,
+			'description'	=> '_MI_XUPDATE_SHOW_DISABLED_STOREDSC',
+			'formtype'	=> 'yesno',
+			'valuetype'	=> 'int',
+			'default'	=> 0 ,
+			'options'	=> array(),
+	)
 
 ##[cubson:config]
 ##[/cubson:config]
@@ -278,6 +352,18 @@ $modversion['blocks'] = array(
 		'visible_any'		=> true
 	),
 */
+	1 => array(
+			'func_num'          => 1,
+			'file'              => 'NotifyBlock.class.php',
+			'class'             => 'NotifyBlock',
+			'name'              => 'X-update Notify',
+			'description'       => '',
+			'options'           => '',
+			'template'          => '',
+			'show_all_module'   => true,
+			'can_clone'         => true,
+			'visible_any'       => false
+	),
 ##[cubson:block]
 ##[/cubson:block]
 );

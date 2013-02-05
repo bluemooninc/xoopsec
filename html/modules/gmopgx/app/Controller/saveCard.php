@@ -48,7 +48,7 @@ class Controller_SaveCard extends AbstractAction{
 			$input->setSitePass( $xoopsModuleConfig['PGCARD_SITE_PASS'] );
 			
 			//会員IDは必須です
-			$input->setMemberId( $xoopsUser->uid() );
+			$input->setMemberId( $xoopsUser->uid() . "-" .$xoopsUser->uname() );
 			
 			//カード登録連番が指定された場合、パラメータに設定します。
 			$cardSeq = $_POST['CardSeq'];

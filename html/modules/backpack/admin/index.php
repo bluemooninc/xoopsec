@@ -32,6 +32,7 @@ require('../include/read_dump.lib.php');
 // Include backup functions
 include("backup.ini.php");
 include("../class/class.backpack.php");
+include("../class/TableName.class.php");
 
 xoops_cp_header();
 
@@ -143,10 +144,12 @@ switch ($mode) {
 		if (isset($_POST['data'])) $backup_data = ($_POST['data'] == "on") ? 1 : 0;
 		$dirname = isset($_POST['dirname']) ? $_POST['dirname'] : 0;
 		if ($dirname){
-			if (strcmp($dirname,"system")==0)
+			if (strcmp($dirname,"system")==0){
 				$result = $sys_tables;
-			else
-				$result = $bp->get_module_tables($dirname);
+			} else {
+				$tableName = new TableName();
+				$result = $tableName->get_module_tables($dirname);
+			}
 			$num_tables = sizeof($result);
 		}else{
 			$result = mysql_list_tables($db_selected);

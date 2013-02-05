@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>"/>
+	<meta http-equiv="content-style-type" content="text/css"/>
+	<meta http-equiv="content-script-type" content="text/javascript"/>
+	<meta http-equiv="content-language" content="<{$xoops_langcode}>"/>
+	<meta name="robots" content="<{$xoops_meta_robots}>"/>
+	<meta name="keywords" content="<{$xoops_meta_keywords}>"/>
+	<meta name="description" content="<{$xoops_meta_description}>"/>
+	<meta name="rating" content="<{$xoops_meta_rating}>"/>
+	<meta name="author" content="<{$xoops_meta_author}>"/>
+	<meta name="copyright" content="<{$xoops_meta_copyright}>"/>
+	<meta name="generator" content="XOOPS Cube"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+	<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>"/>
+	<link rel="stylesheet" href="<{$xoops_imageurl}>/css/bootstrap.css">
+	<link rel="stylesheet" href="<{$xoops_imageurl}>/css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="<{$xoops_imageurl}>css/override.css">
+	<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.8.16.custom.css" type="text/css">
+	<script src="<{$xoops_imageurl}>/js/jquery-1.8.2.min.js"></script>
+	<script src="<{$xoops_imageurl}>/js/bootstrap.js"></script>
+	<!-- RMV: added module header -->
+	<{$xoops_module_header}>
+	<script type="text/javascript"><
+	{
+		$xoops_js
+	}
+	></script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<div class="nav-collapse">
+				<ul class="nav">
+					<{* Site Title *}>
+					<a class="brand" href="<{$xoops_url}>/">
+						<{$xoops_sitename}>
+					</a>
+					<{if $moduleMenu}>
+					<{foreach item=modMenu from=$moduleMenu}>
+					<{if $modMenu.sublinks}>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="<{$modMenu.name}>">
+							<{$modMenu.name}>
+							<{if $modMenu.sublinks}>
+							<b class="caret"></b>
+							<{/if}>
+						</a>
+						<!-- Drop down -->
+						<ul class="dropdown-menu">
+							<{foreach item=subMenu from=$modMenu.sublinks}>
+							<{if $subMenu.dropdown}>
+							<li class="dropdown nondot">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									<i class="icon-white icon-th-list"></i>
+									<{$subMenu.name}>
+									<b class="caret"></b></a>
+								<!-- Drop down -->
+								<ul class="dropdown-menu">
+									<{foreach item=dropwdown from=$subMenu.dropdown}>
+									<li>
+										<a href="<{$dropwdown.url}>"><{$dropwdown.name}></a>
+									</li>
+									<{/foreach}>
+								</ul>
+							</li>
+							<{else}>
+							<{if $subMenu.url}>
+							<li>
+								<a href="<{$subMenu.url}>"><{$subMenu.name}></a>
+							</li>
+							<{else}>
+							<li class="submenu-title">
+								<{$subMenu.name}>
+							</li>
+							<{/if}>
+							<{/if}>
+							<{/foreach}>
+							<{include file='db:system_notification_select.html'}>
+						</ul>
+					</li>
+					<li class="divider-vertical"></li>
+					<{/if}>
+					<{/foreach}>
+					<{/if}>
+					<{* Left Block for ground Menu *}>
+					<{foreach item=block from=$xoops_cgblocks}>
+					<li class="dropdown">
+						<a href="#"
+						   class="dropdown-toggle"
+						   data-toggle="dropdown">
+							<i class="icon-white icon-th-list"></i>
+							<{$block.title}>
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<{$block.content}>
+						</ul>
+					</li>
+					<li class="divider-vertical"></li>
+					<{/foreach}>
+
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+			<div class="btn-group pull-right">
+				<{if $xoops_uname}>
+				<a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
+					<i class="icon-user"></i>
+					<span class="caret"></span>
+					<{$xoops_uname}>
+				</a>
+				<{else}>
+				<a class="btn btn-primary" href="<{$xoops_url}>/user.php">Login</a>
+				<{/if}>
+				<{if $xoops_uname}>
+				<ul class="dropdown-menu">
+					<{if $xoops_isadmin}>
+					<li class="userMenuAdmin"><a
+							href="<{$xoops_url}>/admin.php"><{$smarty.const._MB_LEGACY_ADMENU}></a></li>
+					<li class="divider"></li>
+					<{/if}>
+					<{include file='db:legacy_block_usermenu.html'}>
+				</ul>
+				<{/if}>
+				<{* Scroll down button *}>
+			</div>
+			<div class="GlobalSearchBox pull-right">
+				<form action="<{$xoops_url}>/search.php" method="get">
+					<input id="globalSearch" class="Search-box PngBg" type="text" name="query" size="22"/>
+					<input type="hidden" name="action" value="results"/>
+					<!-- <button name="submit" type="submit" value="search" accesskey="F">Search</button> -->
+				</form>
+			</div>
+			<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<header class="jumbotron subhead" id="overview">
+	<div class="container">
+		<h2><{$xoops_slogan}></h2>
+	</div>
+</header>
+<br/>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<{if $xoops_showlblock==1 && $xoops_showcblock==1 && $xoops_showrblock==1}>
+		<{assign var="sidespan" value="span2"}>
+		<{assign var="centerspan" value="span8"}>
+		<{elseif $xoops_showlblock==0 && $xoops_showcblock==1 && $xoops_showrblock==1}>
+		<{assign var="sidespan" value="span3"}>
+		<{assign var="centerspan" value="span9"}>
+		<{elseif $xoops_showlblock==1 && $xoops_showcblock==1 && $xoops_showrblock==0}>
+		<{assign var="sidespan" value="span3"}>
+		<{assign var="centerspan" value="span9"}>
+		<{elseif $xoops_showlblock==0 && $xoops_showcblock==1 && $xoops_showrblock==0}>
+		<{assign var="sidespan" value="span0"}>
+		<{assign var="centerspan" value="span12"}>
+		<{elseif $xoops_showlblock==1 && $xoops_showcblock==0 && $xoops_showrblock==0}>
+		<{assign var="sidespan" value="span12"}>
+		<{assign var="centerspan" value="span0"}>
+		<{elseif $xoops_showlblock==0 && $xoops_showcblock==0 && $xoops_showrblock==1}>
+		<{assign var="sidespan" value="span3"}>
+		<{assign var="centerspan" value="span9"}>
+		<{elseif $xoops_showlblock==1 && $xoops_showcblock==0 && $xoops_showrblock==1}>
+		<{assign var="sidespan" value="span2"}>
+		<{assign var="centerspan" value="span8"}>
+		<{/if}>
+		<!-- left block -->
+		<{if $xoops_showlblock == 1}>
+		<div class="<{$sidespan}>">
+			<!-- LEFT -->
+			<{foreach item=block from=$xoops_lblocks}>
+			<div class="well sidebar-nav">
+				<{$block.title}>
+				<{$block.content}>
+			</div>
+			<{/foreach}>
+		</div>
+		<{/if}>
+		<!-- Center block -->
+
+		<div class="<{$centerspan}>">
+			<{if empty($xoops_contents)}>
+			<div class="hero-unit">
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+			</div>
+			<{else}>
+			<div class="bs-docs-contents">
+				<{$xoops_contents}>
+			</div>
+			<{/if}>
+			<table class="table">
+			<tr><td width="50%">
+			<!-- BLOCK Center-Left -->
+			<{if isset($xoops_clblocks)}>
+				<!-- CENTER LEFT -->
+				<{foreach item=block from=$xoops_clblocks}>
+				<h3><{$block.title}></h3>
+				<{$block.content}>
+				<{/foreach}>
+			<{/if}>
+			</td><td>
+			<!-- BLOCK Center-Right -->
+			<{if isset($xoops_crblocks)}>
+				<!-- CENTER RIGHT -->
+				<{foreach item=block from=$xoops_crblocks}>
+				<h3><{$block.title}></h3>
+				<{$block.content}>
+				<{/foreach}>
+			<{/if}>
+			</td></tr>
+			</table>
+			<!-- BLOCK Center-Center -->
+			<{if isset($xoops_ccblocks)}>
+				<!-- CENTER CENTER -->
+				<{foreach item=block from=$xoops_ccblocks}>
+				<h3><{$block.title}></h3>
+				<{$block.content}>
+				<{/foreach}>
+			<{/if}>
+		</div>
+
+		<{if $xoops_showrblock == 1}>
+		<div class="<{$sidespan}>">
+			<!-- RIGHT -->
+			<{foreach item=block from=$xoops_rblocks}>
+			<div class="well sidebar-nav">
+				<{$block.title}>
+				<{$block.content}>
+			</div>
+			<{/foreach}>
+		</div>
+		<{/if}>
+	</div>
+	<!-- End Block Center-Left and Center-Right -->
+	<br class="floatClear"/>
+	<hr>
+	<footer>
+		<p>
+			<{$xoops_footer}>
+		</p>
+	</footer>
+</div>
+</body>
+</html>

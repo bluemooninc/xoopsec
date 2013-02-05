@@ -3,7 +3,8 @@
 <{$smarty.const._MD_GMOPAYMENT_DESC_MEMBERSAVE}>
 </p>
 <form method="post" action="<{$xoops_url}>/modules/gmopgx/memberSave/submit">
-        <{$xoops_userid}>
-        <{$xoops_userid|xoops_user:"user_name"}>
-<input name="submit" type="submit" value="submit" />
+<pre>
+Account ID : <{$xoops_userid}>-<{$xoops_userid|xoops_user:"user_name"}>
+</pre>
+<input class="btn btn-primary" name="submit" type="submit" value="<{$smarty.const._MD_GMOPAYMENT_SUBMIT_REGISTRATION}>" />
 </form>

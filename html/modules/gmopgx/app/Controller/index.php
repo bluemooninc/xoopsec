@@ -113,11 +113,7 @@ class Controller_index extends AbstractAction{
   		    $this->root->mController->executeRedirect($this->url, 2, "DELETED");
 		}
 	}
-	public function mp3(){
-		header('Content-Type: audio/x-mpegurl');
-		echo XOOPS_URL.'/uploads/0.mp3';
-		die;	
-	}
+
     private function getModObj($id=null){
         if (!is_null($id)){
             $this->mPagenavi->addCriteria(new Criteria('id', intval($id)));

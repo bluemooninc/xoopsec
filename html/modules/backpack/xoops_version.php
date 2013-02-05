@@ -25,12 +25,12 @@
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
 $modversion['name'] = _MI_MOD_NAME;
-$modversion['version'] = "0.9801";
+$modversion['version'] = "0.99";
 $modversion['description'] = _MI_MOD_DESC;
 $modversion['author'] = "Yoshi Sakai";
-$modversion['credits'] = "Copyright (c) Bluemoon inc. 2004 - 2012";
+$modversion['credits'] = "Copyright (c) Bluemoon inc. 2004 - 2013";
 $modversion['help'] = "help.html";
-$modversion['license'] = "GPL see LICENSE";
+$modversion['license'] = "GPL Ver.3";
 $modversion['official'] = 0;
 $modversion['image'] = "images/backpack.png";
 $modversion['dirname'] = "backpack";

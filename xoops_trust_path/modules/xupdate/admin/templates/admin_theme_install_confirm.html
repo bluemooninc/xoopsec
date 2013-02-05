@@ -1,9 +1,7 @@
+<div id="xupdate">
 <div id="contentBody">
 
-<div class="adminnavi">
-  <a href="./index.php?action=ThemeStore"><{$smarty.const._MI_XUPDATE_ADMENU_ADDONSTORE}></a>
-  &raquo;&raquo; <span class="adminnaviTitle"><a href="./index.php?action=ThemeStore"><{$smarty.const._MI_XUPDATE_ADMENU_ADDONSTOREDEC}></a></span>
-</div>
+<{include file="admin_navi.html"}>
 
 <h3 class="admintitle"><{$smarty.const._MI_XUPDATE_ADMENU_ADDONSTORE}></h3>
 <{include file="admin_menunavi.html"}>
@@ -19,63 +17,52 @@
   </ul>
 </div>
 <{/if}>
+
+<h3><{if $screen_shot}><img src="<{$screen_shot}>" alt="" /> <{/if}><{$dirname|xoops_escape:show}></h3>
+
 <form action="index.php?action=ThemeInstall" method="post">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=confirm value=1}>
-
+  <{xoops_input type=hidden name=id value=$id }>
+  <{xoops_input type=hidden name=sid value=$sid }>
+  <{xoops_input type=hidden name=dirname value=$dirname }>
+  <{xoops_input type=hidden name=addon_url value=$addon_url }>
+  <{xoops_input type=hidden name=unzipdirlevel value=$unzipdirlevel }>
+  <{xoops_input type=hidden name=target_key value=$target_key }>
+  <{xoops_input type=hidden name=target_type value=$target_type }>
 <table class="outer">
   <tr>
-    <th>name</th>
-    <th>value</th>
+    <th colspan="2"><{$target_key|xoops_escape:show}></th>
   </tr>
-    <tr class="<{cycle values='odd,even'}>">
-        <td class="legacy_list_select">id</td>
-        <td class="legacy_list_select">
-            <{xoops_input type=hidden name=id value=$id }>
-            <{$id|xoops_escape:show}>
-        </td>
-    </tr>
-    <tr class="<{cycle values='odd,even'}>">
-        <td class="legacy_list_select"><{$smarty.const._MD_XUPDATE_LANG_SID}></td>
-        <td class="legacy_list_select">
-            <{xoops_input type=hidden name=sid value=$sid }>
-            <{$sid|xoops_escape:show}>
-        </td>
-    </tr>
-    <tr class="<{cycle values='odd,even'}>">
-        <td class="legacy_list_select">dirname</td>
-        <td class="legacy_list_select">
-            <{xoops_input type=hidden name=dirname value=$dirname }>
-            <{$dirname|xoops_escape:show}>
-        </td>
-    </tr>  <tr class="<{cycle values='odd,even'}>">
+  <tr class="<{cycle values='odd,even'}>">
+      <td class="legacy_list_select"><{$smarty.const._MI_XUPDATE_ADMENU_ADDONSTORE}></td>
+      <td class="legacy_list_select">
+          <a href="index.php?action=ThemeStore&amp;sid=<{$sid}>"><{$store_name|xoops_escape:show}></a>
+          <{if $detail_url}>
+          ( <a href="<{$detail_url|xoops_escape:show}>" target="_blank"><{$target_key|xoops_escape:show}></a> )
+          <{/if}>
+      </td>
+  </tr>
+  <tr class="<{cycle values='odd,even'}>">
     <td class="legacy_list_select"><{$smarty.const._MI_XUPDATE_FTP_ADDON_URL}></td>
     <td class="legacy_list_select">
-        <{xoops_input type=hidden name=addon_url value=$addon_url }>
         <{$addon_url|xoops_escape:show}>
     </td>
   </tr>
-    <tr class="<{cycle values='odd,even'}>">
-        <td class="legacy_list_select">unzipdirlevel</td>
-        <td class="legacy_list_select">
-            <{xoops_input type=hidden name=unzipdirlevel value=$unzipdirlevel }>
-            <{$unzipdirlevel|xoops_escape:show}>
-        </td>
-    </tr>
   <tr class="<{cycle values='odd,even'}>">
-    <td class="legacy_list_select">target_key</td>
+    <td class="legacy_list_select"><{$smarty.const._AD_LEGACY_LANG_VERSION}></td>
     <td class="legacy_list_select">
-        <{xoops_input type=hidden name=target_key value=$target_key }>
-        <{$target_key|xoops_escape:show}>
+        <{$version}><{if $detailed_version}> ( <{$detailed_version}> )<{/if}>
+        <{if $options.changes_url}><a href="<{$options.changes_url|escape:'html'}>" target="_blank"><{$smarty.const._AD_XUPDATE_RECENTCHANGES}></a><{/if}>
     </td>
   </tr>
   <tr class="<{cycle values='odd,even'}>">
-    <td class="legacy_list_select">target_type</td>
+    <td class="legacy_list_select"><{$smarty.const._AD_XUPDATE_DESCRIPTION}></td>
     <td class="legacy_list_select">
-        <{xoops_input type=hidden name=target_type value=$target_type }>
-        <{$target_type|xoops_escape:show}>
+        <{$description}>
     </td>
   </tr>
+  <{include file='include_options_form.html'}>
   <tr>
     <td class="foot" colspan="2">
        <{if !$actionForm->getErrorMessages()}>
@@ -87,4 +74,15 @@
 </table>
 </form>
 
+<div id="xupdate_boxes">
+    <!-- #customize your modal window here -->
+    <div id="xupdate_dialog" class="window">
+    <{$smarty.const._MI_XUPDATE_PROG_PROCESSING}>
+    <div class="progress_bar"><img src="../images/progress-bar.gif" alt=""></div>
+    </div>
+    <!-- Do not remove div#mask, because you'll need it to fill the whole screen --> 
+    <div id="xupdate_mask"></div>
 </div>
+
+</div><!-- id="contentBody" -->
+</div><!-- id="xupdate" -->

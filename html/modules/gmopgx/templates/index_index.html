@@ -1,67 +1,41 @@
-<h3><{$smarty.const._MD_GMOPGX_MODULE_TITLE}></h3>
+<h3><{$smarty.const._MD_GMOPGX_RECEIPT}></h3>
 
-<form method="post" action="<{$xoops_url}>/modules/gmopgx/default/search">
-    <div align="right">
-        <{$smarty.const._MD_GMOPGX_TABLE_STATUS}>
-        <select name="status">
-            <option value="">---</option>
-            <option value="0"
-            <{if $status===0}> selected="selected"<{/if}>><{$smarty.const._MD_GMOPGX_TABLE_STATUS_0}></option>
-            <option value="1"
-            <{if $status==1}> selected="selected"<{/if}>><{$smarty.const._MD_GMOPGX_TABLE_STATUS_1}></option>
-            <option value="2"
-            <{if $status==2}> selected="selected"<{/if}>><{$smarty.const._MD_GMOPGX_TABLE_STATUS_2}></option>
-        </select>
-        &nbsp;
-        <{$smarty.const._MD_GMOPGX_TABLE_TITLE}>
-        <input type="text" name="subject" size="25" value="<{$subject|xoops_escape}>"/>
-        &nbsp;
-        <input type="submit" name="subbtn" value="<{$smarty.const._SEARCH}>"/>
-</form>
-</div>
-<br/>
-<form id="list" name="list" method="post" action="<{$xoops_url}>/modules/gmopgx/dafault/index">
-
-    <table class="outer">
-        <tr>
-            <th><{$smarty.const._MD_GMOPAYMENT_ORDERID}></th>
-            <th><{$smarty.const._MD_GMOPAYMENT_AMOUNT}></th>
-            <!--<th><{$smarty.const._MD_GMOPAYMENT_TAX}></th>-->
-            <th><{$smarty.const._MD_GMOPGX_TABLE_DATE}></th>
-            <th><{$smarty.const._MD_GMOPGX_TABLE_STATUS}></th>
-        </tr>
-        <{foreach item=val from=$ListData}>
-        <tr>
-            <td class="even"><a href="<{$xoops_url}>/modules/gmopgx/default/detail/<{$val.id}>"><{$val.orderId}></a>
-            </td>
-            <td class="even">&yen;<{$val.amount|number_format}></td>
-            <!--<td class="even"><{$val.tax}></td>-->
-            <td class="even"><{$val.utime|xoops_formattimestamp:l}></td>
-            <td class="odd" align="center">
-                <{if $val.status==0}>
-                <a href="<{$xoops_url}>/modules/gmopgx/execTran/index/<{$val.id}>">
-                    <{$smarty.const._MD_GMOPAYMENT_EXECTRAN}></a>
-                <{/if}>
-                <{if $val.status==1}>
-                <!--<input type="checkbox" name="delmsg[]" value="<{$val.inbox_id}>"/>-->
-                    <{$smarty.const._MD_GMOPAYMENT_DONETRAN}>
-                <{/if}>
-            </td>
-        </tr>
-        <{/foreach}>
-    </table>
-    <input type="hidden" name="inout" value="in"/>
-</form>
+<table class="table">
+	<tr>
+		<th><{$smarty.const._MD_GMOPAYMENT_ORDERID}></th>
+		<th><{$smarty.const._MD_GMOPAYMENT_AMOUNT}></th>
+		<!--<th><{$smarty.const._MD_GMOPAYMENT_TAX}></th>-->
+		<th><{$smarty.const._MD_GMOPGX_TABLE_DATE}></th>
+		<th><{$smarty.const._MD_GMOPGX_TABLE_STATUS}></th>
+	</tr>
+	<{foreach item=val from=$ListData}>
+	<tr>
+		<td class="even"><{$val.orderId}></td>
+		<td class="even">&yen;<{$val.amount|number_format}></td>
+		<!--<td class="even"><{$val.tax}></td>-->
+		<td class="even"><{$val.utime|xoops_formattimestamp:l}></td>
+		<td class="odd" align="center">
+			<{if $val.status==0}>
+				<{$smarty.const._MD_GMOPAYMENT_HOLD}>
+			<{/if}>
+			<{if $val.status==1}>
+			<!--<input type="checkbox" name="delmsg[]" value="<{$val.inbox_id}>"/>-->
+			<{$smarty.const._MD_GMOPAYMENT_DONETRAN}>
+			<{/if}>
+		</td>
+	</tr>
+	<{/foreach}>
+</table>
 <div class="pagenavi" align="center"><{xoops_pagenavi pagenavi=$pageNavi}></div>
 <script>
-    $(function () {
-        $('#button1').click(function () {
-            $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/default/index');
-            $('#list').submit();
-        });
-        $('#button2').click(function () {
-            $('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/default/edit');
-            $('#list').submit();
-        });
-    });
+	$(function () {
+		$('#button1').click(function () {
+			$('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/default/index');
+			$('#list').submit();
+		});
+		$('#button2').click(function () {
+			$('#list').attr('action', '<{$xoops_url}>/modules/gmopgx/default/edit');
+			$('#list').submit();
+		});
+	});
 </script>

@@ -129,7 +129,7 @@ class Xupdate_Func {
 			}
 			
 			//safe_mode  CURLOPT_FOLLOWLOCATION cannot be activated when in safe_mode
-			if (ini_get('safe_mode') != "1"){
+			if (ini_get('safe_mode') != '1' && ini_get('open_basedir') == '') {
 				try {
 					//redirect suport
 					$setopt4 = curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
@@ -146,21 +146,60 @@ class Xupdate_Func {
 			}
 			
 			//SSL NO VERIFY setting
-			$URI_PARTS = parse_url($data['downloadUrl']);
-			//if (strtolower($URI_PARTS["scheme"]) == 'https' ){
-				try {
-					$setopt6 = curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-					$setopt7 = curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-					if(!$setopt6 || !$setopt7 ){
-						throw new Exception('curl_setopt SSL fail',5);
-					}
-				} catch (Exception $e) {
-					$this->_set_error_log($e->getMessage());
-			
-					fclose($fp);
-					continue;
+			try {
+				$setopt6 = curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+				$setopt7 = curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+				if(!$setopt6 || !$setopt7 ){
+					throw new Exception('curl_setopt SSL fail',5);
 				}
-			//}
+			} catch (Exception $e) {
+				$this->_set_error_log($e->getMessage());
+		
+				fclose($fp);
+				continue;
+			}
+			
+			// Proxy setting
+			if (!empty($_SERVER['HTTP_PROXY']) || !empty($_SERVER['http_proxy'])) {
+				$proxy = parse_url(!empty($_SERVER['http_proxy']) ? $_SERVER['http_proxy'] : $_SERVER['HTTP_PROXY']);
+				if (!empty($proxy) && isset($proxy['host'])) {
+					// url
+					$proxyURL = (isset($proxy['scheme']) ? $proxy['scheme'] : 'http') . '://';
+					$proxyURL .= $proxy['host'];
+					
+					if (isset($proxy['port'])) {
+						$proxyURL .= ":" . $proxy['port'];
+					} elseif ('http://' == substr($proxyURL, 0, 7)) {
+						$proxyURL .= ":80";
+					} elseif ('https://' == substr($proxyURL, 0, 8)) {
+						$proxyURL .= ":443";
+					}
+					try {
+						if(! curl_setopt($ch, CURLOPT_PROXY, $proxyURL)) {
+							throw new Exception('curl_setopt PROXY fail', 6);
+						}
+					} catch (Exception $e) {
+						$this->_set_error_log($e->getMessage());
+					}
+					// user:password
+					if (isset($proxy['user'])) {
+						$proxyAuth = $proxy['user'];
+						if (isset($proxy['pass'])) {
+							$proxyAuth .= ':' . $proxy['pass'];
+						}
+						try {
+							if(! curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth)) {
+								throw new Exception('curl_setopt PROXYUSERPWD fail', 7);
+							}
+						} catch (Exception $e) {
+							$this->_set_error_log($e->getMessage());
+						}
+					}
+				}
+			}
+			// set timeout
+			curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
+			curl_setopt($ch, CURLOPT_TIMEOUT, 300);
 			
 			$chs[$key] = $ch;
 			$fps[$key] = $fp;
@@ -169,36 +208,65 @@ class Xupdate_Func {
 		}
 		
 		if (! $chs) {
-			return false;
+			return true;
 		}
 		
-		// make multi handle
-		$mh = curl_multi_init();
-		
-		foreach($chs as $ch) {
-			curl_multi_add_handle($mh,$ch);
-		}
-		
-		$active = null;
-		// multi exec
-		do {
-			$mrc = curl_multi_exec($mh, $active);
-		} while ($mrc == CURLM_CALL_MULTI_PERFORM);
-		
-		while ($active && $mrc == CURLM_OK) {
-			if (curl_multi_select($mh) != -1) {
+		$error_touch_time = $_SERVER['REQUEST_TIME'] - $cacheTTL + 10;
+		if (count($chs) > 1) {
+			// multi exec
+			// make multi handle
+			$mh = curl_multi_init();
+			foreach($chs as $ch) {
+				curl_multi_add_handle($mh,$ch);
+			}
+			
+			$active = null;
+			// multi exec
+			do {
+				$mrc = curl_multi_exec($mh, $active);
+			} while ($mrc == CURLM_CALL_MULTI_PERFORM);
+			
+			while ($active && $mrc == CURLM_OK) {
+				// @todo found curl_multi_select() problem. What is the correct?
+				// ref. https://bugs.php.net/bug.php?id=63842
+				// ref. https://bugs.php.net/bug.php?id=63411
+				// ref. https://bugs.php.net/bug.php?id=61141
+				if (curl_multi_select($mh) != 1) {
+					usleep(100000); // wait 0.1 second
+				}
 				do {
 					$mrc = curl_multi_exec($mh, $active);
 				} while ($mrc == CURLM_CALL_MULTI_PERFORM);
 			}
-		}
-		
-		foreach($chs as $key => $ch) {
+			
+			foreach($chs as $key => $ch) {
+				$this->_set_error_log(curl_error($ch));
+				$error_no = curl_errno($ch);
+				curl_multi_remove_handle($mh, $ch);
+				fclose($fps[$key]);
+				if ($error_no > 0 && $error_no != 78 /* NotFound */ && is_file($multiData[$key]['downloadedFilePath'])) {
+					// retry 10sec later if has error
+					touch($multiData[$key]['downloadedFilePath'], $error_touch_time);
+					$multiData[$key]['cacheMtime'] = $error_touch_time;
+				}
+			}
+			curl_multi_close($mh);
+		} else {
+			// single exec
+			reset($chs);
+			$ch = current($chs);
+			$key = key($chs);
+			curl_exec($ch);
 			$this->_set_error_log(curl_error($ch));
-			curl_multi_remove_handle($mh, $ch);
+			$error_no = curl_errno($ch);
 			fclose($fps[$key]);
+			if ($error_no > 0 && $error_no != 78 /* NotFound */ && is_file($multiData[$key]['downloadedFilePath'])) {
+				// retry 10sec later if has error
+				touch($multiData[$key]['downloadedFilePath'], $error_touch_time);
+				$multiData[$key]['cacheMtime'] = $error_touch_time;
+			}
+			curl_close($ch);
 		}
-		curl_multi_close($mh);
 		
 		return true;
 	}
@@ -249,7 +317,8 @@ class Xupdate_Func {
 	public function _getDownloadUrl( $target_key, $downloadUrlFormat )
 	{
 		// TODO ファイルNotFound対策
-		$url = sprintf( $downloadUrlFormat, $target_key );
+		//$url = sprintf( $downloadUrlFormat, $target_key );
+		$url = str_replace(array('%s', '%u'), $target_key, $downloadUrlFormat);
 		return $url;
 	}
 
@@ -267,7 +336,32 @@ class Xupdate_Func {
 		$downloadPath = $downloadDirPath .'/'. $tempFilename;
 		return $downloadPath;
 	}
-
+	
+	/**
+	 * Set tag cloud size
+	 * 
+	 * @param array $cloud
+	 * @param int $smallest
+	 * @param int $duration
+	 * @param int $step
+	 */
+	public function setTagCloudSize(& $cloud, $smallest = 100, $duration = 24, $step = 10) {
+		$min = sqrt(min($cloud));
+		$max = sqrt(max($cloud));
+		$factor = 0;
+		// specal case all tags having the same count
+		if (($max - $min) == 0) {
+			$min -= $duration;
+			$factor = 1;
+		} else {
+			$factor = $duration / ($max - $min);
+		}
+		foreach($cloud as $key => $count) {
+			$level = (int)((sqrt($count) - $min) * $factor);
+			$cloud[$key] = $level * $step + $smallest;
+		}
+	}
+	
 	/**
 	 * _set_error_log
 	 *
@@ -280,7 +374,33 @@ class Xupdate_Func {
 		$this->Ftp->appendMes('<span style="color:red;">'.$msg.'</span><br />');
 		$this->content.= '<span style="color:red;">'.$msg.'</span><br />';
 	}
-
+	
+	/**
+	 * enable protector of mainfile.php
+	 * 
+	 * @param boolean $do_chmod
+	 * @return boolean
+	 */
+	public function write_mainfile_protector($do_chmod = false) {
+		$mailfile = XOOPS_ROOT_PATH . '/mainfile.php';
+		$src = file_get_contents($mailfile);
+		if (! preg_match('#(?:include|require)\s*\(?\s*XOOPS_TRUST_PATH\s*.\s*[\'|"]/modules/protector/include/precheck.inc.php\'#i', $src)) {
+			$src = str_replace('if (!defined(\'_LEGACY_PREVENT_LOAD_CORE_\') && XOOPS_ROOT_PATH != \'\') {', 'if (!defined(\'_LEGACY_PREVENT_LOAD_CORE_\') && XOOPS_ROOT_PATH != \'\') {
+        include XOOPS_TRUST_PATH.\'/modules/protector/include/precheck.inc.php\' ;', $src);
+			$src = preg_replace('#include XOOPS_ROOT_PATH.\'/include/common.php\';\s+}#', 'include XOOPS_ROOT_PATH.\'/include/common.php\';
+        }
+        include XOOPS_TRUST_PATH.\'/modules/protector/include/postcheck.inc.php\' ;', $src);
+			if ($do_chmod) {
+				$mod = @ fileperms($mailfile);
+				$this->Ftp->localChmod($mailfile, 0606);
+			}
+			file_put_contents($mailfile, $src, LOCK_EX);
+			if ($do_chmod) {
+				$this->Ftp->localChmod($mailfile, $mod? $mod : 0404);
+			}
+		}
+		return true;
+	}
 } // end class
 } // end if
 

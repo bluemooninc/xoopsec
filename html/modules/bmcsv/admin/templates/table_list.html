@@ -1,0 +1,32 @@
+<h1><{$smarty.const._AM_BMCSV_TITLE}></h1>
+
+<table class="outer">
+	<tr>
+		<th>
+			<{$smarty.const._AM_BMCSV_MODULE_NAME}>
+		</th>
+		<th>
+			<{$smarty.const._AM_BMCSV_TABLE_NAME}>
+		</th>
+		<th>
+			<{$smarty.const._AM_BMCSV_CTRL_BLOCK}>
+		</th>
+	</tr>
+	<{foreach item=mod from=$mod_list}>
+	<{foreach item=tbl from=$mod}>
+	<tr class="<{cycle values='odd,even'}>">
+		<td class="table_name"><{$tbl.dir}></td>
+		<td class="table_name"><{$tbl.name}></td>
+		<td class="category_list_control">
+			<a href="index.php?action=TableExport&amp;tableName=<{$tbl.name}>&amp;moduleName=<{$tbl.dir}>">
+				<img src="<{"icons/download.png"|theme}>" alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._EXPORT}>" />
+			</a>
+			<a href="index.php?action=Import&amp;tableName=<{$tbl.name}>&amp;moduleName=<{$tbl.dir}>">
+				<img src="<{"icons/import.png"|theme}>" alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._IMPORT}>" />
+			</a>
+		</td>
+
+	</tr>
+	<{/foreach}>
+	<{/foreach}>
+</table>

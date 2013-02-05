@@ -214,7 +214,7 @@ class Legacy_SearchService extends XCube_Service
 
         $module =& Legacy_Utils::createModule($xoopsModule, false);
         $results = $module->doLegacyGlobalSearch($queries, $andor, $max_hit, $start, $uid);
-                
+
         if (is_array($results) && count($results) > 0) {
             foreach (array_keys($results) as $key) {
                 $timeval =& $results[$key]['time'];

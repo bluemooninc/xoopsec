@@ -10,6 +10,12 @@ if(!defined('XOOPS_ROOT_PATH'))
     exit;
 }
 
+// Set include_path
+if (!defined('PATH_SEPARATOR')) {
+	define('PATH_SEPARATOR', (strtoupper(substr(PHP_OS, 0, 3)) !== 'WIN')? ':' : ';');
+}
+set_include_path(get_include_path() . PATH_SEPARATOR . dirname(dirname(__FILE__)) . '/PEAR');
+
 /**
  * Xupdate_AbstractAction
 **/
@@ -50,6 +56,11 @@ abstract class Xupdate_AbstractAction
 		$this->mod_config = $this->mRoot->mContext->mModuleConfig ;	// mod_config
 		// FTP login check
 		$this->mod_config['_FtpLoginCheck'] = $this->Ftp->checkLogin();
+		// curl extention check
+		$this->mod_config['_CurlCheck'] = (extension_loaded('curl'));
+		// php max_execution_time
+		@ set_time_limit(300);
+		$this->mod_config['_ExecutionTime'] = (int)ini_get('max_execution_time');
 		//	adump($this->mod_config);
 
    }
@@ -230,6 +241,110 @@ abstract class Xupdate_AbstractAction
     public function executeViewCancel(/*** XCube_RenderTarget ***/ &$render)
     {
     }
+    
+    protected function modalBoxJs() {
+    	return <<<EOD
+jQuery(document).ready(function($) {
+    //select all the a tag with name equal to modal
+    var isCancel = false;
+    $('#contentBody form [name=_form_control_cancel]').click(function(){
+    	isCancel = true;
+    });
+    $('#contentBody form').submit(function(e) {
+        if (isCancel) {
+        	return;
+        }
+        
+        //Get the A tag
+        var id = $('#xupdate_dialog');
+     
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+     
+        //Set height and width to mask to fill up the whole screen
+        $('#xupdate_mask').css({'width':maskWidth,'height':maskHeight});
+         
+        //transition effect    
+        $('#xupdate_mask').fadeIn(1000);   
+        $('#xupdate_mask').fadeTo("slow",0.8); 
+     
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+               
+        //Set the popup window to center
+        $(id).css('top',  winH/2-$(id).height()/2);
+        $(id).css('left', winW/2-$(id).width()/2);
+     
+        //transition effect
+        $(id).fadeIn(2000);
+
+    });
+});
+EOD;
+    }
+    
+    /**
+     * Remove html/install & chmod mainfile.php 0404
+     * 
+     * @return boolean
+     */
+    protected function _removeInstallDir() {
+    	$ret = false;
+    	if ($this->Ftp->app_login()) {
+    		// enable protector in mainfile.php
+    		$this->Func->write_mainfile_protector();
+    		
+    		// write protect mainfile.php
+    		if ($main_perm = @ fileperms(XOOPS_ROOT_PATH . '/mainfile.php')) {
+    			$main_perm = substr(sprintf('%o', $main_perm), -3);
+    			$set_perm = '';
+    			for($i=0; $i < 3; $i++) {
+    				$set_perm .= strval(intval($main_perm[$i], 8) & 5);
+    			}
+    			$set_perm = intval($set_perm, 8);
+    		} else {
+    			$set_perm = 0404;
+    		}
+    		$this->Ftp->localRmdirRecursive(XOOPS_ROOT_PATH . '/install');
+    		$this->Ftp->localChmod(XOOPS_ROOT_PATH . '/mainfile.php', $set_perm);
+    		
+    		// set writable "mod_config['temp_path']"
+    		if (! $this->Xupdate->params['is_writable']['result']) {
+    			$this->Ftp->localChmod($this->Xupdate->params['is_writable']['path'], 0707);
+    		}
+    		
+    		// set writable protector config dir
+    		$protector_config = XOOPS_TRUST_PATH . '/modules/protector/configs';
+    		if (! Xupdate_Utils::checkDirWritable($protector_config)) {
+    			$this->Ftp->localChmod($protector_config, 0707);
+    		}
+    		
+    		clearstatcache();
+    		
+    		// edit /preload/CorePackPreload.class.php
+    		$src = file_get_contents(XOOPS_ROOT_PATH . '/preload/CorePackPreload.class.php');
+    		if (! is_dir(XOOPS_ROOT_PATH . '/install') && ! preg_match('/define\s*\(\'XUPDATE_INSTALLERCHECKER_ACTIVE\'/', $src)) {
+    			$ret = true;
+    			$add = '
+
+// Already checked with X-update install checker
+define(\'XUPDATE_INSTALLERCHECKER_ACTIVE\', false);';
+    			$src = str_replace('<?php', '<?php'.$add, $src);
+    			$sourcePath = $this->Xupdate->params['is_writable']['path'] . '/preload';
+    			$this->Ftp->localMkdir($sourcePath);
+    			$this->Ftp->localChmod($sourcePath, 0707);
+    			file_put_contents($sourcePath . '/CorePackPreload.class.php', $src);
+    			$this->Ftp->uploadNakami($sourcePath, XOOPS_ROOT_PATH . '/preload/');
+    			$this->Ftp->localRmdirRecursive($sourcePath);
+    		}
+    		
+    		$this->Ftp->app_logout();
+    	}
+    	return $ret;
+    }
+    
 }
 
 ?>

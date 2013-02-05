@@ -1,0 +1,5 @@
+bmCSV / Bluemoon XOOPS Import/Export module
+-----------------------------------------------
+
+Bluemoon XOOPS Import/Export is written and distributed under the GNU General Public
+License version3.

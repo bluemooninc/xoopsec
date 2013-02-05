@@ -184,7 +184,7 @@ class XCube_ServiceClient extends XCube_AbstractServiceClient
 		unset($root->mContext->mRequest);
 		
 		$root->mContext->mRequest = new XCube_GenericRequest($params);
-		
+
 		if (isset($this->mService->_mFunctions[$operation])) {
 			$ret = call_user_func(array($this->mService, $operation));
 			

@@ -48,7 +48,7 @@ define('_MI_XUPDATE_INSTALL_MSG_UPDATE_FINISHED', '¤â¤¸¤å¡¼¤ë¤Î¤¢¤Ã¤×¤Ç¡¼¤È¤¬½ªÎ
 define('_MI_XUPDATE_INSTALL_ERROR_UPDATE_FINISHED', '¤â¤¸¤å¡¼¤ë¤Î¤¢¤Ã¤×¤Ç¡¼¤È¤Ë¼ºÇÔ¤·¤Þ¤·¤¿¡£');
 define('_MI_XUPDATE_INSTALL_MSG_MODULE_UPDATED', '¤â¤¸¤å¡¼¤ë¡Ø{0}¡Ù¤ò¤¢¤Ã¤×¤Ç¡¼¤È¤·¤Þ¤·¤¿¡£');
 define('_MI_XUPDATE_INSTALL_ERROR_MODULE_UPDATED', '¤â¤¸¤å¡¼¤ë¡Ø{0}¡Ù¤¬¤¢¤Ã¤×¤Ç¡¼¤È¤Ç¤­¤Þ¤»¤ó¤Ç¤·¤¿¡£');
-define('_MI_XUPDATE_LANG_XUPDATE', '¥¢¥Ã¥×¥Ç¡¼¥¿');
+define('_MI_XUPDATE_LANG_XUPDATE', 'Æ³Æþ¡¦¥¢¥Ã¥×¥Ç¡¼¥È´ÉÍý');
 define('_MI_XUPDATE_DESC_XUPDATE', '¥â¥¸¥å¡¼¥ë¤Î¹¹¿·¤ò¼êÁá¤¯¹Ô¤¨¤Þ¤¹');
 define('_MI_XUPDATE_LANG_AUTHOR', 'XCL Pack201X DISTRIBUTION TEAM : naao, domifara, nao-pon');
 define('_MI_XUPDATE_LANG_CREDITS', 'xoopscube.net');
@@ -56,25 +56,29 @@ define('_MI_XUPDATE_TPL_STORE_LIST', 'STORE_LIST');
 define('_MI_XUPDATE_TPL_STORE_EDIT', 'STORE_EDIT');
 define('_MI_XUPDATE_TPL_STORE_DELETE', 'STORE_DELETE');
 define('_MI_XUPDATE_TPL_STORE_VIEW', 'STORE_VIEW');
+define('_MI_XUPDATE_TPL_MODULESTORE_INC', 'MODULESTORE_INC');
 
 define('_MI_XUPDATE_DEPLOY', '¼èÆÀ¤·¤ÆÇÛÃÖ');
 define('_MI_XUPDATE_UPDATE', '¥¢¥Ã¥×¥Ç¡¼¥È');
 define('_MI_XUPDATE_MANAGE', '´ÉÍý');
 
 // A brief description of this module
-define('_MI_XUPDATE_DESC', '¤ª¹¥¤ß¤Î¥¢¥É¥ª¥ó¤ò¥À¥¦¥ó¥í¡¼¥É¤Ç¤­¤Þ¤¹');
-define('_MI_XUPDATE_MSG_SAVED' , 'ÀßÄê¤òÊÝÂ¸¤·¤Þ¤·¤¿¡£');
+define('_MI_XUPDATE_DESC'     , '¤ª¹¥¤ß¤Î¥¢¥É¥ª¥ó¤ò¥À¥¦¥ó¥í¡¼¥É¤Ç¤­¤Þ¤¹');
+define('_MI_XUPDATE_MSG_SAVED', 'ÀßÄê¤òÊÝÂ¸¤·¤Þ¤·¤¿¡£');
 
 // admin menus
-define('_MI_XUPDATE_ADMENU_ADDONSTORE' , '¥¢¥É¥ª¥ó¥¹¥È¥¢');
-define('_MI_XUPDATE_ADMENU_ADDONSTOREDEC' , '¤ª¹¥¤ß¤Î¥¢¥É¥ª¥ó¤ò¥À¥¦¥ó¥í¡¼¥É¤Ç¤­¤Þ¤¹');
-define('_MI_XUPDATE_ADMENU_STORELIST' , '¥¹¥È¥¢°ìÍ÷');
-define('_MI_XUPDATE_ADMENU_MODULE' , '¥â¥¸¥å¡¼¥ë');
-define('_MI_XUPDATE_ADMENU_MYBLOCKSADMIN' , '¥¢¥¯¥»¥¹¸¢¸ÂÀßÄê');
-define('_MI_XUPDATE_ADMENU_MYPREFERENCES' , '°ìÈÌÀßÄê');
-define('_MI_XUPDATE_ADMENU_THEME' , '¥Æ¡¼¥Þ');
-define('_MI_XUPDATE_ADMENU_THEMEFINDER' , '¥Æ¡¼¥Þ¥Õ¥¡¥¤¥ó¥À');
+define('_MI_XUPDATE_ADMENU_ADDONSTORE'   , '¥¢¥É¥ª¥ó¥¹¥È¥¢');
+define('_MI_XUPDATE_ADMENU_ADDONSTOREDEC', '¤ª¹¥¤ß¤Î¥¢¥É¥ª¥ó¤ò¥À¥¦¥ó¥í¡¼¥É¤Ç¤­¤Þ¤¹');
+define('_MI_XUPDATE_ADMENU_STORELIST'    , '¥¹¥È¥¢°ìÍ÷');
+define('_MI_XUPDATE_ADMENU_PACKAGE'      , '¥Ñ¥Ã¥±¡¼¥¸');
+define('_MI_XUPDATE_ADMENU_MODULE'       , '¥â¥¸¥å¡¼¥ë');
+define('_MI_XUPDATE_ADMENU_MYBLOCKSADMIN', '¥¢¥¯¥»¥¹¸¢¸ÂÀßÄê');
+define('_MI_XUPDATE_ADMENU_MYPREFERENCES', '°ìÈÌÀßÄê');
+define('_MI_XUPDATE_ADMENU_THEME'        , '¥Æ¡¼¥Þ');
+define('_MI_XUPDATE_ADMENU_THEMEFINDER'  , '¥Æ¡¼¥Þ¥Õ¥¡¥¤¥ó¥À');
+define('_MI_XUPDATE_ADMENU_PRELOAD'      , '¥×¥ê¥í¡¼¥É');
 
+// form filtter button
 define('_MI_XUPDATE_ALL'       , '¤¹¤Ù¤Æ');
 define('_MI_XUPDATE_INSTALLED' , '¥¤¥ó¥¹¥È¡¼¥ëºÑ¤ß');
 define('_MI_XUPDATE_UPDATED'   , '¥¢¥Ã¥×¥Ç¡¼¥È¤¢¤ê');
@@ -83,25 +87,53 @@ define('_MI_XUPDATE_ACTIVE'    , '¥¢¥¯¥Æ¥£¥Ö');
 define('_MI_XUPDATE_INACTIVE'  , 'Èó¥¢¥¯¥Æ¥£¥Ö');
 
 // admin constant
-define('_MI_XUPDATE_TEMP_PATH' , '°µ½Ì¥Õ¥¡¥¤¥ë¥À¥¦¥ó¥í¡¼¥É¡¦Å¸³«ÍÑ¥Õ¥©¥ë¥À');
+define('_MI_XUPDATE_TEMP_PATH'    , '°µ½Ì¥Õ¥¡¥¤¥ë¥À¥¦¥ó¥í¡¼¥É¡¦Å¸³«ÍÑ¥Õ¥©¥ë¥À');
 define('_MI_XUPDATE_TEMP_PATHDSC' , '(xoops_trust_path)ÇÛ²¼¤Î¥Ç¥£¥ì¥¯¥È¥ê¤ò»ØÄê¡£ºÇ½é¤ÈºÇ¸å¤Î"/"¡Ê¥¹¥é¥Ã¥·¥å¡Ë¤Ï´Þ¤á¤Þ¤»¤ó¡£');
-define('_MI_XUPDATE_FTP_METHOD' , '»ÈÍÑ¤¹¤ëFTP¥é¥¤¥Ö¥é¥ê');
-define('_MI_XUPDATE_FTP_METHODDSC' , '¤¢¤Ê¤¿¤Î¥µ¡¼¥Ð¡¼¤Ë¥Õ¥¡¥¤¥ë·²¤ò¥¢¥Ã¥×¥í¡¼¥É¤¹¤ëºÝ¤Ë»ÈÍÑ¤¹¤ëFTP¥é¥¤¥Ö¥é¥ê¤ÎÁªÂò¡£<br />¥«¥¹¥¿¥àFTP¡ÊÉ¸½à¡Ë¤òÁªÂò¤·¤ÆÌäÂê¤¬²ò·è¤Ç¤­¤Ê¤¤¾ì¹ç¡¢<br />PHP_FTP¡ÊFTP over SSLÍÑ¡Ë¤ä¡¢¥«¥¹¥¿¥àSSH_FTP¤ò¤ª»î¤·¤¯¤À¤µ¤¤¡£');
-define('_MI_XUPDATE_CUSTOM_FTP' , '¥«¥¹¥¿¥àFTP¡ÊÉ¸½à¡Ë');
-define('_MI_XUPDATE_PHP_FTP' , 'PHP_FTP¡ÊFTPSÍÑ¡Ë');
-define('_MI_XUPDATE_CUSTOM_SFTP' , '¥«¥¹¥¿¥àSSH_FTP¡ÊSFTPÍÑ¡Ë');
-define('_MI_XUPDATE_CUSTOM_SSH2' , '¥«¥¹¥¿¥àSSH2¡Ê¸°Ç§¾ÚÍÑ¡Ë');
-define('_MI_XUPDATE_FTP_USESSL' , 'SSL¡ÊFTPS¡Ë¤ò»ÈÍÑ¤¹¤ë¡£');
-define('_MI_XUPDATE_FTP_USESSLDSC' , 'SSL¡ÊFTPS¡Ë¤ò»ÈÍÑ¤¹¤ë¤Ë¤Ï¡¢FTP¥é¥¤¥Ö¥é¥ê¤Ë¡ÖPHP_FTP¡ÊFTPSÍÑ¡Ë¡×¤òÁªÂò¡£');
-define('_MI_XUPDATE_FTP_UNAME' , 'FTP¥í¥°¥¤¥óID');
+define('_MI_XUPDATE_FTP_METHOD'   , '»ÈÍÑ¤¹¤ëFTP¥é¥¤¥Ö¥é¥ê');
+define('_MI_XUPDATE_FTP_METHODDSC', '¤¢¤Ê¤¿¤Î¥µ¡¼¥Ð¡¼¤Ë¥Õ¥¡¥¤¥ë·²¤ò¥¢¥Ã¥×¥í¡¼¥É¤¹¤ëºÝ¤Ë»ÈÍÑ¤¹¤ëFTP¥é¥¤¥Ö¥é¥ê¤ÎÁªÂò¡£<br />¥À¥¤¥ì¥¯¥È¤ÇÌäÂê¤Ê¤±¤ì¤Ð¡¢¥í¥°¥¤¥ó¾ðÊó¤ÎÆþÎÏ¤ÏÉ¬Í×¤¢¤ê¤Þ¤»¤ó¡£<br />¥«¥¹¥¿¥àFTP¡ÊÉ¸½à¡Ë¤òÁªÂò¤·¤ÆÌäÂê¤¬²ò·è¤Ç¤­¤Ê¤¤¾ì¹ç¡¢<br />PHP_FTP¡ÊFTP over SSLÍÑ¡Ë¤ä¡¢¥«¥¹¥¿¥àSSH_FTP¤ò¤ª»î¤·¤¯¤À¤µ¤¤¡£');
+define('_MI_XUPDATE_CUSTOM_FTP'   , '¥«¥¹¥¿¥àFTP¡ÊÉ¸½à¡Ë');
+define('_MI_XUPDATE_PHP_FTP'      , 'PHP_FTP¡ÊFTPSÍÑ¡Ë');
+define('_MI_XUPDATE_CUSTOM_SFTP'  , '¥«¥¹¥¿¥àSSH_FTP¡ÊSFTPÍÑ¡Ë');
+define('_MI_XUPDATE_CUSTOM_SSH2'  , '¥«¥¹¥¿¥àSSH2¡Ê¸°Ç§¾ÚÍÑ¡Ë');
+define('_MI_XUPDATE_DIRECT'       , '¥À¥¤¥ì¥¯¥È¡Ê¥Õ¥¡¥¤¥ë¥ª¡¼¥Ê¡¼¤¬PHP¡Ë');
+define('_MI_XUPDATE_FTP_USESSL'   , 'SSL¡ÊFTPS¡Ë¤ò»ÈÍÑ¤¹¤ë¡£');
+define('_MI_XUPDATE_FTP_USESSLDSC', 'SSL¡ÊFTPS¡Ë¤ò»ÈÍÑ¤¹¤ë¤Ë¤Ï¡¢FTP¥é¥¤¥Ö¥é¥ê¤Ë¡ÖPHP_FTP¡ÊFTPSÍÑ¡Ë¡×¤òÁªÂò¡£');
+define('_MI_XUPDATE_FTP_SERVER'   , 'FTP¥µ¡¼¥Ð¡¼');
+define('_MI_XUPDATE_FTP_SERVERDSC', 'ÄÌ¾ï¤Ï 127.0.0.1 ¤Ç¤¹¤¬¡¢ÀÜÂ³¤Ç¤­¤Ê¤¤¾ì¹ç¤Ë¼ÂIP¤ò»ØÄê¤·¤Æ¤¯¤À¤µ¤¤¡£');
+define('_MI_XUPDATE_FTP_UNAME'    , 'FTP¥í¥°¥¤¥óID');
 define('_MI_XUPDATE_FTP_UNAMEDSC' , '¤¢¤Ê¤¿¤Î¥µ¡¼¥Ð¡¼¤ËFTP¤Ç¥¢¥Ã¥×¥í¡¼¥É¤¹¤ë¤¿¤á¤Î¥í¥°¥¤¥óID');
-define('_MI_XUPDATE_FTP_PASS' , '¥í¥°¥¤¥ó¥Ñ¥¹¥ï¡¼¥É');
-define('_MI_XUPDATE_FTP_PASSDSC' , 'FTP¤Î¾ì¹ç¤Î¥í¥°¥¤¥ó¥Ñ¥¹¥ï¡¼¥É¡¢¤Þ¤¿¤ÏSSH¸°Ç§¾Ú¤Î¾ì¹ç¤Î¥Ñ¥¹¥Õ¥ì¡¼¥º');
-define('_MI_XUPDATE_SSH_PORT' , 'SSHÀÜÂ³¤Î¥Ý¡¼¥È');
-define('_MI_XUPDATE_SSH_PORTDSC' , 'SSH_FTPÀÜÂ³¡¢¤Þ¤¿¤Ï¸°Ç§¾ÚÀÜÂ³¤ÎSSH¥Ý¡¼¥ÈÈÖ¹æ');
-define('_MI_XUPDATE_SSH_KEY' , 'SSH¸°Ç§¾ÚÀÜÂ³¤Îprivate_key');
-define('_MI_XUPDATE_SSH_KEYDSC' , 'SSH¸°Ç§¾ÚÀÜÂ³¾ì¹ç¤Ëprivate_key¤òÅ½ÉÕ¤±¤Þ¤¹');
-define('_MI_XUPDATE_DEBUG' , '¥Ç¥Ð¥°½ÐÎÏ¤òÉ½¼¨¤¹¤ë');
-define('_MI_XUPDATE_FTP_ADDON_URL' , '¥¢¥É¥ª¥óURL');
-define('_MI_XUPDATE_FTP_THEME_URL' , '¥Æ¡¼¥ÞURL');
-define('_MI_XUPDATE_FTP_STORE_URL' , '¥¢¥É¥ª¥ó¥¹¥È¥¢URL');
+define('_MI_XUPDATE_FTP_PASS'     , '¥í¥°¥¤¥ó¥Ñ¥¹¥ï¡¼¥É');
+define('_MI_XUPDATE_FTP_PASSDSC'  , 'FTP¤Î¾ì¹ç¤Î¥í¥°¥¤¥ó¥Ñ¥¹¥ï¡¼¥É¡¢¤Þ¤¿¤ÏSSH¸°Ç§¾Ú¤Î¾ì¹ç¤Î¥Ñ¥¹¥Õ¥ì¡¼¥º');
+define('_MI_XUPDATE_SSH_PORT'     , 'SSHÀÜÂ³¤Î¥Ý¡¼¥È');
+define('_MI_XUPDATE_SSH_PORTDSC'  , 'SSH_FTPÀÜÂ³¡¢¤Þ¤¿¤Ï¸°Ç§¾ÚÀÜÂ³¤ÎSSH¥Ý¡¼¥ÈÈÖ¹æ');
+define('_MI_XUPDATE_SSH_KEY'      , 'SSH¸°Ç§¾ÚÀÜÂ³¤Îprivate_key');
+define('_MI_XUPDATE_SSH_KEYDSC'   , 'SSH¸°Ç§¾ÚÀÜÂ³¾ì¹ç¤Ëprivate_key¤òÅ½ÉÕ¤±¤Þ¤¹');
+define('_MI_XUPDATE_PHP_PERM'     , '.php ¥Ñ¡¼¥ß¥Ã¥·¥ç¥ó');
+define('_MI_XUPDATE_PHP_PERMDSC'  , '³ÈÄ¥»Ò¤¬ php ¤Î¥Õ¥¡¥¤¥ë¤Ë¥»¥Ã¥È¤¹¤ë¥Ñ¡¼¥ß¥Ã¥·¥ç¥ó(PHP ¤¬ CGI ¥â¡¼¥É¤Î¾ì¹ç¤Ê¤É¡¢É¬Í×¤Ç¤¢¤ì¤Ð»ØÄê¤·¤Þ¤¹¡£)');
+define('_MI_XUPDATE_DEBUG'        , '¥Ç¥Ð¥°½ÐÎÏ¤òÉ½¼¨¤¹¤ë');
+define('_MI_XUPDATE_FTP_ADDON_URL', '¥¢¥É¥ª¥óURL');
+define('_MI_XUPDATE_FTP_THEME_URL', '¥Æ¡¼¥ÞURL');
+define('_MI_XUPDATE_FTP_STORE_URL', '¥¢¥É¥ª¥ó¥¹¥È¥¢URL');
+define('_MI_XUPDATE_TAG_DIRNAME'  , '¥¿¥°¥â¥¸¥å¡¼¥ë');
+define('_MI_XUPDATE_TAG_DIRNAMEDSC', '¥¿¥°¥â¥¸¥å¡¼¥ë¤òÍøÍÑ¤¹¤ë¾ì¹ç¤Ï¤½¤Î¥Ç¥£¥ì¥¯¥È¥êÌ¾¤ò»ØÄê¤·¤Þ¤¹¡£');
+define('_MI_XUPDATE_XEL_DIRNAME'  , 'X-elFinder ¥Ç¥£¥ì¥¯¥È¥êÌ¾');
+define('_MI_XUPDATE_XEL_DIRNAMEDSC','X-elFinder ¤Î°ìÈÌÀßÄê¤Î¥Ü¥ê¥å¡¼¥à¥É¥é¥¤¥Ð¤Ë<br />"<b>xelfinder:xelfinder:preload:¥×¥ê¥í¡¼¥É:gid=1</b>" (X-update ¤¬¥À¥¤¥ì¥¯¥È¥â¡¼¥É¤ÇÆ°ºî¤¹¤ë¾ì¹ç)<br />¤Þ¤¿¤Ï<br />"<b>xelfinder:ftp:preload:¥×¥ê¥í¡¼¥É:gid=1</b>" (X-elFinder ¤Î FTP ÀßÄê¤ò»ÈÍÑ¤¹¤ë¾ì¹ç)<br />¤òÄÉ²Ã¤¹¤ë¤È¥×¥ê¥í¡¼¥É¤Î´ÉÍý¤ò¹Ô¤Ê¤¦¤³¤È¤¬¤Ç¤­¤Þ¤¹¡£');
+define('_MI_XUPDATE_SHOW_DISABLED_STORE'   , 'ÈóÉ½¼¨¤Ë¤µ¤ì¤¿¥¹¥È¥¢¤âÉ½¼¨¤¹¤ë');
+define('_MI_XUPDATE_SHOW_DISABLED_STOREDSC', '¥¢¥É¥ª¥ó¥¹¥È¥¢Â¦¤ÇÈóÉ½¼¨¤Ë¤µ¤ì¤¿¥¹¥È¥¢¡¼¤òÉ½¼¨¤·¤Þ¤¹¡£(³«È¯¼ÔÍÑ¤Ç¤¹)');
+
+// progress messages
+define('_MI_XUPDATE_PROG_FILE_GETTING', '¥Ñ¥Ã¥±¡¼¥¸¤ò¼èÆÀ¤·¤Æ¤¤¤Þ¤¹¡£');
+define('_MI_XUPDATE_PROG_UPLOADING'   , '¥Õ¥¡¥¤¥ë¤òÇÛÃÖ¤·¤Æ¤¤¤Þ¤¹¡£');
+define('_MI_XUPDATE_PROG_CLEANING_UP' , '°ì»þ¥Õ¥¡¥¤¥ë¤òºï½ü¤·¤Æ¤¤¤Þ¤¹¡£');
+define('_MI_XUPDATE_PROG_COMPLETED'   , '¥Õ¥¡¥¤¥ë¤ÎÇÛÃÖ¤ò´°Î»¤·¤Þ¤·¤¿¡£');
+define('_MI_XUPDATE_PROG_PROCESSING'  , '<p>¥Ñ¥Ã¥±¡¼¥¸¤ò¼èÆÀ¤·¤Æ¥µ¡¼¥Ð¡¼¾å¤ËÇÛÃÖ¤·¤Æ¤¤¤Þ¤¹¡£</p><p>¥Ñ¥Ã¥±¡¼¥¸¤Î¥µ¥¤¥º¤ä´Ä¶­¤Ë¤è¤ê¡¢¿ôÊ¬¤Î»þ´Ö¤òÍ×¤¹¤ë¤³¤È¤â¤¢¤ê¤Þ¤¹¡£</p><p>²èÌÌ¤¬ÀÚ¤êÂØ¤ï¤ë¤Þ¤Ç¡¢¤½¤Î¤Þ¤Þ¤ªÂÔ¤Á¤¯¤À¤µ¤¤¡£</p>');
+
+// error messages
+define('_MI_XUPDATE_ANOTHER_PROCESS_RUNNING', 'Â¾¤Î¥×¥í¥»¥¹¤¬¥¢¥Ã¥×¥Ç¡¼¥ÈÃæ¤Ç¤¹¡£¤·¤Ð¤é¤¯ÂÔ¤Ã¤Æ¤«¤éºÆÅÙ¼Â¹Ô¤·¤Æ¤¯¤À¤µ¤¤¡£');
+define('_MI_XUPDATE_ERR_MAKE_EXPLOREDDIR'   , '²òÅàÍÑ¥Ç¥£¥ì¥¯¥È¥ê¤ÎºîÀ®¤Þ¤¿¤Ï½ñ¤­¹þ¤ß¤Ë¼ºÇÔ¤·¤Þ¤·¤¿¡£');
+define('_MI_XUPDATE_ERR_FTP_UPLOADFILES'    , '¥Õ¥¡¥¤¥ë¤ÎÇÛÃÖ¤Ë¼ºÇÔ¤·¤Þ¤·¤¿¡£');
+define('_MI_XUPDATE_ERR_FTP_LOGIN'          , 'FTP ¤Þ¤¿¤Ï SSH ¤Ç¤Î¥í¥°¥¤¥ó¤Ë¼ºÇÔ¤·¤Þ¤·¤¿¡£');
+define('_MI_XUPDATE_ERR_UNZIP_FILE'         , '¥Õ¥¡¥¤¥ë¤Î²òÅà(Å¸³«)¤Ë¼ºÇÔ¤·¤Þ¤·¤¿¡£');
+define('_MI_XUPDATE_ERR_DOWNLOAD_FILE'      , '¥Õ¥¡¥¤¥ë¤Î¥À¥¦¥ó¥í¡¼¥É¤Ë¼ºÇÔ¤·¤Þ¤·¤¿¡£');
+define('_MI_XUPDATE_ERR_NOT_UPLOADED'       , '¾å½ñ¤­¤Î¥­¥ã¥ó¥»¥ë');
+define('_MI_XUPDATE_ERR_FTP_NOTFOUND'       , 'ÂÐ¾Ý¤Î¥¢¥¤¥Æ¥à¤¬¸«¤Ä¤«¤ê¤Þ¤»¤ó¡£');

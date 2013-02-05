@@ -1,0 +1,67 @@
+<div class="adminnavi">
+	<a href="./index.php"><{$smarty.const._AM_BMCSV_TITLE}></a>
+  &raquo;&raquo; 
+  <span class="adminnaviTitle">
+  <a href="./index.php?action=DataUpload">
+  <{$smarty.const._AM_BMCSV_DATA_CSVUPLOAD}>
+  </a>
+  </span>
+</div>
+
+<h3 class="admintitle"><{$smarty.const._AM_BMCSV_DATA_CSVUPLOAD}></h3>
+
+<div class="confirm">
+	<ul>
+		<li><{$smarty.const._AM_BMCSV_TIPS1_IMPORT_CSV}></li>
+		<li><{$smarty.const._AM_BMCSV_TIPS2_IMPORT_CSV}></li>
+		<li><{$smarty.const._AM_BMCSV_TIPS3_IMPORT_CSV}></li>
+	</ul>
+</div>
+<h3>
+	<{$smarty.const._AM_BMCSV_MODULE_NAME}> : <{$moduleName}>
+	<{$smarty.const._AM_BMCSV_TABLE_NAME}> : <{$tableName}>
+</h3>
+<{$smarty.const._AM_BMCSV_IMPORT_MESSAGE|sprintf:$lineCount}>
+
+
+<{if count($csv_data)>0}>
+  <style>
+    td.update{
+	  font-weight: bold;
+	  color: #ff0000;
+	}
+	td.new{
+	  font-weight: bold;
+      color: #00ff00;
+	}
+  </style>
+  <table class="outer">
+  <tr class="head">
+    <th>&nbsp;</th>
+    <{foreach from=$import_fields item=field}>
+      <th style="border-right:1px solid #7775bc;">
+        <{$field}>
+      </th>
+    <{/foreach}>
+  </tr>
+  <{foreach from=$csv_data item=d}>
+    <tr class="<{cycle values=odd,even}>">
+    <td class="<{if $d.mUpdate}>update<{elseif $d.mCreate}>new<{/if}>">
+      <{if $d.mUpdate}>Update!<{elseif $d.mCreate}>New!<{/if}>
+    </td>
+    <{foreach from=$d.value item=dd}>
+	  <td<{if $dd.update}> class="update"<{/if}>><{$dd.var}></td>
+	<{/foreach}>
+	</tr>
+  <{/foreach}>
+  </table>
+<{/if}>
+
+<form action="./index.php?action=ImportDo" method="post">
+	<input type="hidden" name="moduleName" value="<{$moduleName}>" />
+	<input type="hidden" name="tableName" value="<{$tableName}>" />
+  <input type="hidden" name="uploaded_filename" value="<{$uploaded_filename}>" />
+  <input type="submit" name="do" value="<{$smarty.const._AM_BMCSV_IMPORT_CSV_DO}>" class="formButton">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="submit" name="back" value="<{$smarty.const._AM_BMCSV_IMPORT_CSV_BACK}>" class="formButton">
+</form>

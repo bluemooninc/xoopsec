@@ -20,8 +20,10 @@
 	</ul>
 </div>
 <div style="text-align:center; line-height:2em;">
-  <{$smarty.const._AD_PROFILE_DATA_UPLOAD_CHECK_PROFILE_CSVFILE}><br>
+  <{$smarty.const._AD_PROFILE_DATA_UPLOAD_CHECK_CSVFILE}><br>
 </div>
+
+Sample is below and other <{$lineCount}> records will be import. Do you want to procced?
 
 <{if count($csv_data)>0}>
   <style>
@@ -37,7 +39,7 @@
   <table class="outer">
   <tr class="head">
     <th>&nbsp;</th>
-    <{foreach from=$profile_fields item=field}>
+    <{foreach from=$import_fields item=field}>
       <th style="border-right:1px solid #7775bc;">
         <{$field}>
       </th>

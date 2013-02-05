@@ -38,9 +38,7 @@ class Xupdate_Admin_ModuleViewAction extends Xupdate_AbstractAction
 	{
 		//データの自動作成と削除
 		$inidataset = new Xupdate_ModulesIniDadaSet;
-		$inidataset->storeHand =  & $this->_getStoreHandler();
-		$inidataset->modHand = & $this->_getModStoreHandler();
-		$inidataset->execute('module');
+		$inidataset->execute('all', ($this->mRoot->mContext->mRequest->getRequest('checkonly')));
 		//-----------------------------------------------
 		return true;
 
@@ -83,26 +81,52 @@ class Xupdate_Admin_ModuleViewAction extends Xupdate_AbstractAction
 	**/
 	public function executeViewSuccess(&$render)
 	{
+		if ($this->mRoot->mContext->mRequest->getRequest('checkonly')) {
+			while( ob_get_level() && @ ob_end_clean() ){
+			}
+			header('Content-type: image/gif');
+			header('Last-Modified: '.gmdate( 'D, d M Y H:i:s' ).' GMT');
+			header('pragma: no-cache');
+			header('Cache-Control: no-cache, must-revalidate');
+			header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+			readfile(XOOPS_ROOT_PATH . '/images/blank.gif');
+			exit();
+		}
+		
+		// Check install dirctory
+		if (XUPDATE_INSTALLERCHECKER_ACTIVE && is_dir(XOOPS_ROOT_PATH . '/install')) {
+			while( ob_get_level() && @ ob_end_clean() ){
+			}
+			header('Location:' . XOOPS_MODULE_URL . '/xupdate/admin/index.php?action=InstallChecker');
+			exit();
+		}
+		
 		$render->setTemplateName('admin_module_view.html');
 
 		$render->setAttribute('mod_config', $this->mod_config);
 		$render->setAttribute('xupdate_writable', $this->Xupdate->params['is_writable']);
 
-		$render->setAttribute('xupdate_items', $this->get_storeItems());
+		$render->setAttribute('module_items', $this->get_storeItems('module'));
+		$render->setAttribute('theme_items', $this->get_storeItems('theme'));
+		$render->setAttribute('package_items', $this->get_storeItems('package'));
+		$render->setAttribute('preload_items', $this->get_storeItems('preload'));
 
 		$render->setAttribute('adminMenu', $this->mModule->getAdminMenu());
+		$render->setAttribute('currentMenu', _MI_XUPDATE_ADMENU_STORELIST);
 
 	}
 
 
-	private function get_storeItems()
+	private function get_storeItems($contents)
 	{
 		$store_mod_arr=array();
 		$storeHand =  & $this->_getStoreHandler();
 		$modHand = & $this->_getModStoreHandler();
 
 		$criteria = new CriteriaCompo();
-		$criteria->add(new Criteria( 'contents', 'module' ) );
+		$criteria->add(new Criteria( 'contents', $contents ) );
+		$criteria->setSort('sid');
+		$criteria->setOrder('ASC');
 
 		$storeObjects =& $storeHand->getObjects($criteria,null,null,true);
 
@@ -111,14 +135,20 @@ class Xupdate_Admin_ModuleViewAction extends Xupdate_AbstractAction
 
 			$criteria = new CriteriaCompo();
 			$criteria->add(new Criteria( 'sid', $sid ) );
+			$criteria->setSort('dirname');
+			$criteria->setOrder('ASC');
 			$siteModuleStoreObjects =& $modHand->getObjects($criteria);
 
 			$itemsobj = array();
 			foreach($siteModuleStoreObjects as $key => $mobj){
-				$itemsobj[]=$mobj;
+				$itemsobj[$key]['id'] = $mobj->getShow('id');
+				$itemsobj[$key]['dirname'] = $mobj->getShow('dirname');
+				$itemsobj[$key]['hasupdate'] = $mobj->getShow('hasupdate');
+				$itemsobj[$key]['isactive'] = $mobj->getShow('isactive');
+				$itemsobj[$key]['title'] = ($itemsobj[$key]['isactive'] == 1)? htmlspecialchars(_MI_XUPDATE_INSTALLED) : ($mobj->get('description')? htmlspecialchars(strip_tags($mobj->get('description')), ENT_QUOTES) : _MI_XUPDATE_FUTURE);
 			}
-			$store_mod_arr[$sid]['itemsobj']=$itemsobj;
-			$store_mod_arr[$sid]['items_count']=count($itemsobj);
+			$store_mod_arr[$sid]['itemsobj'] = $itemsobj;
+			$store_mod_arr[$sid]['items_count'] = count($itemsobj);
 		}
 		return $store_mod_arr;
 	}

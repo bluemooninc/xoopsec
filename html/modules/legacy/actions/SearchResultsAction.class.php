@@ -89,7 +89,7 @@ class Legacy_SearchResultsAction extends Legacy_Action
 					
 					$params['mid'] = $mid;
 					$module['results'] = $this->_doSearch($client, $xoopsUser, $params);
-					
+
 					if (count($module['results']) > 0) {
 						$module['has_more'] = (count($module['results']) >= $this->_getMaxHit()) ? true : false;
 						$this->mSearchResults[] = $module;

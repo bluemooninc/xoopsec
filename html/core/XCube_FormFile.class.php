@@ -234,13 +234,12 @@ class XCube_FormFile
 		else {
 			$destFile = $file;
 		}
-		
+
 		$ret = move_uploaded_file($this->_mTmpFileName, $destFile);
-			
 //		$prevMask = @umask(XCUBE_FORMFILE_PREVMASK);
 //		@umask($prevMask);
 		@chmod($destFile, XCUBE_FORMFILE_CHMOD);
-		
+
 		return $ret;
 	}
 	
@@ -322,7 +321,7 @@ class XCube_FormImageFile extends XCube_FormFile
 			return false;
 		
 		list($width,$height,$type,$attr)=getimagesize($this->_mTmpFileName);
-		
+
 		switch($type) {
 			case IMAGETYPE_GIF:
 				$this->setExtension("gif");

@@ -264,10 +264,14 @@ class User_LegacypageFunctions
 		//
 		// Regist to session
 		//
+		//if($_SESSION['cartObjects']){
+		//	$cartObjects = $_SESSION['cartObjects'];
+		//}
 		$root->mSession->regenerate();
 		$_SESSION = array();
 		$_SESSION['xoopsUserId'] = $xoopsUser->get('uid');
 		$_SESSION['xoopsUserGroups'] = $xoopsUser->getGroups();
+		//$_SESSION['cartObjects'] =$cartObjects;     // for bmcart
 	}
 	
     function checkLoginSuccess(&$xoopsUser)

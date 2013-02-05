@@ -10,8 +10,8 @@ PRIMARY KEY  (`sid`)) ENGINE=MyISAM;
 CREATE TABLE `{prefix}_{dirname}_modulestore` (
 	`id` int(11) unsigned NOT NULL  auto_increment,
 	`sid` int(11) unsigned NOT NULL default 0,
-	`dirname` varchar(25) NOT NULL default '',
-	`trust_dirname` varchar(25) default '',
+	`dirname` varchar(255) NOT NULL default '',
+	`trust_dirname` varchar(255) default '',
 	`version` smallint(5) unsigned default '100',
 	`license` varchar(255) NOT NULL default '',
 	`required` varchar(255) NOT NULL default '',
@@ -26,6 +26,7 @@ CREATE TABLE `{prefix}_{dirname}_modulestore` (
 	`options` text,
 	`isactive` int(11) NOT NULL DEFAULT '-1',
 	`hasupdate` tinyint(1) NOT NULL DEFAULT '0',
+	`contents` varchar(255) NOT NULL default '',
 PRIMARY KEY  (`id`),
 KEY sid (sid),
 KEY dirname (dirname)

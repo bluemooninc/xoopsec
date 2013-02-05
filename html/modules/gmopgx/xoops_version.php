@@ -16,12 +16,14 @@ $modversion['version'] = 0.03;
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = "admin/index.php";
 $modversion['adminmenu'] = "admin/menu.php";
-$modversion['sub'][] = array('name' => _MI_GMOPGX_MEMBER_SAVE, 'url' => 'memberSave');
-$modversion['sub'][] = array('name' => _MI_GMOPGX_SAVE_CARD  , 'url' => 'saveCard');
-$modversion['sub'][] = array('name' => _MI_GMOPGX_SEARCH_CARD, 'url' => 'searchCard');
+$modDir = XOOPS_URL . "/modules/" . $modversion["dirname"];
+$modversion['sub'][] = array('name' => _MI_GMOPGX_MEMBER_SAVE, 'url' => $modDir.'/memberSave');
+$modversion['sub'][] = array('name' => _MI_GMOPGX_SAVE_CARD  , 'url' => $modDir.'/saveCard');
+$modversion['sub'][] = array('name' => _MI_GMOPGX_SEARCH_CARD, 'url' => $modDir.'/searchCard');
+/*
 $modversion['sub'][] = array('name' => _MI_GMOPGX_ENTRY_TRAN , 'url' => 'entryTran');
 $modversion['sub'][] = array('name' => _MI_GMOPGX_EXEC_TRAN  , 'url' => 'execTran');
-
+*/
 /*
  * View
  */

@@ -1,5 +1,6 @@
 <?php
 define('_MD_GMOPGX_MODULE_TITLE', 'GMO Payment');
+define('_MD_GMOPGX_RECEIPT', 'クレジットご利用明細');
 define('_MD_GMOPGX_TABLE_STATUS', '備考');
 define('_MD_GMOPGX_TABLE_STATUS_0', 'カートの中身');
 define('_MD_GMOPGX_TABLE_STATUS_1', '注文中の商品');
@@ -20,12 +21,19 @@ define('_MD_GMOPGX_CART_QTY', '数量');
 
 
 define('_MD_GMOPAYMENT_TITLE_MEMBERSAVE','会員登録');
-define('_MD_GMOPAYMENT_TITLE_SAVECARD'  ,'カード情報の登録');
-define('_MD_GMOPAYMENT_TITLE_ADDCARD'  ,'カード情報の追加');
+define('_MD_GMOPAYMENT_TITLE_MEMBERSAVED','決済アカウントの作成ありがとうございます。
+次にカード登録のボタンをクリックして、クレジットカードの登録へお進み下さい。
+');
+define('_MD_GMOPAYMENT_TITLE_SAVECARD'  ,'クレジットカード登録');
+define('_MD_GMOPAYMENT_TITLE_ADDCARD'  ,'クレジットカード登録');
 define('_MD_GMOPAYMENT_TITLE_SEARCHCARD'  ,'登録カード検索');
 define('_MD_GMOPAYMENT_TITLE_ENTRYTRAN' ,'クレジットカードによるお支払い');
 define('_MD_GMOPAYMENT_TITLE_EXECTRAN'  ,'決済実行');
-define('_MD_GMOPAYMENT_DESC_MEMBERSAVE','GMO Payment Gateway に貴方のIDでアカウントを作成します。よろしいですか？');
+define('_MD_GMOPAYMENT_DESC_MEMBERSAVE',
+'本サイトでは、GMOペイメントゲートウェイ株式会社( http://www.gmo-pg.com/ )のAPI決済代行システムを採用しております。
+クレジットカードの全ての情報はこのサービスAPIにより行われ本サイトにカード情報は一切残りません。
+上記カードのお取り扱いに同意頂ける事を条件に貴方のIDで決済用アカウントを登録します。よろしいですか？');
+define('_MD_GMOPAYMENT_SUBMIT_REGISTRATION','同意してアカウントを作成する');
 define('_MD_GMOPAYMENT_DESC_SAVECARD'  ,'GMO Payment Gateway に貴方のIDでクレジットカード情報を登録します。必要事項をご記入し登録をクリックしてください。');
 define('_MD_GMOPAYMENT_DESC_SEARCHCARD','GMO Payment Gateway に貴方のIDで登録したクレジットカード情報を検索します。必要事項をご記入し登録をクリックしてください。');
 define('_MD_GMOPAYMENT_DESC_ENTRYTRAN' ,'GMO Payment Gateway にてお支払いを行います。よろしければ「支払いを確定する」をクリックしてください。');
@@ -45,20 +53,20 @@ define('_MD_GMOPAYMENT_CARDPASS','カードパスワード');	// PIN
 define('_MD_GMOPAYMENT_CARDNAME','カード会社略称');	// VISA,Master等
 define('_MD_GMOPAYMENT_HOLDERNAME','カード名義人');
 define('_MD_GMOPAYMENT_DEFAULTFLAG','通常使うカードに指定');
-define('_MD_GMOPAYMENT_RESISTER','決済を確定する');
+define('_MD_GMOPAYMENT_RESISTER','カード情報を登録');
 define('_MD_GMOPAYMENT_SUBMIT','支払いを確定する');
 define('_MD_GMOPAYMENT_DO','する');
 define('_MD_GMOPAYMENT_DONOT','しない');
 define('_MD_GMOPAYMENT_SECMODE0','論理');
 define('_MD_GMOPAYMENT_SECMODE1','物理');
 //EntryTran
-define('_MD_GMOPAYMENT_ORDERID','ご注文番号');
+define('_MD_GMOPAYMENT_ORDERID','クレジット決済番号');
 define('_MD_GMOPAYMENT_JOBCD','処理区分');
 define('_MD_GMOPAYMENT_JOBCD_AUTH','AUTH:仮売上');
 define('_MD_GMOPAYMENT_JOBCD_CHECK','CHECK:有効性チェック');
 define('_MD_GMOPAYMENT_JOBCD_CAPTURE','CAPTURE:即時売上');
 define('_MD_GMOPAYMENT_ITEMCODE','商品コード');
-define('_MD_GMOPAYMENT_AMOUNT','利用金額');
+define('_MD_GMOPAYMENT_AMOUNT','ご利用金額');
 define('_MD_GMOPAYMENT_TAX','税送料');
 define('_MD_GMOPAYMENT_TDFLAG','3D利用');
 define('_MD_GMOPAYMENT_TDFLAG_SECURE','利用する');
@@ -66,7 +74,7 @@ define('_MD_GMOPAYMENT_TDFLAG_NOSECURE','利用しない');
 define('_MD_GMOPAYMENT_TDTENANTNAME','3D認証画面店舗名');
 //ExecTran
 define('_MD_GMOPAYMENT_ACCESSID','取引ID');
-define('_MD_GMOPAYMENT_EXECTRAN','支払いを実行する');
+define('_MD_GMOPAYMENT_HOLD','商品発送時決済予約中');
 define('_MD_GMOPAYMENT_DONETRAN','お支払い済み');
 define('_MD_GMOPAYMENT_ACCESSPASS','取引パスワード');
 define('_MD_GMOPAYMENT_PAYMETHOD','支払方法');

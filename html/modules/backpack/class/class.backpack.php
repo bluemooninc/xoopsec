@@ -126,7 +126,7 @@ class backpack {
 			$field_string .= $crlf.sprintf("  `%s` %s%s%s%s",  $field_name, $field_type, $field_not_null, $field_auto_increment, $field_default);
 		}
 		// Get the index info and output to a string in the correct MySQL syntax
-		$result = mysql_query("SHOW KEYS FROM $tablename");	//SHOW INDEX FROM 
+		$result = mysql_query("SHOW KEYS FROM $tablename");	//SHOW INDEX FROM
 		if ($this->debug) echo "\nindex_info\n\n";
 		while ($row = mysql_fetch_array($result)) {
 	        $kname    = $row['Key_name'];
@@ -322,7 +322,7 @@ class backpack {
 	}
 	function backup_data($tablename_array, $backup_structure, $backup_data, $filename, $cfgZipType){
 		
-		$field_string = "-- Bluemoon.Xoops Backup/Restore Module\r\n-- BackPack\r\n-- http://www.bluemooninc.jp/\r\n"
+		$field_string = "-- Bluemoon inc. Backup/Restore Module\r\n-- BackPack\r\n-- http://www.bluemooninc.jp/\r\n"
 			. "-- --------------------------------------------\r\n";
 		$this->dump_buffer = $field_string;
 		$this->dump_size += strlen(bin2hex($field_string)) / 2;
@@ -408,31 +408,7 @@ class backpack {
 		}
 		fclose($handle);
 	}
-	function get_module_tables($dirname){
-		global $xoopsConfig,$xoopsDB;
-		if (!$dirname ) return;
-		$module_handler =& xoops_gethandler('module');
-		$module =& $module_handler->getByDirname($dirname);
-		// Get tables used by this module
-		$modtables = $module->getInfo('tables');
-		if ($modtables != false && is_array($modtables)) {
-			return $modtables;
-		}else{
-			// TABLES (loading mysql.sql)
-			$sql_file_path = XOOPS_TRUST_PATH . "/modules/" . $dirname.'/sql/mysql.sql' ;
-			$prefix_mod = $dirname ;
-			if( file_exists( $sql_file_path ) ) {
-				$sql_lines = file( $sql_file_path ) ;
-				foreach( $sql_lines as $sql_line ) {
-					if( preg_match( '/^CREATE TABLE \`?([a-zA-Z0-9_-]+)\`? /i' , $sql_line , $regs ) ) {
-						$modtables[] = $prefix_mod.'_'.$regs[1] ;
-					}
-				}
-				return $modtables;
-			}
-		}
-		die( "No Table" );
-	}
+
 	function make_module_selection($select_dirname='',$addblank=0)
 	{
 	    global $xoopsDB;

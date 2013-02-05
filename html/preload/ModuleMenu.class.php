@@ -12,7 +12,7 @@ class moduleMenu extends XCube_ActionFilter
         );
     }
 
-    function makeSubLinks($sublinks)
+    function makeSubLinks($dirname,$sublinks)
     {
         $i = 0;
         $ret = NULL;
@@ -21,12 +21,12 @@ class moduleMenu extends XCube_ActionFilter
                 $i--;
                 $ret[$i]['dropdown'][] = array(
                     'name' => $sublink['name'],
-                    'url' => $sublink['url']
+                    'url' => XOOPS_URL ."/modules/". $dirname  ."/". $sublink['url']
                 );
             } else {
                 $ret[$i] = array(
                     'name' => $sublink['name'],
-                    'url' => $sublink['url']
+                    'url' => XOOPS_URL ."/modules/".  $dirname  ."/". $sublink['url']
                 );
             }
             $i++;
@@ -44,7 +44,7 @@ class moduleMenu extends XCube_ActionFilter
         $curModId = isset($GLOBALS['xoopsModule']) && $GLOBALS['xoopsModule']->getVar('mid') ? $GLOBALS['xoopsModule']->getVar('mid') : NULL;
         $modlist = array();
         foreach ($modules as $module) {
-            $sublinks = $this->makeSubLinks($module->subLink());
+            $sublinks = $this->makeSubLinks($module->get('dirname'),$module->subLink());
             if ($curModId == $module->mid()) {
                 $modlist[] = array(
                     'directory' => $module->get('dirname'),

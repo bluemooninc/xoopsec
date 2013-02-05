@@ -81,9 +81,20 @@ class Profile_DataHandler extends XoopsObjectGenericHandler
 		if(count($obj->mDef)===0){
 			return true;
 		}
-		return parent::insert($obj, $force = false);
+		parent::insert($obj, $force = false);
 	}
 
+	/**
+	 * ユーザIDからレコードをすべて削除する
+	 * @param $userId
+	 * @return bool
+	 */
+	public function deleteAllByUserId($userId)
+	{
+		$criteria = new CriteriaCompo();
+		$criteria->add(new Criteria('uid', $userId));
+		$this->deleteAll($criteria);
+	}
 }
 
 ?>

@@ -63,7 +63,7 @@ $controllerFileName = $controllerName.$ext;
 $controllerFullPath = _MY_MODULE_PATH.$controllerAppPath.$controllerFileName;
 
 require_once _MY_MODULE_PATH.$controllerAppPath.'AbstractAction.class.php';
-require_once _MY_MODULE_PATH.$controllerAppPath.'ErrorMessageHandler.php';
+require_once _MY_MODULE_PATH.'class/ErrorMessageHandler.php';
 require_once _MY_MODULE_PATH.$modelAppPath.'Model.class.php';
 require_once _MY_MODULE_PATH.$viewAppPath.'View.class.php';
 

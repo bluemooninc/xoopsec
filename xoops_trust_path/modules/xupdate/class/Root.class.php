@@ -20,7 +20,12 @@ class Xupdate_Root extends XoopsSimpleObject {
 		{
 			exit;
 		}
-
+		
+		// load compatibility code
+		if (version_compare(PHP_VERSION, '5.2.0', '<')) {
+			require_once XUPDATE_TRUST_PATH . '/include/compat.php';
+		}
+		
 		$this->xoops_root_path = XOOPS_ROOT_PATH;
 
 		$this->mRoot = $root = XCube_Root::getSingleton();
@@ -52,33 +57,14 @@ class Xupdate_Root extends XoopsSimpleObject {
 		}else{
 			$this->params['is_writable']['path'] = $tmpf_realpath ;//OK
 		}
-		$is_writable_result = false;
-		if (!empty($tmpf_realpath) && is_dir($tmpf_realpath)) {
-			@chmod($tmpf_realpath, 0705);
-			if(strtoupper(substr(PHP_OS, 0, 3)) === 'WIN'){
-				if ( is_writeable($tmpf_realpath)  ) {
-					$is_writable_result = true;
-				}
-			}else{
-				$fper_str = substr(sprintf('%o', fileperms($tmpf_realpath)), -3);
-				$fper_str1 = substr($fper_str, 0,1);
-				$fper_str_1 = substr($fper_str, -1);
-				if ( $fper_str1 == '7' ) {
-					if ( $fper_str_1 == '7' || $fper_str_1 == '5' ) {
-						$is_writable_result = true;
-					}
-				}
-			}
-		}
-		$this->params['is_writable']['result'] = $is_writable_result ;
-
+		$this->params['is_writable']['result'] = Xupdate_Utils::checkDirWritable($tmpf_realpath);
 
 		// Ftp class
-		require_once dirname(__FILE__) . '/Ftp.class.php';
+		require_once XUPDATE_TRUST_PATH . '/class/Ftp.class.php';
 		$this->Ftp = new Xupdate_Ftp($this) ;
 
 		// Func class
-		require_once dirname(__FILE__).'/Func.class.php' ;
+		require_once XUPDATE_TRUST_PATH . '/class/Func.class.php' ;
 		$this->func = new Xupdate_Func($this) ;
 	}
 

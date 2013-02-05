@@ -41,7 +41,7 @@ class Controller_MemberSave extends AbstractAction{
 			$input->setSitePass( $xoopsModuleConfig['PGCARD_SITE_PASS'] );
 		
 			//会員IDは必須です
-			$input->setMemberId( $xoopsUser->uid() );
+			$input->setMemberId( $xoopsUser->uid() . "-" . $xoopsUser->getVar('uname') );
 		
 			//会員名称は任意です。
 			$input->setMemberName( mb_convert_encoding( $xoopsUser->getVar('uname') , 'SJIS' , _CHARSET ) );
