@@ -8,7 +8,7 @@
 
 function b_bmcart_category_show()
 {
-	$category_id = $_SESSION['bmcart']['category_id'] ? $_SESSION['bmcart']['category_id'] : 0;
+	$category_id = isset($_SESSION['bmcart']['category_id']) ? $_SESSION['bmcart']['category_id'] : 0;
 	$handler = xoops_getmodulehandler("category", "bmcart");
 	$myObject = $handler->get($category_id);
 	if ($myObject) {

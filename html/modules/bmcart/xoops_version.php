@@ -1,6 +1,6 @@
 <?php
 /*
- * B.M.Cart - Cart Module on XOOPS Cube v2.2
+ * B.M.Cart - Cart Module on XOOPS Cube v2.2 / PHP5.3 or later
  * Copyright (c) Bluemoon inc. 2013 All rights reserved.
  * Author : Yoshi Sakai (http://bluemooninc.jp)
  * Licence : GPL V3 licence

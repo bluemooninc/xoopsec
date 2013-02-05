@@ -9,6 +9,7 @@
 function _array_flatten($array)
 {
 	$result = array();
+	// Callback with closure is PHP5.3 or later
 	array_walk_recursive($array, function ($v) use (&$result) {
 		$result[] = $v;
 	});
@@ -18,7 +19,7 @@ function _array_flatten($array)
 function b_bmcart_newitem_show()
 {
 	// For Category Selector
-	$category_id = $_SESSION['bmcart']['category_id'] ? $_SESSION['bmcart']['category_id'] : NULL;
+	$category_id = isset($_SESSION['bmcart']['category_id']) ? $_SESSION['bmcart']['category_id'] : NULL;
 	$cArray = array();
 	if ($category_id) {
 		$catHandler =& xoops_getModuleHandler('category', 'bmcart');

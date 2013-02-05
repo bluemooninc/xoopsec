@@ -58,7 +58,7 @@ $modversion['tables'][] = '{prefix}_{dirname}_payment';
 // Config Settings
 $modversion['config'][1] = array(
     'name' => 'PGCARD_SITE_ID',
-    'title' => 'PGCARD_SITE_ID',
+    'title' => _MI_GMOPG_SITE_ID,
     'description' => 'PGCARD_SITE_ID',
     'formtype' => 'text',
     'valuetype' => 'text',
@@ -66,15 +66,15 @@ $modversion['config'][1] = array(
 );
 $modversion['config'][2] = array(
     'name' => 'PGCARD_SITE_PASS',
-    'title' => 'PGCARD_SITE_PASS',
+    'title' => _MI_GMOPG_SITE_PASS,
     'description' => 'PGCARD_SITE_PASS',
-    'formtype' => 'text',
+    'formtype' => 'password',
     'valuetype' => 'text',
     'default' => ''
 );
 $modversion['config'][3] = array(
 	'name' => 'PGCARD_SHOP_ID',
-	'title' => 'PGCARD_SHOP_ID',
+	'title' => _MI_GMOPG_SHOP_ID,
 	'description' => 'PGCARD_SHOP_ID',
 	'formtype' => 'text',
 	'valuetype' => 'text',
@@ -82,17 +82,10 @@ $modversion['config'][3] = array(
 );
 $modversion['config'][4] = array(
 	'name' => 'PGCARD_SHOP_PASS',
-	'title' => 'PGCARD_SHOP_PASS',
+	'title' => _MI_GMOPG_SHOP_PASS,
 	'description' => 'PGCARD_SHOP_PASS',
-	'formtype' => 'text',
+	'formtype' => 'password',
 	'valuetype' => 'text',
 	'default' => ''
 );
-$modversion['config'][5] = array(
-    'name' => 'PGCARD_RETURN_URL',
-    'title' => _MI_GMOPGX_RETURN_URL,
-    'description' => _MI_GMOPGX_RETURN_URL,
-    'formtype' => 'text',
-    'valuetype' => 'text',
-    'default' => ''
-);
+

@@ -17,9 +17,10 @@ function b_bmcart_checkedItems_show()
 	$uid = Legacy_Utils::getUid();
 	$bmcart_session = new bmcart_session();
 	if ($uid){
-		$SessionObjects = $bmcart_session->getObjects('checkedItems');
-		$bmcart_session->setCheckedItems($SessionObjects,$uid);
-		$bmcart_session->clearSession('checkedItems');
+		if ($SessionObjects = $bmcart_session->getObjects('checkedItems')){
+			$bmcart_session->setCheckedItems($SessionObjects,$uid);
+			$bmcart_session->clearSession('checkedItems');
+		}
 		$criteria->add(new Criteria('uid',$uid));
 		$criteria->addsort('last_update', 'desc');
 		$objects = $handler->getObjects($criteria, 0, 10);
