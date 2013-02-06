@@ -8,7 +8,10 @@
 	<{/if}>
 </a>
 <{/foreach}>
-<h3><{$smarty.const._MD_BMCART_ITEM_DETAIL}></h3>
+<h2>
+	<{$ListData.item_name|xoops_escape}>
+</h2>
+<{$smarty.const._MD_BMCART_ITEM_DETAIL}>
 <div class="container-fluid">
 	<div class="span4">
 		<{if $imageObjects}>
@@ -57,11 +60,7 @@
 	<div class="span8">
 		<table class="table">
 			<tr>
-				<td width="20%"><{$smarty.const._MD_BMCART_ITEM_NAME}></td>
-				<td width="80%"><{$ListData.item_name|xoops_escape}></td>
-			</tr>
-			<tr>
-				<td><{$smarty.const._MD_BMCART_ITEM_DESC}></td>
+				<td width="20%"><{$smarty.const._MD_BMCART_ITEM_DESC}></td>
 				<td><{$ListData.item_desc}></td>
 			</tr>
 			<tr>

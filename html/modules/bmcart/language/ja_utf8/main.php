@@ -22,7 +22,7 @@ define('_MD_BMCART_DIALOG_DELETE_DESC', 'このレコードを削除してもよ
 define('_MD_BMCART_CATEGORY_LIST', 'カテゴリ一覧');
 define('_MD_BMCART_CATEGORY_NAME', 'カテゴリ名');
 define('_MD_BMCART_ITEM_LIST', '商品一覧');
-define('_MD_BMCART_ITEM_DETAIL', '商品詳細');
+define('_MD_BMCART_ITEM_DETAIL', '商品の情報');
 define('_MD_BMCART_ITEM_NAME', '商品名');
 define('_MD_BMCART_ITEM_DESC', '商品説明');
 define('_MD_BMCART_ITEM_STOCK', '在庫数');
