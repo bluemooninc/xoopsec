@@ -25,10 +25,8 @@ class bmcart_session{
 	}
 	public function setObjects($name,$objects,$newObject=null){
 		$serialized = $newObject ? array(serialize($newObject)) : array();
-		if($objects){
-			foreach($objects as $object){
-				$serialized[] = serialize($object);
-			}
+		foreach($objects as $object){
+			$serialized[] = serialize($object);
 		}
 		$_SESSION[$name] = $serialized;
 	}
