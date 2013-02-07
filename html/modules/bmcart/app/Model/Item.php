@@ -98,11 +98,12 @@ class Model_Item extends AbstractModel {
 			$bmcart_session = new bmcart_session();
 			$bmcart_session->insert('checkedItems','item_id',$checkedObject);
 		}
-
 		$ret=array();
 		foreach($object->mVars as $key=>$val){
-			$ret[$key]=$object->getVar($key);
+			$ret[$key]=$val['value'];
 		}
+		$myts = new Legacy_TextFilter();
+		$ret['item_desc'] = $myts->toShowTarea($ret['item_desc'],1,0,1,1,0);
 		return $ret;
 	}
 
