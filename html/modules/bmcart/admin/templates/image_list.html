@@ -11,18 +11,20 @@
 		<{$smarty.const._AD_BMCART_IMAGE_NEW}>
 	</a></li>
 </ul>
-
+<{if $itemObject}>
+<h2><{$itemObject->getShow('item_name')}></h2>
+<{/if}>
 <table class="outer">
 	<tr>
 		<th><{$smarty.const._AD_BMCART_IMAGE_ID}>
-			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.IMAGE_SORT_KEY_IMAGE_CATEGORY}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
-			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.IMAGE_SORT_KEY_IMAGE_CATEGORY}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.IMAGE_SORT_KEY_IMAGE_ID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.IMAGE_SORT_KEY_IMAGE_ID}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
 		<th><{$smarty.const._AD_BMCART_ITEM_ID}>
-			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.IMAGE_SORT_KEY_IMAGE_CATEGORY}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
-			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.IMAGE_SORT_KEY_IMAGE_CATEGORY}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.IMAGE_SORT_KEY_ITEM_ID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.IMAGE_SORT_KEY_ITEM_ID}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
 		<th><{$smarty.const._AD_BMCART_IMAGE_FILENAME}>
-			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.IMAGE_SORT_KEY_NAME}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
-			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.IMAGE_SORT_KEY_NAME}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.IMAGE_SORT_KEY_IMAGE_FILENAME}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.IMAGE_SORT_KEY_IMAGE_FILENAME}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
 		<th><{$smarty.const._AD_BMCART_CONTROL}></th>
 	</tr>
 	<{foreach item=item from=$objects}>
@@ -33,8 +35,8 @@
 		</td>
 		<td class="item_list_number"><{$item->getShow('item_id')}></td>
 		<td class="item_list_string">
-			<img src="<{$xoops_url}>/uploads/s_<{$item->getShow('image_filename')}>" />
-			<a href="<{$xoops_url}>/uploads/m_<{$item->getShow('image_filename')}>">
+			<img src="<{$xoops_url}>/uploads/m_<{$item->getShow('image_filename')}>" width="150px" />
+			<a href="<{$xoops_url}>/uploads/<{$item->getShow('image_filename')}>">
 			<{$item->getShow('image_filename')}>
 			</a>
 		</td>

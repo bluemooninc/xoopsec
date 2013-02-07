@@ -1,6 +1,6 @@
 <?php
 define('_MI_BMCART_NAME','B.M.Cart');
-define('_MI_BMCART_TITLE','Shopping cart');
+define('_MI_BMCART_TITLE','Shopping');
 
 define('_MI_BMCART_CATEGORY_LIST', 'Category list');
 define('_MI_BMCART_ITEM_LIST', 'Item list');

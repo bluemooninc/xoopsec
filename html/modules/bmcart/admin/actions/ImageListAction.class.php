@@ -8,6 +8,8 @@ require_once XOOPS_MODULE_PATH . "/bmcart/admin/forms/ImageFilterForm.class.php"
 class bmcart_ImageListAction extends bmcart_AbstractListAction
 {
 	protected $item_id;
+	protected $itemObject;
+
 	function &_getHandler()
 	{
 		$handler =& xoops_getmodulehandler('itemImages');
@@ -16,7 +18,10 @@ class bmcart_ImageListAction extends bmcart_AbstractListAction
 
 	function &_getFilterForm()
 	{
-		$this->item_id = xoops_getrequest('item_id');
+		$root =& XCube_Root::getSingleton();
+		$this->item_id = $root->mContext->mRequest->getRequest('item_id');
+		$itemHandler =& xoops_getmodulehandler('item');
+		$this->itemObject = $itemHandler->get($this->item_id);
 		$filter =new bmcart_ImageFilterForm($this->_getPageNavi(), $this->_getHandler());
 		return $filter;
 	}
@@ -30,6 +35,7 @@ class bmcart_ImageListAction extends bmcart_AbstractListAction
 	{
 		$render->setTemplateName("image_list.html");
 		$render->setAttribute("item_id", $this->item_id);
+		$render->setAttribute("itemObject", $this->itemObject);
 		$render->setAttribute("objects", $this->mObjects);
 		$render->setAttribute("pageNavi", $this->mFilter->mNavi);
 		$categoryHandler = xoops_getmodulehandler('category');

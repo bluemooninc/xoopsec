@@ -128,7 +128,8 @@ class bmcart_ImageAdminEditForm extends XCube_ActionForm
 		$imageUploader = new XCube_FormImageFile('upload_filename');
 		$imageUploader->fetch();
 		if ($imageUploader->hasUploadFile()) {
-			$imageUploader->saveAsRandBody($this->mUploadDir, "bmcart");
+			$fname = sprintf("bmcart%d_",$this->get('item_id'));
+			$imageUploader->saveAsRandBody($this->mUploadDir, $fname);
 			$this->_makeThumbnail("s_", 40, $imageUploader->getFileName());
 			$this->_makeThumbnail("m_", 300, $imageUploader->getFileName());
 			return $imageUploader->getFileName();

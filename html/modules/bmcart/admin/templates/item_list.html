@@ -66,13 +66,10 @@
 			</a>
 			<{/if}>
 			<a href="index.php?action=imageList&amp;item_id=<{$item->getShow('item_id')}>">
-				<img src="<{"icons/property.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_ITEM_PROPERTY}>" title="<{$smarty.const._AD_BMCART_LANG_ITEM_PROPERTY}>" />
+				<img src="<{"icons/image_add.png"|theme}>" alt="<{$smarty.const._AD_BMCART_ADD_IMAGE}>" title="<{$smarty.const._AD_BMCART_ADD_IMAGE}>" />
 			</a>
-			<a href="index.php?action=ItemPerm&amp;item_id=<{$item->getShow('item_id')}>">
-				<img src="<{"icons/permission.png"|theme}>" alt="<{$smarty.const._AD_BMCART_ITEM_PERMISSION}>" title="<{$smarty.const._AD_BMCART_ITEM_PERMISSION}>" />
-			</a>
-			<a href="index.php?action=ItemMember&amp;item_id=<{$item->getShow('item_id')}>">
-				<img src="<{"icons/members.png"|theme}>" alt="<{$smarty.const._AD_BMCART_ITEM_ORDER}>" title="<{$smarty.const._AD_BMCART_ITEM_ORDER}>" />
+			<a href="../itemList/itemDetail/<{$item->getShow('item_id')}>">
+				<img src="<{"icons/property.png"|theme}>" alt="<{$smarty.const._AD_BMCART_SHOW_ITEM}>" title="<{$smarty.const._AD_BMCART_SHOW_ITEM}>" />
 			</a>
 		</td>
 	</tr>

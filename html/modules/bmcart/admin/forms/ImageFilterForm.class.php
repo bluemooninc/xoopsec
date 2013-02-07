@@ -8,23 +8,19 @@ if (!defined('XOOPS_ROOT_PATH')) exit();
 
 require_once XOOPS_MODULE_PATH . "/bmcart/class/AbstractFilterForm.class.php";
 
-define('IMAGE_SORT_KEY_IMAGEID', 1);
-define('IMAGE_SORT_KEY_NAME', 2);
-define('IMAGE_SORT_KEY_DESCRIPTION', 3);
-define('IMAGE_SORT_KEY_IMAGE_TYPE', 4);
-define('IMAGE_SORT_KEY_MAXVALUE', 4);
+define('IMAGE_SORT_KEY_IMAGE_ID'      , 1);
+define('IMAGE_SORT_KEY_ITEM_ID'       , 2);
+define('IMAGE_SORT_KEY_IMAGE_FILENAME', 3);
 
-define('IMAGE_SORT_KEY_DEFAULT', IMAGE_SORT_KEY_IMAGEID);
+define('IMAGE_SORT_KEY_DEFAULT', IMAGE_SORT_KEY_IMAGE_ID);
 
 class bmcart_ImageFilterForm extends bmcart_AbstractFilterForm
 {
 	var $mSortKeys = array(
-		IMAGE_SORT_KEY_DEFAULT => 'image_id',
-		IMAGE_SORT_KEY_IMAGEID => 'item_id',
-		IMAGE_SORT_KEY_CATEGORY => 'category_id',
-		IMAGE_SORT_KEY_NAME => 'item_name',
-		IMAGE_SORT_KEY_DESCRIPTION => 'item_desc',
-		IMAGE_SORT_KEY_IMAGE_TYPE => 'status'
+		IMAGE_SORT_KEY_DEFAULT        => 'image_id',
+		IMAGE_SORT_KEY_IMAGE_ID       => 'image_id',
+		IMAGE_SORT_KEY_ITEM_ID        => 'item_id',
+		IMAGE_SORT_KEY_IMAGE_FILENAME => 'image_filename'
 	);
 
 	function getDefaultSortKey()
@@ -36,25 +32,21 @@ class bmcart_ImageFilterForm extends bmcart_AbstractFilterForm
 	{
 		parent::fetch();
 	
+		if (isset($_REQUEST['image_id'])) {
+			$this->mNavi->addExtra('image_id', xoops_getrequest('image_id'));
+			$this->_mCriteria->add(new Criteria('item_id', xoops_getrequest('image_id')));
+		}
+
 		if (isset($_REQUEST['item_id'])) {
 			$this->mNavi->addExtra('item_id', xoops_getrequest('item_id'));
 			$this->_mCriteria->add(new Criteria('item_id', xoops_getrequest('item_id')));
 		}
+	
+		if (isset($_REQUEST['image_filename'])) {
+			$this->mNavi->addExtra('image_filename', xoops_getrequest('image_filename'));
+			$this->_mCriteria->add(new Criteria('image_filename', xoops_getrequest('image_filename')));
+		}
 
-		if (isset($_REQUEST['category_id'])) {
-			$this->mNavi->addExtra('category_id', xoops_getrequest('category_id'));
-			$this->_mCriteria->add(new Criteria('category_id', xoops_getrequest('category_id')));
-		}
-	
-		if (isset($_REQUEST['item_name'])) {
-			$this->mNavi->addExtra('item_name', xoops_getrequest('item_name'));
-			$this->_mCriteria->add(new Criteria('item_name', xoops_getrequest('item_name')));
-		}
-	
-		if (isset($_REQUEST['status'])) {
-			$this->mNavi->addExtra('status', xoops_getrequest('status'));
-			$this->_mCriteria->add(new Criteria('group_type', xoops_getrequest('group_type')));
-		}
 		
 		$this->_mCriteria->addSort($this->getSort(), $this->getOrder());
 	}

@@ -1,6 +1,6 @@
 <?php
 define('_MI_BMCART_NAME','B.M.Cart');
-define('_MI_BMCART_TITLE','ショッピングカート');
+define('_MI_BMCART_TITLE','ショッピング');
 
 define('_MI_BMCART_CATEGORY_LIST', 'カテゴリ一覧');
 define('_MI_BMCART_ITEM_LIST', '商品一覧');
