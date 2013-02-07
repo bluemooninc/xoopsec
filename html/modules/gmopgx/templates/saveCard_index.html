@@ -3,6 +3,13 @@
 <{$smarty.const._MD_GMOPAYMENT_DESC_SAVECARD}>
 </p>
 
+<{if $message}>
+<div class="alert">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong>Warning!</strong> <{$message}>
+</div>
+<{/if}>
+
 <form id="list" name="list" method="post" action="<{$xoops_url}>/modules/gmopgx/saveCard/submit">
 
 <table class="table">
@@ -86,15 +93,18 @@
     </th>
     <td>
       <label for="def1">
-        <input name="DefaultFlag" id="def1" type="radio" value="1" checked="checked" tabindex="19" /><{$smarty.const._MD_GMOPAYMENT_DO}>
+        <input name="DefaultFlag" id="def1" type="radio" value="1" checked="checked" tabindex="19" />
+		  <{$smarty.const._MD_GMOPAYMENT_DO}>
       </label>
       <label for="def0">
-        <input name="DefaultFlag" id="def0" type="radio" value="0" tabindex="20" /><{$smarty.const._MD_GMOPAYMENT_DONOT}>
+        <input name="DefaultFlag" id="def0" type="radio" value="0" tabindex="20" />
+		  <{$smarty.const._MD_GMOPAYMENT_DONOT}>
       </label>
     </td>
   </tr>
   <tr>
     <td colspan="2" class="foot" align="center">
+	  <a class="btn btn-small" href="<{$return_url}>"><{$smarty.const._MD_GMOPGX_RETURN_URL}></a>
       <input class="btn btn-primary" id="button1" type="button" value="<{$smarty.const._MD_GMOPAYMENT_RESISTER}>" />
     </td>
   </tr>

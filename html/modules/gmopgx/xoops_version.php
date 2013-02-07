@@ -2,7 +2,7 @@
 /*
 * GMO-PG - Payment Module as XOOPS Cube Module
 * Copyright (c) Yoshi Sakai at Bluemoon inc. (http://bluemooninc.jp)
-* GPL V2 licence
+* GPL V3 licence
  */
 if (!defined('XOOPS_ROOT_PATH')) exit();
 if ( !isset($root) ) {
@@ -17,10 +17,10 @@ $modversion['hasAdmin'] = 1;
 $modversion['image'] = "gmopg.png";
 $modversion['adminindex'] = "admin/index.php";
 $modversion['adminmenu'] = "admin/menu.php";
-$modDir = XOOPS_URL . "/modules/" . $modversion["dirname"];
-$modversion['sub'][] = array('name' => _MI_GMOPGX_MEMBER_SAVE, 'url' => $modDir.'/memberSave');
-$modversion['sub'][] = array('name' => _MI_GMOPGX_SAVE_CARD  , 'url' => $modDir.'/saveCard');
-$modversion['sub'][] = array('name' => _MI_GMOPGX_SEARCH_CARD, 'url' => $modDir.'/searchCard');
+$modDir = $modversion["dirname"];
+$modversion['sub'][] = array('name' => _MI_GMOPGX_MEMBER_SAVE, 'url' => 'memberSave');
+$modversion['sub'][] = array('name' => _MI_GMOPGX_SAVE_CARD  , 'url' => 'saveCard');
+$modversion['sub'][] = array('name' => _MI_GMOPGX_SEARCH_CARD, 'url' => 'searchCard');
 /*
 $modversion['sub'][] = array('name' => _MI_GMOPGX_ENTRY_TRAN , 'url' => 'entryTran');
 $modversion['sub'][] = array('name' => _MI_GMOPGX_EXEC_TRAN  , 'url' => 'execTran');
@@ -88,5 +88,13 @@ $modversion['config'][4] = array(
 	'formtype' => 'password',
 	'valuetype' => 'text',
 	'default' => ''
+);
+$modversion['config'][5] = array(
+	'name' => 'PGCARD_RETURN_URL',
+	'title' => _MI_GMOPG_RETURN_URL,
+	'description' => _MI_GMOPG_RETURN_URL_DESC,
+	'formtype' => 'text',
+	'valuetype' => 'text',
+	'default' => 'bmcart/checkout'
 );
 

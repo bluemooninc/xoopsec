@@ -70,7 +70,7 @@
 		<{else}>
 			<input type="radio" name="CardSeq" value="<{$card.CardSeq}>" />
 		<{/if}>
-		<{$card.CardNo}>(<{$smarty.const._MD_BMCART_LAST3CODE}>)
+		<{$card.CardNo|substr:12:4}>(<{$smarty.const._MD_BMCART_LAST3CODE}>)
 		</li>
 	<{/foreach}>
 	</ul>
@@ -79,7 +79,7 @@
 	<{$smarty.const._MD_BMCART_ADD_CREDIT}>
 	</a>
 <{else}>
-<a class="btn" href="<{$xoops_url}>/modules/gmopgx/saveCard">
+<a class="btn" href="<{$xoops_url}>/modules/gmopgx/memberSave">
 	<{$smarty.const._MD_BMCART_ADDNEW}>
 </a>
 <{/if}>

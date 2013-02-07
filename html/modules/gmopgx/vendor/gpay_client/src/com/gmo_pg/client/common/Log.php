@@ -73,8 +73,9 @@ class Log {
 	function init() {
 		// INCLUDEパスの内容を取得
         //※get_include_path()はPHP4.3.0以降で動作します。
-		$inc_pathes = split(PATH_SEPARATOR, get_include_path());
-		// 定義ファイルをINCLUDEパス配下から検索
+		//$inc_pathes = split(PATH_SEPARATOR, get_include_path());
+		$inc_pathes = preg_split('#:(?!//)#', get_include_path());
+			// 定義ファイルをINCLUDEパス配下から検索
 		$prop_file = null;
 		$prop_name = 'conf/log.properties';
 		foreach ($inc_pathes as $inc_path) {

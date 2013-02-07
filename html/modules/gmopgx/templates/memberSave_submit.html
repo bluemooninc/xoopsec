@@ -1,11 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
-<title>Member Save Submit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<title>Member Save Submit</title>
 </head>
 <body>
+<{if $message}>
+<div class="alert">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong>Warning!</strong> <{$message}>
+</div>
+<{$smarty.const._MD_GMOPAYMENT_PROCEED_TO_ADDCARD}>
+<{else}>
 <h2>Thanks for register!</h2>
 <{$smarty.const._MD_GMOPAYMENT_TITLE_MEMBERSAVED}>
+<{/if}>
+<a class="btn" href="../saveCard">
+	<{$smarty.const._MD_GMOPAYMENT_TITLE_ADDCARD}>
+</a>
 </body>
 </html>

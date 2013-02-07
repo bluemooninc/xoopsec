@@ -22,9 +22,32 @@ class Controller_bmcart extends AbstractAction {
 		parent::__construct();
 		$this->mHandler = Model_Category::forge();
 	}
+
+	private function _array_flatten($array)
+	{
+		$result = array();
+		// Callback with closure is PHP5.3 or later
+		array_walk_recursive($array, function ($v) use (&$result) {
+			$result[] = $v;
+		});
+		return $result;
+	}
+
+
 	public function action_index(){
-		$this->mListData = $this->mHandler->getCategoryTree();
 		$this->template = 'categoryList.html';
+		$parentObjects = $this->mHandler->getParentCategory();
+		$mArray=array();
+		foreach($parentObjects as $parentObject){
+			$category_id = $parentObject->getVar('category_id');
+			$children = $this->mHandler->getAllChildren($category_id);
+			$mArray[$category_id] = array(
+				'category_name'=>$this->mHandler->getName($category_id),
+				'children'=>$this->_array_flatten($children)
+			);
+
+		}
+		$this->mListData = $mArray;
 	}
 	public function action_view(){
 		$view = new View($this->root);

@@ -53,6 +53,7 @@ foreach($_GET as $key=>$val){
 $controllerName = isset($params[0][1]) ? $params[0][1] : "index";
 $method         = isset($params[0][2]) ? $params[0][2] : "index" ;
 $parameters		= isset($params[0][3]) ? $params[0][3] : "";
+
 if (preg_match('/^[0-9a-zA-Z]+$/',$controllerName)){
 	$controllerClass = "Controller_" . ucFirst($controllerName);
     $modelClass = "Model_" . ucFirst($controllerName);

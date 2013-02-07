@@ -38,10 +38,15 @@ class Model_Category
 	public function getName($id)
 	{
 		$obj = $this->myHandler->get($id);
-		$ret = isset($obj) ? $obj->getVar("name") : NULL;
+		$ret = isset($obj) ? $obj->getVar("category_name") : NULL;
 		return $ret;
 	}
 
+	public function getParentCategory(){
+		$this->myHandler =& xoops_getModuleHandler('category');
+		$criteria = new Criteria('parent_id',0);
+		return $this->myHandler->getObjects($criteria);
+	}
 	public function getCategory($limit=0, $offset=0, $whereArray=null)
 	{
 		$this->myHandler =& xoops_getModuleHandler('category');
@@ -52,17 +57,35 @@ class Model_Category
 		);
 		return $this->_category_names;
 	}
-	public function getCategoryTree($limit=0, $offset=0, $whereArray=null)
+	public function getCategoryTree($category_id=0)
 	{
-		$this->myHandler =& xoops_getModuleHandler('category');
-		$this->_category_names = $this->myHandler->getCategoryTree($limit, $offset, $whereArray,
-			array(
-				array("name" => "name", "sort" => "ASC")
-			)
-		);
-		return $this->_category_names;
+		return $this->myHandler->getAllChildren($category_id);
 	}
 
+	private function _array_flatten($array)
+	{
+		$result = array();
+		// Callback with closure is PHP5.3 or later
+		array_walk_recursive($array, function ($v) use (&$result) {
+			$result[] = $v;
+		});
+		return $result;
+	}
+
+	public function getAllChildren($category_id=0)
+	{
+		$this->myHandler =& xoops_getModuleHandler('category');
+		$catArray = $this->myHandler->getAllChildren($category_id);
+		$ret = array();
+		$cArray = $this->_array_flatten($catArray);
+		foreach($cArray as $category_id){
+			$object = $this->myHandler->get($category_id);
+			if ($object){
+				$ret[$category_id] = $object->getVar('category_name');
+			}
+		}
+		return $ret;
+	}
 	public function getFindInSet($limit, $offset, $whereArray, $orderArray)
 	{
 		$this->myHandler =& xoops_getModuleHandler('category');

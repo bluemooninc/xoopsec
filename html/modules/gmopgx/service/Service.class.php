@@ -1,6 +1,6 @@
 <?php
 if (!defined('XOOPS_ROOT_PATH')) exit();
-require_once(XOOPS_ROOT_PATH.'/modules/gmopgx/class/ErrorMessageHandler.php');
+require_once(XOOPS_ROOT_PATH . '/modules/gmopgx/class/ErrorMessageHandler.php');
 $comdir = XOOPS_ROOT_PATH . "/modules/gmopgx/vendor/gpay_client/src/";
 set_include_path($comdir);
 
@@ -14,13 +14,15 @@ class Gmopgx_Service extends XCube_Service
 	{
 		$this->addFunction(S_PUBLIC_FUNC('int checkOrderStatus(int orderId)'));
 		$this->addFunction(S_PUBLIC_FUNC('int execTranByModule(int orderId,int uid)'));
+		$this->addFunction(S_PUBLIC_FUNC('int saveMemberShip()'));
+		$this->addFunction(S_PUBLIC_FUNC('int saveCardInformation()'));
 		$this->addFunction(S_PUBLIC_FUNC('array getRegisteredCardList()'));
 		$this->addFunction(S_PUBLIC_FUNC('int entryTransit(int order_id,int CardSeq,int amount, int tax'));
 	}
 
 	public function checkOrderStatus()
 	{
-		$ret = false;
+		$ret = FALSE;
 		$root = XCube_Root::getSingleton();
 		$orderId = $root->mContext->mRequest->getRequest('orderId');
 		if ($root->mContext->mUser->isInRole('Site.RegisteredUser')) {
@@ -28,7 +30,7 @@ class Gmopgx_Service extends XCube_Service
 			$modHand = xoops_getmodulehandler('payment', 'gmopgx');
 			$myrow = $modHand->getDataById($uid, $orderId);
 			if ($myrow) {
-				if ($myrow['status'] == 1) $ret = true;
+				if ($myrow['status'] == 1) $ret = TRUE;
 			}
 		}
 		return $ret;
@@ -37,46 +39,56 @@ class Gmopgx_Service extends XCube_Service
 	/**
 	 * 決済実行API
 	 * 決済を実行し、成功すれば true を返す
-	 *
 	 * @return bool
 	 */
-	public function execTranByModule(){
-		$ret = false;
+	public function execTranByModule()
+	{
+		$ret = FALSE;
 		$root = XCube_Root::getSingleton();
 		$orderId = $root->mContext->mRequest->getRequest('orderId');
 		$uid = $root->mContext->mRequest->getRequest('uid');
 		if ($root->mContext->mUser->isInRole('Site.RegisteredUser')) {
 			$modHand = xoops_getmodulehandler('payment', 'gmopgx');
 			$objects = $modHand->getByOrderId($uid, $orderId, 0);
-			if (count($objects)>0) {
+			if (count($objects) > 0) {
 				$object = $objects[0];
 				$cardSeq = $object->getVar('cardSeq');
 				$accessId = $object->getVar('accessId');
 				$accessPass = $object->getVar('accessPass');
-				$ret = $this->_execTransit($orderId,$uid,$cardSeq,$accessId,$accessPass);
-				if ($ret){
-					$object->set('utime',time());
-					$object->set('status',1);
+				$ret = $this->_execTransit($orderId, $uid, $cardSeq, $accessId, $accessPass);
+				if ($ret) {
+					$object->set('utime', time());
+					$object->set('status', 1);
 					$modHand->insert($object);
 				}
 			}
 		}
 		return $ret;
 	}
-	private function _getMemberId(&$root){
+
+	/**
+	 * memberId = uid + uname
+	 * @param $root
+	 * @return string
+	 */
+	private function _getMemberId(&$root)
+	{
 		return $root->mContext->mXoopsUser->get('uid') . "-" . $root->mContext->mXoopsUser->get('uname');
 	}
-	private function _getMemberIdByUid($uid){
+
+	private function _getMemberIdByUid($uid)
+	{
 		$user = new XoopsUser($uid);
 		return $uid . "-" . $user->getVar('uname');
 	}
+
 	public function &getRegisteredCardList()
 	{
 		require_once('com/gmo_pg/client/input/SearchCardInput.php');
 		require_once('com/gmo_pg/client/tran/SearchCard.php');
 
 		$root = XCube_Root::getSingleton();
-		$memberId = $this->_getMemberId($root); 
+		$memberId = $this->_getMemberId($root);
 		$root->mController->setupModuleContext('gmopgx');
 		$myModuleConfig = $root->mContext->mModuleConfig;
 
@@ -92,8 +104,8 @@ class Gmopgx_Service extends XCube_Service
 
 		//カード登録連番が指定された場合、パラメータに設定します。
 		if (isset($_POST['CardSeq'])) {
-			$cardSeq = xoops_getrequest('CardSeq');
-			$seqMode = xoops_getrequest('SeqMode');
+			$cardSeq = $root->mContext->mRequest->getRequest('CardSeq');
+			$seqMode = $root->mContext->mRequest->getRequest('SeqMode');
 			if (0 < strlen($cardSeq)) {
 				//登録カード連番
 				$input->setCardSeq($cardSeq);
@@ -106,12 +118,13 @@ class Gmopgx_Service extends XCube_Service
 		//パラメータオブジェクトを引数に、実行メソッドを呼びます。
 		//正常に終了した場合、結果オブジェクトが返るはずです。
 		$output = $exe->exec($input);
+		$cardList = array();
 
 		//実行後、その結果を確認します。
 		if ($exe->isExceptionOccured()) {
 			//取引の処理そのものがうまくいかない（通信エラー等）場合、例外が発生します。
 			$this->error_message = "Connection ERROR!";
-			return NULL;
+			return $cardList;
 		} else {
 			//例外が発生していない場合、出力パラメータオブジェクトが戻ります。
 			if ($output->isErrorOccurred()) { //出力パラメータにエラーコードが含まれていないか、チェックしています。
@@ -126,7 +139,9 @@ class Gmopgx_Service extends XCube_Service
 						. ':' . $errorHandle->getMessage($errorInfo->getErrInfo())
 						. '</li>';
 				}
-				return NULL;
+				//echo $myModuleConfig['PGCARD_SITE_ID'].$memberId;
+				//echo $this->error_message; die;
+				return $cardList;
 			}
 			//例外発生せず、エラーの戻りもないので、正常とみなします。
 			//このif文を抜けて、結果を表示します。
@@ -134,91 +149,97 @@ class Gmopgx_Service extends XCube_Service
 		$cardList = $output->getCardList();
 		return $cardList;
 	}
-	public function entryTransit(){
-		require_once( 'com/gmo_pg/client/input/EntryTranInput.php');
-		require_once( 'com/gmo_pg/client/tran/EntryTran.php');
+
+	public function entryTransit()
+	{
+		require_once('com/gmo_pg/client/input/EntryTranInput.php');
+		require_once('com/gmo_pg/client/tran/EntryTran.php');
 
 		$root = XCube_Root::getSingleton();
 		$memberId = $this->_getMemberId($root);
 		$root->mController->setupModuleContext('gmopgx');
 		$myModuleConfig = $root->mContext->mModuleConfig;
 
-		//$orderId = intval($_POST['order_id']);
+		//$orderId = intval($root->mContext->mRequest->getRequest('order_id']);
 		$orderId = $root->mContext->mRequest->getRequest('order_id');
 		$cardSeq = $root->mContext->mRequest->getRequest('cardSeq');
 		$amount = $root->mContext->mRequest->getRequest('amount');
 		$tax = $root->mContext->mRequest->getRequest('tax');
 
 		//入力パラメータクラスをインスタンス化します
-		$input = new EntryTranInput();/* @var $input EntryTranInput */
+		$input = new EntryTranInput();
+		/* @var $input EntryTranInput */
 
 		//このサンプルでは、ショップID・パスワードはコンフィグファイルで
 		//定数defineしています。
-		$input->setShopId( $myModuleConfig['PGCARD_SHOP_ID'] );
-		$input->setShopPass( $myModuleConfig['PGCARD_SHOP_PASS'] );
+		$input->setShopId($myModuleConfig['PGCARD_SHOP_ID']);
+		$input->setShopPass($myModuleConfig['PGCARD_SHOP_PASS']);
 
 		//各種パラメータを設定しています。
 		//実際には、処理区分や利用金額、オーダーIDといったパラメータをカード所有者が直接入力することは無く、
 		//購買内容を元に加盟店様システムで生成した値が設定されるものと思います。
-		$input->setJobCd('AUTH');        //$_POST['JobCd']
-		$input->setOrderId( $orderId );
-		$input->setItemCode( NULL );	//	$_POST['ItemCode'] カード会社との間の契約にて使用する商品コードが決められた場合のみ入力
-		$input->setAmount( intval($amount) );
-		$input->setTax( intval($tax) );
-		$input->setTdFlag( null );  //intval($_POST['TdFlag']);
-		$input->setTdTenantName( null ); //$_POST['TdTenantName']
+		$input->setJobCd('AUTH'); //$root->mContext->mRequest->getRequest('JobCd']
+		$input->setOrderId($orderId);
+		$input->setItemCode(NULL); // カード会社との間の契約にて使用する商品コードが決められた場合のみ入力
+		$input->setAmount(intval($amount));
+		$input->setTax(intval($tax));
+		$input->setTdFlag(NULL); //intval($root->mContext->mRequest->getRequest('TdFlag']);
+		$input->setTdTenantName(NULL); //$root->mContext->mRequest->getRequest('TdTenantName']
 
 		//API通信クラスをインスタンス化します
-		$exe = new EntryTran();/* @var $exec EntryTran */
+		$exe = new EntryTran();
+		/* @var $exec EntryTran */
 
 		//パラメータオブジェクトを引数に、実行メソッドを呼び、結果を受け取ります。
-		$output = $exe->exec( $input );/* @var $output EntryTranOutput */
+		$output = $exe->exec($input);
+		/* @var $output EntryTranOutput */
 
 		//実行後、その結果を確認します。
 
-		if( $exe->isExceptionOccured() ){//取引の処理そのものがうまくいかない（通信エラー等）場合、例外が発生します。
+		if ($exe->isExceptionOccured()) { //取引の処理そのものがうまくいかない（通信エラー等）場合、例外が発生します。
 
 			$this->root->mController->executeRedirect(XOOPS_URL, 5, "Connection ERROR!");
 			//サンプルでは、例外メッセージを表示して終了します。
 
-			require_once( PGCARD_SAMPLE_BASE . '/display/Exception.php');
+			require_once(PGCARD_SAMPLE_BASE . '/display/Exception.php');
 			exit();
 
-		}else{
+		} else {
 			//例外が発生していない場合、出力パラメータオブジェクトが戻ります。
-			if( $output->isErrorOccurred() ){//出力パラメータにエラーコードが含まれていないか、チェックしています。
+			if ($output->isErrorOccurred()) { //出力パラメータにエラーコードが含まれていないか、チェックしています。
 				$errorHandle = new ErrorHandler();
 				$errorList = $output->getErrList();
 				$this->emsg = "";
-				foreach( $errorList as  $errorInfo ){/* @var $errorInfo ErrHolder */
+				foreach ($errorList as $errorInfo) {
+					/* @var $errorInfo ErrHolder */
 					$this->emsg .= '<li>'
 						. $errorInfo->getErrCode()
 						. ':' . $errorInfo->getErrInfo()
-						. ':' . $errorHandle->getMessage( $errorInfo->getErrInfo() )
-						.'</li>';
+						. ':' . $errorHandle->getMessage($errorInfo->getErrInfo())
+						. '</li>';
 
 				}
 				$root->mController->executeRedirect(XOOPS_URL, 5, $this->emsg);
 
 				//サンプルでは、エラーが発生していた場合、エラー画面を表示して終了します。
-				require_once( PGCARD_SAMPLE_BASE . '/display/Error.php');
+				require_once(PGCARD_SAMPLE_BASE . '/display/Error.php');
 				exit();
 
 			}
 			//例外発生せず、エラーの戻りもないので、正常とみなします。
-			$myHandler = xoops_getmodulehandler('payment','gmopgx');
+			$myHandler = xoops_getmodulehandler('payment', 'gmopgx');
 			$object = $myHandler->create();
 			$object->set('uid', $memberId);
-			$object->set('orderId', htmlspecialchars($orderId,ENT_QUOTES,_CHARSET));
-			$object->set('amount', intval( $amount));
-			$object->set('tax', intval( $tax ));
+			$object->set('orderId', htmlspecialchars($orderId, ENT_QUOTES, _CHARSET));
+			$object->set('amount', intval($amount));
+			$object->set('tax', intval($tax));
 			$object->set('accessId', $output->getAccessId());
 			$object->set('accessPass', $output->getAccessPass());
 			$object->set('cardSeq', $cardSeq);
 			$myHandler->insert($object);
 			//このif文を抜けて、結果を表示します。
-			return true;
-		}		
+			return TRUE;
+		}
 	}
 
 	/**
@@ -230,7 +251,7 @@ class Gmopgx_Service extends XCube_Service
 	 * @param string $paymentMethod
 	 * @return bool
 	 */
-	private function _execTransit($orderId,$uid,$cardSeq,$accessId,$accessPass,$paymentMethod = '1')
+	private function _execTransit($orderId, $uid, $cardSeq, $accessId, $accessPass, $paymentMethod = '1')
 	{
 		require_once('com/gmo_pg/client/input/ExecTranInput.php');
 		require_once('com/gmo_pg/client/tran/ExecTran.php');
@@ -255,9 +276,9 @@ class Gmopgx_Service extends XCube_Service
 		//利用しない場合、設定する必要はありません。
 		//また、加盟店自由項目に２バイトコードを設定する場合、SJISに変換して設定してください。
 		/*
-		$input->setClientField1( mb_convert_encoding( $_POST['ClientField1'] , 'SJIS' , _CHARSET ) );
-		$input->setClientField2( mb_convert_encoding( $_POST['ClientField2'] , 'SJIS' , _CHARSET ) );
-		$input->setClientField3( mb_convert_encoding( $_POST['ClientField3'] , 'SJIS' , _CHARSET ) );
+		$input->setClientField1( mb_convert_encoding( $root->mContext->mRequest->getRequest('ClientField1'] , 'SJIS' , _CHARSET ) );
+		$input->setClientField2( mb_convert_encoding( $root->mContext->mRequest->getRequest('ClientField2'] , 'SJIS' , _CHARSET ) );
+		$input->setClientField3( mb_convert_encoding( $root->mContext->mRequest->getRequest('ClientField3'] , 'SJIS' , _CHARSET ) );
 		*/
 		//HTTP_ACCEPT,HTTP_USER_AGENTは、3Dセキュアサービスをご利用の場合のみ必要な項目です。
 		//Entryで3D利用フラグをオンに設定した場合のみ、設定してください。
@@ -320,7 +341,7 @@ class Gmopgx_Service extends XCube_Service
 				exit();
 			}
 			//例外発生せず、エラーの戻りもなく、3Dセキュアフラグもオフであるので、実行結果を表示します。
-			return true;
+			return TRUE;
 		}
 	}
 }

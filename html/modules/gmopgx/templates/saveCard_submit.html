@@ -1,7 +1,15 @@
 <h3><{$smarty.const._MD_GMOPAYMENT_TITLE_SAVECARD}></h3>
+
+<{if $message}>
+<div class="alert">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong>Warning!</strong> <{$message}>
+</div>
+<{/if}>
+
 <pre>
 <{$smarty.const._MD_GMOPAYMENT_DONE_SAVECARD}>
 </pre>
-<a class="btn btn-primary" href="<{$xoops_url}>/modules/gmopgx/saveCard">
-	<{$smarty.const._MD_GMOPAYMENT_TITLE_SAVECARD}>
+<a class="btn btn-primary" href="<{$return_url}>">
+	<{$smarty.const._MD_GMOPGX_RETURN_URL}>
 </a>

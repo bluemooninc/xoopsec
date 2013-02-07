@@ -3,29 +3,13 @@
 <{assign var="contname" value="category"}>
 
 <h3><{$smarty.const._MD_BMCART_CATEGORY_LIST}></h3>
-<{foreach item=val from=$ListData}>
-	<ul>
-	<{if $val.sub_category}>
-		<li><{$val.category_name|xoops_escape}></li>
-		<ul class="unstyled">
-		<{foreach item=subCategory from=$val.sub_category}>
-		<li>&nbsp;&nbsp;
-			<a href="<{$xoops_url}>/modules/<{$dirname}>/itemList/category/<{$subCategory.category_id|xoops_escape}>">
-			<{*<{$subCategory.category_id|xoops_escape}>*}>
-			<{$subCategory.category_name|xoops_escape}>
-			</a>
-		</li>
-		<{/foreach}>
-		</ul>
-	<{else}>
-		<li>
-		<a href="<{$xoops_url}>/modules/<{$dirname}>/itemList/category/<{$val.category_id|xoops_escape}>">
-		<{*<{$val.category_id|xoops_escape}>*}>
-		<{$val.category_name|xoops_escape}>
+<ul>
+<{foreach item=category from=$ListData}>
+	<li><{$category.category_name}></li>
+	<{foreach from=$category.children key=k item=v}>
+		<a class="btn" class="menuMain" href="<{$xoops_url}>/modules/bmcart/itemList/category/<{$k}>">
+			<{$v}>
 		</a>
-		</li>
-	<{/if}>
-	</ul>
+	<{/foreach}>
 <{/foreach}>
-
-<div class="pagenavi" align="center"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+</ul>

@@ -1,4 +1,9 @@
 <?php
+/*
+* GMO-PG - Payment Module as XOOPS Cube Module
+* Copyright (c) Yoshi Sakai at Bluemoon inc. (http://bluemooninc.jp)
+* GPL V3 licence
+ */
 require_once _MY_MODULE_PATH.'app/Model/gmopg.class.php';
 
 class Controller_searchCard extends AbstractAction{
@@ -6,9 +11,11 @@ class Controller_searchCard extends AbstractAction{
 	private $params;
 	var $viewFullPath;
 	var $viewTemplate;
+	protected $_gmopg;
 	
 	public function setParams($params){
 		$this->params=$params;
+		$this->_gmopg = new gmopg();
 	}
 	public function setTemplate($controllerName){
 		if (is_null($this->viewTemplate)) $this->viewTemplate = $controllerName . ".html";
@@ -22,19 +29,20 @@ class Controller_searchCard extends AbstractAction{
 	public function executeView(&$render){
 		$render->setTemplateName($this->viewTemplate);
 		$render->setAttribute('ListData', $this->listdata);
+		$render->setAttribute('message', $this->_gmopg->get_message());
 	}
 	/*
 	 * Method Section
 	*/
 
 	public function index(){
-        global $xoopsUser;
-        $this->listdata = gmopg::get_listdata($xoopsUser->getVar('uid')."-".$xoopsUser->getVar('uname'));
+
+        $this->listdata = $this->_gmopg->getCardList();
     }
 	public function submit(){
-        global $xoopsUser;
+
         if( isset( $_POST['submit'] ) ){
-            $this->listdata = gmopg::get_listdata($xoopsUser->getVar('uid')."-".$xoopsUser->getVar('uname'));
+            $this->listdata = $this->_gmopg->getCardList();
 		}
 	}
 }

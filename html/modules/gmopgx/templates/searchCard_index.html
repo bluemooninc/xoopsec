@@ -3,7 +3,14 @@
     <{$smarty.const._MD_GMOPAYMENT_DONE_SEARCHCARD}>
 </p>
 
-<table class="outer">
+<{if $message}>
+<div class="alert">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong>Warning!</strong> <{$message}>
+</div>
+<{/if}>
+
+<table class="table">
     <tr>
         <th>
             <{$smarty.const._MD_GMOPAYMENT_MEMBERID}>(MemberID)
@@ -26,7 +33,7 @@
             <{$smarty.const._MD_GMOPAYMENT_EXPIRE}>(Expire)
         </th>
         <td>
-            <{$val.CardSeq}>
+            <{$val.Expire}>
         </td>
     </tr>
     <tr>
@@ -37,6 +44,7 @@
             <{$val.CardNo}>
         </td>
     </tr>
+<{*
     <tr>
         <th>
             <{$smarty.const._MD_GMOPAYMENT_CARDNAME}>(CardName)
@@ -45,6 +53,7 @@
             <{$val.CardName}>
         </td>
     </tr>
+*}>
     <tr>
         <th>
             <{$smarty.const._MD_GMOPAYMENT_HOLDERNAME}>(HolderName)

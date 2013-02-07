@@ -53,9 +53,11 @@ class ConnectUrlMap {
 	function init() {
 	    // include_pathを区切り文字で分割
         // ※get_include_path()はPHP4.3.0以降で動作します。
-        $pathArray = split(PATH_SEPARATOR, get_include_path());
+        //$pathArray = split(PATH_SEPARATOR, get_include_path());
+		$pathArray = preg_split('#:(?!//)#', get_include_path());
 
-        $prop_path = "conf/connector.properties";
+
+		$prop_path = "conf/connector.properties";
         $prop = null;
 
         foreach ($pathArray as $value) {

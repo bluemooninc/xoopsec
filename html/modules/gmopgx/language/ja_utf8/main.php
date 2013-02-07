@@ -10,6 +10,7 @@ define('_MD_GMOPGX_TABLE_TITLE', '件名');
 define('_MD_GMOPGX_TABLE_DATE', '日時');
 define('_MD_GMOPGX_TABLE_UPDATE', '更新する');
 define('_MD_GMOPGX_TABLE_CLOSE', '閉じる');
+define('_MD_GMOPGX_RETURN_URL', 'チェックアウト画面へ戻る');
 define('_MD_GMOPGX_DIALOG_DELETE', 'レコード削除');
 define('_MD_GMOPGX_DIALOG_DELETE_DESC', 'このレコードを削除してもよろしいですか？');
 // cart.html
@@ -26,6 +27,8 @@ define('_MD_GMOPAYMENT_TITLE_MEMBERSAVED','決済アカウントの作成あり�
 ');
 define('_MD_GMOPAYMENT_TITLE_SAVECARD'  ,'クレジットカード登録');
 define('_MD_GMOPAYMENT_TITLE_ADDCARD'  ,'クレジットカード登録');
+define('_MD_GMOPAYMENT_PROCEED_TO_ADDCARD'  ,'ご利用登録が済んでいますので、クレジットカード登録へお進みください。');
+
 define('_MD_GMOPAYMENT_TITLE_SEARCHCARD'  ,'登録カード検索');
 define('_MD_GMOPAYMENT_TITLE_ENTRYTRAN' ,'クレジットカードによるお支払い');
 define('_MD_GMOPAYMENT_TITLE_EXECTRAN'  ,'決済実行');

@@ -42,19 +42,8 @@ class bmcart_categoryHandler extends XoopsObjectGenericHandler
 		}
 		return $ret;
 	}
-	public function &getCategoryTree(){
-		$objects = $this->getCategory();
-		$ret = array();
-		foreach($objects as $obj){
-			if (intval($obj['parent_id'])>0){
-				$ret[$obj['parent_id']]['sub_category'][$obj['category_id']] = $obj;
-			} else {
-				$ret[$obj['category_id']]= $obj;
-			}
-		}
-		return $ret;
-	}
-	private function getCategoryChild($category_id){
+
+	private function _getCategoryChild($category_id){
 		$criteria = new CriteriaCompo();
 		$criteria->add(new Criteria('parent_id', $category_id));
 		$objects = $this->getObjects($criteria);
@@ -70,7 +59,7 @@ class bmcart_categoryHandler extends XoopsObjectGenericHandler
 	 * @return array
 	 */
 	public function getAllChildren($category_id){
-		$ret = $this->getCategoryChild($category_id);
+		$ret = $this->_getCategoryChild($category_id);
 		$this->catArray[]=$ret;
 		foreach($ret as $catId){
 			$this->getAllChildren($catId);
@@ -89,6 +78,15 @@ class bmcart_categoryHandler extends XoopsObjectGenericHandler
 			$category_id = $myObject->getVar('parent_id');
 		}
 		$ret = array_reverse($ret);
+		return $ret;
+	}
+
+	public function &getAllCategory(){
+		$objects = $this->getObjects();
+		$ret = array();
+		foreach($objects as $object){
+			$ret[$object->getVar('category_id')] = $object->getVar('category_name');
+		}
 		return $ret;
 	}
 }
