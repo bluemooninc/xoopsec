@@ -27,6 +27,7 @@ class bmcart_orderObject extends XoopsSimpleObject
 	    $this->initVar('shipping_date', XOBJ_DTYPE_INT, null);
 	    $this->initVar('shipping_carrier', XOBJ_DTYPE_STRING, '', true, 32);
 	    $this->initVar('shipping_number', XOBJ_DTYPE_STRING, '', true, 24);
+	    $this->initVar('shipping_memo', XOBJ_DTYPE_TXTBOX, '', true, 255);
 	    $this->initVar('notify_date', XOBJ_DTYPE_INT, null);
     }
 }
@@ -41,7 +42,7 @@ class bmcart_orderHandler extends XoopsObjectGenericHandler
     {
         parent::XoopsObjectGenericHandler($db);
     }
-	public function insert($object,$force=false){
-		parent::insert($object,$force);
+	public function insert(&$object,$force=false){
+		return parent::insert($object,$force);
 	}
 }

@@ -99,13 +99,10 @@ class bmcart_AbstractEditAction extends bmcart_Action
 		
 		$this->mActionForm->fetch();
 		$this->mActionForm->validate();
-	
 		if($this->mActionForm->hasError()) {
 			return BMCART_FRAME_VIEW_INPUT;
 		}
-	
 		$this->mActionForm->update($this->mObject);
-		
 		return $this->_doExecute($this->mObject) ? BMCART_FRAME_VIEW_SUCCESS
 		                                         : BMCART_FRAME_VIEW_ERROR;
 	}

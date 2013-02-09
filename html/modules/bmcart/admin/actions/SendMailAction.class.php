@@ -17,15 +17,18 @@ require_once XOOPS_MODULE_PATH . "/bmcart/app/Model/Order.php";
 
 class bmcart_SendMailAction extends bmcart_AbstractEditAction
 {
+	protected $error_message;
 	function _getId()
 	{
 		return xoops_getrequest('order_id');
 	}
+
 	function &_getHandler()
 	{
 		$handler =& xoops_getmodulehandler('order');
 		return $handler;
 	}
+
 	function _setupActionForm()
 	{
 		$this->mActionForm = new bmcart_OrderAdminTransitForm();
@@ -34,26 +37,28 @@ class bmcart_SendMailAction extends bmcart_AbstractEditAction
 
 	function _doExecute()
 	{
-		$modelOrder = Model_Order::forge();
+		$orderHandler = xoops_getmodulehandler('order');
 		$order_id = $this->mObject->get('order_id');
-		$orderObject = $modelOrder->get($order_id);
+		$orderObject = $orderHandler->get($order_id);
 		$uid = $orderObject->getVar('uid');
+		$modelOrder = new Model_Order();
 		$mListData = $modelOrder->getOrderItems($order_id);
 		// TODO: Paypal and other needs make options in the future
-		if ($orderObject != null) {
+		if ($orderObject != NULL) {
 			$userHandler = xoops_gethandler('user');
 			$userObject = $userHandler->get($uid);
 			$mail = new Model_Mail();
-			$result = $mail->sendMail("ShippingNow.tpl",$orderObject,$mListData,_AD_BMCART_SHIPPING_MAIL,$userObject);
-		}else{
-			$result = false;
+			$result = $mail->sendMail("ShippingNow.tpl", $orderObject, $mListData, _AD_BMCART_SHIPPING_MAIL, $userObject);
+		} else {
+			$result = FALSE;
 		}
-		if (!$result) {
-			return BMCART_FRAME_VIEW_ERROR;
-		}else{
-			$orderObject->set('notify_date',time());
-			$modelOrder->insert($orderObject);
+		if ($result) {
+			$orderObject->set('notify_date', time());
+			$orderHandler->insert($orderObject, TRUE);
 			return BMCART_FRAME_VIEW_SUCCESS;
+		} else {
+			$this->error_message = $mail->getErrors();
+			return BMCART_FRAME_VIEW_ERROR;
 		}
 	}
 
@@ -64,17 +69,17 @@ class bmcart_SendMailAction extends bmcart_AbstractEditAction
 		$render->setAttribute('object', $this->mObject);
 	}
 
-	function executeViewSuccess(&$controller,  &$render)
+	function executeViewSuccess(&$controller, &$render)
 	{
 		$controller->executeForward("./index.php?action=OrderList");
 	}
 
-	function executeViewError(&$controller,  &$render)
+	function executeViewError(&$controller, &$render)
 	{
-		$controller->executeRedirect("./index.php?action=OrderList", 3, _MD_BMCART_ERROR_DBUPDATE_FAILED);
+		$controller->executeRedirect("./index.php?action=OrderList", 7, $this->error_message);
 	}
 
-	function executeViewCancel(&$controller,  &$render)
+	function executeViewCancel(&$controller, &$render)
 	{
 		$controller->executeForward("./index.php?action=OrderList");
 	}

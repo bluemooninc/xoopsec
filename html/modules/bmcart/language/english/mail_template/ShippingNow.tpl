@@ -26,7 +26,7 @@
 
 商品計 : {SUB_TOTAL}円（内消費税 : {TAX}）
 送　料 : {SHIPPING_FEE}円
-請求額 : {AMOUNT}円
+合計額 : {AMOUNT}円
 
 お支払情報 : {PAYMENT_DESC}
 

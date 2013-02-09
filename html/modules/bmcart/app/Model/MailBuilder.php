@@ -27,11 +27,15 @@ class Model_Mail
 		$this->mMailer->assign("SITENAME", $this->mXoopsConfig['sitename']);
 		$this->mMailer->assign("ADMINMAIL", $this->mXoopsConfig['adminmail']);
 		foreach($orderObject->mVars as $key => $val){
-			$this->mMailer->assign(strtoupper($key), $val['value']);
+			if ($val['data_type']==3){
+				$this->mMailer->assign(strtoupper($key), number_format($val['value']));
+			}else{
+				$this->mMailer->assign(strtoupper($key), $val['value']);
+			}
 		}
 		$desc = "";
 		foreach($listData as $item){
-			$desc .= sprintf("%s %10s %10s¥n",$item['item_name'],number_format($item['price']),number_format($item['qty']));
+			$desc .= sprintf("%25s ¥%10s- %10s\n",$item['item_name'],number_format($item['price']),number_format($item['qty']));
 		}
 		$this->mMailer->assign("LIST_DATA", $desc);
 		$this->mMailer->assign("SITEURL", XOOPS_URL . "/");
@@ -44,7 +48,7 @@ class Model_Mail
 				$this->mMailer->assign("PAYMENT_DESC", _MD_BMCART_PAYMENT_DESC_CARD);
 				break;
 		}
-		$this->mMailer->assign('SHIPPING_DATE',$orderObject->getVar('shipping_date'));
+		$this->mMailer->assign('SHIPPING_DATE',date("Y-m-d",$orderObject->getVar('shipping_date')));
 		$this->mMailer->assign('SHIPPING_CARRIER',$orderObject->getVar('shipping_carrier'));
 		$this->mMailer->assign('SHIPPING_NUMBER',$orderObject->getVar('shipping_number'));
 	}
@@ -65,8 +69,10 @@ class Model_Mail
 		$this->mMailer->setFromName($this->mXoopsConfig['sitename']);
 		$this->mMailer->setSubject($subject);
 		$this->_setBody($orderObject,$listData);
+		$this->mMailer->usePM();    // send private message
+		$this->mMailer->useMail();  // send email
 		if ($this->mMailer->send()) {
-			echo $this->mMailer->getSuccess();
+			//echo $this->mMailer->getSuccess();
 			return true;
 		} else {
 			echo 'Message could not be sent.';

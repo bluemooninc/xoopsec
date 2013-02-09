@@ -88,4 +88,5 @@ define('_AD_BMCART_TIPS_SHIPPING', '商品の発送をお客様にメール送�
 define('_AD_BMCART_USER_NAME', '発注ユーザー情報');
 define('_AD_BMCART_SHIPPING_TO_NAME', '受取人氏名');
 define('_AD_BMCART_SHIPPING_TO_ADDRESS', '受取人住所');
+define('_AD_BMCART_SHIPPING_MEMO', '連絡事項等');
 define('_AD_BMCART_SHIPPING_MAIL_DO', 'メール送信実行');

@@ -22,41 +22,45 @@
 		</tr>
 		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_USER_NAME}></td>
-			<td class="<{cycle values="odd,even"}>"><{$object->get('uid')}></td>
+			<td class="<{cycle values='odd,even'}>"><{$object->get('uid')}></td>
 		</tr>
 		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_SHIPPING_TO_NAME}></td>
-			<td class="<{cycle values="odd,even"}>">
-				<{$object->get('last_name')}>&nbsp;<{$object->get('first_name')}>
+			<td class="<{cycle values='odd,even'}>">
+			<{$object->get('last_name')}>&nbsp;<{$object->get('first_name')}>
 			</td>
 		</tr>
 		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_SHIPPING_TO_ADDRESS}></td>
-			<td class="<{cycle values="odd,even"}>">
-				<{$object->get('zip_code')}><br />
-				<{$object->get('state')}><br />
-				<{$object->get('address')}><br />
-				<{$object->get('address2')}>
+			<td class="<{cycle values='odd,even'}>">
+			<{$object->get('zip_code')}><br/>
+			<{$object->get('state')}><br/>
+			<{$object->get('address')}><br/>
+			<{$object->get('address2')}>
 			</td>
 		</tr>
 		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_SHIPPING_DATE}></td>
-			<td class="<{cycle values="odd,even"}>"><{$object->get('shipping_date')|date_format:"%Y-%m-%d %H:%M"}></td>
+			<td class="<{cycle values='odd,even'}>"><{$object->get('shipping_date')|date_format:"%Y-%m-%d %H:%M"}></td>
 		</tr>
 		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_SHIPPING_CARRIER}></td>
-			<td class="<{cycle values="odd,even"}>"><{$object->get('shipping_carrier')}></td>
+			<td class="<{cycle values='odd,even'}>"><{$object->get('shipping_carrier')}></td>
 		</tr>
 		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_SHIPPING_NUMBER}></td>
-			<td class="<{cycle values="odd,even"}>"><{$object->get('shipping_number')}></td>
+			<td class="<{cycle values='odd,even'}>"><{$object->get('shipping_number')}></td>
 		</tr>
-	<tr>
-		<td colspan="2" class="foot">
-			<input class="formButton" type="submit" value="<{$smarty.const._AD_BMCART_SHIPPING_MAIL_DO}>" />
-			<input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
-		</td>
-	</tr>
-</table>
-
+		<tr>
+			<td class="head"><{$smarty.const._AD_BMCART_SHIPPING_MEMO}></td>
+			<td class="<{cycle values='odd,even'}>"><{$object->get('shipping_memo')}></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="foot">
+				<input class="formButton" type="submit" value="<{$smarty.const._AD_BMCART_SHIPPING_MAIL_DO}>"/>
+				<input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"/>
+			</td>
+		</tr>
+	</table>
+</form>
 <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>

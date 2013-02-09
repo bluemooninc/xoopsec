@@ -41,7 +41,7 @@ class Model_Order extends AbstractModel {
 	public function &get($id){
 		return $this->myHandler->get($id);
 	}
-	public function &insert($object){
+	public function &insert(&$object){
 		return $this->myHandler->insert($object);
 	}
 	public function &getOrderItems($order_id)

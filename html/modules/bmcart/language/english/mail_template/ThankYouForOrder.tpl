@@ -1,16 +1,11 @@
 {X_SITENAME} ({X_SITEURL}) をご利用いただき、ありがとうございます。
-{X_SITENAME} にてご注文頂いた商品を発送しましたので、お知らせいたします。
-
-{SHIPPING_MEMO}
+{X_SITENAME} にてご注文を承りましたので、お知らせいたします。
 
 返品、交換をご希望の場合や、注文内容を確認したい場合は、以下の注文履歴からどうぞ。
 {URL_BILL}
 
 このメールは自動送信によって通知しております。
-
-発送日付 : {SHIPPING_DATE}
-配送業者名 : {SHIPPING_CARRIER}
-伝票番号 : {SHIPPING_NUMBER}
+ご注文頂いた商品はお支払いの確認が取れ次第、お手続き致します。
 
 ご注文番号 : {ORDER_ID}
 配送先情報 :
@@ -24,9 +19,9 @@
 --------------------------------------------------------------------
 {LIST_DATA}
 
-商品計 : {SUB_TOTAL}円（内消費税 : {TAX}）
-送　料 : {SHIPPING_FEE}円
-請求額 : {AMOUNT}円
+商品計 : {SUB_TOTAL}（内消費税 : {TAX}）
+送　料 : {SHIPPING_FEE}
+請求額 : {AMOUNT}
 
 お支払情報 : {PAYMENT_DESC}
 

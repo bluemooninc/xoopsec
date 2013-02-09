@@ -2,10 +2,10 @@
 <{assign var="dirname" value="bmcart"}>
 <{assign var="contname" value="item"}>
 
-<h3><{$smarty.const._MD_BMCART_CART_LIST}></h3>
+<h3><{$smarty.const._MD_BMCART_ORDER_DETAIL}></h3>
 <form name="orderListForm" action="<{$xoops_url}>/modules/<{$dirname}>/orderList/update" method="post">
 
-	<table>
+	<table class="table">
 		<tr>
 			<td><{$smarty.const._MD_BMCART_ITEM_NAME}></td>
 			<td><{$smarty.const._MD_BMCART_ITEM_PRICE}></td>
@@ -15,10 +15,10 @@
 		<{foreach item=order from=$ListData}>
 		<tr>
 			<td>
-				<a class="btn" href="<{$xoops_url}>/modules/<{$dirname}>/itemList/itemDetail/<{$order.item_id)}>">
-					<{$order.item_id}>
+				<a href="<{$xoops_url}>/modules/<{$dirname}>/itemList/itemDetail/<{$order.item_id}>">
+					(<{$order.item_id}>)
+					<{$order.item_name}>
 				</a>
-				<{$order.item_name}>
 			</td>
 			<td>
 				<{$order.price|number_format}><{$smarty.const._MD_BMCART_PRICE_DESC}>

@@ -9,10 +9,12 @@ if (!defined('XOOPS_ROOT_PATH')) exit();
 require_once XOOPS_MODULE_PATH . "/bmcart/class/AbstractFilterForm.class.php";
 
 define('ORDER_SORT_KEY_ORDERID', 1);
-define('ORDER_SORT_KEY_NAME', 2);
-define('ORDER_SORT_KEY_DESCRIPTION', 3);
-define('ORDER_SORT_KEY_ORDER_TYPE', 4);
-define('ORDER_SORT_KEY_MAXVALUE', 4);
+define('ORDER_SORT_KEY_UID', 2);
+define('ORDER_SORT_KEY_ZIPCODE', 3);
+define('ORDER_SORT_KEY_AMOUNT', 4);
+define('ORDER_SORT_KEY_ORDER_DATE', 5);
+define('ORDER_SORT_KEY_PAID_DATE', 6);
+define('ORDER_SORT_KEY_SHIPPING_DATE', 7);
 
 define('ORDER_SORT_KEY_DEFAULT', ORDER_SORT_KEY_ORDERID);
 
@@ -21,10 +23,12 @@ class bmcart_OrderFilterForm extends bmcart_AbstractFilterForm
 	var $mSortKeys = array(
 		ORDER_SORT_KEY_DEFAULT => 'order_id',
 		ORDER_SORT_KEY_ORDERID => 'order_id',
-		ORDER_SORT_KEY_CATEGORY => 'category_id',
-		ORDER_SORT_KEY_NAME => 'order_name',
-		ORDER_SORT_KEY_DESCRIPTION => 'order_desc',
-		ORDER_SORT_KEY_ORDER_TYPE => 'status'
+		ORDER_SORT_KEY_UID => 'uid',
+		ORDER_SORT_KEY_ZIPCODE => 'zip_code',
+		ORDER_SORT_KEY_AMOUNT => 'amount',
+		ORDER_SORT_KEY_ORDER_DATE => 'order_date',
+		ORDER_SORT_KEY_PAID_DATE => 'paid_date',
+		ORDER_SORT_KEY_SHIPPING_DATE => 'shipping_date'
 	);
 
 	function getDefaultSortKey()
@@ -41,21 +45,11 @@ class bmcart_OrderFilterForm extends bmcart_AbstractFilterForm
 			$this->_mCriteria->add(new Criteria('order_id', xoops_getrequest('order_id')));
 		}
 
-		if (isset($_REQUEST['category_id'])) {
-			$this->mNavi->addExtra('category_id', xoops_getrequest('category_id'));
-			$this->_mCriteria->add(new Criteria('category_id', xoops_getrequest('category_id')));
+		if (isset($_REQUEST['uid'])) {
+			$this->mNavi->addExtra('uid', xoops_getrequest('uid'));
+			$this->_mCriteria->add(new Criteria('uid', xoops_getrequest('uid')));
 		}
-	
-		if (isset($_REQUEST['order_name'])) {
-			$this->mNavi->addExtra('order_name', xoops_getrequest('order_name'));
-			$this->_mCriteria->add(new Criteria('order_name', xoops_getrequest('order_name')));
-		}
-	
-		if (isset($_REQUEST['status'])) {
-			$this->mNavi->addExtra('status', xoops_getrequest('status'));
-			$this->_mCriteria->add(new Criteria('group_type', xoops_getrequest('group_type')));
-		}
-		
+
 		$this->_mCriteria->addSort($this->getSort(), $this->getOrder());
 	}
 }
