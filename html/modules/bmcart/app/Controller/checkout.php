@@ -140,7 +140,7 @@ class Controller_Checkout extends AbstractAction {
 			$orderObject = $this->mHandler->myObject();
 			$mail = new Model_Mail();
 			$mail->sendMail("ThankYouForOrder.tpl",$orderObject,$this->mListData,_MD_BMCART_ORDER_MAIL);
-			$this->executeRedirect(XOOPS_URL."/modules/bmcart/orderList/index", 5, 'Done');
+			$this->executeRedirect(XOOPS_URL."/modules/bmcart/orderList/index", 5, _MD_BMCART_TANKYOU_FOR_SHIPPING);
 		}
 	}
 }
