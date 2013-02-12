@@ -47,15 +47,24 @@ class Model_Cart extends AbstractModel {
 			return $myObjects;
 		}
 	}
+	private function _update($uid){
+		foreach($this->myObjects as $object){
+			$object->set('uid',$uid);
+			$this->myHandler->insert($object);
+		}
+	}
 	private function _getMyCartItems()
 	{
 		$root = XCube_Root::getSingleton();
 		if($root->mContext->mXoopsUser){
+			$this->myObjects = $this->_getFromSession();
 			$criteria = new CriteriaCompo();
 			$criteria->add(new Criteria('uid', Legacy_Utils::getUid()));
 			$criteria->addSort('last_update', 'DESC');
+			$this->_update(Legacy_Utils::getUid());
 			$this->myHandler = xoops_getModuleHandler('cart');
-			$this->myObjects = array_merge($this->myHandler->getObjects($criteria),$this->_getFromSession());
+			//$this->myObjects = array_merge($this->myHandler->getObjects($criteria),$this->_getFromSession());
+			$this->myObjects = $this->myHandler->getObjects($criteria);
 			$_SESSION['cartObjects'] = array();
 		}else{
 			$this->myObjects = $this->_getFromSession();
