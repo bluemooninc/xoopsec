@@ -39,7 +39,7 @@ class Model_Mail
 		}
 		$this->mMailer->assign("LIST_DATA", $desc);
 		$this->mMailer->assign("SITEURL", XOOPS_URL . "/");
-		$this->mMailer->assign("URL_BILL", XOOPS_URL . "/modules/bmcart/orderList/" . $orderObject->getVar('order_id'));
+		$this->mMailer->assign("URL_BILL", XOOPS_URL . "/modules/bmcart/orderList/orderDetail/" . $orderObject->getVar('order_id'));
 		switch ($orderObject->getVar('payment_type')){
 			case 1: // Wire
 				$this->mMailer->assign("PAYMENT_DESC", _MD_BMCART_PAYMENT_DESC_WIRE);
