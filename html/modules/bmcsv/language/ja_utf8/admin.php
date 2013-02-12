@@ -27,4 +27,5 @@ define("_AM_BMCSV_IMPORT_CSV_DO", "インポートの実行");
 define("_AM_BMCSV_IMPORT_CSV_BACK", "CSVファイルの選択に戻る");
 define("_AM_BMCSV_DATA_CSVUPLOAD_DONE", "インポートが完了しました");
 
-
+define("_AM_BMCSV_EXPORT", "エクスポートの実行");
+define("_AM_BMCSV_IMPORT", "インポートの実行");
