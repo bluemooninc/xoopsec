@@ -129,7 +129,7 @@ class Controller_Checkout extends AbstractAction {
                 $ret = true;
 				break;
 			case 2: // Pay by Card
-				$cardOrderId = sprintf("%s%08d",date("ym"),$order_id);
+				$cardOrderId = $order_id;
 				$ret = $this->_payByCreditCard($cardOrderId,$amount,$tax,$cardSeq);
 				break;
 		}
