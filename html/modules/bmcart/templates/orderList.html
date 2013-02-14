@@ -8,7 +8,7 @@
 		<td><{$smarty.const._MD_BMCART_ORDER_ID}></td>
 		<td><{$smarty.const._MD_BMCART_ORDER_DATE}></td>
 		<td><{$smarty.const._MD_BMCART_SUB_TOTAL}></td>
-		<td><{$smarty.const._MD_BMCART_SHIPPING_FEE}></td>
+		<td><{$smarty.const._MD_BMCART_SHIPPING_AND_FEE}></td>
 		<td><{$smarty.const._MD_BMCART_AMOUNT}></td>
 		<td><{$smarty.const._MD_BMCART_PAYMENT_TYPE}></td>
 	</tr>
@@ -37,6 +37,8 @@
 				<{$smarty.const._MD_BMCART_PAYBY_WIRE}>
 			<{elseif $order->getShow('payment_type')==2}>
 				<{$smarty.const._MD_BMCART_PAYBY_CREDIT}>
+			<{elseif $order->getShow('payment_type')==3}>
+				<{$smarty.const._MD_BMCART_CASHON_DELIVERLY}>
 			<{/if}>
 		</td>
 	</tr>

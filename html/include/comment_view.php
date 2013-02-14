@@ -46,6 +46,7 @@ if (XOOPS_COMMENT_APPROVENONE != $xoopsModuleConfig['com_rule']) {
 
 	$t_root =& XCube_Root::getSingleton();
 	$t_root->mLanguageManager->loadPageTypeMessageCatalog('comment');
+	if (!$xoopsConfig) $xoopsConfig = $t_root->mContext->mXoopsConfig;  // by Bluemoon inc.
 	$comment_config = $xoopsModule->getInfo('comments');
 	$com_itemid = (trim($comment_config['itemName']) != '' && isset($_GET[$comment_config['itemName']])) ? (int)$_GET[$comment_config['itemName']] : 0;
 
@@ -207,7 +208,7 @@ if (XOOPS_COMMENT_APPROVENONE != $xoopsModuleConfig['com_rule']) {
 		$renderTarget->setAttribute("extraParams", $fetchParams);
 		$renderTarget->setAttribute("link_extra", $link_extra);
 		$renderTarget->setAttribute("postcomment_link", $postcomment_link);
-		
+
 		$renderSystem->render($renderTarget);
 		
 		//

@@ -324,9 +324,13 @@ class Legacy_TextFilter extends XCube_TextFilter
 			//
 			$this->mMakeXCodeCheckImgPatterns->call(new XCube_Ref($this->mXCodeCheckImgPatterns));
 		}
+
 		$text = preg_replace_callback($this->mXCodeCheckImgPatterns, array($this, '_filterImgUrl'), $text);
+
 		$replacementsIdx = ($allowimage == 0) ? 0 : 1;
+
 		$text = preg_replace($this->mXCodePatterns, $this->mXCodeReplacements[$replacementsIdx], $text);
+
 		return $text;
 	}
 	

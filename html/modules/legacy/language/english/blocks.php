@@ -19,6 +19,8 @@ define("_MB_LEGACY_WDLS",  "Waiting Downloads");
 define("_MB_LEGACY_BFLS",  "Broken Files");
 define("_MB_LEGACY_MFLS",  "Modified Downloads");
 define("_MB_LEGACY_COMPEND", "Comments");
+define("_MB_LEGACY_POSTER", "by ");
+define("_MB_LEGACY_READ_MORE", "Read more");
 
 define("_MB_LEGACY_RECO",  "Recommend Us");
 define("_MB_LEGACY_PWWIDTH", "Pop-Up Window Width");

@@ -22,7 +22,7 @@ define('_MD_BMCART_DIALOG_DELETE_DESC', 'このレコードを削除してもよ
 define('_MD_BMCART_CATEGORY_LIST', 'カテゴリ一覧');
 define('_MD_BMCART_CATEGORY_NAME', 'カテゴリ名');
 define('_MD_BMCART_ITEM_LIST', '商品一覧');
-define('_MD_BMCART_ITEM_DETAIL', '商品詳細');
+define('_MD_BMCART_ITEM_DETAIL', '商品の情報');
 define('_MD_BMCART_ITEM_NAME', '商品名');
 define('_MD_BMCART_ITEM_DESC', '商品説明');
 define('_MD_BMCART_ITEM_STOCK', '在庫数');
@@ -30,9 +30,11 @@ define('_MD_BMCART_ITEM_PRICE', '販売価格');
 define('_MD_BMCART_AMOUNT', '金額');
 define('_MD_BMCART_TOTAL_AMOUNT', '合計金額');
 define('_MD_BMCART_ITEM_SHIPPING_FEE', '送料');
+define('_MD_BMCART_FREE_SHIPPING', '送料無料');
 define('_MD_BMCART_UPDATE', '更新日付');
 define('_MD_BMCART_ITEM_PRICE_DESC', '円（税込、送料別）');
 define('_MD_BMCART_PRICE_DESC', '円');
+define('_MD_BMCART_FREE_SHIPPING_DESC', '円以上 送料無料');
 define('_MD_BMCART_SHIPPING_FEE', '配送料');
 define('_MD_BMCART_ADDTOCART', 'カートに入れる');
 define('_MD_BMCART_CART_LIST', 'カートの中身');
@@ -101,3 +103,4 @@ define('_MD_BMCART_EDIT', '編集する');
 define('_MD_BMCART_ADD_IMAGE', '画像追加');
 
 define('_MD_BMCART_ORDER_DETAIL','ご注文商品の一覧');
+define('_MD_BMCART_CUSTOMER_REVIEW','カスタマーレビュー');

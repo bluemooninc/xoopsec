@@ -20,6 +20,7 @@ class Controller_ItemList extends AbstractAction {
 	protected $sortOrder = "asc";
 	protected $breadcrumbs;
 	protected $categoryHandler;
+	protected $comment_flag = false;
 	/**
 	 * constructor
 	 */
@@ -29,17 +30,21 @@ class Controller_ItemList extends AbstractAction {
 		$this->categoryHandler = xoops_getModuleHandler('category');
 	}
 	public function action_index(){
-		$this->indexDefault($this->mPrimaryKey);
-		$this->category_id = $_SESSION['bmcart']['category_id'] ? $_SESSION['bmcart']['category_id'] : NULL;
-		$categoryArray = $this->mHandler->getCategoryArray($this->category_id);
-		if($categoryArray){
-			$categories = new Criteria('category_id', implode(",",$categoryArray), "IN");
-			$this->mPagenavi->addCriteria($categories);
+		if (xoops_getrequest('item_id')){
+			$this->_get_itemDetail();
+		}else{
+			$this->indexDefault($this->mPrimaryKey);
+			$this->category_id = $_SESSION['bmcart']['category_id'] ? $_SESSION['bmcart']['category_id'] : NULL;
+			$categoryArray = $this->mHandler->getCategoryArray($this->category_id);
+			if($categoryArray){
+				$categories = new Criteria('category_id', implode(",",$categoryArray), "IN");
+				$this->mPagenavi->addCriteria($categories);
+			}
+			$this->mPagenavi->addSort($this->sortName,$this->sortOrder);
+			$this->mListData = $this->mHandler->getItemList( $this->mPagenavi->getCriteria() );
+			$this->breadcrumbs = $this->categoryHandler->makeBreadcrumbs($this->category_id);
+			$this->template = 'itemList.html';
 		}
-		$this->mPagenavi->addSort($this->sortName,$this->sortOrder);
-		$this->mListData = $this->mHandler->getItemList( $this->mPagenavi->getCriteria() );
-		$this->breadcrumbs = $this->categoryHandler->makeBreadcrumbs($this->category_id);
-		$this->template = 'itemList.html';
 	}
 	public function action_category(){
 		$this->indexDefault($this->mPrimaryKey);
@@ -59,8 +64,12 @@ class Controller_ItemList extends AbstractAction {
 		}
 		$this->action_index();
 	}
-	public function action_itemDetail(){
-		if (isset($this->mParams[0])) $item_id = intval($this->mParams[0]);
+	private function _get_itemDetail(){
+		if (xoops_getrequest('item_id')){
+			$item_id = intval(xoops_getrequest('item_id'));
+		}elseif (isset($this->mParams[0])){
+			$item_id = intval($this->mParams[0]);
+		}
 		if (isset($this->mParams[1])) $this->image_id = intval($this->mParams[1]);
 		$this->mListData = $this->mHandler->getItemDetail($item_id);
 		$_SESSION['bmcart']['category_id'] = $this->category_id = $this->mListData['category_id'];
@@ -71,6 +80,29 @@ class Controller_ItemList extends AbstractAction {
 		}
 		$this->breadcrumbs = $this->categoryHandler->makeBreadcrumbs($this->category_id);
 		$this->template = 'itemDetail.html';
+		$_GET['item_id'] = $item_id;    // for comment_view
+		$this->comment_flag = true;
+	}
+	public function action_itemDetail(){
+		if(preg_match("/^comment_(.*)/",$this->mParams[0])){
+			// using core comment code
+			$com_itemid = $this->root->mContext->mRequest->getRequest('com_itemid');
+			$xoopsUser = $this->root->mContext->mXoopsUser;
+			$xoopsModule = $this->root->mContext->mXoopsModule;
+			$xoopsModuleConfig = $this->root->mContext->mModuleConfig;
+			global $xoopsTpl;
+			$_POST['page'] = 'itemDetail' ;
+			$_POST['com_id'] = $this->root->mContext->mRequest->getRequest('com_id');
+			if (isset($_GET['com_order'])){
+				$_POST['com_order'] = $this->root->mContext->mRequest->getRequest('com_order');
+			}else{
+				$_GET['com_order'] = 1;
+			}
+			$action = preg_replace("/_php$/i",".php",$this->mParams[0]);
+			require XOOPS_ROOT_PATH . '/include/'.$action;
+		}else{
+			$this->_get_itemDetail();
+		}
 	}
 	public function action_addtocart(){
 		if (isset($this->mParams[0])) $item_id = intval($this->mParams[0]);
@@ -79,7 +111,19 @@ class Controller_ItemList extends AbstractAction {
 		$cartHandler->addToCart($item_id);
 		$this->executeRedirect("../../cartList", 0, 'Add to Cart');
 	}
+	private function _comment_view(){
+		// include comment from core
+		$xoopsConfig = $this->root->mContext->mXoopsConfig;
+		$xoopsUser = $this->root->mContext->mXoopsUser;
+		$xoopsModule = $this->root->mContext->mXoopsModule;
+		$xoopsModuleConfig = $this->root->mContext->mModuleConfig;
+		global $xoopsTpl;
+		require_once XOOPS_ROOT_PATH.'/include/comment_view.php';
+	}
+
 	public function action_view(){
+		$free_shipping = intval($this->root->mContext->mModuleConfig['free_shipping']);
+		if ($free_shipping==0) $free_shipping = 99999999;
 		$view = new View($this->root);
 		$view->setTemplate($this->template);
 		$view->set('ListData', $this->mListData);
@@ -88,8 +132,12 @@ class Controller_ItemList extends AbstractAction {
 		$view->set('current_category', $this->category_id);
 		$view->set('current_image', $this->image_id);
 		$view->set('ticket_hidden',$this->mTicketHidden);
+		$view->set('free_shipping', $free_shipping);
 		if (is_object($this->mPagenavi)) {
 			$view->set('pageNavi', $this->mPagenavi->getNavi());
+		}
+		if ($this->comment_flag){
+			$this->_comment_view();
 		}
 	}
 //-----------------

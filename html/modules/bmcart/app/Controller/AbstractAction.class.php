@@ -227,7 +227,7 @@ abstract class AbstractAction {
 	 */
 	protected function checkToken( $name='bmcart') {
 		$keys = array_keys($_POST);
-		$token = preg_grep("/^XOOPS_TOKEN_(.*)/", $keys);
+		$token = preg_grep("/^XOOPS_TOKEN_".$name."(.*)/", $keys);
 		if ($token){
 			$ret = $this->mTokenHandler->autoValidate($name);
 			return $ret;

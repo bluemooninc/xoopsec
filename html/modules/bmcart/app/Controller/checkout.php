@@ -19,11 +19,20 @@ class Controller_Checkout extends AbstractAction {
 	protected $cardList;
 	protected $message;
 	protected $stateOptions;
+	protected $cashOnDeliveryFee;
 
 	public function __construct(){
 		parent::__construct();
 		$this->mHandler = Model_Checkout::forge();
 		$this->cartHandler = Model_Cart::forge();
+	}
+	private function _getCashOnDeliveryFee($total){
+		$cods = explode(",",$this->root->mContext->mModuleConfig['cash_on_delivery']);
+		foreach($cods as $cod){
+			$keyVal = explode(">",$cod);
+			if ($total<$keyVal[0]) return $keyVal[1];
+		}
+		return null;
 	}
 	public function action_view(){
 		$view = new View($this->root);
@@ -36,19 +45,21 @@ class Controller_Checkout extends AbstractAction {
 		$view->set('ListData', $this->mListData);
 		$view->set('shipping_fee', $this->cartHandler->isShippingFee() );
 		$view->set('total_amount', $this->cartHandler->isTotalAmount() );
+		$view->set('cashOnDeliveryFee', $this->cashOnDeliveryFee);
 		$view->set('ticket_hidden',$this->mTicketHidden);
 		if (is_object($this->mPagenavi)) {
 			$view->set('pageNavi', $this->mPagenavi->getNavi());
 		}
 		$view->setTemplate($this->template);
 	}
+
 	public function action_index(){
 		$root = XCube_Root::getSingleton();
 		if(!$root->mContext->mXoopsUser){
 			redirect_header(XOOPS_URL."/user.php",3,_MD_BMCART_NEED_LOGIN);
 		}
 		$this->mListData = $this->cartHandler->getCartList();
-
+		$this->cashOnDeliveryFee = $this->_getCashOnDeliveryFee($this->cartHandler->isTotalAmount());
 		$itemHandler = Model_Item::forge();
 		if (!$itemHandler->checkStock($this->mListData)){
 			$this->message = $itemHandler->getMessage() . _MD_BMCART_NO_STOCK;
@@ -131,6 +142,12 @@ class Controller_Checkout extends AbstractAction {
 			case 2: // Pay by Card
 				$cardOrderId = $order_id;
 				$ret = $this->_payByCreditCard($cardOrderId,$amount,$tax,$cardSeq);
+				break;
+			case 3: // Cash on Delivery
+				$codFee = $this->_getCashOnDeliveryFee($sub_total);
+				$shipping_fee += $codFee;
+				$amount += $codFee;
+				$ret = true;
 				break;
 		}
 		if( $ret==true ){

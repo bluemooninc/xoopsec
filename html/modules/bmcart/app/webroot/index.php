@@ -1,6 +1,6 @@
 <?php
 /*********************************************************************************************
- * MVC ( Model View Control ) Action Program
+ * Achtungbaby Flamework
  ********************************** License: GPLv3 *******************************************
  * Copyright (C) 2012 Yoshi Sakai (A.K.A. bluemooninc)
  *  This program is free software: you can redistribute it and/or modify
@@ -14,7 +14,6 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *********************************************************************************************/
-
 require_once '../../../../mainfile.php'; // Load XOOPS Config
 function errorMessage($errorMessage)
 {
@@ -52,6 +51,7 @@ foreach ($_GET as $key => $val) {
  */
 $parameters = null;
 $controller_name = isset($params[0][1]) ? $params[0][1] : $mydirname;
+$controller_name = preg_replace("/_php$/i","",$controller_name);
 $method = isset($params[0][2]) ? $params[0][2] : "index";
 if (isset($params) && count($params[0]) > 3) {
 	for ($i = 3; $i < count($params[0]); $i++) {
@@ -59,7 +59,7 @@ if (isset($params) && count($params[0]) > 3) {
 	}
 }
 $method_name = "action_" . $method;
-if (preg_match('/^[0-9a-zA-Z]+$/', $controller_name)) {
+if (preg_match('/^[0-9a-zA-Z\._-]+$/', $controller_name)) {
 	$controllerClass = "Controller_" . ucFirst($controller_name);
 } else {
 	die("controller_name must be alpha numerics characters!");

@@ -20,10 +20,15 @@
 // ------------------------------------------------------------------------- //
 
 function b_legacy_comments_show($options) {
+	$root = XCube_Root::getSingleton();
+	$xoopsModule = $root->mContext->mXoopsModule;
     $block = array();
     include_once XOOPS_ROOT_PATH.'/include/comment_constants.php';
     $comment_handler =& xoops_gethandler('comment');
     $criteria = new CriteriaCompo(new Criteria('com_status', XOOPS_COMMENT_ACTIVE));
+	if ($xoopsModule){
+		$criteria->add(new Criteria('com_modid',$xoopsModule->getVar('mid')));
+	}
     $criteria->setLimit(intval($options[0]));
     $criteria->setSort('com_created');
     $criteria->setOrder('DESC');
@@ -34,13 +39,15 @@ function b_legacy_comments_show($options) {
     $comment_config = array();
     foreach (array_keys($comments) as $i) {
         $mid = $comments[$i]->getVar('com_modid');
-        $com['module'] = '<a href="'.XOOPS_URL.'/modules/'.$modules[$mid]->getVar('dirname').'/">'.$modules[$mid]->getVar('name').'</a>';
+        $com['module'] = $modules[$mid]->getVar('name');
         if (!isset($comment_config[$mid])) {
             $comment_config[$mid] = $modules[$mid]->getInfo('comments');
         }
         $com['id'] = $i;
-        $com['title'] = '<a href="'.XOOPS_URL.'/modules/'.$modules[$mid]->getVar('dirname').'/'.$comment_config[$mid]['pageName'].'?'.$comment_config[$mid]['itemName'].'='.$comments[$i]->getVar('com_itemid').'&amp;com_id='.$i.'&amp;com_rootid='.$comments[$i]->getVar('com_rootid').'&amp;'.htmlspecialchars($comments[$i]->getVar('com_exparams')).'#comment'.$i.'">'.$comments[$i]->getVar('com_title').'</a>';
-        $com['icon'] = $comments[$i]->getVar('com_icon');
+        $com['title'] = $comments[$i]->getVar('com_title');
+	    $com['com_link'] = XOOPS_URL.'/modules/'.$modules[$mid]->getVar('dirname').'/'.$comment_config[$mid]['pageName'].'?'.$comment_config[$mid]['itemName'].'='.$comments[$i]->getVar('com_itemid').'&amp;com_id='.$i.'&amp;com_rootid='.$comments[$i]->getVar('com_rootid').'&amp;'.htmlspecialchars($comments[$i]->getVar('com_exparams')).'#comment'.$i;
+        $com['com_text'] = mb_strimwidth( $comments[$i]->getVar('com_text'), 0, 80, "...", _CHARSET);
+	    $com['icon'] = $comments[$i]->getVar('com_icon');
         $com['icon'] = ($com['icon'] != '') ? $com['icon'] : 'icon1.gif';
         $com['time'] = $comments[$i]->getVar('com_created');
         if ($comments[$i]->getVar('com_uid') > 0) {

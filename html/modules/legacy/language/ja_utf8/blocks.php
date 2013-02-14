@@ -19,6 +19,8 @@ define("_MB_LEGACY_WDLS",  "新規投稿ダウンロード情報");
 define("_MB_LEGACY_BFLS",  "破損ファイル報告");
 define("_MB_LEGACY_MFLS",  "修正ダウンロード情報");
 define("_MB_LEGACY_COMPEND", "コメント");
+define("_MB_LEGACY_POSTER", "投稿者:");
+define("_MB_LEGACY_READ_MORE", "続きを読む");
 
 define("_MB_LEGACY_RECO",  "当サイトを推薦する");
 define("_MB_LEGACY_PWWIDTH", "ポップアップウィンドウの横幅");

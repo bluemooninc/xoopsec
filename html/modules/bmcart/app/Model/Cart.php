@@ -9,6 +9,7 @@
 if (!defined('XOOPS_ROOT_PATH')) exit();
 
 class Model_Cart extends AbstractModel {
+	protected $root;
 	protected $myHandler;
 	protected $myObjects;
 	protected $shipping_fee=0;
@@ -22,6 +23,7 @@ class Model_Cart extends AbstractModel {
 	{
 		$this->_module_names = $this->getModuleNames();
 		$this->myHandler =& xoops_getModuleHandler('cart');
+		$this->root = XCube_Root::getSingleton();
 	}
 
 	/**
@@ -55,8 +57,7 @@ class Model_Cart extends AbstractModel {
 	}
 	private function _getMyCartItems()
 	{
-		$root = XCube_Root::getSingleton();
-		if($root->mContext->mXoopsUser){
+		if($this->root->mContext->mXoopsUser){
 			$this->myObjects = $this->_getFromSession();
 			$criteria = new CriteriaCompo();
 			$criteria->add(new Criteria('uid', Legacy_Utils::getUid()));
@@ -73,6 +74,7 @@ class Model_Cart extends AbstractModel {
 
 	public function &getCartList()
 	{
+		$free_shipping = intval($this->root->mContext->mModuleConfig['free_shipping']);
 		$this->_getMyCartItems();
 		$itemHandler = xoops_getmodulehandler('item');
 		$mListData = array();
@@ -91,6 +93,9 @@ class Model_Cart extends AbstractModel {
 				$this->shipping_fee = $itemObject->getVar('shipping_fee');
 			}
 			$this->sub_total += $amount;
+		}
+		if ($free_shipping>0 && $this->sub_total>=$free_shipping){
+			$this->shipping_fee = 0;
 		}
 		$this->total_amount = $this->sub_total + $this->shipping_fee;
 		return $mListData;
