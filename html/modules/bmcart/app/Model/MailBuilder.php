@@ -47,6 +47,9 @@ class Model_Mail
 			case 2: // Credi Card
 				$this->mMailer->assign("PAYMENT_DESC", _MD_BMCART_PAYMENT_DESC_CARD);
 				break;
+			case 3: // Cash on delivery
+				$this->mMailer->assign("PAYMENT_DESC", _MD_BMCART_CASHON_DELIVERLY);
+				break;
 		}
 		$this->mMailer->assign('SHIPPING_DATE',date("Y-m-d",$orderObject->getVar('shipping_date')));
 		$this->mMailer->assign('SHIPPING_CARRIER',$orderObject->getVar('shipping_carrier'));
