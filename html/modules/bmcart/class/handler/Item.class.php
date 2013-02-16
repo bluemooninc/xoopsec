@@ -12,6 +12,7 @@ class bmcart_itemObject extends XoopsSimpleObject
         $this->initVar('uid', XOBJ_DTYPE_INT, 0, true);
 	    $this->initVar('item_name', XOBJ_DTYPE_STRING, '', true, 255);
 	    $this->initVar('item_desc', XOBJ_DTYPE_TEXT, '', true);
+	    $this->initVar('barcode', XOBJ_DTYPE_STRING, null, true, 13);
         $this->initVar('price', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('shipping_fee', XOBJ_DTYPE_INT, 0, true);
 	    $this->initVar('stock_qty', XOBJ_DTYPE_INT, 0, true);

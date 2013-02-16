@@ -16,6 +16,7 @@ CREATE TABLE {prefix}_{dirname}_item (
   `uid` int(8) unsigned NOT NULL,
   `item_name` varchar(255) NOT NULL,
   `item_desc` text,
+  `barcode` varchar(13),
   `price` decimal(13,2),
   `shipping_fee` decimal(13,2),
   `stock_qty` int(1) unsigned NOT NULL,

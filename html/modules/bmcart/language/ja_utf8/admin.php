@@ -22,6 +22,7 @@ define('_AD_BMCART_ITEM_NAME', '商品名');
 define('_AD_BMCART_ITEM_DESC', '商品概要');
 define('_AD_BMCART_ADD_IMAGE', '画像の追加');
 define('_AD_BMCART_SHOW_ITEM', '商品ページへ');
+define('_AD_BMCART_BARCODE', 'バーコード');
 
 define('_AD_BMCART_IMAGE_LIST', '商品画像一覧表');
 define('_AD_BMCART_TIPS_IMAGE_EDIT', '商品の画像を登録します。１商品に何枚でも画像を設定出来ます。');

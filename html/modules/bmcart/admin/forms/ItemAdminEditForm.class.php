@@ -1,7 +1,7 @@
 <?php
 /**
- * @package user
- * @version $Id: ItemAdminEditForm.class.php,v 1.1 2007/05/15 02:34:39 minahito Exp $
+ * Copyright (c) Bluemoon inc. GPL V3 license.
+ * 2013-02-16 : Add barcode by Yoshi Sakai
  */
 
 if (!defined('XOOPS_ROOT_PATH')) exit();
@@ -29,6 +29,7 @@ class bmcart_ItemAdminEditForm extends XCube_ActionForm
 		$this->mFormProperties['category_id'] =new XCube_IntProperty('category_id');
 		$this->mFormProperties['item_name'] =new XCube_StringProperty('item_name');
 		$this->mFormProperties['item_desc'] =new XCube_TextProperty('item_detail');
+		$this->mFormProperties['barcode'] =new XCube_StringProperty('barcode');
 		$this->mFormProperties['price'] =new XCube_IntProperty('price');
 		$this->mFormProperties['shipping_fee'] =new XCube_IntProperty('shipping_fee');
 		$this->mFormProperties['stock_qty'] =new XCube_IntProperty('stock_qty');
@@ -58,6 +59,7 @@ class bmcart_ItemAdminEditForm extends XCube_ActionForm
 		}
 		$this->set('item_name', $obj->get('item_name'));
 		$this->set('item_desc', $obj->get('item_desc'));
+		$this->set('barcode', $obj->get('barcode'));
 		$this->set('price', $obj->get('price'));
 		$this->set('shipping_fee', $obj->get('shipping_fee'));
 		$this->set('stock_qty', $obj->get('stock_qty'));
@@ -69,11 +71,10 @@ class bmcart_ItemAdminEditForm extends XCube_ActionForm
 		$obj->set('category_id', $this->get('category_id'));
 		$obj->set('item_name', $this->get('item_name'));
 		$obj->set('item_desc', $this->get('item_desc'));
+		$obj->set('barcode', $this->get('barcode'));
 		$obj->set('price', intval($this->get('price')));
 		$obj->set('shipping_fee', intval($this->get('shipping_fee')));
 		$obj->set('stock_qty', intval($this->get('stock_qty')));
 		$obj->set('last_update', time());
 	}
 }
-
-?>

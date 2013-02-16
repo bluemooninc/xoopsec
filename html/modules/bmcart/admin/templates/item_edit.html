@@ -57,6 +57,12 @@
 			</td>
 		</tr>
 		<tr>
+			<td class="head"><{$smarty.const._AD_BMCART_BARCODE}></td>
+			<td class="<{cycle values=" odd,even"}>">
+			<{xoops_input type=text name=barcode value=$actionForm->get('barcode')}>
+			</td>
+		</tr>
+		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_ITEM_PRICE}></td>
 			<td class="<{cycle values=" odd,even"}>">
 			<{xoops_input type=text name=price value=$actionForm->get('price')}>

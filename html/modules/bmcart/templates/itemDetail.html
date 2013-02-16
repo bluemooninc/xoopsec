@@ -20,7 +20,7 @@
 		<{if $img->getShow('image_id') eq $current_image}>
 		<div class="thumbnail">
 			<a href="#myModal" role="button" data-toggle="modal">
-				<img src="<{$xoops_url}>/uploads/m_<{$img->getShow('image_filename')}>"/>
+				<img src="<{$xoops_url}>/uploads/m_<{$img->getShow('image_filename')}>" id="MainPhoto"/>
 			</a>
 		</div>
 		<!-- Modal -->
@@ -32,7 +32,7 @@
 			</div>
 			<div class="modal-body">
 				<p>
-					<img src="<{$xoops_url}>/uploads/<{$img->getShow('image_filename')}>"/>
+					<img src="<{$xoops_url}>/uploads/<{$img->getShow('image_filename')}>" id="ModalPhoto"/>
 				</p>
 			</div>
 			<div class="modal-footer">
@@ -44,17 +44,28 @@
 		<div class="thumbnail">
 			<{foreach item=img from=$imageObjects}>
 			<a href="<{$xoops_url}>/modules/<{$dirname}>/itemList/itemDetail/<{$ListData.item_id}>/<{$img->getShow('image_id')}>">
-				<img src="<{$xoops_url}>/uploads/s_<{$img->getShow('image_filename')}>"/>
+				<img src="<{$xoops_url}>/uploads/s_<{$img->getShow('image_filename')}>" class="ChangePhoto" />
 			</a>
 			<{/foreach}>
+			<{if $xoops_isadmin}>
+			<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=imageList&item_id=<{$ListData.item_id}>" >
+				<{$smarty.const._MD_BMCART_ADD_IMAGE}>
+			</a>
+			<{/if}>
 		</div>
 		<{else}>
 			<img src="<{$xoops_url}>/modules/<{$dirname}>/images/noimage.png"/>
+			<{if $xoops_isadmin}>
+			<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=imageList&item_id=<{$ListData.item_id}>" >
+				<{$smarty.const._MD_BMCART_ADD_IMAGE}>
+			</a>
+			<{/if}>
 		<{/if}>
-		<{if $xoops_isadmin}>
-		<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=imageList&item_id=<{$ListData.item_id}>" >
-			<{$smarty.const._MD_BMCART_ADD_IMAGE}>
-		</a>
+		<{if $ListData.barcode}>
+
+			<div hidden id="ean_13"><{$ListData.barcode}></div>
+			<canvas id="canvas_1" class="span12"></canvas>
+
 		<{/if}>
 	</div>
 	<div class="span8">
@@ -126,3 +137,24 @@
 	<!-- end comments loop -->
 </div>
 <!-- end comments area -->
+<script type="text/javascript">
+	$(function() {
+		$("div#ean_13").text = draw_barcode();
+		function draw_barcode(){
+			var barcodeDrawer;
+			barcodeDrawer = new EAN13CanvasDrawer($('div#ean_13').text(), 'canvas_1');
+			return barcodeDrawer.drawBarcode();
+		}
+		$("img.ChangePhoto").click(function(){
+			var ImgSrc = $(this).attr("src");
+			ImgSrc = ImgSrc.replace("s_","m_");
+			var MdlSrc = ImgSrc.replace("m_","");
+			var ImgAlt = $(this).attr("alt");
+			$("img#ModalPhoto").attr({src:MdlSrc,alt:ImgAlt});
+			$("img#MainPhoto").attr({src:ImgSrc,alt:ImgAlt});
+			$("img#MainPhoto").hide();
+			$("img#MainPhoto").fadeIn("slow");
+			return false;
+		});
+	});
+</script>

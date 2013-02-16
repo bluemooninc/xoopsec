@@ -13,7 +13,7 @@ $mydirpath = basename( dirname( dirname( __FILE__ ) ) ) ;
 $modversion["name"] = _MI_BMCART_TITLE;
 $modversion["dirname"] = basename(dirname(__FILE__));
 $modversion['hasMain'] = 1;
-$modversion['version'] = 0.11;
+$modversion['version'] = 0.12;
 $modversion['image'] = 'images/bmcart.png';
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = "admin/index.php";
@@ -22,6 +22,7 @@ $modversion['sub'][] = array('name' => _MI_BMCART_CATEGORY_LIST, 'url' => 'index
 $modversion['sub'][] = array('name' => _MI_BMCART_ITEM_LIST, 'url' => 'itemList/index');
 $modversion['sub'][] = array('name' => _MI_BMCART_CART_LIST, 'url' => 'cartList/index');
 $modversion['sub'][] = array('name' => _MI_BMCART_ORDER_LIST, 'url' => 'orderList/index');
+$modversion['onUpdate'] = 'sql/onupdate.php' ;
 
 /*
  * View section
