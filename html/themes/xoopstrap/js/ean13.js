@@ -119,13 +119,11 @@ EAN13Generator = (function() {
       if (eanString.length == 13) {
         eanString = eanString.substr(0,12);
       }
-      if (eanString.length !== 12) {
-        eanString = eanString.substr(0,12);
-        throw new Error('You need to provide exact 12 digits');
+      if (eanString.length == 12) {
+        this.eanArray = eanString.split('');
+        checkDigit = this.computeControlSum();
+        this.eanArray.push(String(checkDigit));
       }
-      this.eanArray = eanString.split('');
-      checkDigit = this.computeControlSum();
-      this.eanArray.push(String(checkDigit));
     } catch (error) {
       alert(error.message);
     }
@@ -182,15 +180,15 @@ EAN13CanvasDrawer = (function(_super) {
         throw new Error('jCanvaScript object not found');
       }
       this.textStartX = 1;
-      this.textStartY = 65;
+      this.textStartY = 75;
       this.textStep = 18;
       this.textBreak = 15;
       this.textSize = 18;
       this.barStartX = 18;
       this.barStartY = 1;
       this.barWidth = 2.75;
-      this.barHeight = 45;
-      this.barLongerHeight = 60;
+      this.barHeight = 55;
+      this.barLongerHeight = 70;
     } catch (error) {
       alert(error.message);
     }
