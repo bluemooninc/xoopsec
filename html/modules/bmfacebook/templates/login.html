@@ -1,0 +1,21 @@
+<h1><{$smarty.const._MD_BMFACEBOOK_TITLE}></h1>
+
+<{if $user}>
+	<{$smarty.const._MD_BMFACEBOOK_WELCOME}>
+<{else}>
+	<div>
+	<a class="btn btn-primary" href="<{$loginUrl}>">Login with Facebook</a>
+	</div>
+<{/if}>
+
+<{if $user}>
+	<h3>
+		<img src="https://graph.facebook.com/<{$user}>/picture">
+	</h3>
+	<a class="btn" href="<{$xoops_url}>">Home</a>
+	<pre>
+		<{* $user_profile *}>
+	</pre>
+<{else}>
+	<strong><em><{$smarty.const._MD_BMFACEBOOK_LOGIN}></em></strong>
+<{/if}>

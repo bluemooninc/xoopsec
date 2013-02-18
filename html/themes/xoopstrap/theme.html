@@ -108,13 +108,16 @@
 			<!--/.nav-collapse -->
 			<div class="btn-group pull-right">
 				<{if $xoops_uname}>
-				<a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
+					<a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
 					<i class="icon-user"></i>
 					<span class="caret"></span>
 					<{$xoops_uname}>
-				</a>
+					</a>
 				<{else}>
-				<a class="btn btn-primary" href="<{$xoops_url}>/user.php">Login</a>
+					<a class="btn btn-primary" href="<{$xoops_url}>/user.php">Login</a>
+					<{if $facbookLogin}>
+						<{$facbookLogin}>
+					<{/if}>
 				<{/if}>
 				<{if $xoops_uname}>
 				<ul class="dropdown-menu">
