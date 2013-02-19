@@ -123,4 +123,43 @@ $modversion['config'][]=array(
 	'default' => "10000>300,30000>400,100000>600,300000>1000"
 );
 
+// Notification
+$modversion['hasNotification'] = 1;
+$modversion['notification']['lookup_file'] = 'notification.php';
+$modversion['notification']['lookup_func'] = '{$mydirname}_notify_iteminfo';
 
+$modversion['notification']['category'][] = array(
+	'name' => 'global',
+	'title' => constant($constpref.'_GLOBAL_NOTIFY'),
+	'description' => constant($constpref.'_GLOBAL_NOTIFYDSC'),
+	'subscribe_from' => array('index.php', 'article.php')
+);
+$modversion['notification']['category'][] = array(
+	'name' => 'item',
+	'title' => constant($constpref.'_STORY_NOTIFY'),
+	'description' => constant($constpref.'_STORY_NOTIFYDSC'),
+	'subscribe_from' => array('index.php', 'article.php'),
+	'item_name' => 'storyid'
+);
+
+$modversion['notification']['event'][] = array(
+	'name' => 'order_submit',
+	'category' => 'global',
+	'admin_only' => 1,
+	'title' => constant($constpref.'_GLOBAL_STORYSUBMIT_NOTIFY'),
+	'caption' => constant($constpref.'_GLOBAL_STORYSUBMIT_NOTIFYCAP'),
+	'description' => constant($constpref.'_GLOBAL_STORYSUBMIT_NOTIFYDSC'),
+	'mail_template' => 'global_storysubmit_notify',
+	'mail_subject' => constant($constpref.'_GLOBAL_STORYSUBMIT_NOTIFYSBJ')
+);
+
+$modversion['notification']['event'][] = array(
+	'name' => 'comment',
+	'category' => 'item',
+	'admin_only' => 1,
+	'title' => constant($constpref.'_NOTIFY5_TITLE');,
+	'caption' => constant($constpref.'_NOTIFY5_CAPTION'),
+	'description' => constant($constpref.'_NOTIFY5_DESC'),
+	'mail_template' => 'story_comment';
+	'mail_subject' => constant($constpref.'_NOTIFY5_SUBJECT')
+);
