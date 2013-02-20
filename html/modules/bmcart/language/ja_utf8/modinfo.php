@@ -24,3 +24,20 @@ define('_MI_BMCART_FREE_SHIPPING', '送料無料設定(円)');
 define('_MI_BMCART_FREE_SHIPPING_DESC', '0:設定無し,1以上で商品合計比較により送料無料となります。');
 define('_MI_BMCART_CASHON_DELIVERY', '代引き手数料(円)');
 define('_MI_BMCART_CASHON_DELIVERY_DESC', '商品価格>手数料,（カンマ区切）');
+
+// Text for notifications
+define('_MI_BMCART_GLOBAL_NOTIFY', 'モジュール全体');
+define('_MI_BMCART_GLOBAL_NOTIFYDSC', 'ショッピングカートモジュール全体における通知オプション');
+
+define('_MI_BMCART_ITEM_NOTIFY', '表示中の商品');
+define('_MI_BMCART_ITEM_NOTIFYDSC', '表示中の商品に対する通知オプション');
+
+define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFY', '注文が入った時の通知');
+define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYCAP', '注文があった場合に通知する');
+define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYDSC', '注文があった場合に通知する');
+define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE}: 注文がありました');
+
+define('_MI_BMCART_NOTIFY5_TITLE', '新規コメント投稿');
+define('_MI_BMCART_NOTIFY5_CAPTION', '商品にコメントがついた場合通知する');
+define('_MI_BMCART_NOTIFY5_DESC', '商品にコメントがついた場合通知する');
+define('_MI_BMCART_NOTIFY5_SUBJECT', '[{X_SITENAME}] {X_MODULE}: コメントの投稿がありました');

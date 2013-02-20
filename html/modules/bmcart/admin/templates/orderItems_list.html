@@ -1,0 +1,41 @@
+<div class="adminnavi">
+	<a href="./index.php"><{$smarty.const._MI_BMCART_NAME}></a>
+	&raquo;&raquo; <span class="adminnaviTitle"><a href="./index.php?action=OrderList"><{$smarty.const._AD_BMCART_ORDER_LIST}></a></span>
+</div>
+
+<h3 class="admintitle"><{$smarty.const._AD_BMCART_ORDER_LIST}></h3>
+
+<table class="outer">
+	<tr>
+		<th><{$smarty.const._AD_BMCART_ORDERITEM_ID}></th>
+		<th><{$smarty.const._AD_BMCART_ORDERID}></th>
+		<th><{$smarty.const._AD_BMCART_ITEM_ID}></th>
+		<th><{$smarty.const._AD_BMCART_ITEM_PRICE}></th>
+		<th><{$smarty.const._AD_BMCART_SHIPPING_FEE}></th>
+		<th><{$smarty.const._AD_BMCART_ORDERITEM_QTY}></th>
+		<th><{$smarty.const._AD_BMCART_CONTROL}></th>
+	</tr>
+	<{foreach item=order from=$objects}>
+	<{assign var=itemId value=$order->getShow('item_id')}>
+
+	<tr class="<{cycle values='odd,even'}>">
+		<td class="order_list_title"><{$order->getShow('orderItem_id')}></td>
+		<td class="order_list_title"><{$order->getShow('order_id')}></td>
+		<td class="order_list_title">
+			<a href="<{$xoops_url}>/modules/bmcart/itemList/itemDetail/<{$itemId}>">
+				(<{$itemId}>)<{$itemObjects[$itemId]}>
+			</a>
+		</td>
+		<td class="order_list_title">&yen;<{$order->getShow('price')|number_format}></td>
+		<td class="order_list_title">&yen;<{$order->getShow('shipping_fee')|number_format}></td>
+		<td class="order_list_title"><{$order->getShow('qty')|number_format}></td>
+		<td class="order_list_title">
+			<a href="<{$xoops_url}>/modules/bmcart/itemList/itemDetail/<{$itemId}>">
+			<img src="<{"icons/property.png"|theme}>" alt="<{$smarty.const._AD_BMCART_SHOW_ITEM}>" title="<{$smarty.const._AD_BMCART_SHOW_ITEM}>" />
+			</a>
+		</td>
+	</tr>
+	<{/foreach}>
+</table>
+
+<div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>

@@ -80,6 +80,7 @@ class Model_Item extends AbstractModel {
 
 	public function &getItemDetail($item_id)
 	{
+		if ($item_id==0) return null;
 		$this->myHandler =& xoops_getModuleHandler('item');
 		$object = $this->myHandler->get($item_id);
 		$checkedHandler =& xoops_getModuleHandler('checkedItems');
@@ -88,7 +89,7 @@ class Model_Item extends AbstractModel {
 		if (!$checkedObject){
 			$checkedObject = $checkedHandler->create();
 			$checkedObject->set('uid',$uid);
-			$checkedObject->set('item_id',$object->getVar('item_id'));
+			$checkedObject->set('item_id',$item_id);
 			$checkedObject->set('category_id',$object->getVar('category_id'));
 		}
 		$checkedObject->set('last_update',time());

@@ -110,7 +110,12 @@ class Controller_Checkout extends AbstractAction {
 		}
 		return $ret;
 	}
-
+	private function _order_notifications($order_id){
+		$tags = array();
+		$tags['ORDER_URL']  = XOOPS_URL.'/modules/bmcart/admin/index.php?action=orderList&order_id=' . $order_id;
+		$notification_handler =& xoops_gethandler('notification');
+		$notification_handler->triggerEvent('global', 0, 'order_submit', $tags );
+	}
 	/**
 	 * Check out method
 	 */
@@ -155,8 +160,9 @@ class Controller_Checkout extends AbstractAction {
 			$this->cartHandler->clearMyCart();
 			$this->mHandler->setOrderStatus($order_id,$payment_type,$cardOrderId,$sub_total,$tax,$shipping_fee,$amount);
 			$orderObject = $this->mHandler->myObject();
-			$mail = new Model_Mail();
-			$mail->sendMail("ThankYouForOrder.tpl",$orderObject,$this->mListData,_MD_BMCART_ORDER_MAIL);
+			//$mail = new Model_Mail();
+			//$mail->sendMail("ThankYouForOrder.tpl",$orderObject,$this->mListData,_MD_BMCART_ORDER_MAIL);
+			$this->_order_notifications($order_id);
 			$this->executeRedirect(XOOPS_URL."/modules/bmcart/orderList/index", 5, 'Done');
 		}
 	}

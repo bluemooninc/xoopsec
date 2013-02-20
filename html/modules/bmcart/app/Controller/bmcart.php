@@ -35,6 +35,12 @@ class Controller_bmcart extends AbstractAction {
 
 
 	public function action_index(){
+		if (isset($_GET['item_id'])){
+			// for notification call back
+			$item_id = $this->root->mContext->mRequest->getRequest('item_id');
+			$itemDetail = "./itemList/itemDetail/".$item_id;
+			$this->root->mController->executeRedirect($itemDetail, 0, "itemDetail");
+		}
 		$this->template = 'categoryList.html';
 		$parentObjects = $this->mHandler->getParentCategory();
 		$mArray=array();

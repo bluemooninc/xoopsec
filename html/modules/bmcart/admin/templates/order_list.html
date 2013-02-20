@@ -36,7 +36,11 @@
 	</tr>
 	<{foreach item=order from=$objects}>
 	<tr class="<{cycle values='odd,even'}>">
-		<td class="order_list_title"><{$order->getShow('order_id')}></td>
+		<td class="order_list_title">
+			<a href="index.php?action=orderItemsList&amp;order_id=<{$order->getShow('order_id')}>">
+				<{$order->getShow('order_id')}>
+			</a>
+		</td>
 		<td class="order_list_title">
 			<a href="<{$xoops_url}>/modules/user/admin/index.php?action=UserView&amp;uid=<{$order->getShow('uid')}>">
 				<{$order->getShow('uid')}>
@@ -88,6 +92,9 @@
 				<img src="<{"icons/send.png"|theme}>" alt="<{$smarty.const._AD_BMCART_SEND_MAIL}>" title="<{$smarty.const._AD_BMCART_EXEC_SEND_MAIL}>" />
 			</a>
 			<{/if}>
+			<a href="index.php?action=orderItemsList&amp;order_id=<{$order->getShow('order_id')}>">
+				<img src="<{"icons/property.png"|theme}>" alt="<{$smarty.const._AD_BMCART_SHOW_ITEM}>" title="<{$smarty.const._AD_BMCART_SHOW_ITEM}>" />
+			</a>
 		</td>
 	</tr>
 	<{/foreach}>

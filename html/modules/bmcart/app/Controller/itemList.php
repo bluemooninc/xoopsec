@@ -70,6 +70,7 @@ class Controller_ItemList extends AbstractAction {
 		}elseif (isset($this->mParams[0])){
 			$item_id = intval($this->mParams[0]);
 		}
+		$_GET['item_id'] = $item_id;    // for comment_view and notification
 		if (isset($this->mParams[1])) $this->image_id = intval($this->mParams[1]);
 		$this->mListData = $this->mHandler->getItemDetail($item_id);
 		$_SESSION['bmcart']['category_id'] = $this->category_id = $this->mListData['category_id'];
@@ -80,11 +81,16 @@ class Controller_ItemList extends AbstractAction {
 		}
 		$this->breadcrumbs = $this->categoryHandler->makeBreadcrumbs($this->category_id);
 		$this->template = 'itemDetail.html';
-		$_GET['item_id'] = $item_id;    // for comment_view
 		$this->comment_flag = true;
 	}
 	public function action_itemDetail(){
-		if(preg_match("/^comment_(.*)/",$this->mParams[0])){
+		if(preg_match("/^notification_(.*)/",$this->mParams[0])){
+			$xoopsUser = $this->root->mContext->mXoopsUser;
+			$xoopsModule = $this->root->mContext->mXoopsModule;
+			$xoopsModuleConfig = $this->root->mContext->mModuleConfig;
+			global $xoopsTpl;
+			require_once XOOPS_ROOT_PATH.'/include/notification_update.php';
+		}elseif(preg_match("/^comment_(.*)/",$this->mParams[0])){
 			// using core comment code
 			$com_itemid = $this->root->mContext->mRequest->getRequest('com_itemid');
 			$xoopsUser = $this->root->mContext->mXoopsUser;

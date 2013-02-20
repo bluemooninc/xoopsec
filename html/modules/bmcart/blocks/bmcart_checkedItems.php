@@ -49,7 +49,6 @@ function b_bmcart_checkedItems_show()
 			$i++;
 		}
 	}
-	//adump($mListData);die;
 	$block = array();
 	$block['checkedItemsList'] = $mListData;
 	return $block;

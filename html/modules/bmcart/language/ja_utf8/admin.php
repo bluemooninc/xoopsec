@@ -54,6 +54,8 @@ define('_AD_BMCART_CONTROL', '操作');
 define('_AD_BMCART_UPDATE', '更新日付');
 define('_AD_BMCART_ORDER_LIST', '注文一覧表');
 define('_AD_BMCART_TIPS_ORDER_EDIT', 'クレジット払いは商品発送時に決済課金処理を行います。');
+define('_AD_BMCART_ORDERITEM_ID', '受注品ID');
+define('_AD_BMCART_ORDERITEM_QTY', '受注数量');
 define('_AD_BMCART_ORDERID', 'オーダーID');
 define('_AD_BMCART_UID', 'UID');
 define('_AD_BMCART_ADDRESS', '市区町村番地');
