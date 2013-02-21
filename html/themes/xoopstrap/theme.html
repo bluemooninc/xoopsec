@@ -28,7 +28,11 @@
 	<script src="<{$xoops_imageurl}>/js/ean13.js"></script>
 	<!-- RMV: added module header -->
 	<{$xoops_module_header}>
-	<script type="text/javascript"><{$xoops_js}></script>
+	<script type="text/javascript">
+		<!--
+		<{$xoops_js}>
+		// -->
+	</script>
 </head>
 <body>
 <div class="navbar navbar-fixed-top">
@@ -80,7 +84,6 @@
 							<{/if}>
 							<{/if}>
 							<{/foreach}>
-							<{include file='db:system_notification_select.html'}>
 						</ul>
 					</li>
 					<li class="divider-vertical"></li>
