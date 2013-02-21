@@ -5,7 +5,7 @@
 
 // Text for various templates...
 
-define ('_NOT_NOTIFICATIONOPTIONS', 'イベントの選択');
+define ('_NOT_NOTIFICATIONOPTIONS', '通知の設定');
 define ('_NOT_UPDATENOW', '今すぐ更新');
 define ('_NOT_UPDATEOPTIONS', 'イベントの更新');
 
@@ -14,12 +14,12 @@ define ('_NOT_CLEAR', 'クリア');
 define ('_NOT_DELETE', '削除');
 define ('_NOT_CHECKALL', '全てチェック');
 define ('_NOT_MODULE', 'モジュール');
-define ('_NOT_CATEGORY', 'カテゴリ');
+define ('_NOT_CATEGORY', '通知の範囲');
 define ('_NOT_ITEMID', 'ID');
 define ('_NOT_ITEMNAME', '名称');
-define ('_NOT_EVENT', 'イベント');
+define ('_NOT_EVENT', '通知内容');
 define ('_NOT_EVENTS', 'イベント');
-define ('_NOT_ACTIVENOTIFICATIONS', '選択可能なイベント');
+define ('_NOT_ACTIVENOTIFICATIONS', 'ウォッチリスト');
 define ('_NOT_NAMENOTAVAILABLE', '無題');
 define ('_NOT_ITEMNAMENOTAVAILABLE', '項目名が無効です');
 define ('_NOT_ITEMTYPENOTAVAILABLE', '項目タイプが無効です');

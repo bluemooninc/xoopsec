@@ -2,12 +2,11 @@
 <form name="notification_select" action="<{$xoops_notification.target_page}>" method="post">
 <h4 style="text-align:center;"><{$smarty.const._NOT_ACTIVENOTIFICATIONS}></h4>
 <input type="hidden" name="not_redirect" value="<{$xoops_notification.redirect_script}>" />
-<table class="outer">
-  <tr><th colspan="3"><{$smarty.const._NOT_NOTIFICATIONOPTIONS}></th></tr>
+<table class="table">
   <tr>
-    <td class="head"><{$smarty.const._NOT_CATEGORY}></td>
-    <td class="head"><input name="allbox" id="allbox" onclick="xoopsCheckAll('notification_select','allbox');" type="checkbox" value="<{$smarty.const._NOT_CHECKALL}>" /></td>
-    <td class="head"><{$smarty.const._NOT_EVENT}></td>
+    <th><{$smarty.const._NOT_CATEGORY}></th>
+    <th><input name="allbox" id="allbox" onclick="xoopsCheckAll('notification_select','allbox');" type="checkbox" value="<{$smarty.const._NOT_CHECKALL}>" /></th>
+    <th><{$smarty.const._NOT_EVENT}></th>
   </tr>
   <{foreach name=outer item=category from=$xoops_notification.categories}>
   <{foreach name=inner item=event from=$category.events}>
@@ -24,12 +23,12 @@
   </tr>
   <{/foreach}>
   <{/foreach}>
-  <tr>
-    <td class="foot" colspan="3" align="center"><input type="submit" name="not_submit" value="<{$smarty.const._NOT_UPDATENOW}>" /></td>
-  </tr>
 </table>
 <div align="center">
-<{$smarty.const._NOT_NOTIFICATIONMETHODIS}>:&nbsp;<{$user_method}>&nbsp;&nbsp;[<a href="<{$editprofile_url|xoops_escape:link}>"><{$smarty.const._NOT_CHANGE}></a>]
+	<p>
+		<input class="btn btn-info" type="submit" name="not_submit" value="<{$smarty.const._NOT_UPDATENOW}>" />
+	</p>
+	<{$smarty.const._NOT_NOTIFICATIONMETHODIS}>:&nbsp;<{$user_method}>&nbsp;&nbsp;[<a href="<{$editprofile_url|xoops_escape:link}>"><{$smarty.const._NOT_CHANGE}></a>]
 </div>
 </form>
 <{/if}>
