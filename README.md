@@ -9,3 +9,5 @@ Live Demo site : https://www.xoopsec.com
 
 Document (Japanese right now) : http://dl.dropbox.com/u/31666676/xoopsec.pptx
 
+Latest seminar slide show
+http://www.slideshare.net/YoshiSakai/xec-bmcart
