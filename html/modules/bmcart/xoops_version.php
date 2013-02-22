@@ -16,7 +16,7 @@ $mydirname = basename(dirname(__FILE__));
 $modversion["name"] = _MI_BMCART_TITLE;
 $modversion["dirname"] = $mydirname;
 $modversion['hasMain'] = 1;
-$modversion['version'] = 0.14;
+$modversion['version'] = 0.15;
 $modversion['image'] = 'images/bmcart.png';
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = "admin/index.php";
@@ -51,6 +51,7 @@ $modversion['tables'][] = '{prefix}_{dirname}_cart';
 $modversion['tables'][] = '{prefix}_{dirname}_order';
 $modversion['tables'][] = '{prefix}_{dirname}_orderItems';
 $modversion['tables'][] = '{prefix}_{dirname}_itemImages';
+$modversion['tables'][] = '{prefix}_{dirname}_itemSKU';
 $modversion['tables'][] = '{prefix}_{dirname}_checkedItems';
 
 /*

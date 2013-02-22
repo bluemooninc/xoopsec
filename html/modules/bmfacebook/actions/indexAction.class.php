@@ -16,6 +16,7 @@ class indexAction extends AbstractAction
 	private $user_profile;
 	private $logoutUrl;
 	private $loginUrl;
+	private $userObject;
 
 	public function __construct()
 	{
@@ -56,6 +57,18 @@ class indexAction extends AbstractAction
 		$_SESSION = array();
 		$_SESSION['xoopsUserId'] = $userObject->getVar('uid');
 		$_SESSION['xoopsUserGroups'] = $userObject->getGroups();
+		$this->userObject = $userObject;
+	}
+	private function _makeUserName(){
+		$name_prefix ="";
+		if (isset($this->user_profile['username'])){
+			$name_prefix = $this->user_profile['username'];
+		}
+		if ($name_prefix=="" && isset($this->user_profile['first_name']) && isset($this->user_profile['last_name'])){
+			$name_prefix = substr($this->user_profile['first_name'],0,1) . $this->user_profile['last_name'];
+		}
+		$name_postfix = dechex(intval(substr($this->user_profile['id'],7,8)));
+		return substr($name_prefix,0,16) ."-". $name_postfix;
 	}
 	private function _checkLogin(){
 		$userHandler = xoops_getmodulehandler('users','user');
@@ -68,7 +81,7 @@ class indexAction extends AbstractAction
 			$this->_loginByFaceBook($userObjects[0]);
 		}else{
 			// make account
-			$uname = substr($this->user_profile['username'],0,16) ."-". dechex(intval(substr($this->user_profile['id'],7,8)));
+			$uname = $this->_makeUserName();
 			$userObject = $userHandler->create();
 			$userObject->set('uname',$uname);
 			$userObject->set('name',$this->user_profile['name']);
@@ -76,6 +89,7 @@ class indexAction extends AbstractAction
 			$userObject->set('url',$this->user_profile['link']);
 			$userObject->set('pass',md5(rand(0,time())));
 			$userObject->set('level',1);
+			$userObject->set('timezone_offset',$this->user_profile['timezone']);
 			$ret = $userHandler->insert($userObject,true);
 			if($ret){
 				$uid = $userHandler->db->getInsertId();
@@ -102,5 +116,6 @@ class indexAction extends AbstractAction
 		$render->setAttribute('user_profile', $this->user_profile);
 		$render->setAttribute('logoutUrl', $this->logoutUrl);
 		$render->setAttribute('loginUrl', $this->loginUrl);
+		$render->setAttribute('userObject',$this->userObject);
 	}
 }

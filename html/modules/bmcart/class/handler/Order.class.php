@@ -15,7 +15,7 @@ class bmcart_orderObject extends XoopsSimpleObject
 	    $this->initVar('state', XOBJ_DTYPE_STRING, '', true, 32);
 	    $this->initVar('address', XOBJ_DTYPE_STRING, '', true, 80);
 	    $this->initVar('address2', XOBJ_DTYPE_STRING, '', true, 80);
-	    $this->initVar('phone', XOBJ_DTYPE_STRING, '', true, 12);
+	    $this->initVar('phone', XOBJ_DTYPE_STRING, '', true, 14);
 	    $this->initVar('payment_type', XOBJ_DTYPE_INT, 0);
 	    $this->initVar('card_order_id', XOBJ_DTYPE_STRING, null, true, 14);
 	    $this->initVar('sub_total', XOBJ_DTYPE_INT, 0, true);

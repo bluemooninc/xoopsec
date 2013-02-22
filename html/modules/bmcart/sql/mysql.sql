@@ -28,6 +28,17 @@ CREATE TABLE {prefix}_{dirname}_item (
   KEY uid (`uid`)
 ) ENGINE = MYISAM;
 ##
+## Stock Keeping Unit
+##
+CREATE TABLE {prefix}_{dirname}_itemSKU (
+  `sku_id` int(8) unsigned NOT NULL auto_increment,
+  `item_id` int(8) unsigned NOT NULL,
+  `sku_name` varchar(255) NOT NULL,
+  `sku_stock` int(1) unsigned NOT NULL,
+  PRIMARY KEY  (`sku_id`),
+  KEY item_id (`item_id`),
+) ENGINE = MYISAM;
+##
 ## Stock
 ##
 CREATE TABLE {prefix}_{dirname}_itemImages (
@@ -66,7 +77,7 @@ CREATE TABLE {prefix}_{dirname}_order (
   `state` varchar(32) NOT NULL,
   `address` varchar(80) NOT NULL,
   `address2` varchar(80) NOT NULL,
-  `phone` varchar(12) NOT NULL,
+  `phone` varchar(14) NOT NULL,
   `payment_type` tinyint(1) unsigned NOT NULL,
   `card_order_id` varchar(14),
   `sub_total` decimal(13,2),
