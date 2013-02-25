@@ -8,12 +8,14 @@
  * To change this template use File | Settings | File Templates.
  */
 require_once _MY_MODULE_PATH . 'app/Model/Item.php';
+require_once _MY_MODULE_PATH . 'app/Model/Cart.php';
 require_once _MY_MODULE_PATH . 'app/Model/PageNavi.class.php';
 require_once _MY_MODULE_PATH . 'app/View/view.php';
 
 class Controller_ItemList extends AbstractAction {
 	protected $mPrimaryKey = 'item_id';
 	protected $imageObjects;
+	protected $skuObjects;
 	protected $image_id;
 	protected $category_id = 0;
 	protected $sortName = "item_name";
@@ -21,6 +23,7 @@ class Controller_ItemList extends AbstractAction {
 	protected $breadcrumbs;
 	protected $categoryHandler;
 	protected $comment_flag = false;
+	protected $message;
 	/**
 	 * constructor
 	 */
@@ -79,6 +82,9 @@ class Controller_ItemList extends AbstractAction {
 		if (!$this->image_id && $this->imageObjects){
 			$this->image_id = $this->imageObjects[0]->getVar('image_id');
 		}
+		$skuHandler = xoops_getmodulehandler('itemSku');
+		$criteria = new Criteria('item_id',$item_id);
+		$this->skuObjects = $skuHandler->getObjects($criteria);
 		$this->breadcrumbs = $this->categoryHandler->makeBreadcrumbs($this->category_id);
 		$this->template = 'itemDetail.html';
 		$this->comment_flag = true;
@@ -111,11 +117,24 @@ class Controller_ItemList extends AbstractAction {
 		}
 	}
 	public function action_addtocart(){
-		if (isset($this->mParams[0])) $item_id = intval($this->mParams[0]);
-		$this->mListData = $this->mHandler->getItemDetail($item_id);
-		$cartHandler = xoops_getModuleHandler('cart');
-		$cartHandler->addToCart($item_id);
-		$this->executeRedirect("../../cartList", 0, 'Add to Cart');
+		$item_id = xoops_getrequest('item_id');                     // get item_id from http request
+		$sku_id = xoops_getrequest('sku_id');                       // get sku_id from http request
+		$itemHandler = xoops_getmodulehandler("item");              // Make instance for item table
+		$skuHandler = xoops_getmodulehandler("itemSku");            // Make instance for itemSku table
+		$cartHandler = xoops_getModuleHandler('cart');              // Make instance for cart table
+		$itemObject = $itemHandler->get($item_id);                  // Get object by primary key on item table
+		$skuObject = $skuHandler->get($sku_id);                     // Get object by primary key on itemSku table
+		$cartDependency = Model_Cart::forge();                      // Create DI components
+		$cartDependency->setterInjection($itemObject);              // Setter Injection from item table
+		$cartDependency->setterInjection($skuObject);               // Setter Injection from itemSku table
+		$ret = $cartDependency->fetchConcern();                     // Fetch Concern
+		if ($ret){
+			$cartHandler->addToCart($item_id,$sku_id);
+			$this->executeRedirect("../cartList", 0, 'Add to Cart');
+		}else{
+			$this->message = $cartDependency->getMessage();
+			$this->_get_itemDetail();
+		}
 	}
 	private function _comment_view(){
 		// include comment from core
@@ -132,8 +151,10 @@ class Controller_ItemList extends AbstractAction {
 		if ($free_shipping==0) $free_shipping = 99999999;
 		$view = new View($this->root);
 		$view->setTemplate($this->template);
+		$view->set('Message', $this->message);
 		$view->set('ListData', $this->mListData);
 		$view->set('imageObjects', $this->imageObjects);
+		$view->set('skuObjects', $this->skuObjects);
 		$view->set('breadcrumbs', $this->breadcrumbs);
 		$view->set('current_category', $this->category_id);
 		$view->set('current_image', $this->image_id);

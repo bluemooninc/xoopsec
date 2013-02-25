@@ -30,13 +30,13 @@ CREATE TABLE {prefix}_{dirname}_item (
 ##
 ## Stock Keeping Unit
 ##
-CREATE TABLE {prefix}_{dirname}_itemSKU (
+CREATE TABLE {prefix}_{dirname}_itemSku (
   `sku_id` int(8) unsigned NOT NULL auto_increment,
   `item_id` int(8) unsigned NOT NULL,
   `sku_name` varchar(255) NOT NULL,
   `sku_stock` int(1) unsigned NOT NULL,
   PRIMARY KEY  (`sku_id`),
-  KEY item_id (`item_id`),
+  KEY item_id (`item_id`)
 ) ENGINE = MYISAM;
 ##
 ## Stock
@@ -55,6 +55,7 @@ CREATE TABLE {prefix}_{dirname}_itemImages (
 CREATE TABLE {prefix}_{dirname}_cart (
   `cart_id` int(8) unsigned NOT NULL auto_increment,
   `item_id` int(8) unsigned NOT NULL,
+  `sku_id` int(8) unsigned,
   `uid` int(8) unsigned NOT NULL,
   `qty` int(1) unsigned NOT NULL,
   `last_update` int(10) unsigned NOT NULL,
@@ -101,6 +102,7 @@ CREATE TABLE {prefix}_{dirname}_orderItems (
   `orderItem_id` int(8) unsigned NOT NULL auto_increment,
   `order_id` int(8) unsigned NOT NULL,
   `item_id` int(8) unsigned NOT NULL,
+  `sku_id` int(8) unsigned,
   `price` decimal(13,2),
   `shipping_fee` decimal(13,2),
   `qty` int(1) unsigned NOT NULL,

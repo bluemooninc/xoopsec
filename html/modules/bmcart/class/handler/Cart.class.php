@@ -9,6 +9,7 @@ class bmcart_cartObject extends XoopsSimpleObject
     {
         $this->initVar('cart_id', XOBJ_DTYPE_INT, 0);
 	    $this->initVar('item_id', XOBJ_DTYPE_INT, 0, true);
+	    $this->initVar('sku_id', XOBJ_DTYPE_INT, 0, true);
         $this->initVar('uid', XOBJ_DTYPE_INT, 0, true);
 	    $this->initVar('qty', XOBJ_DTYPE_INT, 0, true);
 	    $this->initVar('last_update', XOBJ_DTYPE_INT, 0);
@@ -47,12 +48,13 @@ class bmcart_cartHandler extends XoopsObjectGenericHandler
 		}
 		return $objects[0];
 	}
-	public function addToCart($item_id)
+	public function addToCart($item_id,$sku_id=null)
 	{
 		$cartObject = $this->getByItemId($item_id);
 		if(is_null($cartObject)){
 			$cartObject = $this->myHandler->create();
 			$cartObject->set('item_id',$item_id);
+			$cartObject->set('sku_id',$sku_id);
 			$cartObject->set('uid',Legacy_Utils::getUid());
 			$cartObject->set('qty',1);
 		}else{

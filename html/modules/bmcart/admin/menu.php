@@ -14,6 +14,12 @@ $adminmenu[]=array(
 	'keywords' => _MI_BMCART_KEYWORD_ITEM_LIST,
 	'show' => true
 );
+$adminmenu[]=array(
+	'title' => _MI_BMCART_SKU_LIST,
+	'link' => "admin/index.php?action=skuList",
+	'keywords' => _MI_BMCART_KEYWORD_SKU_LIST,
+	'show' => true
+);
 
 $adminmenu[]=array(
 	'title' => _MI_BMCART_IMAGE_LIST,

@@ -78,6 +78,9 @@
 			<td class="head"><{$smarty.const._AD_BMCART_ITEM_STOCK}></td>
 			<td class="<{cycle values=" odd,even"}>">
 			<{xoops_input type=text name=stock_qty value=$actionForm->get('stock_qty')}>
+			<a href="./index.php?action=SkuList&item_id=<{$actionForm->get('item_id')}>" >
+				<{$smarty.const._AD_BMCART_SKU_LIST}>
+			</a>
 			</td>
 		</tr>
 		<tr>

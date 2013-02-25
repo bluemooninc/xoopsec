@@ -105,6 +105,11 @@ define('_MD_BMCART_ADD_CREDIT', 'クレジットカード追加');
 define('_MD_BMCART_CASHON_DELIVERLY', '代引き');
 define('_MD_BMCART_EDIT', '編集する');
 define('_MD_BMCART_ADD_IMAGE', '画像追加');
+define('_MD_BMCART_ADD_SKU', 'SKU在庫追加');
 
 define('_MD_BMCART_ORDER_DETAIL','ご注文商品の一覧');
 define('_MD_BMCART_CUSTOMER_REVIEW','カスタマーレビュー');
+
+// For Dependency Injection Component
+define('_MD_BMCART_NEED_SKUID','この商品は、色やサイズ等の指定が必要です。');
+define('_MD_BMCART_NO_STOCKSKU','  %s は只今在庫がありません。');

@@ -39,6 +39,14 @@ define('_AD_BMCART_SMALL_IMAGE','アイコン・サイズ画像');
 define('_AD_BMCART_MIDIUM_IMAGE','サムネール・サイズ画像');
 define('_AD_BMCART_ORIGINAL_IMAGE','オリジナル・サイズ画像');
 
+define('_AD_BMCART_SKU_LIST', '商品SKU一覧表');
+define('_AD_BMCART_TIPS_SKU_EDIT', '商品のSKUを登録します。１商品に何個でもSKUを設定出来ます。');
+define('_AD_BMCART_SKU_EDIT', 'SKUの設定');
+define('_AD_BMCART_SKU_DELETE', 'SKUの削除');
+define('_AD_BMCART_SKU_NEW', 'SKUの追加');
+define('_AD_BMCART_SKU_ID', 'SKU ID');
+define('_AD_BMCART_SKU_NAME', 'SKU名称');
+
 define('_AD_BMCART_CATEGORY', 'カテゴリ設定');
 define('_AD_BMCART_CATEGORY_NEW', 'カテゴリの追加');
 define('_AD_BMCART_CATEGORY_ID', 'カテゴリID');

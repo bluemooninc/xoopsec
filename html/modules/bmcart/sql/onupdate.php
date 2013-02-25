@@ -44,6 +44,33 @@ function bmcart_onupdate_base($module, $myDirName)
 		$sql = "ALTER TABLE " . $tblName . " CHANGE `phone` `phone` VARCHAR( 14 )";
 		$db->queryF($sql);
 	}
+	// 0.15 -> 0.16
+	$tblName = $db->prefix($myDirName . "_itemSku");
+	$check_sql = "SHOW TABLES LIKE '" . $tblName ."'";
+	list($result) = $db->fetchRow($db->query($check_sql));
+	if (empty($result)) {
+		$sql = "CREATE TABLE ".$tblName ." (
+			`sku_id` int(8) unsigned NOT NULL auto_increment,
+			`item_id` int(8) unsigned NOT NULL,
+			`sku_name` varchar(255) NOT NULL,
+			`sku_stock` int(1) unsigned NOT NULL,
+			PRIMARY KEY  (`sku_id`),
+			KEY item_id (`item_id`)
+		) ENGINE = MYISAM;";
+		$db->queryF($sql);
+	}
+	$tblName = $db->prefix($myDirName . "_orderItems");
+	$check_sql = "SELECT sku_id FROM " . $tblName;
+	if (!$db->query($check_sql)) {
+		$sql = "ALTER TABLE " . $tblName . "  ADD `sku_id` int(8) unsigned AFTER `item_id`";
+		$db->queryF($sql);
+	}
+	$tblName = $db->prefix($myDirName . "_cart");
+	$check_sql = "SELECT sku_id FROM " . $tblName;
+	if (!$db->query($check_sql)) {
+		$sql = "ALTER TABLE " . $tblName . "  ADD `sku_id` int(8) unsigned AFTER `item_id`";
+		$db->queryF($sql);
+	}
 	return TRUE;
 }
 

@@ -46,7 +46,8 @@ class bmcart_itemHandler extends XoopsObjectGenericHandler
 		return $ret;
 	}
 	public function &getItemOptions(){
-		$itemList = $this->getItemByCategory();
+		$criteria = null;
+		$itemList = $this->getItemByCategory($criteria);
 		$ret = array(0=>null);
 		foreach($itemList as $item){
 			$ret[$item['item_id']] = $item['item_name'];

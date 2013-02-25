@@ -1,6 +1,14 @@
 <{* $Id: $ *}>
 <{assign var="dirname" value="bmcart"}>
 <{assign var="contname" value="item"}>
+
+<{if $Message}>
+<div class="alert">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<strong><{$Message}></strong>
+</div>
+<{/if}>
+
 <{foreach item=breadcrumb from=$breadcrumbs}>
 <a href="<{$xoops_url}>/modules/<{$dirname}>/itemList/category/<{$breadcrumb.category_id}>">
 	<{if $breadcrumb.category_id}>
@@ -18,7 +26,7 @@
 		<{if $img->getShow('image_id') eq $current_image}>
 		<div class="thumbnail">
 			<a href="#myModal" role="button" data-toggle="modal">
-				<img src="<{$xoops_url}>/uploads/m_<{$img->getShow('image_filename')}>" id="MainPhoto"/>
+				<img name="imgonmouse" src="<{$xoops_url}>/uploads/m_<{$img->getShow('image_filename')}>" id="MainPhoto"/>
 			</a>
 		</div>
 		<div align="center">
@@ -33,7 +41,7 @@
 			</div>
 			<div class="modal-body">
 				<p>
-					<img src="<{$xoops_url}>/uploads/<{$img->getShow('image_filename')}>" id="ModalPhoto"/>
+					<img src="<{$xoops_url}>/uploads/<{$img->getShow('image_filename')}>" id="ModalPhoto" onMouseOver="document.imgonmouse.src='<{$xoops_url}>/uploads/m_<{$img->getShow(\'image_filename\')}>'"/>
 				</p>
 			</div>
 			<div class="modal-footer">
@@ -65,6 +73,7 @@
 		<{/if}>
 	</div>
 	<div class="span8">
+		<form action="<{$xoops_url}>/modules/<{$dirname}>/itemList/addtocart" method="post">
 		<table class="table">
 			<tr>
 				<td width="20%"><{$smarty.const._MD_BMCART_ITEM_DESC}></td>
@@ -92,7 +101,22 @@
 			</tr>
 			<tr>
 				<td><{$smarty.const._MD_BMCART_ITEM_STOCK}></td>
-				<td class="align-right"><{$ListData.stock_qty|number_format}></td>
+				<td>
+					<{if $skuObjects}>
+					<{foreach item=sku from=$skuObjects}>
+						<{xoops_input type="radio" name="sku_id" value=$sku->getShow('sku_id')}>
+						<{$sku->getShow('sku_name')}>
+						<{$sku->getShow('sku_stock')|number_format}><{$smarty.const._MD_BMCART_QTY_DESC}>
+					<{/foreach}>
+					<{else}>
+					<{$ListData.stock_qty|number_format}>
+					<{/if}>
+					<{if $xoops_isadmin}>
+						<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=SkuList&item_id=<{$ListData.item_id}>" >
+							<{$smarty.const._MD_BMCART_ADD_SKU}>
+						</a>
+					<{/if}>
+				</td>
 			</tr>
 			<tr>
 				<td><{$smarty.const._MD_BMCART_UPDATE}></td>
@@ -106,12 +130,11 @@
 		<{/if}>
 
 		<{if $ListData.price>0 &&  $ListData.stock_qty>0 }>
-		<a class="btn btn-primary"
-		   href="<{$xoops_url}>/modules/<{$dirname}>/itemList/addtocart/<{$ListData.item_id|xoops_escape}>">
-			<i class="icon-shopping-cart icon-white"></i>
-			<{$smarty.const._MD_BMCART_ADDTOCART}>
-		</a>
+			<input type="hidden" name="item_id" value="<{$ListData.item_id|xoops_escape}>" />
+			<input type="submit" class="btn btn-primary" name="submit" value="<{$smarty.const._MD_BMCART_ADDTOCART}>" />
+			<{* <i class="icon-shopping-cart icon-white"></i> *}>
 		<{/if}>
+		</form>
 	</div>
 </div>
 <h4><{$smarty.const._MD_BMCART_CUSTOMER_REVIEW}></h4>

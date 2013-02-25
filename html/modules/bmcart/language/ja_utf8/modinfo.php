@@ -4,6 +4,7 @@ define('_MI_BMCART_TITLE','ショッピング');
 
 define('_MI_BMCART_CATEGORY_LIST', 'カテゴリ一覧');
 define('_MI_BMCART_ITEM_LIST', '商品一覧');
+define('_MI_BMCART_SKU_LIST', 'SKU一覧');
 define('_MI_BMCART_IMAGE_LIST', '画像一覧');
 define('_MI_BMCART_ORDER_LIST', '注文一覧');
 define('_MI_BMCART_SALES_LIST', '売上一覧');

@@ -136,18 +136,26 @@ class Model_Item extends AbstractModel {
 	 */
 	public function checkStock($ListData){
 		$itemHandler = xoops_getModuleHandler('item');
+		$skuHandler = xoops_getModuleHandler('itemSku');
 		foreach ($ListData as $myRow) {
 			$itemObject = $itemHandler->get($myRow['item_id']);
-			if ($itemObject){
-				$stock = $itemObject->getVar('stock_qty');
+			$skuObject = $skuHandler->get($myRow['sku_id']);
+			if ($skuObject){
+				$stock = $skuObject->getVar('sku_stock');
+				$title = $itemObject->getVar('item_name') . " (" . $skuObject->getVar('sku_name') .")";
 			}else{
-				$stock = 0;
+				$title = $itemObject->getVar('item_name');
+				if ($itemObject){
+					$stock = $itemObject->getVar('stock_qty');
+				}else{
+					$stock = 0;
+				}
 			}
 			if ( $stock==0 ){
-				$this->message = sprintf(_MD_BMCART_MESSAGE_NO_STOCK,$itemObject->getVar('item_name'));
+				$this->message = sprintf(_MD_BMCART_MESSAGE_NO_STOCK,$title);
 				return false;
 			}elseif ($stock < $myRow['qty'] ){
-				$this->message = sprintf(_MD_BMCART_MESSAGE_LESS_STOCK,$itemObject->getVar('item_name'),$stock);
+				$this->message = sprintf(_MD_BMCART_MESSAGE_LESS_STOCK,$title,$stock);
 				return false;
 			}
 		}

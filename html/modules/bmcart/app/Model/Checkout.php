@@ -191,22 +191,35 @@ class Model_Checkout
 	 */
 	public function moveCartToOrder($ListData, $order_id){
 		$itemHandler = xoops_getModuleHandler('item');
+		$skuHandler = xoops_getModuleHandler('itemSku');
 		$orderItemHandler = xoops_getModuleHandler('orderItems');
 		foreach ($ListData as $orderObject) {
 			$itemObject = $itemHandler->get($orderObject['item_id']);
+			$skuObject = $skuHandler->get($orderObject['sku_id']);
 			// Check Stock 1st
-			$stock = $itemObject->getVar('stock_qty');
+			if($skuObject){
+				$stock = $skuObject->getVar('sku_stock');
+			}else{
+				$stock = $itemObject->getVar('stock_qty');
+			}
 			if ( $stock>0 && $stock >= $orderObject['qty'] ){
 				$itemHandler->insert($itemObject);
 				$addObject = $orderItemHandler->create();
 				$addObject->set('order_id', $order_id);
 				$addObject->set('item_id', $orderObject['item_id']);
+				$addObject->set('sku_id', $orderObject['sku_id']);
 				$addObject->set('price', $orderObject['price']);
 				$addObject->set('qty', $orderObject['qty']);
 				$result = $orderItemHandler->insert($addObject);
 				if ($result){
-					$itemObject->set('stock_qty',$stock-1);
-					$itemHandler->insert($itemObject);
+					$newStock = $stock -  $orderObject['qty'];
+					if($skuObject){
+						$skuObject->set('sku_stock',$newStock);
+						$skuHandler->insert($skuObject);
+					}else{
+						$itemObject->set('stock_qty',$newStock);
+						$itemHandler->insert($itemObject);
+					}
 				}
 			}
 		}

@@ -1,0 +1,54 @@
+<div class="adminnavi">
+	<a href="./index.php"><{$smarty.const._MI_BMCART_NAME}></a>
+	&raquo;&raquo; <span class="adminnaviTitle"><a href="./index.php?action=ItemList"><{$smarty.const._AD_BMCART_SKU_LIST}></a></span>
+</div>
+
+<h3 class="admintitle"><{$smarty.const._AD_BMCART_SKU_LIST}></h3>
+<div class="tips"><{$smarty.const._AD_BMCART_TIPS_SKU_EDIT}></div>
+
+<ul class="toptab">
+	<li class="add"><a href="index.php?action=SkuEdit<{if $item_id}>&amp;item_id=<{$item_id}><{/if}>">
+		<{$smarty.const._AD_BMCART_SKU_NEW}>
+	</a></li>
+</ul>
+<{if $itemObject}>
+<h2><{$itemObject->getShow('item_name')}></h2>
+<{/if}>
+<table class="outer">
+	<tr>
+		<th><{$smarty.const._AD_BMCART_SKU_ID}>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SKU_SORT_KEY_SKU_ID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SKU_SORT_KEY_SKU_ID}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+		<th><{$smarty.const._AD_BMCART_ITEM_ID}>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SKU_SORT_KEY_ITEM_ID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SKU_SORT_KEY_ITEM_ID}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+		<th><{$smarty.const._AD_BMCART_SKU_NAME}>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SKU_SORT_KEY_SKU_NAME}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SKU_SORT_KEY_SKU_NAME}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+		<th><{$smarty.const._AD_BMCART_ITEM_STOCK}>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SKU_SORT_KEY_SKU_STOCK}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
+			<a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SKU_SORT_KEY_SKU_STOCK}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+		<th><{$smarty.const._AD_BMCART_CONTROL}></th>
+	</tr>
+	<{foreach item=item from=$objects}>
+	<{assign var=catId value=$item->getShow('category_id')}>
+	<tr class="<{cycle values='odd,even'}>">
+		<td class="item_list_number"><{$item->getShow('sku_id')}></td>
+		<td class="item_list_number"><{$item->getShow('item_id')}></td>
+		<td class="item_list_number"><{$item->getShow('sku_name')}></td>
+		<td class="item_list_number"><{$item->getShow('sku_stock')}></td>
+		<td class="item_list_control">
+			<a href="index.php?action=SkuEdit&amp;sku_id=<{$item->getShow('sku_id')}>">
+				<img src="<{"icons/edit.png"|theme}>" alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._EDIT}>" />
+			</a>
+			<{if $item->get('sku_id') > $smarty.const.XOOPS_SKU_ANONYMOUS }>
+			<a href="index.php?action=SkuDelete&amp;sku_id=<{$item->getShow('sku_id')}>">
+				<img src="<{"icons/delete.png"|theme}>" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>" />
+			</a>
+			<{/if}>
+		</td>
+	</tr>
+	<{/foreach}>
+</table>
+
+<div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
