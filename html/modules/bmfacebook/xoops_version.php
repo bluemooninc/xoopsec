@@ -13,12 +13,13 @@ $mydirpath = basename( dirname( dirname( __FILE__ ) ) ) ;
 $modversion["name"] = _MI_BM_FACEBOOK;
 $modversion["dirname"] = basename(dirname(__FILE__));
 $modversion['hasMain'] = 0;
-$modversion['version'] = 0.02;
+$modversion['version'] = 0.04;
 $modversion['image'] = 'images/bmfacebook.png';
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = "admin/index.php";
 $modversion['adminmenu'] = "admin/menu.php";
 $modversion['cube_style'] = true;
+$modversion['onUpdate'] = 'sql/onupdate.php';
 
 // Module Config
 $modversion['hasconfig'] = 1;
