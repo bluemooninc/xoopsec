@@ -123,15 +123,19 @@ class Model_Cart extends AbstractModel {
 		$skuHandler = xoops_getmodulehandler('itemSku');
 		$mListData = array();
 		foreach ($this->myObjects as $object) {
+			$sku_name = null;
 			$itemObject = $itemHandler->get($object->getVar('item_id'));
-			$skuObject = $skuHandler->get($object->getVar('sku_id'));
+			if ($object->getVar('sku_id')){
+				$skuObject = $skuHandler->get($object->getVar('sku_id'));
+				$sku_name = $skuObject ? $skuObject->getVar('sku_name') : null;
+			}
 			$amount = $itemObject->getVar('price') * $object->getVar('qty');
 			$mListData[$object->getVar('cart_id')] = array(
 				'cart_id' => $object->getVar('cart_id'),
 				'item_id' => $itemObject->getVar('item_id'),
 				'item_name' => $itemObject->getVar('item_name'),
 				'sku_id' => $object->getVar('sku_id'),
-				'sku_name' => $skuObject->getVar('sku_name'),
+				'sku_name' => $sku_name,
 				'price' => $itemObject->getVar('price'),
 				'qty' => $object->getVar('qty'),
 				'amount' => $amount
