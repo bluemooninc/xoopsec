@@ -262,6 +262,11 @@
 @gridGutterWidth768:      20px;
 @gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
 
+// 480px-767px
+@gridColumnWidth480:      30px;
+@gridGutterWidth480:      8px;
+@gridRowWidth480:         (@gridColumns * @gridColumnWidth480) + (@gridGutterWidth480 * (@gridColumns - 1));
+
 
 // Fluid grid
 // -------------------------
@@ -275,3 +280,7 @@
 // 768px-979px
 @fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
 @fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
+
+// 480px-767px
+@fluidGridColumnWidth480:      percentage(@gridColumnWidth480/@gridRowWidth480);
+@fluidGridGutterWidth480:      percentage(@gridGutterWidth480/@gridRowWidth480);

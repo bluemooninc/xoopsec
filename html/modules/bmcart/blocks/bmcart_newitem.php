@@ -27,33 +27,40 @@ function b_bmcart_newitem_show()
 		$catArray[] = $category_id;
 		$cArray = _array_flatten($catArray);
 	}
-	$handler = xoops_getmodulehandler("item", "bmcart");
+	$itemHandler = xoops_getmodulehandler("item", "bmcart");
 	$imageHandler = xoops_getmodulehandler("itemImages", "bmcart");
 	$criteria = new CriteriaCompo();
 	if (count($cArray) > 0) {
 		$criteria->add(new Criteria('category_id', $cArray, "IN"));
 	}
 	$criteria->addsort('last_update', 'desc');
-	$objects = $handler->getObjects($criteria, 0, 10);
+	$objects = $itemHandler->getObjects($criteria, 0, 10);
 	$mListData = array();
 	$i=0;
 	foreach ($objects as $object) {
-		if ($i>5) break;
-		$imageCriteria = new Criteria('item_id', $object->getVar('item_id'));
-		$imageObjects = $imageHandler->getObjects($imageCriteria);
-		$images = array();
-		foreach ($imageObjects as $imageObject) {
-			$images[] = $imageObject->getVar("image_filename");
+		if ($i>=8){
+			break;
 		}
-		$myRow = array(
-			"item_id" => $object->getVar("item_id"),
-			"item_name" => $object->getVar("item_name"),
-			"images" => $images
-		);
-		$mListData[] = $myRow;
-		$i++;
+		$item_id = $object->getVar('item_id');
+		$itemObject = $itemHandler->get($item_id);
+		if ($itemObject){
+			$imageCriteria = new Criteria('item_id', $item_id);
+			$imageObjects = $imageHandler->getObjects($imageCriteria);
+			$images = array();
+			foreach ($imageObjects as $imageObject) {
+				$images[] = $imageObject->getVar("image_filename");
+			}
+			$myRow = array(
+				"item_id" => $object->getVar("item_id"),
+				"item_name" => $itemObject->getVar("item_name"),
+				"images" => $images
+			);
+			$blockNumber = 'block' . intval($i/4);
+			$mListData[$blockNumber][] = $myRow;
+			$i++;
+		}
 	}
 	$block = array();
-	$block['newitemList'] = $mListData;
+	$block['newItemsList'] = $mListData;
 	return $block;
 }

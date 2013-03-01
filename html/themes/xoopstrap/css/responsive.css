@@ -7,18 +7,26 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+/* line 12, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000312}}
 .clearfix {
   *zoom: 1;
 }
+/* line 14, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
 .clearfix:before,
 .clearfix:after {
   display: table;
   content: "";
   line-height: 0;
 }
+/* line 22, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
 .clearfix:after {
   clear: both;
 }
+/* line 106, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003106}}
 .hide-text {
   font: 0/0 a;
   color: transparent;
@@ -26,6 +34,8 @@
   background-color: transparent;
   border: 0;
 }
+/* line 154, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003154}}
 .input-block-level {
   display: block;
   width: 100%;
@@ -34,159 +44,317 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+/* line 8, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\000038}}
 .hidden {
   display: none;
   visibility: hidden;
 }
+/* line 16, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000316}}
 .visible-phone {
   display: none !important;
 }
+/* line 17, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000317}}
 .visible-tablet {
   display: none !important;
 }
+/* line 20, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000320}}
 .hidden-desktop {
   display: none !important;
 }
+/* line 21, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000321}}
 .visible-desktop {
   display: inherit !important;
 }
 @media (min-width: 768px) and (max-width: 979px) {
+  /* line 26, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000326}}
   .hidden-desktop {
     display: inherit !important;
   }
+  /* line 27, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000327}}
   .visible-desktop {
     display: none !important ;
   }
+  /* line 29, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000329}}
   .visible-tablet {
     display: inherit !important;
   }
+  /* line 31, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000331}}
   .hidden-tablet {
     display: none !important;
   }
 }
 @media (max-width: 767px) {
+  /* line 37, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000337}}
   .hidden-desktop {
     display: inherit !important;
   }
+  /* line 38, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000338}}
   .visible-desktop {
     display: none !important;
   }
+  /* line 40, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000340}}
   .visible-phone {
     display: inherit !important;
   }
+  /* line 42, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000342}}
   .hidden-phone {
     display: none !important;
   }
 }
 @media (min-width: 1200px) {
+  /* line 581, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003581}}
   .row {
     margin-left: -30px;
     *zoom: 1;
   }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
   .row:before,
   .row:after {
     display: table;
     content: "";
     line-height: 0;
   }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
   .row:after {
     clear: both;
   }
+  /* line 586, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003586}}
   [class*="span"] {
     float: left;
     margin-left: 30px;
   }
+  /* line 590, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003590}}
+  [class*="strongSpan"] {
+    float: left;
+    margin-left: 30px;
+  }
+  /* line 596, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003596}}
   .container,
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 1170px;
   }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan12 {
+    width: 1170px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan11 {
+    width: 1070px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan10 {
+    width: 970px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan9 {
+    width: 870px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan8 {
+    width: 770px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan7 {
+    width: 670px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan6 {
+    width: 570px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan5 {
+    width: 470px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan4 {
+    width: 370px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan3 {
+    width: 270px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan2 {
+    width: 170px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan1 {
+    width: 70px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span12 {
     width: 1170px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span11 {
     width: 1070px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span10 {
     width: 970px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span9 {
     width: 870px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span8 {
     width: 770px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span7 {
     width: 670px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span6 {
     width: 570px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span5 {
     width: 470px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span4 {
     width: 370px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span3 {
     width: 270px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span2 {
     width: 170px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span1 {
     width: 70px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset12 {
     margin-left: 1230px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset11 {
     margin-left: 1130px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset10 {
     margin-left: 1030px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset9 {
     margin-left: 930px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset8 {
     margin-left: 830px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset7 {
     margin-left: 730px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset6 {
     margin-left: 630px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset5 {
     margin-left: 530px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset4 {
     margin-left: 430px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset3 {
     margin-left: 330px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset2 {
     margin-left: 230px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset1 {
     margin-left: 130px;
   }
+  /* line 649, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003649}}
   .row-fluid {
     width: 100%;
     *zoom: 1;
   }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
   .row-fluid:before,
   .row-fluid:after {
     display: table;
     content: "";
     line-height: 0;
   }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
   .row-fluid:after {
     clear: both;
   }
+  /* line 652, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003652}}
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
@@ -198,316 +366,646 @@
     margin-left: 2.564102564102564%;
     *margin-left: 2.5109110747408616%;
   }
+  /* line 658, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003658}}
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }
+  /* line 661, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003661}}
+  .row-fluid [class*="strongSpan"] {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.564102564102564%;
+    *margin-left: 2.5109110747408616%;
+  }
+  /* line 667, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003667}}
+  .row-fluid [class*="strongSpan"]:first-child {
+    margin-left: 0;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan12 {
+    width: 100%;
+    *width: 99.94680851063829%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan11 {
+    width: 91.45299145299145%;
+    *width: 91.39979996362975%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan10 {
+    width: 82.90598290598291%;
+    *width: 82.8527914166212%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan9 {
+    width: 74.35897435897436%;
+    *width: 74.30578286961266%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan8 {
+    width: 65.81196581196582%;
+    *width: 65.75877432260411%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan7 {
+    width: 57.26495726495726%;
+    *width: 57.21176577559556%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan6 {
+    width: 48.717948717948715%;
+    *width: 48.664757228587014%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan5 {
+    width: 40.17094017094017%;
+    *width: 40.11774868157847%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan4 {
+    width: 31.623931623931625%;
+    *width: 31.570740134569924%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan3 {
+    width: 23.076923076923077%;
+    *width: 23.023731587561375%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan2 {
+    width: 14.52991452991453%;
+    *width: 14.476723040552828%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan1 {
+    width: 5.982905982905983%;
+    *width: 5.929714493544281%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span12 {
     width: 100%;
     *width: 99.94680851063829%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span11 {
     width: 91.45299145299145%;
     *width: 91.39979996362975%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span10 {
     width: 82.90598290598291%;
     *width: 82.8527914166212%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span9 {
     width: 74.35897435897436%;
     *width: 74.30578286961266%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span8 {
     width: 65.81196581196582%;
     *width: 65.75877432260411%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span7 {
     width: 57.26495726495726%;
     *width: 57.21176577559556%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span6 {
     width: 48.717948717948715%;
     *width: 48.664757228587014%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span5 {
     width: 40.17094017094017%;
     *width: 40.11774868157847%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span4 {
     width: 31.623931623931625%;
     *width: 31.570740134569924%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span3 {
     width: 23.076923076923077%;
     *width: 23.023731587561375%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span2 {
     width: 14.52991452991453%;
     *width: 14.476723040552828%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span1 {
     width: 5.982905982905983%;
     *width: 5.929714493544281%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset12 {
     margin-left: 105.12820512820512%;
     *margin-left: 105.02182214948171%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset12:first-child {
     margin-left: 102.56410256410257%;
     *margin-left: 102.45771958537915%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset11 {
     margin-left: 96.58119658119658%;
     *margin-left: 96.47481360247316%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset11:first-child {
     margin-left: 94.01709401709402%;
     *margin-left: 93.91071103837061%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset10 {
     margin-left: 88.03418803418803%;
     *margin-left: 87.92780505546462%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset10:first-child {
     margin-left: 85.47008547008548%;
     *margin-left: 85.36370249136206%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset9 {
     margin-left: 79.48717948717949%;
     *margin-left: 79.38079650845607%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset9:first-child {
     margin-left: 76.92307692307693%;
     *margin-left: 76.81669394435352%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset8 {
     margin-left: 70.94017094017094%;
     *margin-left: 70.83378796144753%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset8:first-child {
     margin-left: 68.37606837606839%;
     *margin-left: 68.26968539734497%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset7 {
     margin-left: 62.393162393162385%;
     *margin-left: 62.28677941443899%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset7:first-child {
     margin-left: 59.82905982905982%;
     *margin-left: 59.72267685033642%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset6 {
     margin-left: 53.84615384615384%;
     *margin-left: 53.739770867430444%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset6:first-child {
     margin-left: 51.28205128205128%;
     *margin-left: 51.175668303327875%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset5 {
     margin-left: 45.299145299145295%;
     *margin-left: 45.1927623204219%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset5:first-child {
     margin-left: 42.73504273504273%;
     *margin-left: 42.62865975631933%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset4 {
     margin-left: 36.75213675213675%;
     *margin-left: 36.645753773413354%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset4:first-child {
     margin-left: 34.18803418803419%;
     *margin-left: 34.081651209310785%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset3 {
     margin-left: 28.205128205128204%;
     *margin-left: 28.0987452264048%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset3:first-child {
     margin-left: 25.641025641025642%;
     *margin-left: 25.53464266230224%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset2 {
     margin-left: 19.65811965811966%;
     *margin-left: 19.551736679396257%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset2:first-child {
     margin-left: 17.094017094017094%;
     *margin-left: 16.98763411529369%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset1 {
     margin-left: 11.11111111111111%;
     *margin-left: 11.004728132387708%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset1:first-child {
     margin-left: 8.547008547008547%;
     *margin-left: 8.440625568285142%;
   }
+  /* line 694, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003694}}
   input,
   textarea,
   .uneditable-input {
     margin-left: 0;
   }
+  /* line 701, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003701}}
   .controls-row [class*="span"] + [class*="span"] {
     margin-left: 30px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span12, textarea.span12, .uneditable-input.span12 {
     width: 1156px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span11, textarea.span11, .uneditable-input.span11 {
     width: 1056px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span10, textarea.span10, .uneditable-input.span10 {
     width: 956px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span9, textarea.span9, .uneditable-input.span9 {
     width: 856px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span8, textarea.span8, .uneditable-input.span8 {
     width: 756px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span7, textarea.span7, .uneditable-input.span7 {
     width: 656px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span6, textarea.span6, .uneditable-input.span6 {
     width: 556px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span5, textarea.span5, .uneditable-input.span5 {
     width: 456px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span4, textarea.span4, .uneditable-input.span4 {
     width: 356px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span3, textarea.span3, .uneditable-input.span3 {
     width: 256px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span2, textarea.span2, .uneditable-input.span2 {
     width: 156px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span1, textarea.span1, .uneditable-input.span1 {
     width: 56px;
   }
+  /* line 18, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-1200px-min.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-1200px-min\.less}line{font-family:\0000318}}
   .thumbnails {
     margin-left: -30px;
   }
+  /* line 21, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-1200px-min.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-1200px-min\.less}line{font-family:\0000321}}
   .thumbnails > li {
     margin-left: 30px;
   }
+  /* line 24, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-1200px-min.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-1200px-min\.less}line{font-family:\0000324}}
   .row-fluid .thumbnails {
     margin-left: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
+  /* line 581, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003581}}
   .row {
     margin-left: -20px;
     *zoom: 1;
   }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
   .row:before,
   .row:after {
     display: table;
     content: "";
     line-height: 0;
   }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
   .row:after {
     clear: both;
   }
+  /* line 586, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003586}}
   [class*="span"] {
     float: left;
     margin-left: 20px;
   }
+  /* line 590, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003590}}
+  [class*="strongSpan"] {
+    float: left;
+    margin-left: 20px;
+  }
+  /* line 596, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003596}}
   .container,
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 724px;
   }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan12 {
+    width: 724px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan11 {
+    width: 662px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan10 {
+    width: 600px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan9 {
+    width: 538px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan8 {
+    width: 476px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan7 {
+    width: 414px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan6 {
+    width: 352px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan5 {
+    width: 290px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan4 {
+    width: 228px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan3 {
+    width: 166px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan2 {
+    width: 104px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan1 {
+    width: 42px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span12 {
     width: 724px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span11 {
     width: 662px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span10 {
     width: 600px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span9 {
     width: 538px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span8 {
     width: 476px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span7 {
     width: 414px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span6 {
     width: 352px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span5 {
     width: 290px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span4 {
     width: 228px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span3 {
     width: 166px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span2 {
     width: 104px;
   }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
   .span1 {
     width: 42px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset12 {
     margin-left: 764px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset11 {
     margin-left: 702px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset10 {
     margin-left: 640px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset9 {
     margin-left: 578px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset8 {
     margin-left: 516px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset7 {
     margin-left: 454px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset6 {
     margin-left: 392px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset5 {
     margin-left: 330px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset4 {
     margin-left: 268px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset3 {
     margin-left: 206px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset2 {
     margin-left: 144px;
   }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
   .offset1 {
     margin-left: 82px;
   }
+  /* line 649, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003649}}
   .row-fluid {
     width: 100%;
     *zoom: 1;
   }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
   .row-fluid:before,
   .row-fluid:after {
     display: table;
     content: "";
     line-height: 0;
   }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
   .row-fluid:after {
     clear: both;
   }
+  /* line 652, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003652}}
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
@@ -519,241 +1017,1133 @@
     margin-left: 2.7624309392265194%;
     *margin-left: 2.709239449864817%;
   }
+  /* line 658, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003658}}
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }
+  /* line 661, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003661}}
+  .row-fluid [class*="strongSpan"] {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.7624309392265194%;
+    *margin-left: 2.709239449864817%;
+  }
+  /* line 667, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003667}}
+  .row-fluid [class*="strongSpan"]:first-child {
+    margin-left: 0;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan12 {
+    width: 100%;
+    *width: 99.94680851063829%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan11 {
+    width: 91.43646408839778%;
+    *width: 91.38327259903608%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan10 {
+    width: 82.87292817679558%;
+    *width: 82.81973668743387%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan9 {
+    width: 74.30939226519337%;
+    *width: 74.25620077583166%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan8 {
+    width: 65.74585635359117%;
+    *width: 65.69266486422946%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan7 {
+    width: 57.18232044198895%;
+    *width: 57.12912895262725%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan6 {
+    width: 48.61878453038674%;
+    *width: 48.56559304102504%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan5 {
+    width: 40.05524861878453%;
+    *width: 40.00205712942283%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan4 {
+    width: 31.491712707182323%;
+    *width: 31.43852121782062%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan3 {
+    width: 22.92817679558011%;
+    *width: 22.87498530621841%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan2 {
+    width: 14.3646408839779%;
+    *width: 14.311449394616199%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan1 {
+    width: 5.801104972375691%;
+    *width: 5.747913483013988%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span12 {
     width: 100%;
     *width: 99.94680851063829%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span11 {
     width: 91.43646408839778%;
     *width: 91.38327259903608%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span10 {
     width: 82.87292817679558%;
     *width: 82.81973668743387%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span9 {
     width: 74.30939226519337%;
     *width: 74.25620077583166%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span8 {
     width: 65.74585635359117%;
     *width: 65.69266486422946%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span7 {
     width: 57.18232044198895%;
     *width: 57.12912895262725%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span6 {
     width: 48.61878453038674%;
     *width: 48.56559304102504%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span5 {
     width: 40.05524861878453%;
     *width: 40.00205712942283%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span4 {
     width: 31.491712707182323%;
     *width: 31.43852121782062%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span3 {
     width: 22.92817679558011%;
     *width: 22.87498530621841%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span2 {
     width: 14.3646408839779%;
     *width: 14.311449394616199%;
   }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
   .row-fluid .span1 {
     width: 5.801104972375691%;
     *width: 5.747913483013988%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset12 {
     margin-left: 105.52486187845304%;
     *margin-left: 105.41847889972962%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset12:first-child {
     margin-left: 102.76243093922652%;
     *margin-left: 102.6560479605031%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset11 {
     margin-left: 96.96132596685082%;
     *margin-left: 96.8549429881274%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset11:first-child {
     margin-left: 94.1988950276243%;
     *margin-left: 94.09251204890089%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset10 {
     margin-left: 88.39779005524862%;
     *margin-left: 88.2914070765252%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset10:first-child {
     margin-left: 85.6353591160221%;
     *margin-left: 85.52897613729868%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset9 {
     margin-left: 79.8342541436464%;
     *margin-left: 79.72787116492299%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset9:first-child {
     margin-left: 77.07182320441989%;
     *margin-left: 76.96544022569647%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset8 {
     margin-left: 71.2707182320442%;
     *margin-left: 71.16433525332079%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset8:first-child {
     margin-left: 68.50828729281768%;
     *margin-left: 68.40190431409427%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset7 {
     margin-left: 62.70718232044199%;
     *margin-left: 62.600799341718584%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset7:first-child {
     margin-left: 59.94475138121547%;
     *margin-left: 59.838368402492065%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset6 {
     margin-left: 54.14364640883978%;
     *margin-left: 54.037263430116376%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset6:first-child {
     margin-left: 51.38121546961326%;
     *margin-left: 51.27483249088986%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset5 {
     margin-left: 45.58011049723757%;
     *margin-left: 45.47372751851417%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset5:first-child {
     margin-left: 42.81767955801105%;
     *margin-left: 42.71129657928765%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset4 {
     margin-left: 37.01657458563536%;
     *margin-left: 36.91019160691196%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset4:first-child {
     margin-left: 34.25414364640884%;
     *margin-left: 34.14776066768544%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset3 {
     margin-left: 28.45303867403315%;
     *margin-left: 28.346655695309746%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset3:first-child {
     margin-left: 25.69060773480663%;
     *margin-left: 25.584224756083227%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset2 {
     margin-left: 19.88950276243094%;
     *margin-left: 19.783119783707537%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset2:first-child {
     margin-left: 17.12707182320442%;
     *margin-left: 17.02068884448102%;
   }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
   .row-fluid .offset1 {
     margin-left: 11.32596685082873%;
     *margin-left: 11.219583872105325%;
   }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
   .row-fluid .offset1:first-child {
     margin-left: 8.56353591160221%;
     *margin-left: 8.457152932878806%;
   }
+  /* line 694, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003694}}
   input,
   textarea,
   .uneditable-input {
     margin-left: 0;
   }
+  /* line 701, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003701}}
   .controls-row [class*="span"] + [class*="span"] {
     margin-left: 20px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span12, textarea.span12, .uneditable-input.span12 {
     width: 710px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span11, textarea.span11, .uneditable-input.span11 {
     width: 648px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span10, textarea.span10, .uneditable-input.span10 {
     width: 586px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span9, textarea.span9, .uneditable-input.span9 {
     width: 524px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span8, textarea.span8, .uneditable-input.span8 {
     width: 462px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span7, textarea.span7, .uneditable-input.span7 {
     width: 400px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span6, textarea.span6, .uneditable-input.span6 {
     width: 338px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span5, textarea.span5, .uneditable-input.span5 {
     width: 276px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span4, textarea.span4, .uneditable-input.span4 {
     width: 214px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span3, textarea.span3, .uneditable-input.span3 {
     width: 152px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span2, textarea.span2, .uneditable-input.span2 {
     width: 90px;
   }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
   input.span1, textarea.span1, .uneditable-input.span1 {
     width: 28px;
   }
 }
 @media (max-width: 767px) {
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
+  /* line 581, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003581}}
+  .row {
+    margin-left: -8px;
+    *zoom: 1;
   }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+  .row:after {
+    clear: both;
+  }
+  /* line 586, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003586}}
+  [class*="span"] {
+    float: left;
+    margin-left: 8px;
+  }
+  /* line 590, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003590}}
+  [class*="strongSpan"] {
+    float: left;
+    margin-left: 8px;
+  }
+  /* line 596, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003596}}
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 448px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan12 {
+    width: 448px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan11 {
+    width: 410px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan10 {
+    width: 372px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan9 {
+    width: 334px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan8 {
+    width: 296px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan7 {
+    width: 258px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan6 {
+    width: 220px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan5 {
+    width: 182px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan4 {
+    width: 144px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan3 {
+    width: 106px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan2 {
+    width: 68px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan1 {
+    width: 30px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span12 {
+    width: 448px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span11 {
+    width: 410px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span10 {
+    width: 372px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span9 {
+    width: 334px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span8 {
+    width: 296px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span7 {
+    width: 258px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span6 {
+    width: 220px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span5 {
+    width: 182px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span4 {
+    width: 144px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span3 {
+    width: 106px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span2 {
+    width: 68px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span1 {
+    width: 30px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset12 {
+    margin-left: 464px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset11 {
+    margin-left: 426px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset10 {
+    margin-left: 388px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset9 {
+    margin-left: 350px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset8 {
+    margin-left: 312px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset7 {
+    margin-left: 274px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset6 {
+    margin-left: 236px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset5 {
+    margin-left: 198px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset4 {
+    margin-left: 160px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset3 {
+    margin-left: 122px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset2 {
+    margin-left: 84px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset1 {
+    margin-left: 46px;
+  }
+  /* line 649, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003649}}
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+  .row-fluid:after {
+    clear: both;
+  }
+  /* line 652, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003652}}
+  .row-fluid [class*="span"] {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 1.7857142857142856%;
+    *margin-left: 1.7325227963525835%;
+  }
+  /* line 658, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003658}}
+  .row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  /* line 661, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003661}}
+  .row-fluid [class*="strongSpan"] {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 1.7857142857142856%;
+    *margin-left: 1.7325227963525835%;
+  }
+  /* line 667, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003667}}
+  .row-fluid [class*="strongSpan"]:first-child {
+    margin-left: 0;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan12 {
+    width: 100%;
+    *width: 99.94680851063829%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan11 {
+    width: 91.51785714285714%;
+    *width: 91.46466565349543%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan10 {
+    width: 83.03571428571428%;
+    *width: 82.98252279635257%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan9 {
+    width: 74.55357142857142%;
+    *width: 74.50037993920971%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan8 {
+    width: 66.07142857142857%;
+    *width: 66.01823708206686%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan7 {
+    width: 57.589285714285715%;
+    *width: 57.536094224924014%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan6 {
+    width: 49.10714285714286%;
+    *width: 49.05395136778116%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan5 {
+    width: 40.625%;
+    *width: 40.5718085106383%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan4 {
+    width: 32.14285714285714%;
+    *width: 32.08966565349544%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan3 {
+    width: 23.660714285714285%;
+    *width: 23.607522796352583%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan2 {
+    width: 15.178571428571427%;
+    *width: 15.125379939209726%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan1 {
+    width: 6.696428571428571%;
+    *width: 6.643237082066869%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span12 {
+    width: 100%;
+    *width: 99.94680851063829%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span11 {
+    width: 91.51785714285714%;
+    *width: 91.46466565349543%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span10 {
+    width: 83.03571428571428%;
+    *width: 82.98252279635257%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span9 {
+    width: 74.55357142857142%;
+    *width: 74.50037993920971%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span8 {
+    width: 66.07142857142857%;
+    *width: 66.01823708206686%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span7 {
+    width: 57.589285714285715%;
+    *width: 57.536094224924014%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span6 {
+    width: 49.10714285714286%;
+    *width: 49.05395136778116%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span5 {
+    width: 40.625%;
+    *width: 40.5718085106383%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span4 {
+    width: 32.14285714285714%;
+    *width: 32.08966565349544%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span3 {
+    width: 23.660714285714285%;
+    *width: 23.607522796352583%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span2 {
+    width: 15.178571428571427%;
+    *width: 15.125379939209726%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span1 {
+    width: 6.696428571428571%;
+    *width: 6.643237082066869%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset12 {
+    margin-left: 103.57142857142857%;
+    *margin-left: 103.46504559270515%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset12:first-child {
+    margin-left: 101.78571428571429%;
+    *margin-left: 101.67933130699087%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset11 {
+    margin-left: 95.08928571428571%;
+    *margin-left: 94.98290273556229%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset11:first-child {
+    margin-left: 93.30357142857143%;
+    *margin-left: 93.19718844984801%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset10 {
+    margin-left: 86.60714285714285%;
+    *margin-left: 86.50075987841943%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset10:first-child {
+    margin-left: 84.82142857142857%;
+    *margin-left: 84.71504559270515%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset9 {
+    margin-left: 78.12499999999999%;
+    *margin-left: 78.01861702127657%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset9:first-child {
+    margin-left: 76.33928571428571%;
+    *margin-left: 76.23290273556229%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset8 {
+    margin-left: 69.64285714285714%;
+    *margin-left: 69.53647416413372%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset8:first-child {
+    margin-left: 67.85714285714286%;
+    *margin-left: 67.75075987841944%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset7 {
+    margin-left: 61.160714285714285%;
+    *margin-left: 61.05433130699088%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset7:first-child {
+    margin-left: 59.375%;
+    *margin-left: 59.2686170212766%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset6 {
+    margin-left: 52.67857142857143%;
+    *margin-left: 52.57218844984803%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset6:first-child {
+    margin-left: 50.892857142857146%;
+    *margin-left: 50.78647416413374%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset5 {
+    margin-left: 44.19642857142857%;
+    *margin-left: 44.09004559270517%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset5:first-child {
+    margin-left: 42.410714285714285%;
+    *margin-left: 42.30433130699088%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset4 {
+    margin-left: 35.71428571428571%;
+    *margin-left: 35.607902735562305%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset4:first-child {
+    margin-left: 33.92857142857142%;
+    *margin-left: 33.82218844984802%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset3 {
+    margin-left: 27.232142857142854%;
+    *margin-left: 27.12575987841945%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset3:first-child {
+    margin-left: 25.44642857142857%;
+    *margin-left: 25.340045592705167%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset2 {
+    margin-left: 18.75%;
+    *margin-left: 18.643617021276597%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset2:first-child {
+    margin-left: 16.96428571428571%;
+    *margin-left: 16.85790273556231%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset1 {
+    margin-left: 10.267857142857142%;
+    *margin-left: 10.16147416413374%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset1:first-child {
+    margin-left: 8.482142857142858%;
+    *margin-left: 8.375759878419453%;
+  }
+  /* line 694, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003694}}
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  /* line 701, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003701}}
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 8px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span12, textarea.span12, .uneditable-input.span12 {
+    width: 434px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span11, textarea.span11, .uneditable-input.span11 {
+    width: 396px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span10, textarea.span10, .uneditable-input.span10 {
+    width: 358px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span9, textarea.span9, .uneditable-input.span9 {
+    width: 320px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span8, textarea.span8, .uneditable-input.span8 {
+    width: 282px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span7, textarea.span7, .uneditable-input.span7 {
+    width: 244px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span6, textarea.span6, .uneditable-input.span6 {
+    width: 206px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span5, textarea.span5, .uneditable-input.span5 {
+    width: 168px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span4, textarea.span4, .uneditable-input.span4 {
+    width: 130px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span3, textarea.span3, .uneditable-input.span3 {
+    width: 92px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 54px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span1, textarea.span1, .uneditable-input.span1 {
+    width: 16px;
+  }
+  /* line 17, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000317}}
+  body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 21, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000321}}
+  .jumbotron {
+    padding: 0;
+  }
+  /* line 24, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000324}}
+  .well.sidebar-nav {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  /* line 29, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000329}}
   .navbar-fixed-top,
-  .navbar-fixed-bottom {
+  .navbar-fixed-bottom,
+  .navbar-static-top {
     margin-left: -20px;
     margin-right: -20px;
   }
+  /* line 36, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000336}}
   .container-fluid {
     padding: 0;
   }
+  /* line 39, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000339}}
+  .hero-unit {
+    height: 60px;
+  }
+  /* line 47, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000347}}
   .dl-horizontal dt {
     float: none;
     clear: none;
     width: auto;
     text-align: left;
   }
+  /* line 53, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000353}}
   .dl-horizontal dd {
     margin-left: 0;
   }
+  /* line 61, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000361}}
   .container {
     width: auto;
   }
+  /* line 65, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000365}}
   .row-fluid {
     width: 100%;
   }
+  /* line 69, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000369}}
+  ul.unstyled li {
+    float: left;
+    width: 12.5%;
+    font-size: 75%;
+  }
+  /* line 74, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000374}}
+  ul.unstyled {
+    list-style: none outside;
+    display: block;
+  }
+  /* line 78, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000378}}
+  ul.unstyled:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+  }
+  /* line 88, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000388}}
   .row,
   .thumbnails {
     margin-left: 0;
   }
+  /* line 92, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000392}}
   .thumbnails > li {
     float: none;
     margin-left: 0;
   }
+  /* line 97, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000397}}
   [class*="span"],
+  .uneditable-input[class*="span"],
   .row-fluid [class*="span"] {
     float: none;
     display: block;
-    width: auto;
+    width: 100%;
     margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
+  /* line 106, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003106}}
   .span12,
   .row-fluid .span12 {
     width: 100%;
@@ -761,6 +2151,13 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  /* line 111, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003111}}
+  .row-fluid [class*="offset"]:first-child {
+    margin-left: 0;
+  }
+  /* line 118, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003118}}
   .input-large,
   .input-xlarge,
   .input-xxlarge,
@@ -775,6 +2172,8 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  /* line 128, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003128}}
   .input-prepend input,
   .input-append input,
   .input-prepend input[class*="span"],
@@ -782,6 +2181,13 @@
     display: inline-block;
     width: auto;
   }
+  /* line 135, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003135}}
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 0;
+  }
+  /* line 140, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003140}}
   .modal {
     position: fixed;
     top: 20px;
@@ -790,107 +2196,223 @@
     width: auto;
     margin: 0;
   }
+  /* line 147, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003147}}
+  .modal.fade {
+    top: -100px;
+  }
+  /* line 148, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003148}}
   .modal.fade.in {
-    top: auto;
+    top: 20px;
   }
 }
 @media (max-width: 480px) {
+  /* line 158, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003158}}
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 162, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003162}}
+  .jumbotron {
+    padding: 0 15px;
+  }
+  /* line 166, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003166}}
+  .hero-unit {
+    height: 1px;
+  }
+  /* line 170, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003170}}
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }
+  /* line 175, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003175}}
   .page-header h1 small {
     display: block;
     line-height: 20px;
   }
+  /* line 180, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003180}}
+  .well.sidebar-nav {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  /* line 186, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003186}}
   input[type="checkbox"],
   input[type="radio"] {
     border: 1px solid #ccc;
   }
-  .form-horizontal .control-group > label {
+  /* line 193, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003193}}
+  .form-horizontal .control-label {
     float: none;
     width: auto;
     padding-top: 0;
     text-align: left;
   }
+  /* line 200, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003200}}
   .form-horizontal .controls {
     margin-left: 0;
   }
+  /* line 204, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003204}}
   .form-horizontal .control-list {
     padding-top: 0;
   }
+  /* line 208, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003208}}
   .form-horizontal .form-actions {
     padding-left: 10px;
     padding-right: 10px;
   }
+  /* line 216, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003216}}
+  .media .pull-left,
+  .media .pull-right {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  /* line 223, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003223}}
+  .media-object {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  /* line 229, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003229}}
   .modal {
     top: 10px;
     left: 10px;
     right: 10px;
   }
+  /* line 234, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003234}}
   .modal-header .close {
     padding: 10px;
     margin: -10px;
   }
-  .carousel-caption {
-    position: static;
+  /* line 240, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003240}}
+  ul.unstyled li {
+    float: left;
+    width: 25%;
+    font-size: 75%;
+  }
+  /* line 245, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003245}}
+  ul.unstyled {
+    list-style: none outside;
+    display: block;
+  }
+  /* line 249, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003249}}
+  ul.unstyled:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+  }
+  /* line 257, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003257}}
+  .bs-docs-contents {
+    padding: 15px;
   }
 }
 @media (max-width: 979px) {
+  /* line 13, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000313}}
   body {
     padding-top: 0;
   }
+  /* line 17, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000317}}
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     position: static;
   }
+  /* line 21, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000321}}
   .navbar-fixed-top {
     margin-bottom: 20px;
   }
+  /* line 24, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000324}}
   .navbar-fixed-bottom {
     margin-top: 20px;
   }
+  /* line 27, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000327}}
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
     padding: 5px;
   }
+  /* line 31, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000331}}
   .navbar .container {
     width: auto;
     padding: 0;
   }
+  /* line 36, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000336}}
   .navbar .brand {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0 0 0 -5px;
   }
+  /* line 45, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000345}}
   .nav-collapse {
     clear: both;
   }
+  /* line 49, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000349}}
   .nav-collapse .nav {
     float: none;
     margin: 0 0 10px;
   }
+  /* line 53, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000353}}
   .nav-collapse .nav > li {
     float: none;
   }
+  /* line 56, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000356}}
   .nav-collapse .nav > li > a {
     margin-bottom: 2px;
   }
+  /* line 59, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000359}}
   .nav-collapse .nav > .divider-vertical {
     display: none;
   }
+  /* line 62, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000362}}
   .nav-collapse .nav .nav-header {
-    color: #555555;
+    color: #ffffff;
     text-shadow: none;
   }
+  /* line 67, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000367}}
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     padding: 9px 15px;
     font-weight: bold;
-    color: #555555;
+    color: #ffffff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
   }
+  /* line 75, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000375}}
   .nav-collapse .btn {
     padding: 4px 10px 4px;
     font-weight: normal;
@@ -898,21 +2420,31 @@
     -moz-border-radius: 4px;
     border-radius: 4px;
   }
+  /* line 80, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000380}}
   .nav-collapse .dropdown-menu li + li a {
     margin-bottom: 2px;
   }
+  /* line 83, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000383}}
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .dropdown-menu a:hover {
     background-color: #151515;
   }
+  /* line 87, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000387}}
   .navbar-inverse .nav-collapse .nav > li > a:hover,
   .navbar-inverse .nav-collapse .dropdown-menu a:hover {
     background-color: #111111;
   }
+  /* line 92, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000392}}
   .nav-collapse.in .btn-group {
     margin-top: 5px;
     padding: 0;
   }
+  /* line 97, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000397}}
   .nav-collapse .dropdown-menu {
     position: static;
     top: auto;
@@ -931,13 +2463,19 @@
     -moz-box-shadow: none;
     box-shadow: none;
   }
+  /* line 111, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003111}}
   .nav-collapse .dropdown-menu:before,
   .nav-collapse .dropdown-menu:after {
     display: none;
   }
+  /* line 115, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003115}}
   .nav-collapse .dropdown-menu .divider {
     display: none;
   }
+  /* line 119, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003119}}
   .nav-collapse .navbar-form,
   .nav-collapse .navbar-search {
     float: none;
@@ -949,24 +2487,34 @@
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
     box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
   }
+  /* line 129, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003129}}
   .navbar .nav-collapse .nav.pull-right {
     float: none;
     margin-left: 0;
   }
+  /* line 134, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003134}}
   .nav-collapse,
   .nav-collapse.collapse {
     overflow: hidden;
     height: 0;
   }
+  /* line 140, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003140}}
   .navbar .btn-navbar {
     display: block;
   }
+  /* line 146, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003146}}
   .navbar-static .navbar-inner {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 @media (min-width: 980px) {
+  /* line 161, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003161}}
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;

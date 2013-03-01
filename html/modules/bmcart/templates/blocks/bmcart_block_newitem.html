@@ -1,10 +1,12 @@
-<{foreach item=itemList from=$block.newitemList}>
 <ul class="unstyled">
+	<{foreach item=itemBlock from=$block.newItemsList name=carousel}>
+	<{foreach item=itemList from=$itemBlock}>
 	<li>
 		<a class="thumbnail" href="<{$xoops_url}>/modules/bmcart/itemList/itemDetail/<{$itemList.item_id}>">
-			<img src="<{$xoops_url}>/uploads/m_<{$itemList.images[0]}>" />
+			<img src="<{$xoops_url}>/uploads/m_<{$itemList.images[0]}>"/>
 			<{$itemList.item_name}>
 		</a>
 	</li>
+	<{/foreach}>
+	<{/foreach}>
 </ul>
-<{/foreach}>

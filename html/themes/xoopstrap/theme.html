@@ -17,7 +17,7 @@
 	<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
 	<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>"/>
 	<link rel="stylesheet" href="<{$xoops_imageurl}>/css/bootstrap.css">
-	<link rel="stylesheet" href="<{$xoops_imageurl}>/css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="<{$xoops_imageurl}>/css/responsive.css">
 	<link rel="stylesheet" href="<{$xoops_imageurl}>css/override.css">
 	<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.8.16.custom.css" type="text/css">
 	<script src="<{$xoops_imageurl}>/js/jquery-1.8.2.min.js"></script>
@@ -197,39 +197,35 @@
 
 		<div class="<{$centerspan}>">
 			<{if empty($xoops_contents)}>
-			<div class="hero-unit">
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-			</div>
+			<div class="hero-unit"></div>
 			<{else}>
 			<div class="bs-docs-contents">
 				<{$xoops_contents}>
 			</div>
 			<{/if}>
-			<table class="table">
-			<tr><td width="50%">
-			<!-- BLOCK Center-Left -->
-			<{if isset($xoops_clblocks)}>
-				<!-- CENTER LEFT -->
-				<{foreach item=block from=$xoops_clblocks}>
-				<h3><{$block.title}></h3>
-				<{$block.content}>
-				<{/foreach}>
+			<{if isset($xoops_clblocks) || isset($xoops_crblocks)}>
+				<table class="table">
+				<tr><td width="50%">
+				<!-- BLOCK Center-Left -->
+				<{if isset($xoops_clblocks)}>
+					<!-- CENTER LEFT -->
+					<{foreach item=block from=$xoops_clblocks}>
+					<h3><{$block.title}></h3>
+					<{$block.content}>
+					<{/foreach}>
+				<{/if}>
+				</td><td>
+				<!-- BLOCK Center-Right -->
+				<{if isset($xoops_crblocks)}>
+					<!-- CENTER RIGHT -->
+					<{foreach item=block from=$xoops_crblocks}>
+					<h3><{$block.title}></h3>
+					<{$block.content}>
+					<{/foreach}>
+				<{/if}>
+				</td></tr>
+				</table>
 			<{/if}>
-			</td><td>
-			<!-- BLOCK Center-Right -->
-			<{if isset($xoops_crblocks)}>
-				<!-- CENTER RIGHT -->
-				<{foreach item=block from=$xoops_crblocks}>
-				<h3><{$block.title}></h3>
-				<{$block.content}>
-				<{/foreach}>
-			<{/if}>
-			</td></tr>
-			</table>
 			<!-- BLOCK Center-Center -->
 			<{if isset($xoops_ccblocks)}>
 				<!-- CENTER CENTER -->

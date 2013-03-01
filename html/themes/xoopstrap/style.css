@@ -5,11 +5,6 @@
   Special styles for presenting Bootstrap's documentation and examples
 */
 
-.hero-unit {
-	background-image: url("img/hero.jpg");
-	background-size: cover;
-	padding: 0 0 160px !important;
-}
 
 /* Body and structure
 -------------------------------------------------- */
