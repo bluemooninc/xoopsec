@@ -112,6 +112,7 @@ class Controller_ItemList extends AbstractAction {
 			}
 			$action = preg_replace("/_php$/i",".php",$this->mParams[0]);
 			require XOOPS_ROOT_PATH . '/include/'.$action;
+			exit;
 		}else{
 			$this->_get_itemDetail();
 		}

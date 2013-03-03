@@ -772,7 +772,7 @@ form.bs-docs-example {
 
 .bs-docs-contents {
   margin: 0;
-  padding: 30px;
+  padding: 15px;
   background-color: #fcfcfc;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
@@ -869,7 +869,6 @@ form.bs-docs-example {
   /* When affixed, space properly */
   .bs-docs-contents {
     top: 0;
-    margin-top: 30px;
     margin-right: 0;
   }
 }

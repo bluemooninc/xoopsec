@@ -1,5 +1,9 @@
-@import url('bootstrap-blessed1.css?z=1362152622195');
+@import url('bootstrap-blessed1.css?z=1362207943003');
 
+.carousel .next.left,
+.carousel .prev.right {
+  left: 0;
+}
 /* line 58, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/carousel.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/carousel\.less}line{font-family:\0000358}}
 .carousel .active.left {

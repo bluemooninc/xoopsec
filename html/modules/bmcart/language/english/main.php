@@ -49,7 +49,7 @@ define('_MD_BMCART_SHIPPING_TITLE', 'お届け先住所：');
 define('_MD_BMCART_BILLING_TITLE', '支払い方法:');
 define('_MD_BMCART_MODIFY', '配送先の入力');
 define('_MD_BMCART_ADDNEW', '入力する');
-define('_MD_BMCART_PHONE', '電話番号：');
+define('_MD_BMCART_PHONE', '電話番号');
 define('_MD_BMCART_LAST3CODE', '下3桁');
 define('_MD_BMCART_CHECK_YOUR_ADDRESS', ' 欄の入力項目をご確認下さい。');
 
@@ -69,8 +69,9 @@ define('_MD_BMCART_LASTNAME', '姓');
 define('_MD_BMCART_SHIPPING_ADDRESS', '配送先住所');
 define('_MD_BMCART_ZIP_CODE', '郵便番号');
 define('_MD_BMCART_STATE', '都道府県');
-define('_MD_BMCART_ADDRESS', '市区町村番地');
+define('_MD_BMCART_ADDRESS', '市区町村等');
 define('_MD_BMCART_ZIP2ADDRESS', '郵便番号から住所を自動入力');
+define('_MD_BMCART_ADDRESS_ETC', 'その他');
 define('_MD_BMCART_ADDRESS2', 'マンション名等');
 define('_MD_BMCART_STATE_OPTIONS',
 	'北海道,青森県,岩手県,宮城県,秋田県,山形県,福島県,'.
@@ -105,6 +106,11 @@ define('_MD_BMCART_ADD_CREDIT', 'クレジットカード追加');
 define('_MD_BMCART_CASHON_DELIVERLY', '代引き');
 define('_MD_BMCART_EDIT', '編集する');
 define('_MD_BMCART_ADD_IMAGE', '画像追加');
+define('_MD_BMCART_ADD_SKU', 'SKU在庫追加');
 
 define('_MD_BMCART_ORDER_DETAIL','ご注文商品の一覧');
 define('_MD_BMCART_CUSTOMER_REVIEW','カスタマーレビュー');
+
+// For Dependency Injection Component
+define('_MD_BMCART_NEED_SKUID','この商品は、色やサイズ等の指定が必要です。');
+define('_MD_BMCART_NO_STOCKSKU','  %s は只今在庫がありません。');

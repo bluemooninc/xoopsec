@@ -34,7 +34,7 @@ define('_MD_BMCART_ITEM_SHIPPING_FEE', '送料');
 define('_MD_BMCART_FREE_SHIPPING', '送料無料');
 define('_MD_BMCART_UPDATE', '更新日付');
 define('_MD_BMCART_ITEM_PRICE_DESC', '円（税込、送料別）');
-define('_MD_BMCART_PRICE_DESC', '円');
+define('_MD_BMCART_PRICE_DESC', '-');
 define('_MD_BMCART_FREE_SHIPPING_DESC', '円以上 送料無料');
 define('_MD_BMCART_FEE', '手数料');
 define('_MD_BMCART_SHIPPING_FEE', '配送料');
@@ -49,7 +49,7 @@ define('_MD_BMCART_SHIPPING_TITLE', 'お届け先住所：');
 define('_MD_BMCART_BILLING_TITLE', '支払い方法:');
 define('_MD_BMCART_MODIFY', '配送先の入力');
 define('_MD_BMCART_ADDNEW', '入力する');
-define('_MD_BMCART_PHONE', '電話番号：');
+define('_MD_BMCART_PHONE', '電話番号');
 define('_MD_BMCART_LAST3CODE', '下3桁');
 define('_MD_BMCART_CHECK_YOUR_ADDRESS', ' 欄の入力項目をご確認下さい。');
 
@@ -69,8 +69,9 @@ define('_MD_BMCART_LASTNAME', '姓');
 define('_MD_BMCART_SHIPPING_ADDRESS', '配送先住所');
 define('_MD_BMCART_ZIP_CODE', '郵便番号');
 define('_MD_BMCART_STATE', '都道府県');
-define('_MD_BMCART_ADDRESS', '市区町村番地');
+define('_MD_BMCART_ADDRESS', '市区町村等');
 define('_MD_BMCART_ZIP2ADDRESS', '郵便番号から住所を自動入力');
+define('_MD_BMCART_ADDRESS_ETC', 'その他');
 define('_MD_BMCART_ADDRESS2', 'マンション名等');
 define('_MD_BMCART_STATE_OPTIONS',
 '北海道,青森県,岩手県,宮城県,秋田県,山形県,福島県,'.
@@ -93,10 +94,15 @@ define('_MD_BMCART_PAYMENT_DESC_WIRE','銀行振込によるお支払いを選�
 
 define('_MD_BMCART_THANKS_FOR_ORDER','ご注文ありがとうございます。ご注文の確認メールを送信します。');
 
-define('_MD_BMCART_ORDER_LIST','ご注文一覧');
+define('_MD_BMCART_ORDER_LIST','注文履歴を見る');
 define('_MD_BMCART_ORDER_ID','注文番号');
 define('_MD_BMCART_ORDER_DATE','注文日時');
-define('_MD_BMCART_SUB_TOTAL','商品合計(内消費税)');
+define('_MD_BMCART_ORDER_WAITING','注文受付中');
+define('_MD_BMCART_SHIPPING_WAITING','発送準備中');
+define('_MD_BMCART_SHIPPING_DATE','配送日');
+define('_MD_BMCART_SHIPPING_DONE','発送済み');
+define('_MD_BMCART_RECIPIENT', '受取人');
+define('_MD_BMCART_TOTAL','合計 ¥');
 define('_MD_BMCART_QTY_DESC', '個');
 define('_MD_BMCART_PAYMENT_TYPE', 'お支払い方法');
 define('_MD_BMCART_PAYBY_WIRE', '銀行振込');

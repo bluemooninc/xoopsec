@@ -11,6 +11,7 @@ require_once XOOPS_ROOT_PATH . '/modules/bmcart/app/Model/AbstractModel.class.ph
 
 class Model_Order extends AbstractModel {
 	protected $myHandler;
+	protected $optionHandler;
 	protected $myObjects;
 	protected $shipping_fee=0;
 	protected $sub_total=0;
@@ -44,6 +45,9 @@ class Model_Order extends AbstractModel {
 	public function &insert(&$object){
 		return $this->myHandler->insert($object);
 	}
+	public function handlerInjection($tablename){
+		$this->optionHandler = xoops_getModuleHandler($tablename);
+	}
 	public function &getOrderItems($order_id)
 	{
 		$criteria = new CriteriaCompo();
@@ -60,14 +64,24 @@ class Model_Order extends AbstractModel {
 				$item[$key] = $val['value'];
 			}
 			$itemObject = $itemHandler->get($itemId);
+			$image_filename = null;
+			if ($this->optionHandler){
+				$criteria = new Criteria('item_id',$itemId);
+				$optionObjects = $this->optionHandler->getObjects($criteria);
+				$image_filename = $optionObjects[0]->getVar('image_filename');
+			}
 			if ($itemObject){
 				$item['item_name'] = $itemObject->getVar('item_name');
+				if ($image_filename){
+					$item['image_filename'] = $image_filename;
+				}
 			}
 			$item['amount'] = $item['price']*$item['qty'];
 			$mListData[$itemId] = $item;
 		}
 		return $mListData;
 	}
+
 
 	public function &getOrderList()
 	{

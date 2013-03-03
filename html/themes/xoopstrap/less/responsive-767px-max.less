@@ -93,6 +93,14 @@
     float: none;
     margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
   }
+  a.thumbnail{
+    line-height: 1em;
+  }
+  .thumbnail > img{
+    padding-bottom: 5px;
+  }
+
+
 // Make all grid-sized elements block level again
   [class*="span"],
   .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
@@ -181,7 +189,9 @@
     padding: 10px;
     margin-bottom: 10px;
   }
-
+  .accordion {
+    margin-bottom: 10px;
+  }
 // Update checkboxes for iOS
   input[type="checkbox"],
   input[type="radio"] {
@@ -236,11 +246,18 @@
     margin: -10px;
   }
 
-// for thumbnails by yoshis
+  // for thumbnails by yoshis
+  a.thumbnail{
+    line-height: 1em;
+    font-size: 60%;
+  }
+  .thumbnail > img{
+    padding-bottom: 5px;
+  }
   ul.unstyled li{
     float: left;
     width: 25%;
-    font-size: 75%;
+    line-height: 0.5em;
   }
   ul.unstyled{
     list-style: none outside;
@@ -254,7 +271,14 @@
     visibility:hidden;
     font-size:0;
   }
-  .bs-docs-contents{
-    padding: 15px;
+  .carousel{
+    height:100px;
+  }
+  .carousel-control{
+    height: 100%;
+    top: 17.5%;
+    width: 20px;
+    font-size: 32px;
+    line-height: 90px;
   }
 }

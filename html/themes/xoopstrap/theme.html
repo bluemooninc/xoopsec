@@ -22,10 +22,12 @@
 	<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.8.16.custom.css" type="text/css">
 	<script src="<{$xoops_imageurl}>/js/jquery-1.8.2.min.js"></script>
 	<script src="<{$xoops_imageurl}>/js/bootstrap.js"></script>
+	<script src="<{$xoops_imageurl}>/js/application.js"></script>
 	<!-- For BarCode -->
 	<script src="<{$xoops_imageurl}>/js/jCanvaScript.1.5.15.min.js"></script>
 	<script src="<{$xoops_imageurl}>/js/jquery.validate.min.js"></script>
 	<script src="<{$xoops_imageurl}>/js/ean13.js"></script>
+
 	<!-- RMV: added module header -->
 	<{$xoops_module_header}>
 	<script type="text/javascript">
@@ -33,17 +35,25 @@
 		<{$xoops_js}>
 		// -->
 	</script>
+
 </head>
 <body>
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container-fluid">
+			<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
 			<div class="nav-collapse">
 				<ul class="nav">
 					<{* Site Title *}>
-					<a class="brand" href="<{$xoops_url}>/">
-						<{$xoops_sitename}>
-					</a>
+					<li>
+						<a class="brand" href="<{$xoops_url}>/">
+							<{$xoops_sitename}>
+						</a>
+					</li>
 					<{if $moduleMenu}>
 					<{foreach item=modMenu from=$moduleMenu}>
 					<{if $modMenu.sublinks}>
@@ -107,33 +117,33 @@
 					<li class="divider-vertical"></li>
 					<{/foreach}>
 				</ul>
-			</div>
-			<!--/.nav-collapse -->
-			<div class="btn-group pull-right">
-				<{if $xoops_uname}>
+				<div class="btn-group pull-right">
+					<{if $xoops_uname}>
 					<a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
-					<i class="icon-user"></i>
-					<span class="caret"></span>
-					<{$xoops_uname}>
+						<i class="icon-user"></i>
+						<span class="caret"></span>
+						<{$xoops_uname}>
 					</a>
-				<{else}>
+					<{else}>
 					<a class="btn btn-primary" href="<{$xoops_url}>/user.php">Login</a>
 					<{if $facbookLogin}>
-						<{$facbookLogin}>
+					<{$facbookLogin}>
 					<{/if}>
-				<{/if}>
-				<{if $xoops_uname}>
-				<ul class="dropdown-menu">
-					<{if $xoops_isadmin}>
-					<li class="userMenuAdmin"><a
-							href="<{$xoops_url}>/admin.php"><{$smarty.const._MB_LEGACY_ADMENU}></a></li>
-					<li class="divider"></li>
 					<{/if}>
-					<{include file='db:legacy_block_usermenu.html'}>
-				</ul>
-				<{/if}>
-				<{* Scroll down button *}>
+					<{if $xoops_uname}>
+					<ul class="dropdown-menu">
+						<{if $xoops_isadmin}>
+						<li class="userMenuAdmin"><a
+								href="<{$xoops_url}>/admin.php"><{$smarty.const._MB_LEGACY_ADMENU}></a></li>
+						<li class="divider"></li>
+						<{/if}>
+						<{include file='db:legacy_block_usermenu.html'}>
+					</ul>
+					<{/if}>
+					<{* Scroll down button *}>
+				</div>
 			</div>
+			<!--/.nav-collapse -->
 			<div class="GlobalSearchBox pull-right">
 				<form action="<{$xoops_url}>/search.php" method="get">
 					<input id="globalSearch" class="Search-box PngBg" type="text" name="query" size="22"/>
@@ -141,11 +151,6 @@
 					<!-- <button name="submit" type="submit" value="search" accesskey="F">Search</button> -->
 				</form>
 			</div>
-			<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
 		</div>
 	</div>
 </div>
@@ -182,15 +187,35 @@
 		<{assign var="centerspan" value="span8"}>
 		<{/if}>
 		<!-- left block -->
-		<{if $xoops_showlblock == 1}>
+		<{if $xoops_showlblock==1}>
 		<div class="<{$sidespan}>">
 			<!-- LEFT -->
-			<{foreach item=block from=$xoops_lblocks}>
-			<div class="well sidebar-nav">
-				<{$block.title}>
-				<{$block.content}>
-			</div>
+			<{if $smartphone}>
+			<div class="accordion" id="accordionlblock">
+			<{foreach name=lblockloop item=block from=$xoops_lblocks}>
+				<div class="accordion-group">
+				<{assign var="inum" value=$smarty.foreach.lblockloop.iteration}>
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionlblock" href="#lBlockCollapse<{$inum}>">
+							<{$block.title}>
+						</a>
+					</div>
+					<div id="lBlockCollapse<{$inum}>" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<{$block.content}>
+						</div>
+					</div>
+				</div>
 			<{/foreach}>
+			</div>
+			<{else}>
+				<{foreach name=lblockloop item=block from=$xoops_lblocks}>
+				<div class="well sidebar-nav">
+					<h5><{$block.title}></h5>
+					<{$block.content}>
+				</div>
+				<{/foreach}>
+			<{/if}>
 		</div>
 		<{/if}>
 		<!-- Center block -->
@@ -238,13 +263,33 @@
 
 		<{if $xoops_showrblock == 1}>
 		<div class="<{$sidespan}>">
-			<!-- RIGHT -->
-			<{foreach item=block from=$xoops_rblocks}>
+			<!-- LEFT -->
+			<{if $smartphone}>
+			<div class="accordion" id="accordionrblock">
+				<{foreach name=rblockloop item=block from=$xoops_rblocks}>
+				<div class="accordion-group">
+					<{assign var="inum" value=$smarty.foreach.rblockloop.iteration}>
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionrblock" href="#rBlockCollapse<{$inum}>">
+							<{$block.title}>
+						</a>
+					</div>
+					<div id="rBlockCollapse<{$inum}>" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<{$block.content}>
+						</div>
+					</div>
+				</div>
+				<{/foreach}>
+			</div>
+			<{else}>
+			<{foreach name=rblockloop item=block from=$xoops_rblocks}>
 			<div class="well sidebar-nav">
-				<{$block.title}>
+				<h5><{$block.title}></h5>
 				<{$block.content}>
 			</div>
 			<{/foreach}>
+			<{/if}>
 		</div>
 		<{/if}>
 	</div>

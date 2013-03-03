@@ -8,10 +8,10 @@
 
 <form  class="form-horizontal" name="editAddressForm" action="<{$xoops_url}>/modules/<{$dirname}>/checkout/updateAddress" method="post">
 
-<table>
+<table class="table">
 	<tr>
-		<td><{$smarty.const._MD_BMCART_LASTNAME}></td>
-		<td><input type="text" name="last_name" value="<{$CurrentOrder->getShow('last_name')}>" /></td>
+		<td width="30%"><{$smarty.const._MD_BMCART_LASTNAME}></td>
+		<td width="70%"><input type="text" name="last_name" value="<{$CurrentOrder->getShow('last_name')}>" /></td>
 	</tr>
 	<tr>
 		<td><{$smarty.const._MD_BMCART_FIRSTNAME}></td>
@@ -37,13 +37,15 @@
 		</td>
 	</tr>
 	<tr>
-		<td><{$smarty.const._MD_BMCART_ADDRESS2}></td>
-		<td><input type="text" name="address2"  value="<{$CurrentOrder->getShow('address2')}>" /></td>
+		<td><{$smarty.const._MD_BMCART_ADDRESS_ETC}></td>
+		<td><input type="text" name="address2" value="<{$CurrentOrder->getShow('address2')}>" placeholder="<{$smarty.const._MD_BMCART_ADDRESS2}>" /></td>
 	</tr>
 </table>
-<{$ticket_hidden}>
-<input type="hidden" name="order_id"  value="<{$CurrentOrder->getShow('order_id')}>" /><br />
-<input class="btn btn-primary" type="submit" name="submit" value="<{$smarty.const._MD_BMCART_REGISTER}>" />
+<div style="text-align:center">
+	<{$ticket_hidden}>
+	<input type="hidden" name="order_id"  value="<{$CurrentOrder->getShow('order_id')}>" /><br />
+	<input class="btn btn-primary" type="submit" name="submit" value="<{$smarty.const._MD_BMCART_REGISTER}>" />
+</div>
 </form>
 
 <!-- ZIP Code to Address on googlecode.com MIT licence code-->

@@ -885,7 +885,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 10px 0;
+  margin: 5px 0;
   font-family: inherit;
   font-weight: bold;
   line-height: 1;
@@ -1466,38 +1466,43 @@ textarea::-webkit-input-placeholder {
 .checkbox.inline + .checkbox.inline {
   margin-left: 10px;
 }
-/* line 260, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003260}}
-.input-mini {
-  width: 60px;
-}
 /* line 261, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003261}}
-.input-small {
-  width: 90px;
+.input-tiny {
+  width: 30px;
 }
 /* line 262, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003262}}
-.input-medium {
-  width: 150px;
+.input-mini {
+  width: 60px;
 }
 /* line 263, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003263}}
-.input-large {
-  width: 210px;
+.input-small {
+  width: 90px;
 }
 /* line 264, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003264}}
-.input-xlarge {
-  width: 270px;
+.input-medium {
+  width: 150px;
 }
 /* line 265, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003265}}
+.input-large {
+  width: 210px;
+}
+/* line 266, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003266}}
+.input-xlarge {
+  width: 270px;
+}
+/* line 267, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003267}}
 .input-xxlarge {
   width: 530px;
 }
-/* line 268, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003268}}
+/* line 270, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003270}}
 input[class*="span"],
 select[class*="span"],
 textarea[class*="span"],
@@ -1509,8 +1514,8 @@ textarea[class*="span"],
   float: none;
   margin-left: 0;
 }
-/* line 281, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003281}}
+/* line 283, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003283}}
 .input-append input[class*="span"],
 .input-append .uneditable-input[class*="span"],
 .input-prepend input[class*="span"],
@@ -1595,8 +1600,8 @@ input.span2, textarea.span2, .uneditable-input.span2 {
 input.span1, textarea.span1, .uneditable-input.span1 {
   width: 46px;
 }
-/* line 303, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003303}}
+/* line 305, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003305}}
 .controls-row {
   *zoom: 1;
 }
@@ -1613,13 +1618,13 @@ input.span1, textarea.span1, .uneditable-input.span1 {
 .controls-row:after {
   clear: both;
 }
-/* line 306, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003306}}
+/* line 308, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003308}}
 .controls-row [class*="span"] {
   float: left;
 }
-/* line 317, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003317}}
+/* line 319, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003319}}
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -1629,8 +1634,8 @@ textarea[readonly] {
   cursor: not-allowed;
   background-color: #eeeeee;
 }
-/* line 327, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003327}}
+/* line 329, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003329}}
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"][readonly],
@@ -1757,16 +1762,16 @@ input[type="checkbox"][readonly] {
   background-color: #dff0d8;
   border-color: #468847;
 }
-/* line 355, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003355}}
+/* line 357, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003357}}
 input:focus:required:invalid,
 textarea:focus:required:invalid,
 select:focus:required:invalid {
   color: #b94a48;
   border-color: #ee5f5b;
 }
-/* line 360, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003360}}
+/* line 362, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003362}}
 input:focus:required:invalid:focus,
 textarea:focus:required:invalid:focus,
 select:focus:required:invalid:focus {
@@ -1775,8 +1780,8 @@ select:focus:required:invalid:focus {
   -moz-box-shadow: 0 0 6px #f8b9b7;
   box-shadow: 0 0 6px #f8b9b7;
 }
-/* line 371, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003371}}
+/* line 373, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003373}}
 .form-actions {
   padding: 19px 20px 20px;
   margin-top: 20px;
@@ -1798,20 +1803,20 @@ select:focus:required:invalid:focus {
 .form-actions:after {
   clear: both;
 }
-/* line 385, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003385}}
+/* line 387, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003387}}
 .help-block,
 .help-inline {
   color: #595959;
 }
-/* line 390, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003390}}
+/* line 392, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003392}}
 .help-block {
   display: block;
   margin-bottom: 10px;
 }
-/* line 395, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003395}}
+/* line 397, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003397}}
 .help-inline {
   display: inline-block;
   *display: inline;
@@ -1821,16 +1826,16 @@ select:focus:required:invalid:focus {
   vertical-align: middle;
   padding-left: 5px;
 }
-/* line 408, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003408}}
+/* line 410, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003410}}
 .input-append,
 .input-prepend {
   margin-bottom: 5px;
   font-size: 0;
   white-space: nowrap;
 }
-/* line 414, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003414}}
+/* line 416, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003416}}
 .input-append input,
 .input-prepend input,
 .input-append select,
@@ -1846,8 +1851,8 @@ select:focus:required:invalid:focus {
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 424, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003424}}
+/* line 426, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003426}}
 .input-append input:focus,
 .input-prepend input:focus,
 .input-append select:focus,
@@ -1856,8 +1861,8 @@ select:focus:required:invalid:focus {
 .input-prepend .uneditable-input:focus {
   z-index: 2;
 }
-/* line 428, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003428}}
+/* line 430, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003430}}
 .input-append .add-on,
 .input-prepend .add-on {
   display: inline-block;
@@ -1873,8 +1878,8 @@ select:focus:required:invalid:focus {
   background-color: #eeeeee;
   border: 1px solid #ccc;
 }
-/* line 442, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003442}}
+/* line 444, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003444}}
 .input-append .add-on,
 .input-prepend .add-on,
 .input-append .btn,
@@ -1885,29 +1890,29 @@ select:focus:required:invalid:focus {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-/* line 448, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003448}}
+/* line 450, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003450}}
 .input-append .active,
 .input-prepend .active {
   background-color: #a9dba9;
   border-color: #46a546;
 }
-/* line 454, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003454}}
+/* line 456, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003456}}
 .input-prepend .add-on,
 .input-prepend .btn {
   margin-right: -1px;
 }
-/* line 458, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003458}}
+/* line 460, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003460}}
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-/* line 464, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003464}}
+/* line 466, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003466}}
 .input-append input,
 .input-append select,
 .input-append .uneditable-input {
@@ -1915,16 +1920,16 @@ select:focus:required:invalid:focus {
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-/* line 469, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003469}}
+/* line 471, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003471}}
 .input-append .add-on:last-child,
 .input-append .btn:last-child {
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 476, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003476}}
+/* line 478, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003478}}
 .input-prepend.input-append input,
 .input-prepend.input-append select,
 .input-prepend.input-append .uneditable-input {
@@ -1932,8 +1937,8 @@ select:focus:required:invalid:focus {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-/* line 481, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003481}}
+/* line 483, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003483}}
 .input-prepend.input-append .add-on:first-child,
 .input-prepend.input-append .btn:first-child {
   margin-right: -1px;
@@ -1941,8 +1946,8 @@ select:focus:required:invalid:focus {
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-/* line 486, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003486}}
+/* line 488, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003488}}
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
@@ -1950,8 +1955,8 @@ select:focus:required:invalid:focus {
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 498, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003498}}
+/* line 500, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003500}}
 input.search-query {
   padding-right: 14px;
   padding-right: 4px \9;
@@ -1965,44 +1970,44 @@ input.search-query {
   border-radius: 15px;
 }
 /* Allow for input prepend/append in search forms */
-/* line 508, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003508}}
+/* line 510, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003510}}
 .form-search .input-append .search-query,
 .form-search .input-prepend .search-query {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-/* line 512, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003512}}
+/* line 514, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003514}}
 .form-search .input-append .search-query {
   -webkit-border-radius: 14px 0 0 14px;
   -moz-border-radius: 14px 0 0 14px;
   border-radius: 14px 0 0 14px;
 }
-/* line 515, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003515}}
+/* line 517, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003517}}
 .form-search .input-append .btn {
   -webkit-border-radius: 0 14px 14px 0;
   -moz-border-radius: 0 14px 14px 0;
   border-radius: 0 14px 14px 0;
 }
-/* line 518, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003518}}
+/* line 520, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003520}}
 .form-search .input-prepend .search-query {
   -webkit-border-radius: 0 14px 14px 0;
   -moz-border-radius: 0 14px 14px 0;
   border-radius: 0 14px 14px 0;
 }
-/* line 521, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003521}}
+/* line 523, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003523}}
 .form-search .input-prepend .btn {
   -webkit-border-radius: 14px 0 0 14px;
   -moz-border-radius: 14px 0 0 14px;
   border-radius: 14px 0 0 14px;
 }
-/* line 537, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003537}}
+/* line 539, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003539}}
 .form-search input,
 .form-inline input,
 .form-horizontal input,
@@ -2032,31 +2037,31 @@ input.search-query {
   margin-bottom: 0;
   vertical-align: middle;
 }
-/* line 550, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003550}}
+/* line 552, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003552}}
 .form-search .hide,
 .form-inline .hide,
 .form-horizontal .hide {
   display: none;
 }
-/* line 554, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003554}}
+/* line 556, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003556}}
 .form-search label,
 .form-inline label,
 .form-search .btn-group,
 .form-inline .btn-group {
   display: inline-block;
 }
-/* line 561, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003561}}
+/* line 563, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003563}}
 .form-search .input-append,
 .form-inline .input-append,
 .form-search .input-prepend,
 .form-inline .input-prepend {
   margin-bottom: 0;
 }
-/* line 568, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003568}}
+/* line 570, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003570}}
 .form-search .radio,
 .form-search .checkbox,
 .form-inline .radio,
@@ -2065,8 +2070,8 @@ input.search-query {
   margin-bottom: 0;
   vertical-align: middle;
 }
-/* line 577, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003577}}
+/* line 579, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003579}}
 .form-search .radio input[type="radio"],
 .form-search .checkbox input[type="checkbox"],
 .form-inline .radio input[type="radio"],
@@ -2075,19 +2080,19 @@ input.search-query {
   margin-right: 3px;
   margin-left: 0;
 }
-/* line 588, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003588}}
+/* line 590, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003590}}
 .control-group {
   margin-bottom: 10px;
 }
-/* line 593, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003593}}
+/* line 595, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003595}}
 legend + .control-group {
   margin-top: 20px;
   -webkit-margin-top-collapse: separate;
 }
-/* line 603, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003603}}
+/* line 605, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003605}}
 .form-horizontal .control-group {
   margin-bottom: 20px;
   *zoom: 1;
@@ -2105,35 +2110,35 @@ legend + .control-group {
 .form-horizontal .control-group:after {
   clear: both;
 }
-/* line 608, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003608}}
+/* line 610, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003610}}
 .form-horizontal .control-label {
   float: left;
   width: 140px;
   padding-top: 5px;
   text-align: right;
 }
-/* line 615, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003615}}
+/* line 617, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003617}}
 .form-horizontal .controls {
   *display: inline-block;
   *padding-left: 20px;
   margin-left: 160px;
   *margin-left: 0;
 }
-/* line 622, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003622}}
+/* line 624, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003624}}
 .form-horizontal .controls:first-child {
   *padding-left: 160px;
 }
-/* line 627, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003627}}
+/* line 629, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003629}}
 .form-horizontal .help-block {
   margin-top: 10px;
   margin-bottom: 0;
 }
-/* line 632, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003632}}
+/* line 634, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/forms.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/forms\.less}line{font-family:\00003634}}
 .form-horizontal .form-actions {
   padding-left: 160px;
 }
@@ -3440,7 +3445,7 @@ table .span24 {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/wells\.less}line{font-family:\000037}}
 .well {
   min-height: 20px;
-  padding: 19px;
+  padding: 10px 15px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
@@ -6537,7 +6542,3 @@ a.badge:hover {
 }
 /* line 53, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/carousel.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/carousel\.less}line{font-family:\0000353}}
-.carousel .next.left,
-.carousel .prev.right {
-  left: 0;
-}

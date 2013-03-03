@@ -69,6 +69,10 @@
 			<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=imageList&item_id=<{$ListData.item_id}>" >
 				<{$smarty.const._MD_BMCART_ADD_IMAGE}>
 			</a>
+			&nbsp;
+			<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=ItemEdit&item_id=<{$ListData.item_id}>" >
+				<{$smarty.const._MD_BMCART_EDIT}>
+			</a>
 		</div>
 		<{/if}>
 	</div>
@@ -122,18 +126,18 @@
 				<td><{$smarty.const._MD_BMCART_UPDATE}></td>
 				<td class="align-right"><{$ListData.last_update|date_format:'%Y&#x5E74;%m&#x6708;%e&#x65E5;'}></td>
 			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<{if $ListData.price>0 &&  $ListData.stock_qty>0 }>
+					<input type="hidden" name="item_id" value="<{$ListData.item_id|xoops_escape}>" />
+					<input type="submit" class="btn btn-primary" name="submit" value="<{$smarty.const._MD_BMCART_ADDTOCART}>" />
+					<{* <i class="icon-shopping-cart icon-white"></i> *}>
+					<{/if}>
+				</td>
+			</tr>
 		</table>
-		<{if $xoops_isadmin}>
-			<a class="btn" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=ItemEdit&item_id=<{$ListData.item_id}>" >
-				<{$smarty.const._MD_BMCART_EDIT}>
-			</a>
-		<{/if}>
-
-		<{if $ListData.price>0 &&  $ListData.stock_qty>0 }>
-			<input type="hidden" name="item_id" value="<{$ListData.item_id|xoops_escape}>" />
-			<input type="submit" class="btn btn-primary" name="submit" value="<{$smarty.const._MD_BMCART_ADDTOCART}>" />
-			<{* <i class="icon-shopping-cart icon-white"></i> *}>
-		<{/if}>
 		</form>
 	</div>
 </div>

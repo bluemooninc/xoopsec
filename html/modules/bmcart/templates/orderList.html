@@ -4,44 +4,77 @@
 
 <h3><{$smarty.const._MD_BMCART_ORDER_LIST}></h3>
 <table class="table">
-	<tr>
-		<td><{$smarty.const._MD_BMCART_ORDER_ID}></td>
-		<td><{$smarty.const._MD_BMCART_ORDER_DATE}></td>
-		<td><{$smarty.const._MD_BMCART_SUB_TOTAL}></td>
-		<td><{$smarty.const._MD_BMCART_SHIPPING_AND_FEE}></td>
-		<td><{$smarty.const._MD_BMCART_AMOUNT}></td>
-		<td><{$smarty.const._MD_BMCART_PAYMENT_TYPE}></td>
-	</tr>
 	<{foreach item=order from=$ListData}>
+	<{assign var="order_id" value=$order->getShow('order_id')}>
 	<tr>
-		<td>
-			<a href="<{$xoops_url}>/modules/<{$dirname}>/orderList/orderDetail/<{$order->getShow('order_id')}>">
+		<td width="25%">
+			<p>
+				<small><{$smarty.const._MD_BMCART_ORDER_DATE}></small>
+				<h4><{$order->getShow('order_date')|date_format:'%Y/%m/%d'}></h4>
+			</p>
+			<p>
+				<small><{$smarty.const._MD_BMCART_ORDER_ID}></small>
+				<a href="<{$xoops_url}>/modules/<{$dirname}>/orderList/orderDetail/<{$order->getShow('order_id')}>">
 				<{$order->getShow('order_id')}>
-			</a>
-		</td>
-		<td>
-			<{$order->getShow('order_date')|date_format:'%Y&#x5E74;%m&#x6708;%e&#x65E5; %H:%M'}>
-		</td>
-		<td align="right">
-			<{$order->getShow('sub_total')|number_format}><{$smarty.const._MD_BMCART_PRICE_DESC}>
-			(<{$order->getShow('tax')|number_format}><{$smarty.const._MD_BMCART_PRICE_DESC}>)
-		</td>
-		<td align="right">
-			<{$order->getShow('shipping_fee')|number_format}><{$smarty.const._MD_BMCART_PRICE_DESC}>
-		</td>
-		<td align="right">
-			<{$order->getShow('amount')|number_format}><{$smarty.const._MD_BMCART_PRICE_DESC}>
-		</td>
-		<td align="right">
-			<{if $order->getShow('payment_type')==1}>
+				</a>
+			<p>
+				<small><{$smarty.const._MD_BMCART_RECIPIENT}></small>
+				<a  href="#" rel="popover" data-content="<{$order->getShow('zip_code')}>&nbsp;
+				<{$order->getShow('state')}>&nbsp;
+				<{$order->getShow('address')}>&nbsp;<{$order->getShow('address2')}>"
+				data-original-title="<{$smarty.const._MD_BMCART_SHIPPING_ADDRESS}>" >
+					<{$order->getShow('last_name')}>&nbsp;<{$order->getShow('first_name')}>
+				</a>
+			</p>
+			<p>
+				<small><{$smarty.const._MD_BMCART_TOTAL}></small>
+				<{$order->getShow('amount')|number_format}><{$smarty.const._MD_BMCART_PRICE_DESC}>
+				<br /><small>(
+				<{if $order->getShow('payment_type')==1}>
 				<{$smarty.const._MD_BMCART_PAYBY_WIRE}>
-			<{elseif $order->getShow('payment_type')==2}>
+				<{elseif $order->getShow('payment_type')==2}>
 				<{$smarty.const._MD_BMCART_PAYBY_CREDIT}>
-			<{elseif $order->getShow('payment_type')==3}>
+				<{elseif $order->getShow('payment_type')==3}>
 				<{$smarty.const._MD_BMCART_CASHON_DELIVERLY}>
+				<{/if}>
+				)</small>
+			</p>
+		</td>
+		<td align="right">
+			<p>
+				<small><{$smarty.const._MD_BMCART_SHIPPING_DATE}></small>
+				<{if $order->getShow('shipping_date')}>
+					<{$order->getShow('shipping_date')|date_format:'%Y/%m/%e'}>
+					<small>
+						<{$order->getShow('shipping_carrier')}>
+						<{$order->getShow('shipping_number')}>
+					</small>
+				<{/if}>
+			</p>
+			<{if $order->getShow('shipping_date')}>
+				<h4 style="color: orange"><{$smarty.const._MD_BMCART_SHIPPING_DONE}></h4>
+			<{elseif $order->getShow('paid_date')}>
+				<h4 style="color: green"><{$smarty.const._MD_BMCART_SHIPPING_WAITING}></h4>
+			<{else}>
+				<h4 style="color: blue"><{$smarty.const._MD_BMCART_ORDER_WAITING}></h4>
 			<{/if}>
+			<hr>
+			<ul class="thumbnails">
+			<{foreach item=item from=$ListItems[$order_id]}>
+				<li>
+					<img class="strongSpan3 img-polaroid" src="<{$xoops_url}>/uploads/m_<{$item.image_filename}>" />
+					<a class="strongSpan9" href="<{$xoops_url}>/modules/<{$dirname}>/itemList/itemDetail/<{$item.item_id}>">
+						<{$item.item_name}>
+					</a>
+				</li>
+			<{/foreach}>
+			</ul>
 		</td>
 	</tr>
 	<{/foreach}>
 </table>
 <div class="pagenavi" align="center"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+
+<div class="bs-docs-example" style="padding-bottom: 24px;">
+	<a class="btn btn-large btn-danger" data-content="And here's some amazing content. It's very engaging. right?" rel="popover" href="#" data-original-title="A Title">Click to toggle popover</a>
+</div>

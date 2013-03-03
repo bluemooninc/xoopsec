@@ -2129,8 +2129,18 @@
     float: none;
     margin-left: 0;
   }
-  /* line 97, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000397}}
+  /* line 96, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000396}}
+  a.thumbnail {
+    line-height: 1em;
+  }
+  /* line 99, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000399}}
+  .thumbnail > img {
+    padding-bottom: 5px;
+  }
+  /* line 105, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003105}}
   [class*="span"],
   .uneditable-input[class*="span"],
   .row-fluid [class*="span"] {
@@ -2142,8 +2152,8 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 106, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003106}}
+  /* line 114, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003114}}
   .span12,
   .row-fluid .span12 {
     width: 100%;
@@ -2151,13 +2161,13 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 111, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003111}}
+  /* line 119, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003119}}
   .row-fluid [class*="offset"]:first-child {
     margin-left: 0;
   }
-  /* line 118, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003118}}
+  /* line 126, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003126}}
   .input-large,
   .input-xlarge,
   .input-xxlarge,
@@ -2172,8 +2182,8 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 128, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003128}}
+  /* line 136, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003136}}
   .input-prepend input,
   .input-append input,
   .input-prepend input[class*="span"],
@@ -2181,13 +2191,13 @@
     display: inline-block;
     width: auto;
   }
-  /* line 135, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003135}}
+  /* line 143, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003143}}
   .controls-row [class*="span"] + [class*="span"] {
     margin-left: 0;
   }
-  /* line 140, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003140}}
+  /* line 148, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003148}}
   .modal {
     position: fixed;
     top: 20px;
@@ -2196,123 +2206,139 @@
     width: auto;
     margin: 0;
   }
-  /* line 147, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003147}}
+  /* line 155, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003155}}
   .modal.fade {
     top: -100px;
   }
-  /* line 148, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003148}}
+  /* line 156, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003156}}
   .modal.fade.in {
     top: 20px;
   }
 }
 @media (max-width: 480px) {
-  /* line 158, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003158}}
+  /* line 166, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003166}}
   body {
     padding-left: 10px;
     padding-right: 10px;
   }
-  /* line 162, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003162}}
+  /* line 170, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003170}}
   .jumbotron {
     padding: 0 15px;
   }
-  /* line 166, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003166}}
+  /* line 174, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003174}}
   .hero-unit {
     height: 1px;
   }
-  /* line 170, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003170}}
+  /* line 178, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003178}}
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }
-  /* line 175, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003175}}
+  /* line 183, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003183}}
   .page-header h1 small {
     display: block;
     line-height: 20px;
   }
-  /* line 180, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003180}}
+  /* line 188, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003188}}
   .well.sidebar-nav {
     padding: 10px;
     margin-bottom: 10px;
   }
-  /* line 186, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003186}}
+  /* line 192, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003192}}
+  .accordion {
+    margin-bottom: 10px;
+  }
+  /* line 196, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003196}}
   input[type="checkbox"],
   input[type="radio"] {
     border: 1px solid #ccc;
   }
-  /* line 193, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003193}}
+  /* line 203, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003203}}
   .form-horizontal .control-label {
     float: none;
     width: auto;
     padding-top: 0;
     text-align: left;
   }
-  /* line 200, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003200}}
+  /* line 210, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003210}}
   .form-horizontal .controls {
     margin-left: 0;
   }
-  /* line 204, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003204}}
+  /* line 214, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003214}}
   .form-horizontal .control-list {
     padding-top: 0;
   }
-  /* line 208, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003208}}
+  /* line 218, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003218}}
   .form-horizontal .form-actions {
     padding-left: 10px;
     padding-right: 10px;
   }
-  /* line 216, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003216}}
+  /* line 226, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003226}}
   .media .pull-left,
   .media .pull-right {
     float: none;
     display: block;
     margin-bottom: 10px;
   }
-  /* line 223, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003223}}
+  /* line 233, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003233}}
   .media-object {
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 229, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003229}}
+  /* line 239, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003239}}
   .modal {
     top: 10px;
     left: 10px;
     right: 10px;
   }
-  /* line 234, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003234}}
+  /* line 244, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003244}}
   .modal-header .close {
     padding: 10px;
     margin: -10px;
   }
-  /* line 240, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003240}}
+  /* line 250, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003250}}
+  a.thumbnail {
+    line-height: 1em;
+    font-size: 60%;
+  }
+  /* line 254, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003254}}
+  .thumbnail > img {
+    padding-bottom: 5px;
+  }
+  /* line 257, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003257}}
   ul.unstyled li {
     float: left;
     width: 25%;
-    font-size: 75%;
+    line-height: 0.5em;
   }
-  /* line 245, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003245}}
+  /* line 262, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003262}}
   ul.unstyled {
     list-style: none outside;
     display: block;
   }
-  /* line 249, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003249}}
+  /* line 266, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003266}}
   ul.unstyled:after {
     content: ".";
     display: block;
@@ -2321,10 +2347,19 @@
     visibility: hidden;
     font-size: 0;
   }
-  /* line 257, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003257}}
-  .bs-docs-contents {
-    padding: 15px;
+  /* line 274, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003274}}
+  .carousel {
+    height: 100px;
+  }
+  /* line 277, /Users/bluemooninc/PhpstormProjects/xoopsec/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/xoopsec\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003277}}
+  .carousel-control {
+    height: 100%;
+    top: 17.5%;
+    width: 20px;
+    font-size: 32px;
+    line-height: 90px;
   }
 }
 @media (max-width: 979px) {

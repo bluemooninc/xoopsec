@@ -13,12 +13,12 @@
 
 <form name="cartListForm" action="<{$xoops_url}>/modules/<{$dirname}>/cartList/update" method="post">
 
-	<table>
+	<table class="table table-bordered">
 		<tr>
-			<td><{$smarty.const._MD_BMCART_ITEM_NAME}></td>
-			<td><{$smarty.const._MD_BMCART_ITEM_PRICE}></td>
-			<td><{$smarty.const._MD_BMCART_CART_QTY}></td>
-			<td><{$smarty.const._MD_BMCART_AMOUNT}></td>
+			<td width="45%"><{$smarty.const._MD_BMCART_ITEM_NAME}></td>
+			<td width="30%"><{$smarty.const._MD_BMCART_ITEM_PRICE}></td>
+			<td width="10%"><{$smarty.const._MD_BMCART_CART_QTY}></td>
+			<td width="15%"><{$smarty.const._MD_BMCART_AMOUNT}></td>
 		</tr>
 		<{foreach item=cart from=$ListData}>
 		<tr>
@@ -34,7 +34,7 @@
 				<{$cart.price|number_format}><{$smarty.const._MD_BMCART_ITEM_PRICE_DESC}>
 			</td>
 			<td align="right">
-				<input type="text" name="qty_<{$cart.cart_id}>" value="<{$cart.qty}>"/>
+				<input class="input-tiny" type="text" name="qty_<{$cart.cart_id}>" value="<{$cart.qty}>"/>
 				<a class="btn" href="<{$xoops_url}>/modules/<{$dirname}>/cartList/removeItem/<{$cart.cart_id}>">
 					<{$smarty.const._MD_BMCART_REMOVE_ITEM}>
 				</a>
@@ -45,22 +45,19 @@
 		</tr>
 		<{/foreach}>
 		<tr>
-			<td></td>
-			<td></td>
-			<td align="right"><{$smarty.const._MD_BMCART_SHIPPING_FEE}></td>
+			<td colspan="3" align="right"><{$smarty.const._MD_BMCART_SHIPPING_FEE}></td>
 			<td align="right"><{$shipping_fee|number_format}><{$smarty.const._MD_BMCART_PRICE_DESC}></td>
 		</tr>
 		<tr>
-			<td></td>
-			<td></td>
-			<td align="right"><{$smarty.const._MD_BMCART_TOTAL_AMOUNT}></td>
+			<td colspan="3" align="right"><{$smarty.const._MD_BMCART_TOTAL_AMOUNT}></td>
 			<td align="right"><{$total_amount|number_format}><{$smarty.const._MD_BMCART_PRICE_DESC}></td>
 		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td align="right"><input type="submit" name="update" value="<{$smarty.const._MD_BMCART_QTY_UPDATE}>"/></td>
-			<td align="right"><input type="submit" name="checkout" value="<{$smarty.const._MD_BMCART_TO_CHECKOUT}>"/></td>
 	</table>
+	<div style="text-align:center">
+	<input class="btn" type="submit" name="update" value="<{$smarty.const._MD_BMCART_QTY_UPDATE}>"/>
+	<input class="btn btn-primary" type="submit" name="checkout" value="<{$smarty.const._MD_BMCART_TO_CHECKOUT}>"/>
+	</div>
 </form>
+<{*
 <div class="pagenavi" align="center"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+*}>
