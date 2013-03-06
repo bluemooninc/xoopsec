@@ -19,6 +19,8 @@ define('_MI_BMCART_BLOCK_checkedItems', '最近チェックした商品');
 define('_MI_BMCART_BLOCK_checkedItems_DESC', '最近更新チェックした商品を一覧アイコン表示します。');
 define('_MI_BMCART_BLOCK_BOOKMARKITEMS', 'ブックマークした商品');
 define('_MI_BMCART_BLOCK_BOOKMARKITEMS_DESC', 'ブックマークに入れた商品を一覧アイコン表示します。');
+define('_MI_BMCART_BLOCK_WHOCHECKDALSO', 'この商品をチェックした人が見ている商品');
+define('_MI_BMCART_BLOCK_WHOCHECKDALSO_DESC', 'この商品をチェックした人が他にチェックしている商品を表示します。');
 
 // Admin Panel
 define('_MI_BMCART_SALES_TAX', '消費税');

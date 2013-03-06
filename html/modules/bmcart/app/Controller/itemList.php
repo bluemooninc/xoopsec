@@ -167,6 +167,12 @@ class Controller_ItemList extends AbstractAction {
 		if ($this->comment_flag){
 			$this->_comment_view();
 		}
+		if ($this->sortName){
+			$view->set('sortName',$this->sortName);
+		}
+		if ($this->sortOrder){
+			$view->set('sortOrder',$this->sortOrder);
+		}
 	}
 //-----------------
 // protected

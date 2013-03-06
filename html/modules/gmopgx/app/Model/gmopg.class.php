@@ -7,17 +7,16 @@
  * To change this template use File | Settings | File Templates.
  */
 
-$comdir = _MY_MODULE_PATH . "/vendor/gpay_client/src/";
-set_include_path($comdir);
-
 class gmopg
 {
+	protected $comdir;
 	protected $root;
 	var $error_message = NULL;
 
 	public function __construct()
 	{
 		$this->root = XCube_Root::getSingleton();
+		$this->comdir = _MY_MODULE_PATH . "/vendor/gpay_client/src/";
 	}
 
 	/**
@@ -88,8 +87,8 @@ class gmopg
 
 	public function saveMemberShip()
 	{
-		require_once('com/gmo_pg/client/input/SaveMemberInput.php');
-		require_once('com/gmo_pg/client/tran/SaveMember.php');
+		require_once($this->comdir.'com/gmo_pg/client/input/SaveMemberInput.php');
+		require_once($this->comdir.'com/gmo_pg/client/tran/SaveMember.php');
 
 		//入力パラメータクラスをインスタンス化します
 		$input = new SaveMemberInput();
@@ -127,8 +126,8 @@ class gmopg
 
 	public function saveCardInformation()
 	{
-		require_once('com/gmo_pg/client/input/SaveCardInput.php');
-		require_once('com/gmo_pg/client/tran/SaveCard.php');
+		require_once($this->comdir.'com/gmo_pg/client/input/SaveCardInput.php');
+		require_once($this->comdir.'com/gmo_pg/client/tran/SaveCard.php');
 
 		//入力パラメータクラスをインスタンス化します
 		$input = new SaveCardInput();
@@ -168,8 +167,8 @@ class gmopg
 
 	public function getCardList($MemberId)
 	{
-		require_once('com/gmo_pg/client/input/SearchCardInput.php');
-		require_once('com/gmo_pg/client/tran/SearchCard.php');
+		require_once($this->comdir.'com/gmo_pg/client/input/SearchCardInput.php');
+		require_once($this->comdir.'com/gmo_pg/client/tran/SearchCard.php');
 
 		//入力パラメータクラスをインスタンス化します
 		$input = new SearchCardInput();

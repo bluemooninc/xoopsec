@@ -1,15 +1,16 @@
 <?php
 if (!defined('XOOPS_ROOT_PATH')) exit();
 require_once(XOOPS_ROOT_PATH . '/modules/gmopgx/class/ErrorMessageHandler.php');
-$comdir = XOOPS_ROOT_PATH . "/modules/gmopgx/vendor/gpay_client/src/";
-set_include_path($comdir);
 
 class Gmopgx_Service extends XCube_Service
 {
+	protected $comdir;
 	public $mServiceName = 'Gmopgx_Service';
 	public $mNameSpace = 'Gmopgx';
 	public $mClassName = 'Gmopgx_Service';
-
+	function __construct(){
+		$this->comdir = XOOPS_ROOT_PATH . "/modules/gmopgx/vendor/gpay_client/src/";
+	}
 	public function prepare()
 	{
 		$this->addFunction(S_PUBLIC_FUNC('int checkOrderStatus(int orderId)'));
@@ -84,8 +85,8 @@ class Gmopgx_Service extends XCube_Service
 
 	public function &getRegisteredCardList()
 	{
-		require_once('com/gmo_pg/client/input/SearchCardInput.php');
-		require_once('com/gmo_pg/client/tran/SearchCard.php');
+		require_once($this->comdir.'com/gmo_pg/client/input/SearchCardInput.php');
+		require_once($this->comdir.'com/gmo_pg/client/tran/SearchCard.php');
 
 		$root = XCube_Root::getSingleton();
 		$memberId = $this->_getMemberId($root);
@@ -152,8 +153,8 @@ class Gmopgx_Service extends XCube_Service
 
 	public function entryTransit()
 	{
-		require_once('com/gmo_pg/client/input/EntryTranInput.php');
-		require_once('com/gmo_pg/client/tran/EntryTran.php');
+		require_once($this->comdir.'com/gmo_pg/client/input/EntryTranInput.php');
+		require_once($this->comdir.'com/gmo_pg/client/tran/EntryTran.php');
 
 		$root = XCube_Root::getSingleton();
 		$memberId = $this->_getMemberId($root);
@@ -253,8 +254,8 @@ class Gmopgx_Service extends XCube_Service
 	 */
 	private function _execTransit($orderId, $uid, $cardSeq, $accessId, $accessPass, $paymentMethod = '1')
 	{
-		require_once('com/gmo_pg/client/input/ExecTranInput.php');
-		require_once('com/gmo_pg/client/tran/ExecTran.php');
+		require_once($this->comdir.'com/gmo_pg/client/input/ExecTranInput.php');
+		require_once($this->comdir.'com/gmo_pg/client/tran/ExecTran.php');
 
 		$root = XCube_Root::getSingleton();
 		$memberId = $this->_getMemberIdByUid($uid);
@@ -328,8 +329,8 @@ class Gmopgx_Service extends XCube_Service
 				//3Dセキュアフラグがオンである場合、リダイレクトページを表示する必要があります。
 				//サンプルでは、モジュールタイプに標準添付されるリダイレクトユーティリティを利用しています。
 				//リダイレクト用パラメータをインスタンス化して、パラメータを設定します
-				require_once('com/gmo_pg/client/input/AcsParam.php');
-				require_once('com/gmo_pg/client/common/RedirectUtil.php');
+				require_once($this->comdir.'com/gmo_pg/client/input/AcsParam.php');
+				require_once($this->comdir.'com/gmo_pg/client/common/RedirectUtil.php');
 				$redirectInput = new AcsParam();
 				$redirectInput->setAcsUrl($output->getAcsUrl());
 				$redirectInput->setMd(model::get('accessId'));

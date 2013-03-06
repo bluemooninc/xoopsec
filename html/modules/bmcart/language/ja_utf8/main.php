@@ -22,6 +22,14 @@ define('_MD_BMCART_DIALOG_DELETE_DESC', 'このレコードを削除してもよ
 define('_MD_BMCART_CATEGORY_LIST', 'カテゴリ一覧');
 define('_MD_BMCART_CATEGORY_NAME', 'カテゴリ名');
 define('_MD_BMCART_ITEM_LIST', '商品一覧');
+define('_MD_BMCART_SORT_ASC_NAME', '名称昇順');
+define('_MD_BMCART_SORT_DESC_NAME', '名称降順');
+define('_MD_BMCART_SORT_ASC_PRICE', '安い順');
+define('_MD_BMCART_SORT_DESC_PRICE', '高い順');
+define('_MD_BMCART_SORT_ASC_QTY', '少ない順');
+define('_MD_BMCART_SORT_DESC_QTY', '多い順');
+define('_MD_BMCART_SORT_ASC_DATE', '古い順');
+define('_MD_BMCART_SORT_DESC_DATE', '新しい順');
 define('_MD_BMCART_ITEM_DETAIL', '商品の情報');
 define('_MD_BMCART_ITEM_IMAGE', '画像をクリックして拡大イメージを表示');
 define('_MD_BMCART_ITEM_NAME', '商品名');

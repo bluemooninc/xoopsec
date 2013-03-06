@@ -12,7 +12,7 @@ if ( !isset($root) ) {
 $modversion["name"] =  _MI_GMOPGX_TITLE;
 $modversion["dirname"] = basename(dirname(__FILE__));
 $modversion['hasMain'] = 1;
-$modversion['version'] = 0.04;
+$modversion['version'] = 0.05;
 $modversion['hasAdmin'] = 1;
 $modversion['image'] = "gmopg.png";
 $modversion['adminindex'] = "admin/index.php";

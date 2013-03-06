@@ -25,4 +25,24 @@ class bmcart_checkedItemsHandler extends XoopsObjectGenericHandler
     {
         parent::XoopsObjectGenericHandler($db);
     }
+	public function &getWhoCheckedAlso($checked_id){
+		$criteria = new CriteriaCompo();
+		$criteria->add(new Criteria("item_id",$checked_id));
+		$criteria->addsort("last_update","DESC");
+		$objects = $this->getObjects($criteria);
+		$uids = array();
+		foreach($objects as $object){
+			$uids[] = $object->getVar('uid');
+		}
+		$uidstr = implode(",",$uids);
+		$sql = "select item_id,count(uid) as checked from " . $this->mTable
+			. " WHERE uid in (". $uidstr.") "
+			. " GROUP BY item_id ORDER BY checked DESC";
+		$result = $this->db->query($sql,false,0,10);
+		$ret = array();
+		while( list($item_id,$checked) = $this->db->fetchRow($result) ){
+			$ret[] = $item_id;
+		}
+		return $ret;
+	}
 }

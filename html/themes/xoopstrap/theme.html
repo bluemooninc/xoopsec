@@ -125,10 +125,9 @@
 						<{$xoops_uname}>
 					</a>
 					<{else}>
-					<a class="btn btn-primary" href="<{$xoops_url}>/user.php">Login</a>
-					<{if $facbookLogin}>
-					<{$facbookLogin}>
-					<{/if}>
+						<a class="btn btn-primary" href="<{$xoops_url}>/user.php">Login</a>
+						<{if $facbookLogin}><{$facbookLogin}><{/if}>
+						<{if $yahooLogin}><{$yahooLogin}><{/if}>
 					<{/if}>
 					<{if $xoops_uname}>
 					<ul class="dropdown-menu">

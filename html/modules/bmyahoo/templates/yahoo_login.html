@@ -1,0 +1,20 @@
+<h1><{$smarty.const._MD_BMYAHOO_TITLE}></h1>
+
+<{if $login}>
+	<{$smarty.const._MD_BMYAHOO_WELCOME}>
+	<h3>
+		<{$userObject->getShow('uname')}>
+	</h3>
+	<a class="btn btn-primary" href="<{$xoops_url}>">Home</a>
+	<ul>
+		<{foreach from=$user_profile key=key item=var}>
+		<li><{$key}>:<{$var}></li>
+		<{/foreach}>
+	</ul>
+<{else}>
+<div>
+	<a class="btn btn-primary" href="<{$loginUrl}>">Login with Yahoo! ID</a>
+</div>
+<strong><em><{$smarty.const._MD_BMYAHOO_LOGIN}></em></strong>
+<{/if}>
+

@@ -57,7 +57,7 @@
       <{$smarty.const._MD_GMOPAYMENT_CARDNO}>
     </th>
     <td>
-      <input name="CardNo" type="text" maxlength="16" size="20" tabindex="16" />
+      <input name="CardNo" type="text" tabindex="16" />
     </td>
   </tr>
 <!--   
@@ -84,7 +84,7 @@
       <{$smarty.const._MD_GMOPAYMENT_HOLDERNAME}>
     </th>
     <td>
-      <input name="HolderName" type="text" maxlength="50" size="30" tabindex="18" />
+      <input name="HolderName" type="text" tabindex="18" />
     </td>
   </tr>
   <tr>
@@ -102,14 +102,12 @@
       </label>
     </td>
   </tr>
-  <tr>
-    <td colspan="2" class="foot" align="center">
-	  <a class="btn btn-small" href="<{$return_url}>"><{$smarty.const._MD_GMOPGX_RETURN_URL}></a>
-      <input class="btn btn-primary" id="button1" type="button" value="<{$smarty.const._MD_GMOPAYMENT_RESISTER}>" />
-    </td>
-  </tr>
 </table>
-<input type="hidden" name="method" value="submit" />
+<div style="text-align:center">
+	<input type="hidden" name="method" value="submit" />
+	<a class="btn btn-small" href="<{$return_url}>"><{$smarty.const._MD_GMOPGX_RETURN_URL}></a>
+	<input class="btn btn-primary" id="button1" type="button" value="<{$smarty.const._MD_GMOPAYMENT_RESISTER}>" />
+</div>
 </form>
 <script>
 $(function(){

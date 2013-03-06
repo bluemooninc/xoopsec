@@ -16,7 +16,7 @@ $mydirname = basename(dirname(__FILE__));
 $modversion["name"] = _MI_BMCART_TITLE;
 $modversion["dirname"] = $mydirname;
 $modversion['hasMain'] = 1;
-$modversion['version'] = 0.18;
+$modversion['version'] = 0.20;
 $modversion['image'] = 'images/bmcart.png';
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = "admin/index.php";
@@ -106,6 +106,15 @@ $modversion['blocks'][4] = array(
 	'description' => _MI_BMCART_BLOCK_BOOKMARKITEMS_DESC,
 	'show_func' => "b_bmcart_bookmarkItems_show",
 	'template' => 'bmcart_block_bookmarkItems.html',
+	'visible_any' => TRUE,
+	'show_all_module' => FALSE
+);
+$modversion['blocks'][5] = array(
+	'file' => "bmcart_whoCheckedAlso.php",
+	'name' => _MI_BMCART_BLOCK_WHOCHECKDALSO,
+	'description' => _MI_BMCART_BLOCK_WHOCHECKDALSO_DESC,
+	'show_func' => "b_bmcart_whoCheckedAlso_show",
+	'template' => 'bmcart_block_whoCheckedAlso.html',
 	'visible_any' => TRUE,
 	'show_all_module' => FALSE
 );
