@@ -3,6 +3,7 @@
 
 if (!defined('XOOPS_ROOT_PATH')) exit();
 include_once dirname(dirname(dirname(__FILE__)))."/class/bmcart_session.php";
+include_once dirname(__FILE__)."/Curl.class.php";
 
 /**
  * Utility
@@ -18,6 +19,7 @@ class Model_Item extends AbstractModel {
 	 */
 	public function __construct()
 	{
+		$this->root = XCube_Root::getSingleton();
 		$this->_module_names = $this->getModuleNames();
 		$this->myHandler =& xoops_getModuleHandler('item');
 	}
@@ -77,7 +79,18 @@ class Model_Item extends AbstractModel {
 		}
 		return $items;
 	}
-
+	private function &_add_myAppInfo(){
+		$jsonObject = array(
+			'app_userName' => $this->root->mContext->mModuleConfig['app_userName'],
+			'app_orderId' => $this->root->mContext->mModuleConfig['app_orderId'],
+			'app_userSite' => XOOPS_URL
+		);
+		$jsonStrings = base64_encode(json_encode($jsonObject));
+		$url = "https://www.xoopsec.com/modules/bmcart/JsonApi/getMyApp/".$jsonStrings;
+		$curl = Model_cURL::forge();
+		$jsonObject = json_decode($curl->execute($url),true);
+		return $jsonObject['linkUrl'];
+	}
 	public function &getItemDetail($item_id)
 	{
 		if ($item_id==0) return null;
@@ -127,6 +140,7 @@ class Model_Item extends AbstractModel {
 	}
 
 	public function getMessage(){
+		$this->message .= $this->_add_myAppInfo();
 		return $this->message;
 	}
 	/**

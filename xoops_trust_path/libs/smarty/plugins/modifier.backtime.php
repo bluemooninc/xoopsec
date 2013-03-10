@@ -20,7 +20,7 @@ function smarty_modifier_backtime($timestamp,$format,$newtime=null)
 		$result = sprintf("%d分前",$tt/60);
 	}elseif( $tt >= 3600 && $tt < 86400 ){  // 1時間～24時間
 		$result = sprintf("%d時間前",$tt/60/60);
-	}elseif( $tt >= 86400 && $tt < 2592000 ){  // 24時間～30日
+	}elseif( $tt >= 86400 && $tt < 864000 ){  // 24時間～10日
 		$result = sprintf("%d日前",$tt/60/60/24);
 	}else{
 		$result = strftime ( $format, xoops_getUserTimestamp ( $timestamp ) );

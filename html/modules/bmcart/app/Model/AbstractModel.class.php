@@ -7,6 +7,15 @@
  * To change this template use File | Settings | File Templates.
  */
 abstract class AbstractModel {
+	// object
+	protected $root = null;
+
+	/**
+	 * constructor
+	 */
+	public function __construct() {
+		$this->root = XCube_Root::getSingleton();
+	}
 	protected function getModuleNames($isactive = FALSE)
 	{
 		$criteria = new CriteriaCompo();

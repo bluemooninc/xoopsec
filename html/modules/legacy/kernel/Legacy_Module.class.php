@@ -565,6 +565,7 @@ class Legacy_ModuleAdapter extends Legacy_AbstractModule
 
                 $item['link'] = XOOPS_URL . '/modules/' . $this->mXoopsModule->get('dirname') . '/' . $result['link'];
                 $item['title'] = $result['title'];
+	            $item['body'] = $result['body'];    // yoshis
                 $item['uid'] = $result['uid'];
 
                 //
@@ -572,6 +573,7 @@ class Legacy_ModuleAdapter extends Legacy_AbstractModule
                 // change format from unixtime to string by timeoffset.
                 //
                 $item['time'] = isset($result['time']) ? $result['time'] : 0;
+	            $item['time_desc'] = $result['time_desc'];    // yoshis
 
                 $ret[] = $item;
             }

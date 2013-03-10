@@ -16,7 +16,7 @@ $mydirname = basename(dirname(__FILE__));
 $modversion["name"] = _MI_BMCART_TITLE;
 $modversion["dirname"] = $mydirname;
 $modversion['hasMain'] = 1;
-$modversion['version'] = 0.20;
+$modversion['version'] = 0.22;
 $modversion['image'] = 'images/bmcart.png';
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = "admin/index.php";
@@ -144,6 +144,22 @@ $modversion['config'][] = array(
 	'formtype' => 'text',
 	'valuetype' => 'string',
 	'default' => "10000>300,30000>400,100000>600,300000>1000"
+);
+$modversion['config'][] = array(
+	'name' => 'app_userName',
+	'title' => _MI_BMCART_APP_USERNAME,
+	'description' => '_MI_BMCART_APP_USERNAME_DESC',
+	'formtype' => 'text',
+	'valuetype' => 'string',
+	'default' => ''
+);
+$modversion['config'][] = array(
+	'name' => 'app_orderId',
+	'title' => _MI_BMCART_APP_ORDERID,
+	'description' => '_MI_BMCART_APP_ORDERID_DESC',
+	'formtype' => 'text',
+	'valuetype' => 'int',
+	'default' => 0
 );
 
 // Notification

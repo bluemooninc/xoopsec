@@ -1,0 +1,27 @@
+<div id="myCarousel" class="carousel slide row-fluid">
+	<!-- Carousel items -->
+	<div class="span1">
+		<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	</div>
+	<div class="span10">
+	<div class="carousel-inner">
+
+	<{foreach item=itemBlock from=$block.checkedItemsList name=carousel}>
+		<div class="item<{if $smarty.foreach.carousel.iteration==1}> active<{/if}>">
+		<{foreach item=itemList from=$itemBlock}>
+		<div class="span3">
+		<a class="thumbnail" href="<{$xoops_url}>/modules/bmcart/itemList/itemDetail/<{$itemList.item_id}>">
+			<img src="<{$xoops_url}>/uploads/m_<{$itemList.images[0]}>" />
+			<{$itemList.item_name}>
+		</a>
+		</div>
+		<{/foreach}>
+		</div>
+	<{/foreach}>
+	</div>
+	</div>
+	<!-- Carousel nav -->
+	<div class="span1">
+		<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+</div>

@@ -68,6 +68,7 @@ class Controller_ItemList extends AbstractAction {
 		$this->action_index();
 	}
 	private function _get_itemDetail(){
+		$this->message = $this->mHandler->getMessage();
 		if (xoops_getrequest('item_id')){
 			$item_id = intval(xoops_getrequest('item_id'));
 		}elseif (isset($this->mParams[0])){

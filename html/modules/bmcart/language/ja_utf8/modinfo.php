@@ -1,6 +1,10 @@
 <?php
 define('_MI_BMCART_NAME','B.M.Cart');
 define('_MI_BMCART_TITLE','ショッピング');
+define('_MI_BMCART_APP_USERNAME','XoopsEC ログイン名');
+define('_MI_BMCART_APP_USERNAME_DESC','https://www.xoopsec.com で購入した際のログイン名称');
+define('_MI_BMCART_APP_ORDERID','XoopsEC 注文番号');
+define('_MI_BMCART_APP_ORDERID_DESC','https://www.xoopsec.com で購入後に表示される注文一覧にある注文番号');
 
 define('_MI_BMCART_CATEGORY_LIST', 'カテゴリ一覧');
 define('_MI_BMCART_ITEM_LIST', '商品一覧');
