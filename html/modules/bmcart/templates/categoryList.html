@@ -11,7 +11,9 @@
 			<{$v}>
 		</a>
 	<{/foreach}>
-	<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=CategoryEdit&parent_id=<{$catId}>" >Add Category</a>
+	<{if $xoops_isadmin}>
+		<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=CategoryEdit&parent_id=<{$catId}>" >Add Category</a>
+	<{/if}>
 	<{/foreach}>
 </ul>
 

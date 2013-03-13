@@ -10,9 +10,11 @@
 	<{/if}>
 </a>
 <{/foreach}>
-<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=CategoryEdit&parent_id=<{$catId}>" >Add Category</a>
-<{if $catId}>
-	<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=ItemEdit&category_id=<{$catId}>" >Add Item</a>
+<{if $xoops_isadmin}>
+	<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=CategoryEdit&parent_id=<{$catId}>" >Add Category</a>
+	<{if $catId}>
+		<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=ItemEdit&category_id=<{$catId}>" >Add Item</a>
+	<{/if}>
 <{/if}>
 <h3><{$smarty.const._MD_BMCART_ITEM_LIST}></h3>
 <table class="table table-striped table-bordered table-condensed">
