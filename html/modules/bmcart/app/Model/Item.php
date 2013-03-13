@@ -67,11 +67,11 @@ class Model_Item extends AbstractModel {
 		}
 		return $cArray;
 	}
-	public function &getItemList(&$criteria,$sortName="last_update",$sortOrder="desc")
+	public function &getItemList(&$criteria,$limit=10,$start=0)
 	{
 
 		$this->myHandler =& xoops_getModuleHandler('item');
-		$items = $this->myHandler->getItemByCategory($criteria,$sortName,$sortOrder);
+		$items = $this->myHandler->getItemByCategory($criteria,$limit,$start);
 		$i=0;
 		foreach($items as $item){
 			$items[$i]['image_filename'] = $this->_getTopImage($item['item_id']);

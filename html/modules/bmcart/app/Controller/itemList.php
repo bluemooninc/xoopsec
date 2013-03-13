@@ -20,6 +20,7 @@ class Controller_ItemList extends AbstractAction {
 	protected $category_id = 0;
 	protected $sortName = "item_name";
 	protected $sortOrder = "asc";
+
 	protected $breadcrumbs;
 	protected $categoryHandler;
 	protected $comment_flag = false;
@@ -33,18 +34,27 @@ class Controller_ItemList extends AbstractAction {
 		$this->categoryHandler = xoops_getModuleHandler('category');
 	}
 	public function action_index(){
-		if (xoops_getrequest('item_id')){
+		$item_id = $this->root->mContext->mRequest->getRequest('item_id');
+		$perpage = $this->root->mContext->mRequest->getRequest('perpage');
+		$start = $this->root->mContext->mRequest->getRequest('start');
+		if ($item_id){
 			$this->_get_itemDetail();
 		}else{
+			$this->mPagenavi = Model_PageNavi::forge();
+			if ($perpage==0) $perpage = $this->mPagenavi->getPerpage();
+			$this->mPagenavi->setHandler($this->mHandler);
+			$this->mPagenavi->setUrl("itemList");
+			$this->mPagenavi->setPerpage($perpage);
+			$this->mPagenavi->setStart($start);
 			$this->indexDefault($this->mPrimaryKey);
 			$this->category_id = $_SESSION['bmcart']['category_id'] ? $_SESSION['bmcart']['category_id'] : NULL;
 			$categoryArray = $this->mHandler->getCategoryArray($this->category_id);
-			if($categoryArray){
+			if(is_array($categoryArray)){
 				$categories = new Criteria('category_id', implode(",",$categoryArray), "IN");
 				$this->mPagenavi->addCriteria($categories);
 			}
-			$this->mPagenavi->addSort($this->sortName,$this->sortOrder);
-			$this->mListData = $this->mHandler->getItemList( $this->mPagenavi->getCriteria() );
+			$this->mPagenavi->addSort($this->sortName, $this->sortOrder);
+			$this->mListData = $this->mHandler->getItemList( $this->mPagenavi->getCriteria(), $perpage, $start);
 			$this->breadcrumbs = $this->categoryHandler->makeBreadcrumbs($this->category_id);
 			$this->template = 'itemList.html';
 		}
@@ -162,9 +172,6 @@ class Controller_ItemList extends AbstractAction {
 		$view->set('current_image', $this->image_id);
 		$view->set('ticket_hidden',$this->mTicketHidden);
 		$view->set('free_shipping', $free_shipping);
-		if (is_object($this->mPagenavi)) {
-			$view->set('pageNavi', $this->mPagenavi->getNavi());
-		}
 		if ($this->comment_flag){
 			$this->_comment_view();
 		}
@@ -174,12 +181,9 @@ class Controller_ItemList extends AbstractAction {
 		if ($this->sortOrder){
 			$view->set('sortOrder',$this->sortOrder);
 		}
-	}
-//-----------------
-// protected
-//-----------------
-	protected function setPageNavi($sortName, $sortIndex)
-	{
-		$this->setPageNaviDefault($sortName, $sortIndex);
+		if (is_object($this->mPagenavi)) {
+			$this->mPagenavi->addSort($this->sortName,$this->sortOrder);
+			$view->set('pageNavi', $this->mPagenavi->getNavi());
+		}
 	}
 }

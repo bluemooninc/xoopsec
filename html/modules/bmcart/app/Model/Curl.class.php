@@ -23,6 +23,7 @@ class Model_cURL
 			'http_code' => '',
 			'last_url' => ''
 		);
+		$this->fp = null;
 	}
 	/**
 	 * get Instance
@@ -56,7 +57,7 @@ class Model_cURL
 	 *
 	 * @return array  'header','body','curl_error','http_code','last_url'
 	 */
-	public function &execute($targetUrl, $writeToFile)
+	public function &execute($targetUrl, $writeToFile=true)
 	{
 		$this->_setUrl($targetUrl);
 		$response = @curl_exec($this->ch);

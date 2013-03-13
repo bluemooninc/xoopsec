@@ -155,7 +155,7 @@ abstract class AbstractAction {
 	 * @return none
 	 */
 	protected function indexDefault($primaryKey='id') {
-		$this->setPageNavi($primaryKey, 'ASC');
+//		$this->setPageNavi($primaryKey, 'ASC');
 	}
 	/**
 	 * edit
@@ -165,10 +165,12 @@ abstract class AbstractAction {
 	 */
 	protected function editDefault($primaryKey='id') {
 		$this->id = intval( $this->mParams[0] );
-		if ( $this->id > 0 ){
+/*
+ 		if ( $this->id > 0 ){
 			$this->setPageNavi($primaryKey, 'ASC');
 			$this->mPagenavi->addCriteria(new Criteria($primaryKey, $this->id));
 		}
+*/
 	}
 	/**
 	 * delete
@@ -190,6 +192,7 @@ abstract class AbstractAction {
 	 * @param string $sortIndex
 	 * @return none
 	 */
+	/*
 	protected function setPageNaviDefault($sortName, $sortIndex){
 		$class = $this->getPagenaviClass();
 		$this->mPagenavi = new $class($this->mHandler);
@@ -199,9 +202,9 @@ abstract class AbstractAction {
 		$this->mPagenavi->fetch();
 	}
 	protected function getPagenaviClass(){
-		// Acl_PageNavi
 		return ucwords($this->mDirname).'_PageNavi';
 	}
+	*/
 
 	protected function setModel($modelName){
 		$this->mHandler = xoops_getmodulehandler($modelName);

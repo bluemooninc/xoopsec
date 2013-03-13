@@ -43,9 +43,10 @@ class bmcart_CategoryAdminEditForm extends XCube_ActionForm
 
 	function load(&$obj)
 	{
+		$parent_id = xoops_getrequest('parent_id') ? xoops_getrequest('parent_id') : $obj->get('parent_id');
 		$this->set('category_id', $obj->get('category_id'));
 		$this->set('category_name', $obj->get('category_name'));
-		$this->set('parent_id', $obj->get('parent_id'));
+		$this->set('parent_id', $parent_id);
 	}
 
 	function update(&$obj)

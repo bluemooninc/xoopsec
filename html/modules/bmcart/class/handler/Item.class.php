@@ -33,8 +33,8 @@ class bmcart_itemHandler extends XoopsObjectGenericHandler
     {
         parent::XoopsObjectGenericHandler($db);
     }
-	public function &getItemByCategory(&$criteria){
-		$objects = $this->getObjects($criteria);
+	public function &getItemByCategory(&$criteria,$limit,$start){
+		$objects = $this->getObjects($criteria,$limit,$start);
 		$ret = array();
 		foreach( $objects as $object ){
 			$myRow = array();
@@ -45,9 +45,9 @@ class bmcart_itemHandler extends XoopsObjectGenericHandler
 		}
 		return $ret;
 	}
-	public function &getItemOptions(){
+	public function &getItemOptions($limit=10,$start=0){
 		$criteria = null;
-		$itemList = $this->getItemByCategory($criteria);
+		$itemList = $this->getItemByCategory($criteria,$limit,$start);
 		$ret = array(0=>null);
 		foreach($itemList as $item){
 			$ret[$item['item_id']] = $item['item_name'];

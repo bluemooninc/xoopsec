@@ -42,4 +42,18 @@ amazon_ad_tag = "bluemoon0b2c-22"; amazon_ad_width = "728"; amazon_ad_height = "
 		$jsonObject['linkUrl'] = $this->linkUrl;
 		$this->_output( $jsonObject );
 	}
+	public function action_searchItems(){
+		error_reporting(E_ALL);
+		ini_set("display_errors", 1);
+		$jsonStrings = base64_decode( $this->mParams[0] );
+		$jsonObject = json_decode($jsonStrings,true);
+		if (array_key_exists('search_strings',$jsonObject)){
+			include_once dirname(dirname(dirname(__FILE__)))."/class/BmCart_Search.class.php";
+			$bms = new BmCart_Search();
+			$searchArr = explode(" ",$jsonObject['search_strings']);
+			$andOr = count($searchArr)>1 ? "and" : "";
+			$jsonObject['linkUrl'] = $bms->bmcart_itemSearch($searchArr,$andOr);
+		}
+		$this->_output( $jsonObject );
+	}
 }

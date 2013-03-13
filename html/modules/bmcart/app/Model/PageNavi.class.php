@@ -7,7 +7,7 @@ require_once XOOPS_ROOT_PATH.'/core/XCube_PageNavigator.class.php';
 /**
  * PageNavi
  */
-class Bmcart_PageNavi{
+class Model_PageNavi extends XCube_PageNavigator{
 	// object
 	protected $mCriteria = null;
 	protected $mHandler = null;
@@ -15,20 +15,31 @@ class Bmcart_PageNavi{
 	
 	// set variable
 	protected $mPagenum = 10;
-	protected $mUrl = 'bmcart.php';
 	protected $mTotal = 0;
 
 	/**
 	 * constructor
 	 */  
-	public function __construct( $handler=null, $criteria=null ) {
-		$this->mUrl = _MY_MODULE_URL . 'index.php';
-
-		$this->mHandler = $handler;
-
+	public function __construct( ) {
 		$this->mCriteria = new CriteriaCompo();
+		$this->mNavi = new XCube_PageNavigator($this->mUrl);
 	}
-
+	/**
+	 * get Instance
+	 * @param none
+	 * @return object Instance
+	 */
+	public function &forge()
+	{
+		static $instance;
+		if (!isset($instance)) {
+			$instance = new Model_PageNavi();
+		}
+		return $instance;
+	}
+	public function setHandler(&$handler){
+		$this->mHandler = $handler;
+	}
 	/**
 	 * set Pagenum
 	 *
@@ -56,6 +67,7 @@ class Bmcart_PageNavi{
 	 * @return object PageNavigator
 	 */	  
 	public function &getNavi() {
+		$this->fetch();
 		return $this->mNavi;
 	}
 	
@@ -87,29 +99,7 @@ class Bmcart_PageNavi{
 	 * @return object Criteria
 	 */		
 	 public function getCriteria() {
-		$this->mCriteria->setStart( $this->getStart() );
-		$this->mCriteria->setLimit( $this->getPerpage() );
 		return $this->mCriteria;
-	}
-
-	/**
-	 * get Start
-	 *
-	 * @param none
-	 * @return int Start
-	 */		
-	 public function getStart() {
-		return $this->mNavi->getStart();
-	}
-
-	/**
-	 * get Perpage
-	 *
-	 * @param none
-	 * @return int Perpage
-	 */		
-	 public function getPerpage() {
-		return $this->mNavi->getPerpage();
 	}
 
 	/**
@@ -122,9 +112,7 @@ class Bmcart_PageNavi{
 		if ( is_object($this->mHandler) ) {
 			$this->setTotal( $this->mHandler->getCount($this->mCriteria) );
 		}
-		$this->mNavi = new XCube_PageNavigator($this->mUrl);
 		$this->mNavi->mGetTotalItems->add(array($this, 'getTotalItems'));
-		$this->mNavi->setPerpage($this->mPagenum);
 		$this->mNavi->fetch();
 	}
 

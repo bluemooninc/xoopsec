@@ -9,6 +9,7 @@
 require_once _MY_MODULE_PATH . 'app/Model/Category.php';
 require_once _MY_MODULE_PATH . 'app/Model/PageNavi.class.php';
 require_once _MY_MODULE_PATH . 'app/View/view.php';
+include_once _MY_MODULE_PATH . 'app/Model/Curl.class.php';
 
 class Controller_bmcart extends AbstractAction {
 	protected $mHandler;
@@ -33,6 +34,16 @@ class Controller_bmcart extends AbstractAction {
 		return $result;
 	}
 
+	private function &_add_XoopsECCategory(){
+		$jsonObject = array(
+			'search_strings' => "Nikon",
+		);
+		$jsonStrings = base64_encode(json_encode($jsonObject));
+		$url = "https://www.xoopsec.com/modules/bmcart/JsonApi/searchItems/".$jsonStrings;
+		$curl = Model_cURL::forge();
+		$jsonObject = json_decode($curl->execute($url),true);
+		return $jsonObject['linkUrl'];
+	}
 
 	public function action_index(){
 		if (isset($_GET['item_id'])){

@@ -4,14 +4,15 @@
 
 <h3><{$smarty.const._MD_BMCART_CATEGORY_LIST}></h3>
 <ul>
-<{foreach item=category from=$ListData}>
+<{foreach key=catId item=category from=$ListData}>
 	<li><{$category.category_name}></li>
 	<{foreach from=$category.children key=k item=v}>
 		<a class="btn" class="menuMain" href="<{$xoops_url}>/modules/bmcart/itemList/category/<{$k}>">
 			<{$v}>
 		</a>
 	<{/foreach}>
-<{/foreach}>
+	<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=CategoryEdit&parent_id=<{$catId}>" >Add Category</a>
+	<{/foreach}>
 </ul>
 
 <{include file='db:system_notification_select.html'}>
