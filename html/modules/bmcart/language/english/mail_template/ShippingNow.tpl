@@ -1,36 +1,36 @@
-{X_SITENAME} ({X_SITEURL}) をご利用いただき、ありがとうございます。
-{X_SITENAME} にてご注文頂いた商品を発送しましたので、お知らせいたします。
+{X_SITENAME} ({X_SITEURL}) Thank you for shipping on this site.
+Inform you this mail to now under shipping for your purchase.
 
 {SHIPPING_MEMO}
 
-返品、交換をご希望の場合や、注文内容を確認したい場合は、以下の注文履歴からどうぞ。
+And if you want to make sure your order or return, please following order history.
 {URL_BILL}
 
-このメールは自動送信によって通知しております。
+This mail is automaticaly send from server.
 
-発送日付 : {SHIPPING_DATE}
-配送業者名 : {SHIPPING_CARRIER}
-伝票番号 : {SHIPPING_NUMBER}
+Shipping date : {SHIPPING_DATE}
+Carrier : {SHIPPING_CARRIER}
+Shipping number : {SHIPPING_NUMBER}
 
-ご注文番号 : {ORDER_ID}
-配送先情報 :
-	氏名 : {LAST_NAME} {FIRST_NAME}
-	郵便番号 : {ZIP_CODE}
-	住所 : {STATE} {ADDRESS} {ADDRESS2}
-	電話番号 : {PHONE}
+Order ID : {ORDER_ID}
+Shipping :
+	To : {LAST_NAME} {FIRST_NAME}
+	Zip : {ZIP_CODE}
+	Addresss : {ADDRESS} {ADDRESS2} , {STATE}
+	Phone : {PHONE}
 
-ご注文内容 :
-商品名          　　                                 価格         数量
+Order purchase :
+Products name          　　                          Price       Qty
 --------------------------------------------------------------------
 {LIST_DATA}
 
-商品計 : {SUB_TOTAL}円（内消費税 : {TAX}）
-送　料 : {SHIPPING_FEE}円
-合計額 : {AMOUNT}円
+Sub total : {SUB_TOTAL} Yen (including tax: {TAX} ）
+Shipping fee : {SHIPPING_FEE}Yen
+Amount : {AMOUNT} Yen
 
-お支払情報 : {PAYMENT_DESC}
+Paid by : {PAYMENT_DESC}
 
-ご利用有り難うございます。またのご注文をお待ち申し上げております。
+Thank you for shopping. We looking forward to ordering again.
 
-このメールは自動配信されておりますので、ご返信にならない様お願いします。
--------------------------
+this email is delivered automatically, please do not reply this address.
+------------------------------------------------------------------------

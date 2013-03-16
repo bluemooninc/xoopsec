@@ -11,38 +11,38 @@ define('_MI_BMCART_SALES_LIST', 'Sales List');
 define('_MI_BMCART_CART_LIST', 'CHeck my cart');
 
 // Block
-define('_MI_BMCART_BLOCK_CATEGORY', 'カテゴリ一');
-define('_MI_BMCART_BLOCK_CATEGORY_DESC', '商品のカテゴリ一を一覧表示します。');
-define('_MI_BMCART_BLOCK_NEWITEM', '最近更新された商品');
-define('_MI_BMCART_BLOCK_NEWITEM_DESC', '最近更新商品を一覧アイコン表示します。');
-define('_MI_BMCART_BLOCK_checkedItems', '最近チェックした商品');
-define('_MI_BMCART_BLOCK_checkedItems_DESC', '最近更新チェックした商品を一覧アイコン表示します。');
-define('_MI_BMCART_BLOCK_BOOKMARKITEMS', 'ブックマークした商品');
-define('_MI_BMCART_BLOCK_BOOKMARKITEMS_DESC', 'ブックマークに入れた商品を一覧アイコン表示します。');
-define('_MI_BMCART_BLOCK_WHOCHECKDALSO', 'この商品をチェックした人が見ている商品');
-define('_MI_BMCART_BLOCK_WHOCHECKDALSO_DESC', 'この商品をチェックした人が他にチェックしている商品を表示します。');
+define('_MI_BMCART_BLOCK_CATEGORY', 'Category');
+define('_MI_BMCART_BLOCK_CATEGORY_DESC', 'List the Category');
+define('_MI_BMCART_BLOCK_NEWITEM', 'List the new products');
+define('_MI_BMCART_BLOCK_NEWITEM_DESC', 'List the most recently updated products.');
+define('_MI_BMCART_BLOCK_checkedItems', 'Recently Viewed Products');
+define('_MI_BMCART_BLOCK_checkedItems_DESC', 'list the checked items recently updated');
+define('_MI_BMCART_BLOCK_BOOKMARKITEMS', 'Bookmark products');
+define('_MI_BMCART_BLOCK_BOOKMARKITEMS_DESC', 'list the products you put in your bookmarks.');
+define('_MI_BMCART_BLOCK_WHOCHECKDALSO', 'Customers Also Viewed those items');
+define('_MI_BMCART_BLOCK_WHOCHECKDALSO_DESC', 'Show the items that are checked by other Customers who viewed this item.');
 
 // Admin Panel
-define('_MI_BMCART_SALES_TAX', '消費税');
-define('_MI_BMCART_SALES_TAX_DESC', 'パーセントで指定します。');
-define('_MI_BMCART_FREE_SHIPPING', '送料無料設定(円)');
-define('_MI_BMCART_FREE_SHIPPING_DESC', '0:設定無し,1以上で商品合計比較により送料無料となります。');
-define('_MI_BMCART_CASHON_DELIVERY', '代引き手数料(円)');
-define('_MI_BMCART_CASHON_DELIVERY_DESC', '商品価格>手数料,（カンマ区切）');
+define('_MI_BMCART_SALES_TAX', 'Sales Tax');
+define('_MI_BMCART_SALES_TAX_DESC', 'Specified as a percentage.');
+define('_MI_BMCART_FREE_SHIPPING', 'Set free shipping');
+define('_MI_BMCART_FREE_SHIPPING_DESC', 'It will be free shipping by comparing products total more than here.');
+define('_MI_BMCART_CASHON_DELIVERY', 'COD fee');
+define('_MI_BMCART_CASHON_DELIVERY_DESC', 'price>fee,(divide comma)');
 
 // Text for notifications
-define('_MI_BMCART_GLOBAL_NOTIFY', 'モジュール全体');
-define('_MI_BMCART_GLOBAL_NOTIFYDSC', 'ショッピングカートモジュール全体における通知オプション');
+define('_MI_BMCART_GLOBAL_NOTIFY', 'The entire module');
+define('_MI_BMCART_GLOBAL_NOTIFYDSC', 'Notification options in the entire shopping cart module');
 
-define('_MI_BMCART_ITEM_NOTIFY', '表示中の商品');
-define('_MI_BMCART_ITEM_NOTIFYDSC', '表示中の商品に対する通知オプション');
+define('_MI_BMCART_ITEM_NOTIFY', 'Showing products');
+define('_MI_BMCART_ITEM_NOTIFYDSC', 'Notification options for the item being displayed');
 
-define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFY', '注文が入った時の通知');
-define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYCAP', '注文があった場合に通知する');
-define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYDSC', '注文があった場合に通知する');
-define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE}: 注文がありました');
+define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFY', 'Notification of when the order was entered');
+define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYCAP', 'Notify me when there are order');
+define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYDSC', 'Notify me when there are order');
+define('_MI_BMCART_GLOBAL_ORDER_SUBMIT_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE}: There was order');
 
-define('_MI_BMCART_NOTIFY5_TITLE', '新規コメント投稿');
-define('_MI_BMCART_NOTIFY5_CAPTION', 'この商品にコメントがついた場合通知する');
-define('_MI_BMCART_NOTIFY5_DESC', 'この商品にコメントがついた場合通知する');
-define('_MI_BMCART_NOTIFY5_SUBJECT', '[{X_SITENAME}] {X_MODULE}: コメントの投稿がありました');
+define('_MI_BMCART_NOTIFY5_TITLE', 'Post new comment');
+define('_MI_BMCART_NOTIFY5_CAPTION', 'If you notice with a comment on this product');
+define('_MI_BMCART_NOTIFY5_DESC', 'If you notice with a comment on this product');
+define('_MI_BMCART_NOTIFY5_SUBJECT', '[{X_SITENAME}] {X_MODULE}: There was a comment posted');

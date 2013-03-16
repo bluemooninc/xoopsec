@@ -1,31 +1,35 @@
-{X_SITENAME} ({X_SITEURL}) をご利用いただき、ありがとうございます。
-{X_SITENAME} にてご注文を承りましたので、お知らせいたします。
+{X_SITENAME} ({X_SITEURL}) Thank you for shipping on this site.
+Inform you this mail to we recieved your order.
 
-返品、交換をご希望の場合や、注文内容を確認したい場合は、以下の注文履歴からどうぞ。
+If you want to make sure your order, please following order history.
 {URL_BILL}
 
-このメールは自動送信によって通知しております。
-ご注文頂いた商品はお支払いの確認が取れ次第、お手続き致します。
 
-ご注文番号 : {ORDER_ID}
-配送先情報 :
-	氏名 : {LAST_NAME} {FIRST_NAME}
-	郵便番号 : {ZIP_CODE}
-	住所 : {STATE} {ADDRESS} {ADDRESS2}
-	電話番号 : {PHONE}
+This mail is automaticaly send from server.
+As soon as confirmation of payment and order we will Procedures.
 
-ご注文内容 :
-商品名          　　                                 価格         数量
+Order date : {ORDER_DATE}
+Order ID : {ORDER_ID}
+Shipping :
+To : {LAST_NAME} {FIRST_NAME}
+Zip : {ZIP_CODE}
+Addresss : {ADDRESS} {ADDRESS2} , {STATE}
+Phone : {PHONE}
+
+Order purchase :
+Products name          　　                          Price       Qty
 --------------------------------------------------------------------
 {LIST_DATA}
 
-商品計 : {SUB_TOTAL}（内消費税 : {TAX}）
-送　料 : {SHIPPING_FEE}
-請求額 : {AMOUNT}
+Sub total : {SUB_TOTAL} Yen (including tax: {TAX} ）
+Shipping fee : {SHIPPING_FEE}Yen
+Amount : {AMOUNT} Yen
 
-お支払情報 : {PAYMENT_DESC}
+Pay by : {PAYMENT_DESC}
 
-ご利用有り難うございます。またのご注文をお待ち申し上げております。
 
-このメールは自動配信されておりますので、ご返信にならない様お願いします。
--------------------------
+Thank you for shopping. We looking forward to ordering again.
+
+this email is delivered automatically, please do not reply this address.
+------------------------------------------------------------------------
+
