@@ -77,6 +77,11 @@ class Controller_ItemList extends AbstractAction {
 		}
 		$this->action_index();
 	}
+	private function _get_youtubeThumnail($youtube_id){
+		$url = sprintf("http://gdata.youtube.com/feeds/api/videos/%s?v=2&alt=jsonc",$youtube_id);
+		$json = json_decode(file_get_contents($url));
+		return $json->data->thumbnail->hqDefault;
+	}
 	private function _get_itemDetail(){
 		$this->message = $this->mHandler->getMessage();
 		if (xoops_getrequest('item_id')){
@@ -90,6 +95,13 @@ class Controller_ItemList extends AbstractAction {
 		$_SESSION['bmcart']['category_id'] = $this->category_id = $this->mListData['category_id'];
 		$imageHandler = xoops_getmodulehandler('itemImages');
 		$this->imageObjects = $imageHandler->getImages($item_id);
+		for($i=0;$i<count($this->imageObjects);$i++){
+			$youtube_id = $this->imageObjects[$i]->getVar('youtube_id');
+			if ( $youtube_id ){
+				$img = $this->_get_youtubeThumnail($youtube_id);
+				$this->imageObjects[$i]->set("image_filename",$img);
+			}
+		}
 		if (!$this->image_id && $this->imageObjects){
 			$this->image_id = $this->imageObjects[0]->getVar('image_id');
 		}

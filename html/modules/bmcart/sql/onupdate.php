@@ -62,13 +62,20 @@ function bmcart_onupdate_base($module, $myDirName)
 	$tblName = $db->prefix($myDirName . "_orderItems");
 	$check_sql = "SELECT sku_id FROM " . $tblName;
 	if (!$db->query($check_sql)) {
-		$sql = "ALTER TABLE " . $tblName . "  ADD `sku_id` int(8) unsigned AFTER `item_id`";
+		$sql = "ALTER TABLE " . $tblName . " ADD `sku_id` int(8) unsigned AFTER `item_id`";
 		$db->queryF($sql);
 	}
 	$tblName = $db->prefix($myDirName . "_cart");
 	$check_sql = "SELECT sku_id FROM " . $tblName;
 	if (!$db->query($check_sql)) {
-		$sql = "ALTER TABLE " . $tblName . "  ADD `sku_id` int(8) unsigned AFTER `item_id`";
+		$sql = "ALTER TABLE " . $tblName . " ADD `sku_id` int(8) unsigned AFTER `item_id`";
+		$db->queryF($sql);
+	}
+	// 0.23 -> 0.24
+	$tblName = $db->prefix($myDirName . "_itemImages");
+	$check_sql = "SELECT youtube_id FROM " . $tblName;
+	if (!$db->query($check_sql)) {
+		$sql = "ALTER TABLE " . $tblName . " ADD `youtube_id` VARCHAR(11) NULL DEFAULT NULL AFTER `image_filename`";
 		$db->queryF($sql);
 	}
 	return TRUE;

@@ -40,6 +40,7 @@ class bmcart_ImageAdminEditForm extends XCube_ActionForm
 		$this->mFormProperties['item_id'] = new XCube_IntProperty('item_id');
 		$this->mFormProperties['image_filename'] = new XCube_StringProperty('image_filename');
 		$this->mFormProperties['upload_filename'] = new XCube_FileProperty('upload_filename');
+		$this->mFormProperties['youtube_id'] = new XCube_StringProperty('youtube_id');
 		$this->mFormProperties['weight'] = new XCube_IntProperty('weight');
 
 		//
@@ -60,6 +61,7 @@ class bmcart_ImageAdminEditForm extends XCube_ActionForm
 		}
 		$this->set('image_id', $obj->get('image_id'));
 		$this->set('image_filename', $obj->get('image_filename'));
+		$this->set('youtube_id', $obj->get('youtube_id'));
 		$this->set('weight', $obj->get('weight'));
 	}
 
@@ -73,6 +75,7 @@ class bmcart_ImageAdminEditForm extends XCube_ActionForm
 		} else {
 			$obj->set('image_filename', $this->get('image_filename'));
 		}
+		$obj->set('youtube_id', $this->get('youtube_id'));
 		$obj->set('weight', $this->get('weight'));
 	}
 

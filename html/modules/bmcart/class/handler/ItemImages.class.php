@@ -12,7 +12,8 @@ class bmcart_itemImagesObject extends XoopsSimpleObject
 	{
 		$this->initVar('image_id', XOBJ_DTYPE_INT, 0, true);
 		$this->initVar('item_id', XOBJ_DTYPE_INT, 0, true);
-		$this->initVar('image_filename', XOBJ_DTYPE_STRING, '', true, 255);
+		$this->initVar('image_filename', XOBJ_DTYPE_STRING, '', false, 255);
+		$this->initVar('youtube_id', XOBJ_DTYPE_STRING, null, false, 11);
 		$this->initVar('weight', XOBJ_DTYPE_INT, 0, true);
 	}
 }

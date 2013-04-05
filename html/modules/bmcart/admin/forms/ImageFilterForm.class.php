@@ -47,7 +47,11 @@ class bmcart_ImageFilterForm extends bmcart_AbstractFilterForm
 			$this->_mCriteria->add(new Criteria('image_filename', xoops_getrequest('image_filename')));
 		}
 
-		
+		if (isset($_REQUEST['youtube_id'])) {
+			$this->mNavi->addExtra('youtube_id', xoops_getrequest('youtube_id'));
+			$this->_mCriteria->add(new Criteria('youtube_id', xoops_getrequest('youtube_id')));
+		}
+
 		$this->_mCriteria->addSort($this->getSort(), $this->getOrder());
 	}
 }

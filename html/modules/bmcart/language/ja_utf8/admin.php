@@ -36,8 +36,9 @@ define('_MD_BMCART_ERROR_IMAGE_EXTENSION', '画像ファイルの拡張子が違
 define('_MD_BMCART_ERROR_IMAGE_MAXFILESIZE', '画像ファイルのサイズが大きすぎます。');
 define('_AD_BMCART_IMAGE_WEIGHT','表示ウエイト');
 define('_AD_BMCART_SMALL_IMAGE','アイコン・サイズ画像');
-define('_AD_BMCART_MIDIUM_IMAGE','サムネール・サイズ画像');
+define('_AD_BMCART_MEDIUM_IMAGE','サムネール・サイズ画像');
 define('_AD_BMCART_ORIGINAL_IMAGE','オリジナル・サイズ画像');
+define('_AD_BMCART_YOUTUBE_ID','YouTube ID');
 
 define('_AD_BMCART_SKU_LIST', '商品SKU一覧表');
 define('_AD_BMCART_TIPS_SKU_EDIT', '商品のSKUを登録します。１商品に何個でもSKUを設定出来ます。');

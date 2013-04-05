@@ -45,6 +45,7 @@ CREATE TABLE {prefix}_{dirname}_itemImages (
   `image_id` int(8) unsigned NOT NULL auto_increment,
   `item_id` int(8) unsigned NOT NULL,
   `image_filename` varchar(255),
+  `youtube_id` varchar(11),
   `weight` int(8) unsigned NOT NULL,
   PRIMARY KEY  (`image_id`)
 ) ENGINE = MYISAM;

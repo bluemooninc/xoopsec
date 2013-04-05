@@ -25,21 +25,26 @@
 		<{foreach item=img from=$imageObjects}>
 		<{if $img->getShow('image_id') eq $current_image}>
 		<div class="thumbnail">
+			<{if $img->getShow('youtube_id')}>
 			<a href="#myModal" role="button" data-toggle="modal">
-				<img name="imgonmouse" src="<{$xoops_url}>/uploads/m_<{$img->getShow('image_filename')}>" id="MainPhoto"/>
+				<img name="imgonmouse" src="<{$img->getShow('image_filename')}>" id="MainMovie"/>
 			</a>
+			<{else}>
+				<a href="#myModal" role="button" data-toggle="modal">
+				<img name="imgonmouse" src="<{$xoops_url}>/uploads/m_<{$img->getShow('image_filename')}>" id="MainPhoto"/>
+				</a>
+			<{/if}>
 		</div>
 		<div align="center">
 		<small><{$smarty.const._MD_BMCART_ITEM_IMAGE}></small>
 		</div>
 		<!-- Modal -->
-		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-		     aria-hidden="true">
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 				<h3 id="myModalLabel"><{$ListData.item_name}></h3>
 			</div>
-			<div class="modal-body">
+			<div class="modal-body" id="modal-body">
 				<p>
 					<img src="<{$xoops_url}>/uploads/<{$img->getShow('image_filename')}>" id="ModalPhoto" />
 				</p>
@@ -53,7 +58,11 @@
 		<div class="thumbnail">
 			<{foreach item=img from=$imageObjects}>
 			<a href="<{$xoops_url}>/modules/<{$dirname}>/itemList/itemDetail/<{$ListData.item_id}>/<{$img->getShow('image_id')}>">
+				<{if $img->getShow('youtube_id')}>
+				<img width="40px" src="<{$img->getShow('image_filename')}>" class="ChangePhoto" alt="<{$img->getShow('youtube_id')}>" />
+				<{else}>
 				<img src="<{$xoops_url}>/uploads/s_<{$img->getShow('image_filename')}>" class="ChangePhoto" />
+				<{/if}>
 			</a>
 			<{/foreach}>
 		</div>
@@ -73,6 +82,25 @@
 			<a class="badge" href="<{$xoops_url}>/modules/<{$dirname}>/admin/index.php?action=ItemEdit&item_id=<{$ListData.item_id}>" >
 				<{$smarty.const._MD_BMCART_EDIT}>
 			</a>
+			&nbsp;
+			<!-- Button to trigger modal -->
+			<a href="#LPModal" role="button" class="badge" data-toggle="modal">LP Code</a>
+			<!-- Modal -->
+			<div id="LPModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 id="LPModalLabel">LP Code</h3>
+				</div>
+				<div class="modal-body">
+						&lt;form method=&quot;post&quot; action=&quot;<{$xoops_url}>/modules/bmcart/itemList/addtocart&quot;&gt;
+						&lt;input type=&quot;hidden&quot; value=&quot;<{$ListData.item_id|xoops_escape}>&quot; name=&quot;item_id&quot;&gt;
+						&lt;input type=&quot;submit&quot; value=&quot;<{$smarty.const._MD_BMCART_ADDTOCART}>&quot; name=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;
+						&lt;/form&gt;
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+				</div>
+			</div>
 		</div>
 		<{/if}>
 	</div>
@@ -176,7 +204,12 @@
 			ImgSrc = ImgSrc.replace("s_","m_");
 			var MdlSrc = ImgSrc.replace("m_","");
 			var ImgAlt = $(this).attr("alt");
-			$("img#ModalPhoto").attr({src:MdlSrc,alt:ImgAlt});
+			if (ImgAlt){
+				document.getElementById("modal-body").innerHTML = '<p><iframe id="ytplayer" type="text/html" width="100%" height="360" src="https://www.youtube.com/embed/'+ImgAlt+'" frameborder="0" allowfullscreen ></iframe></p>';
+			}else{
+				document.getElementById("modal-body").innerHTML = '<p><img src="<{$xoops_url}>/uploads/'+MdlSrc+'" id="ModalPhoto" /></p>';
+			}
+			//$("img#ModalPhoto").attr({src:MdlSrc,alt:ImgAlt});
 			$("img#MainPhoto").attr({src:ImgSrc,alt:ImgAlt});
 			$("img#MainPhoto").hide();
 			$("img#MainPhoto").fadeIn("slow");

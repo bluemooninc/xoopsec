@@ -32,7 +32,12 @@
 		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_ITEM_ID}></td>
 			<td class="<{cycle values=" odd,even"}>">
+			<{if $actionForm->get('item_id')}>
+			<{xoops_input type=hidden name=item_id value=$actionForm->get('item_id')}>
+			<{$actionForm->get('item_id')}>
+			<{else}>
 			<{html_options name=item_id options=$itemOptions selected=$actionForm->get('item_id')}>
+			<{/if}>
 			</td>
 		</tr>
 		<tr>
@@ -41,7 +46,7 @@
 			<img src="<{$xoops_url}>/uploads/s_<{$actionForm->get('image_filename')}>" />
 		</tr>
 		<tr>
-			<td class="head"><{$smarty.const._AD_BMCART_MIDIUM_IMAGE}></td>
+			<td class="head"><{$smarty.const._AD_BMCART_MEDIUM_IMAGE}></td>
 			<td class="<{cycle values=" odd,even"}>">
 			<img src="<{$xoops_url}>/uploads/m_<{$actionForm->get('image_filename')}>" />
 		</tr>
@@ -57,6 +62,11 @@
 			<br />
 			<input type="file" name="upload_filename" size="50">
 			</td>
+		</tr>
+		<tr>
+			<td class="head"><{$smarty.const._AD_BMCART_YOUTUBE_ID}></td>
+			<td class="<{cycle values=" odd,even"}>">
+			<{xoops_input type=text name=youtube_id value=$actionForm->get('youtube_id')}>
 		</tr>
 		<tr>
 			<td class="head"><{$smarty.const._AD_BMCART_IMAGE_WEIGHT}></td>

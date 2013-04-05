@@ -23,6 +23,7 @@ class bmcart_ImageAdminDeleteForm extends XCube_ActionForm
 		$this->mFormProperties['image_id'] =new XCube_IntProperty('image_id');
 		$this->mFormProperties['item_id'] =new XCube_IntProperty('item_id');
 		$this->mFormProperties['image_filename'] = new XCube_StringProperty('image_filename');
+		$this->mFormProperties['youtube_id'] = new XCube_StringProperty('youtube_id');
 		//
 		// Set field properties
 		//
@@ -36,6 +37,7 @@ class bmcart_ImageAdminDeleteForm extends XCube_ActionForm
 		$this->set('image_id', $obj->get('image_id'));
 		$this->set('item_id', $obj->get('item_id'));
 		$this->set('image_filename', $obj->get('image_filename'));
+		$this->set('youtube_id', $obj->get('youtube_id'));
 	}
 
 	function update(&$obj)
