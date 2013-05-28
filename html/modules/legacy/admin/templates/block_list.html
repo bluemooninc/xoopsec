@@ -40,7 +40,7 @@
         <{$smarty.const._SEARCH}> :
         <input type="text" name="search" value="<{$filterForm->mKeyword}>"/>
         <{$smarty.const._AD_LEGACY_LANG_MOD_NAME}> :
-        <select name="dirname">
+        <select name="dirname" class="input-medium">
             <option value="0"><{$smarty.const._ALL}></option>
             <{foreach from=$modules item=module}>
             <{if is_object($filterForm->mModule)}>
@@ -58,7 +58,7 @@
             "cblock"}>selected="selected"<{/if}>><{$smarty.const._AD_LEGACY_LANG_CUSTOMBLOCK_EDIT}></option>
         </select>
         <{$smarty.const._AD_LEGACY_LANG_SIDE}> :
-        <select name="option_field">
+        <select name="option_field" class="input-medium">
             <{if $filterForm->mOptionField == "all"}>
             <option value="all" selected="selected"><{$smarty.const._ALL}></option>
             <{foreach from=$columnSideArr item=columnSide}>
@@ -74,7 +74,7 @@
             <{/if}>
         </select>
         <{$smarty.const._VIEW}> :
-        <select name="perpage">
+        <select name="perpage" class="input-small">
             <option value="<{$smarty.const.XCUBE_PAGENAVI_DEFAULT_PERPAGE}>"><{$smarty.const._SELECT}></option>
             <{foreach item=page from=$pageArr}>
             <{if $pageNavi->mPerpage == $page && $page != 0}>
@@ -104,68 +104,69 @@
 
 <form name="blockform" method="post" action="./index.php?action=BlockList">
     <{xoops_token form=$actionForm}>
-    <table class="outer">
+    <table class="table table-bordered">
         <tr>
             <th><{$smarty.const._AD_LEGACY_LANG_BID}>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_BID}>"><img
-                        src="<{" icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
+                        src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
                     title="<{$smarty.const._ASCENDING}>" /></a>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_BID}>"><img
-                        src="<{" icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
+                        src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
                     title="<{$smarty.const._DESCENDING}>" /></a></th>
             <th><{$smarty.const._AD_LEGACY_LANG_BLOCK_MOD}>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_MID}>"><img
-                        src="<{" icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
+                        src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
                     title="<{$smarty.const._ASCENDING}>" /></a>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_MID}>"><img
-                        src="<{" icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
+                        src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
                     title="<{$smarty.const._DESCENDING}>" /></a></th>
             <th><{$smarty.const._AD_LEGACY_LANG_TITLE}>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_TITLE}>"><img
-                        src="<{" icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
+                        src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
                     title="<{$smarty.const._ASCENDING}>" /></a>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_TITLE}>"><img
-                        src="<{" icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
+                        src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
                     title="<{$smarty.const._DESCENDING}>" /></a></th>
             <th><{$smarty.const._AD_LEGACY_LANG_SIDE}>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_SIDE}>"><img
-                        src="<{" icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
+                        src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
                     title="<{$smarty.const._ASCENDING}>" /></a>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_SIDE}>"><img
-                        src="<{" icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
+                        src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
                     title="<{$smarty.const._DESCENDING}>" /></a><br/>
                 <{$smarty.const._AD_LEGACY_LANG_LCR}>
             </th>
-            <th><{$smarty.const._AD_LEGACY_LANG_WEIGHT}>
+            <th width="5%"><{$smarty.const._AD_LEGACY_LANG_WEIGHT}>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_WEIGHT}>"><img
-                        src="<{" icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
+                        src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
                     title="<{$smarty.const._ASCENDING}>" /></a>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_WEIGHT}>"><img
-                        src="<{" icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
+                        src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
                     title="<{$smarty.const._DESCENDING}>" /></a></th>
-            <th><{$smarty.const._AD_LEGACY_LANG_BCACHETIME}>
+            <th width="5%"><{$smarty.const._AD_LEGACY_LANG_BCACHETIME}>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_BCACHETIME}>"><img
-                        src="<{" icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
+                        src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
                     title="<{$smarty.const._ASCENDING}>" /></a>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_BCACHETIME}>"><img
-                        src="<{" icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
+                        src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
                     title="<{$smarty.const._DESCENDING}>" /></a></th>
             <th><{$smarty.const._AD_LEGACY_LANG_LAST_MODIFIED}>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_LAST_MODIFIED}>"><img
-                        src="<{" icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
+                        src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>"
                     title="<{$smarty.const._ASCENDING}>" /></a>
                 <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_LAST_MODIFIED}>"><img
-                        src="<{" icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
+                        src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>"
                     title="<{$smarty.const._DESCENDING}>" /></a></th>
-            <th><{$smarty.const._AD_LEGACY_LANG_UNINSTALL}><br/>
-                <input name="allbox" id="allbox"
-                       onclick="with(document.blockform){for(i=0;i<length;i++){if(elements[i].type=='checkbox'&&elements[i].disabled==false&&elements[i].name.indexOf('uninstall')>=0){elements[i].checked=this.checked;}}}"
-                       type="checkbox" value="Check All"/></th>
             <th><{$smarty.const._AD_LEGACY_LANG_CONTROL}></th>
         </tr>
         <{foreach item=obj from=$objects}>
         <tr class="<{cycle values='odd,even'}>">
-            <td class="legacy_list_id"><{$obj->getShow('bid')}></td>
+            <td class="legacy_list_id" valign="middle">
+				<label>
+				<input type="checkbox" name="uninstall[<{$obj->get('bid')}>]" value="1"/>
+				<{$obj->getShow('bid')}>
+				</label>
+			</td>
             <td class="legacy_list_name">
                 <{if $obj->mModule}>
                 <span class="legacy_blocktype_module"><{$obj->mModule->getVar('name')}></span>
@@ -184,6 +185,7 @@
             </td>
             <td class="legacy_blockside">
                 <{strip}>
+				<label>
                 <{if $obj->get('side') == 25}>
                 <div class="legacy_blocksideInput active">
                     <{xoops_input type=radio name=side key=$obj->get('bid') value=25 default=$obj->get('side')}>
@@ -193,7 +195,9 @@
                     <{xoops_input type=radio name=side key=$obj->get('bid') value=25 default=$obj->get('side')}>
                 </div>
                 <{/if}>
-                <div class="legacy_blockside_separator">:</div>
+				</label>
+				<br />
+				<label>
                 <{if $obj->get('side') == 0}>
                 <div class="legacy_blocksideInput active">
                     <{xoops_input type=radio name=side key=$obj->get('bid') value=0 default=$obj->get('side')}>
@@ -241,38 +245,41 @@
                     <{xoops_input type=radio name=side key=$obj->get('bid') value=1 default=$obj->get('side')}>
                 </div>
                 <{/if}>
+				</label>
                 <{/strip}>
             </td>
             <td class="legacy_list_select">
-                <{xoops_input type=text name=weight size=4 key=$obj->get('bid') value=$obj->get('weight')
-                class=legacy_list_number}>
+                <{xoops_input type=text name=weight size=4 key=$obj->get('bid') value=$obj->get('weight') class=input-tiny}>
             </td>
             <td class="legacy_list_select">
-                <select name="bcachetime[<{$obj->getShow('bid')}>]">
+                <select name="bcachetime[<{$obj->getShow('bid')}>]" class="input-medium">
                     <{assign var="bid" value=$obj->getShow('bid') }>
                     <{xoops_optionsArray id="bcachetime[`$bid`]" from=$cachetimeArr value=cachetime label=label
                     default=$obj->get('bcachetime')}>
                 </select>
             </td>
             <td class="legacy_list_date"><{$obj->getShow('last_modified')|xoops_formattimestamp:l}></td>
-            <td class="legacy_list_select"><input type="checkbox" name="uninstall[<{$obj->get('bid')}>]" value="1"/>
-            </td>
+
             <td class="legacy_list_control">
                 <{if $obj->get('block_type') == 'C'}>
-                <a href="./index.php?action=CustomBlockEdit&amp;bid=<{$obj->getShow('bid')}>"><img src="<{" icons/block_edit.png"|theme}>"
+                <a href="./index.php?action=CustomBlockEdit&amp;bid=<{$obj->getShow('bid')}>"><img src="<{"icons/block_edit.png"|theme}>"
                     alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._EDIT}>" /></a>
                 <{else}>
-                <a href="./index.php?action=BlockEdit&amp;bid=<{$obj->getShow('bid')}>"><img src="<{" icons/block_edit.png"|theme}>"
+                <a href="./index.php?action=BlockEdit&amp;bid=<{$obj->getShow('bid')}>"><img src="<{"icons/block_edit.png"|theme}>"
                     alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._EDIT}>" /></a>
                 <{/if}>
-                <a href="./index.php?action=BlockUninstall&amp;bid=<{$obj->getShow('bid')}>"><img src="<{" icons/block_remove.png"|theme}>"
+                <a href="./index.php?action=BlockUninstall&amp;bid=<{$obj->getShow('bid')}>"><img src="<{"icons/block_remove.png"|theme}>"
                     alt="<{$smarty.const._AD_LEGACY_LANG_UNINSTALL}>"
                     title="<{$smarty.const._AD_LEGACY_LANG_UNINSTALL}>" /></a>
             </td>
         </tr>
         <{/foreach}>
         <tr>
-            <td colspan="11" class="foot">
+            <td colspan="7" class="foot">
+				<input name="allbox" id="allbox"
+					   onclick="with(document.blockform){for(i=0;i<length;i++){if(elements[i].type=='checkbox'&&elements[i].disabled==false&&elements[i].name.indexOf('uninstall')>=0){elements[i].checked=this.checked;}}}"
+					   type="checkbox" value="Check All"/><{$smarty.const._AD_LEGACY_LANG_UNINSTALL}>
+			<td class="foot">
                 <input type="submit" value="<{$smarty.const._SUBMIT}>" class="formButton"/>
             </td>
         </tr>

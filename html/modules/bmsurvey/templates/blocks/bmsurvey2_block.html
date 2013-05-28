@@ -1,0 +1,12 @@
+<!-- begin of bmsurvey blog block -->
+<ul>
+	<{foreach from=$block.form item=list }>
+	<li><{$list.last_update_m}> <a
+		href="<{$block.url}>/webform.php?name=<{$list.name}>"><{$list.title}></a>&nbsp;
+		<{$list.subtitle}> <{if ($xoops_isuser)}> <{if ($list.submitted)}> <img
+		src="<{$block.url>/images/checked.png" alt="Checked"
+		title="<{$list.submitted|date_format:'%Y-%m-%d %H:%M'}>" /> <{/if}>
+		<{/if}>
+	</li> <{/foreach}>
+</ul>
+<!-- end of bmsurvey blog block -->

@@ -1,0 +1,111 @@
+<table class="table">
+	<{foreach name=previewLoop from=$tpl_vars.preview item=preview}>
+	<tr>
+		<td>
+			<h3>
+				(<{$smarty.foreach.previewLoop.iteration}>)
+				<{if $preview.content}>
+				<{$preview.content}>
+			<{else}>
+				<{$smarty.const._MB_New_Field}>
+			<{/if}>
+			</h3>
+			<p>
+				<a class="badge<{if $preview.id==$tpl_vars.id}> badge-important<{/if}>"
+				   href="<{$xoops_url}>/modules/bmsurvey/EditForm/question/<{$preview.id}>">
+					<{$smarty.const._EDIT}>
+				</a>
+				<a class="badge" href="<{$xoops_url}>/modules/bmsurvey/EditForm/deleteQuestion/<{$preview.id}>">
+					<{$smarty.const._DELETE}>
+				</a>
+				<a class="badge" href="<{$xoops_url}>/modules/bmsurvey/EditForm/UpQuestion/<{$preview.id}>">
+					<{$smarty.const._MB_GO_UP}>
+				</a>
+				<a class="badge" href="<{$xoops_url}>/modules/bmsurvey/EditForm/DownQuestion/<{$preview.id}>">
+					<{$smarty.const._MB_GO_DOWN}>
+				</a>
+			</p>
+			<{foreach from=$preview.tag item=tag}>
+				<{if $tag.type == 'text'}>
+					<input type="text" name="<{$tag.name}>" value="<{$tag.value}>" <{if $tag.length}>maxlength="<{$tag.length}>"<{/if}> />
+				<{elseif $tag.type == 'textarea'}>
+					<textarea name="<{$tag.name}>"<{if $tag.cols}> wrap="<{$tag.wrap|lower}>"<{/if}><{if $tag.rows}> rows="<{$tag.rows}>"<{/if}>>
+					<{$tag.value}>
+					</textarea>
+				<{elseif $tag.type == 'radio'}>
+					<input type="radio" name="<{$tag.name}>" value="<{$tag.value}>"<{if $tag.checked}> checked="checked"<{/if}> />
+					<{$tag.message}>
+				<{elseif $tag.type == 'checkbox'}>
+					<input type="checkbox" name="<{$tag.name}>[]" value="<{$tag.value}>" <{if $tag.checked}> checked="checked"<{/if}> />
+					<{$tag.message}>
+				<{elseif $tag.type == 'select'}>
+					<select name="<{$tag.name}>">
+					<option></option>
+					<{foreach from=$tag.value item=option}>
+						<option value="<{$option.value}>" <{if $option.checked}> selected="selected"<{/if}>><{$option.content}></option>
+					<{/foreach}>
+					</select>
+				<{elseif $tag.type == 'button' && $bmsurvey.config.mode != 'mobile'}>
+					<button type="button" class="btn" name="<{$tag.name}>" <{if $tag.onclick}> onclick="<{$tag.onclick}>"<{/if}>>
+					<{$tag.value}>
+					</button>
+				<{/if}>
+			<{/foreach}>
+		</td>
+	<{if $preview.id==$tpl_vars.id}>
+		<td>
+			<div class="alert fade in">
+				<button class="close" data-dismiss="alert" type="button">×</button>
+				<strong><{$smarty.const.BMSURVEY_TABS_QUESTIONS_QUESTION_CONTENT}></strong>
+				<label>
+				<textarea name="content" wrap="VIRTUAL" rows="1" cols="40"><{$tpl_vars.currentObject->getShow("content")}></textarea>
+				</label>
+				<strong><{$tpl_vars.edit.type_id.label}></strong>
+				<label>
+					<select name="type_id">
+						<{foreach from=$tpl_vars.edit.type_id.tag.value item=option}>
+							<option value="<{$option.value}>" <{if $option.checked}> selected="selected"<{/if}>><{$option.content}></option>
+						<{/foreach}>
+					</select>
+				</label>
+				<strong><{$tpl_vars.edit.required.label}></strong>
+				<label>
+					<select name="required">
+						<{foreach from=$tpl_vars.edit.required.tag.value item=option}>
+						<option value="<{$option.value}>" <{if $option.checked}> selected="selected"<{/if}>><{$option.content}></option>
+						<{/foreach}>
+					</select>
+				</label>
+				<strong><{$smarty.const.BMSURVEY_TABS_QUESTIONS_CHOICES_INFOS}></strong>
+				<input type="hidden" name="num_choices" value="<{$bmsurvey.content.currentQuestion.num_choices}>"/>
+				<{if $tpl_vars.choiceObjects}>
+					<{foreach name=choiceLoop from=$tpl_vars.choiceObjects item=choiceObject}>
+						<label>
+						<{$smarty.foreach.choiceLoop.iteration}>
+						<input type="text" size="25" name="choiceId_<{$choiceObject->getShow('id')}>" value="<{$choiceObject->getShow('value')}>"/>
+						<a class="btn" href="<{$xoops_url}>/modules/bmsurvey/EditForm/deleteChoice/<{$choiceObject->getShow('id')}>">
+							<{$smarty.const._DELETE}>
+						</a>
+						</label>
+					<{/foreach}>
+				<{/if}>
+				<label>
+					<a class="btn" href="<{$xoops_url}>/modules/bmsurvey/EditForm/addChoice/<{$tpl_vars.id}>">
+						<{$smarty.const._MB_Add_another_answer_line}>
+					</a>
+					<input class="btn btn-warning" type="submit" name="saveQuestion" value="<{$smarty.const._MB_Save}>"/>
+					<input type="hidden" name="id" value="<{$tpl_vars.id}>"/>
+					<input type="hidden" name="length" value=""/>
+					<input type="hidden" name="precise" value=""/>
+				</label>
+			</div>
+		</td>
+	<{/if}>
+	</tr>
+	<{/foreach}>
+</table>
+<a class="badge" href="<{$xoops_url}>/modules/bmsurvey/EditForm/addQuestion/<{$form_id}>">
+	<{$smarty.const._MB_New_Field}>
+</a>
+
+<div class="bmsurvey-tabs-choicesinfos-description"><{$bmsurvey.langs.choices_description}></div>

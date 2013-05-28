@@ -1,0 +1,97 @@
+<{* $Id: bmsurvey_manage.html,v 1.0 2009/01/29 makinosuke Exp $ *}>
+<!-- FormMakeX v.<{$version}> by Bluemoon.inc (http://www.bluemooninc.biz/) // -->
+<!-- template: "<{$smarty.template}>", script: "<{$smarty.server.SCRIPT_NAME}>" // -->
+
+<{* Query Variables
+**************************************************************************}>
+<{capture
+assign=query_where}><{$smarty.get.where}><{$smarty.post.where}><{/capture}>
+<{capture
+assign=query_op}><{$smarty.get.op}><{$smarty.post.op}><{/capture}>
+<{capture
+assign=query_sid}><{$smarty.get.sid}><{$smarty.post.sid}><{/capture}>
+<{capture
+assign=query_rid}><{$smarty.get.rid}><{$smarty.post.rid}><{/capture}>
+<{capture
+assign=query_cross}><{$smarty.get.cross}><{$smarty.post.cross}><{/capture}>
+<{capture
+assign=query_type}><{$smarty.get.type}><{$smarty.post.type}><{/capture}>
+<{capture
+assign=query_qidc}><{$smarty.get.qidc}><{$smarty.post.qidc}><{/capture}>
+<{capture
+assign=query_qidr}><{$smarty.get.qidr}><{$smarty.post.qidr}><{/capture}>
+<{capture
+assign=query_tab}><{$smarty.get.tab}><{$smarty.post.tab}><{/capture}>
+
+<div id="bmsurvey-manage-contents-wrap" class="bmsurvey-contents-wrap">
+	<div class="bmsurvey-manage-contents-wrap-innr">
+		<div class="bmsurvey-contents-head">
+			<h1><{$smarty.const._AM_BMSURVEY_MANAGE}></h1>
+
+			<div class="bmsurvey-contents-nav">
+				<div class="bmsurvey-contents-navl"></div>
+				<div class="bmsurvey-contents-navr">
+					<a href="index.php?manage_on=1"
+					   target="_top"><{$smarty.const._MB_Go_back_to_Management_Interface}></a>
+				</div>
+			</div>
+		</div>
+		<div class="bmsurvey-contents-body">
+			<div class="bmsurvey-contents-nav">
+				<div class="bmsurvey-contents-navl"></div>
+				<div class="bmsurvey-contents-navr"></div>
+			</div>
+
+			<{* Form Settings View
+			**************************************************************************}>
+			<{if $query_where == '' || $query_where == 'manage'}>
+				<a class="btn" href="<{$xoops_url}>/modules/bmsurvey/manage/new">
+					<{$smarty.const._MB_Create_a_New_Form}>
+				</a>
+				<{include file="db:bmsurvey_list.html"}>
+			<{elseif $query_where =='crossset'}>
+				<{include file="db:bmsurvey_manage_crossset.html"}>
+			<{elseif $query_where == 'crosstab'}>
+				<{include file="db:bmsurvey_manage_crosstab.html"}>
+			<{elseif $query_where == 'results'}>
+			<h2><{$smarty.const._MB_View_Form_Results}></h2>
+			<table>
+				<thead>
+				<tr>
+					<th><{$smarty.const._MB_General}></th>
+					<th><{$smarty.const._MB_LIST_NAME}></th>
+				</tr>
+				</thead>
+				<tbody>
+				<{foreach key=key item=value from=$form}>
+					<{if $key !='questions'}>
+						<{if $key == 'title'}>
+				<tr>
+					<th><{$smarty.const._MB_Title}></th>
+					<td><{$value}></td>
+				</tr>
+						<{elseif $key == 'subtitle'}>
+				<tr>
+					<th><{$smarty.const._MB_Subtitle}></th>
+					<td><{$value}></td>
+				</tr>
+						<{/if}>
+					<{/if}>
+				<{/foreach}>
+				</tbody>
+			</table>
+			<{include file="db:bmsurvey_manage_results.html"}> <{/if}>
+
+
+			<div class="bmsurvey-contents-nav">
+				<div class="bmsurvey-contents-navl"></div>
+				<div class="bmsurvey-contents-navr"></div>
+			</div>
+		</div>
+		<div class="bmsurvey-contents-foot">
+			<div class="bmsurvey-contents-nav">
+				<div class="bmsurvey-contents-navl"></div>
+			</div>
+		</div>
+	</div>
+</div>

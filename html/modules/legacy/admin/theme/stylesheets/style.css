@@ -6,9 +6,26 @@
 	(c) 2008
 */
 
+.sticky, .ondemand {
+    background: -moz-linear-gradient(center top , #444 20%, #555 50%) repeat scroll 0 0 transparent !important;
+    border-left: 2px solid #FFFFFF !important;
+    border-radius: 0 0 3px 3px !important;
+    border-right: 2px solid #FFFFFF !important;
+    box-shadow: 1px 1px 7px #676767;
+    color: white;
+    height: 40px !important;
+    width: 400px;
+    left: auto !important;
+    right: 0px;
+    z-index: 2000;
+}
 * {
 	margin:0;
 	padding:0;
+}
+
+#admincontent {
+    padding: 27px 0 0;
 }
 
 body {
@@ -16,7 +33,6 @@ body {
 	font-size:12px;
 	line-height:130%;
 	font:12px/1.5em Arial, Helvetica, sans-serif;
-	background:#fff url(../design/bg_page.jpg) top left repeat-x;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,12 +54,13 @@ h6 {
 }
 
 a, a:visited {
-	color:#3F4D6B;
+	color: #fafaff;
 	font-weight:normal;
 	text-decoration:none;
 }
 a:hover, a:active {
 	color:#F29B09;
+    text-decoration:none;
 }
 
 img {
@@ -80,9 +97,13 @@ td {
 	vertical-align:top;
 }
 th {
-	text-align:center;
-	padding:5px 1px;
-	background:#eee url(../design/bg_blocktitle.png) top left repeat-x;
+    background: -moz-linear-gradient(center bottom , #DDDDDD 0%, #FAFAFA 100%) repeat scroll 0 0 transparent;
+    border-top: 1px solid #FFFFFF;
+    color: #505050;
+    outline: medium none;
+    padding-left: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 th a {
 	font-weight:bold;
@@ -137,6 +158,9 @@ table.outer {
 	margin:10px 0;
 	border:1px solid #ddd;
 }
+table.outer a {
+    color: #000000;
+}
 .head {
 	background:#dddddd;
 	padding:5px 3px;
@@ -144,7 +168,7 @@ table.outer {
 .foot {
 	padding:6px 4px;
 	text-align: center;
-	background:url(../design/bg_footer.png) top left repeat-x;
+    background-color: #aaaaaa;
 }
 
 .odd {
@@ -170,14 +194,19 @@ tr .even td {
 /* ====================================================== header ===== */
 
 #header {
-	height:100px;
+    background-color: #333333;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 0.75em;
+    height: 25px;
+    left: 0;
+    padding: 0 1em;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-#header .logo a {
-	float:left;
-	padding:14px;
-	font-size:20px;
-	color:#FFF;
+#header a {
+	color:#eee;
 }
 
 #header .logo a:hover {
@@ -203,11 +232,30 @@ tr .even td {
 }
 
 #header .topnav span.linkadmin { float:left;}
-#header .topnav span.linkadmin a, span.linksite a { margin-right:10px;}
+#header .topnav span.linkadmin a, span.linksite a {
+    margin-right:10px;
+    color: #eee;
+}
 
 /* ====================================================== LeftColumn ===== */
+.sidebar-nav .nav-header {
+    background: -moz-linear-gradient(center bottom , #333333 0%, #404040 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #0D0D0D;
+    border-left: medium none;
+    border-top: 1px solid #4D4D4D;
+    color: #DDDDDD;
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 2.5em;
+    margin: 0;
+    padding: 0 0.25em;
+    text-shadow: none;
+    text-transform: none;
+}
 
 #leftcolumn {
+    background-color: #222;
 	width:190px;
 	padding:10px;
 }
@@ -216,18 +264,16 @@ tr .even td {
 	font-weight:bold;
 	border:1px solid #E5E5E5;
 	text-align:left;
-	background:url(../design/bg_blocktitle.png) left top repeat-x;
 }
 #leftcolumn .head a, #leftcolumn .head a:visited {
 	font-weight:bold;
 }
 
 #leftcolumn .head2 {
-	padding:5px;
-	text-align:left;		
+	padding:0;
+	text-align:left;
 	border-top:1px solid #fff;
 	border-bottom:1px solid #D4D4FF;
-	background:url(../design/bg_blocktitle2.png) left top repeat-x;
 }
 #leftcolumn .head2 a {
 	font-weight:bold;
@@ -237,13 +283,11 @@ tr .even td {
 	margin:0px;
 	padding:3px 2px;
 	display:none;	
-	background:url(../design/bg_blockcontent.png) left top repeat-x;
 }
 #leftcolumn .submenu li {
 	margin:0;
 	padding:2px 2px 2px 17px;
 	list-style:none;
-	background:url(../design/menulist.png) center left no-repeat;
 }
 
 /* ====================================================== Center Column ===== */
@@ -257,13 +301,20 @@ tr .even td {
 	background:#fff;
 	padding:10px;
 }
+#contentBody a{
+    color: #000000;
+}
+
+.nav-tabs{
+    margin: 0 !important;
+}
 
 #footer {
 	padding:15px 0;	
 	text-align:center;
 	font-size:0.9em;
 	border-top:1px solid #ddd;
-	background:url(../design/bg_footer.png) top left repeat-x;
+    background-color: #F5F5F5;
 }
 
 .return_top {
@@ -278,7 +329,9 @@ tr .even td {
 	border-bottom:1px solid #ccc;
 	background:#f2f2f2 url(../icons/page_up.png) left center no-repeat;
 }
-
+.return_top a {
+    color: #000000;
+}
 /* ====================================================== MenuNavi for noscript ===== */
 
 #menunavi {
@@ -306,24 +359,32 @@ ul.submenunavi li {
 	border-bottom:1px solid #cccccc;
 	background:#f8f8ff;
 }
-
+ul.submenunavi a{
+    color: #000000;
+}
 /* ====================================================== Admin Navi ===== */
 
 .adminnavi {
-	margin:0px -3px 20px -3px;
-	padding:5px 10px;
-	border:1px solid #EEE;
-	border-bottom:1px solid #fff;
-	background:#FBFBFB url(../design/bg_blockcontent.png) 0px -25px repeat-x;
+    margin: 0;
+    background: -moz-linear-gradient(center bottom , #E6E6E6 0%, #FFFFFF 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    padding: 10px 1.25em 10px;
+    font-weight: bold;
 }
 .adminnavi a:link , .adminnavi a:visited {
-	font-weight:bold;
+    font-weight:bold;
+    color: #333333;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 1em 0;
+    padding: 0;
 }
 .adminnavi a:hover {
 	font-weight:bold;
 }
 .adminnaviTitle {
-	font-size:16px;
 	font-weight:bold;
 }
 h3.admintitle {
@@ -344,7 +405,9 @@ ul.toptab li {
 	border-right:1px solid #ddd;
 	border-bottom:1px solid #ccc;	
 }
-
+ul.toptab a {
+    color: #000000;
+}
 /* ====================================================== Buttons ===== */
 
 ul.toptab li.add {
@@ -524,17 +587,6 @@ background:#f2f2f2 url(../icons/view.png) 5px center no-repeat;
 	background:#E4E4E4 url(../icons/update.png) no-repeat 5px 4px;
 }
 
-/* ====================================================== active ===== */
-
-.active {
-	background-color:#E6FFE6;
-}
-.active a:hover {
-		color:#cc0000;
-}
-.inactive {
-		color:#333333; 
-}
 /* ====================================================== Ranking ===== */
 
 .user_module_error {

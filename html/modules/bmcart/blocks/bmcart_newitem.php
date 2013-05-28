@@ -6,6 +6,7 @@
  * Licence : GPL V3 licence
  */
 // TODO : array_flatten move to more abstruct class
+
 function _array_flatten($array)
 {
 	$result = array();
@@ -15,7 +16,6 @@ function _array_flatten($array)
 	});
 	return $result;
 }
-
 function b_bmcart_newitem_show()
 {
 	// For Category Selector
@@ -44,16 +44,13 @@ function b_bmcart_newitem_show()
 		$item_id = $object->getVar('item_id');
 		$itemObject = $itemHandler->get($item_id);
 		if ($itemObject){
-			$imageCriteria = new Criteria('item_id', $item_id);
-			$imageObjects = $imageHandler->getObjects($imageCriteria);
-			$images = array();
-			foreach ($imageObjects as $imageObject) {
-				$images[] = $imageObject->getVar("image_filename");
-			}
+			$imageCriteria = new CriteriaCompo();
+			$imageCriteria->add(new Criteria('item_id', $item_id));
+			$imageCriteria->addsort('weight');
 			$myRow = array(
 				"item_id" => $object->getVar("item_id"),
 				"item_name" => $itemObject->getVar("item_name"),
-				"images" => $images
+				"images" => $imageHandler->getObjects($imageCriteria)
 			);
 			$blockNumber = 'block' . intval($i/4);
 			$mListData[$blockNumber][] = $myRow;

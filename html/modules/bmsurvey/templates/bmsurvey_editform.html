@@ -1,0 +1,28 @@
+<h1><{$smarty.const._MB_Edit_a_Form}>&nbsp;-&nbsp;<{$tab.title}></h1>
+<{$tab.description}>
+<{if $error_message}>
+	<ul>
+	<{foreach from=$error_message item=error name=errors}>
+	<li><{$error}></li>
+	<{/foreach}>
+	</ul>
+<{/if}>
+<form method="post" action="<{$xoops_url}>/modules/bmsurvey/EditForm/switchTab" name="phpesp">
+<ul class="nav nav-tabs">
+	<input type="submit" class="btn<{if $tab.name == 'general'}> btn-primary<{/if}>" name="general" value="<{$smarty.const._MB_General}>" />
+	<input type="submit" class="btn<{if $tab.name == 'questions'}> btn-primary<{/if}>" name="questions" value="<{$smarty.const._MB_Questions}>" />
+	<a class="btn" href="<{$xoops_url}>/modules/bmsurvey"><{$smarty.const._MB_Finish}></a>
+</ul>
+<input type="hidden" name="form_id" value="<{$form_id}>">
+<input type="hidden" name="tab" value="<{$tab.name}>">
+<p><{$bmsurvey.content.guide}></p>
+<{if $tab.name == "general"}>
+	<{include file="db:bmsurvey_general.html"}>
+<{elseif $tab.name == "questions"}>
+	<{include file="db:bmsurvey_questions.html"}>
+<{elseif $tab.name == "order"}>
+	<{include file="db:bmsurvey_order.html"}>
+<{elseif $tab.name == "preview"}>
+	<{include file="db:bmsurvey_preview.html"}>
+<{/if}>
+</form>

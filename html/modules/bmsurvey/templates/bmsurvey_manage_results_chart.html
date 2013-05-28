@@ -1,0 +1,94 @@
+<{* $Id: bmsurvey_manage_results_chart.html,v 1.0 2009/02/10 makinosuke
+Exp $ *}>
+<!-- FormMakeX v.<{$version}> by Bluemoon.inc (http://www.bluemooninc.biz/) -->
+<!-- template: "<{$smarty.template}>", script: "<{$smarty.server.SCRIPT_NAME}>" -->
+
+<{if $question.typename == 'yesno' || $question.typename == 'radio' ||
+$question.typename == 'dropdown'}> <{* Bar chart (Buildup percentage)
+*}>
+<div class="question-chart chart-builduppercentage">
+	<div class="chart-builduppercentage-chart">
+		<{foreach from=$question.responses item=response name=builduppercentage}>
+		<div style="width: <{$response.percentage_countNA|floor}>%" class="chart-builduppercentage-data chart-builduppercentage-data-<{$smarty.foreach.builduppercentage.iteration%8}>">
+			<span><{$response.subtotal}>(<{$response.percentage_countNA|round:1}> %)</span>
+		</div>
+		<{/foreach}>
+		<div style="width: <{$question.NA_total_percentage|floor}>%"
+			class="chart-builduppercentage-data chart-builduppercentage-data-na">
+			<{if $question.NA_total}>
+				<span>
+				<{$question.NA_total}> (<{$question.NA_total_percentage|round:1}> %)
+				</span>
+			<{/if}>
+		</div>
+	</div>
+	<div class="chart-builduppercentage-legend">
+		<ul>
+			<{foreach from=$question.responses item=response name=builduppercentage_legend}>
+				<li class="chart-builduppercentage-data-legend-<{$smarty.foreach.builduppercentage_legend.iteration%8}>">
+				<span class="chart-builduppercentage-data-legend-colors"></span> 
+				<span>"<{$response.response}>": <{$response.subtotal}> (<{$response.percentage_countNA|round:1}>%)</span>
+				</li> 
+			<{/foreach}>
+			<li class="chart-builduppercentage-data-legend-na">
+				<span class="chart-builduppercentage-data-legend-colors"></span> 
+				<span>
+				"<{$smarty.const._AM_BMSURVEY_NA}>" :<{$question.NA_total}> (<{$question.NA_total_percentage|round:1}>%)
+				</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<{elseif $question.typename == 'checkbox'}> 
+<{* Bar chart (Percentage) *}>
+<div class="question-chart chart-percentagebars">
+	<div class="chart-percentagebars-chart">
+		<{foreach from=$question.responses item=response name=percentagebars}>
+			<div style="width: <{$response.percentage|round:1}>%" class="chart-percentagebar-data chart-percentagebar-data-<{$smarty.foreach.percentagebars.iteration%8}>">
+			<span><{$response.subtotal}>(<{$response.percentage|round:1}> %)</span>
+			</div>
+		<{/foreach}>
+		<div style="width: <{$question.NA_total_percentage|round:1}>%;" class="chart-percentagebar-data chart-percentagebar-data-na">
+			<span><{$question.NA_total}> (<{$question.NA_total_percentage|round:1}> %)</span>
+		</div>
+	</div>
+	<div class="chart-builduppercentage-legend">
+		<ul>
+			<{foreach from=$question.responses item=response name=percentagebars_legend}>
+			<li class="chart-percentagebar-data-legend-<{$smarty.foreach.percentagebars_legend.iteration%8}>">
+				<span class="chart-percentagebar-data-legend-colors"></span> 
+				<span>"<{$response.response}>" : <{$response.subtotal}> (<{$response.percentage|round:1}>%)</span>
+			</li>
+			<{/foreach}>
+			<li class="chart-percentagebar-data-legend-na">
+				<span class="chart-percentagebar-data-legend-colors"></span>
+				<span>"<{$smarty.const._AM_BMSURVEY_NA}>" : <{$question.NA_total}> (<{$question.NA_total_percentage|round:1}> %)</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<{elseif $question.typename == 'rate'}> <{* Bar chart (Averages) *}>
+<div class="question-chart chart-percentagebars">
+	<div class="chart-percentagebars-chart">
+		<{foreach from=$question.responses item=response name=percentagebars}>
+		<div style="width: <{$response.average*20|floor}>%" class="chart-percentagebar-data chart-percentagebar-data-<{$smarty.foreach.percentagebars.iteration%8}>">
+			<span><{$response.average|round:1}></span>
+		</div>
+		<{/foreach}>
+	</div>
+	<div class="chart-builduppercentage-legend">
+		<ul>
+			<{foreach from=$question.responses item=response
+			name=percentagebars_legend}>
+			<li
+				class="chart-percentagebar-data-legend-<{$smarty.foreach.percentagebars_legend.iteration%8}>">
+				<span class="chart-percentagebar-data-legend-colors"></span> <span>"<{$response.subject}>"
+					: <{$response.average|round:1}></span>
+			</li> <{/foreach}>
+		</ul>
+	</div>
+</div>
+
+<{/if}>

@@ -1,0 +1,30 @@
+<{$preview.title}> <{$preview.hidden}>
+<hr>
+<{if $preview.sectionTitle}>
+<br />
+<b><{$preview.sectionTitle}></b>
+<{foreach item=v from=$preview.sectionValue}>
+<input type="submit" name="section" value="<{$v}>">
+<{/foreach}> <{/if}>
+<!-- for javascript -->
+<input type="hidden" name="tab" value="">
+<input type="hidden" name="q" value="">
+<!--<input type="hidden" name="response_id" value="<{$form.response_id}>">-->
+<!--  -->
+<input type="hidden" name="submit_jumpuri" value="<{$formheader.submit_jumpuri}>">
+<input type="hidden" name="referer" value="<{$formheader.referer}>">
+<input type="hidden" name="userid" value="<{$formheader.userid}>">
+<input type="hidden" name="sid" value="<{$formheader.sid}>">
+<input type="hidden" name="rid" value="<{$formheader.rid}>">
+<input type="hidden" name="sec" value="<{$formheader.sec}>">
+
+<{$formPage}> <{include file="db:bmsurvey_form.html"}>
+
+<p align="center">
+	<{$auth_response}> 
+<!-- 
+	<{foreach item=btn from=$preview.button}>
+<inpu type="submit" name="save" value="<{$btn}>">
+	<{/foreach}>
+ -->
+</p>

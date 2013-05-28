@@ -1,0 +1,78 @@
+
+<div>
+	<font color="#333333" size="small"><img
+		src="images/mobile_logo_360x60.gif" alt="�A���l�X�e�B�E�C���^�[�i�V���i����{" /></font>
+	<h1><{$bmsurvey.content.form.title}></h1>
+	<{if $bmsurvey.content.form.subtitle}>
+	<p><{$bmsurvey.content.form.subtitle}></p>
+	<{/if}>
+	<hr />
+	<{if $bmsurvey.content.form.info }>
+	<p><{$bmsurvey.content.form.info}></p>
+	<{/if}> <{if $bmsurvey.content.form.has_required}>
+	<p><{$bmsurvey.content.form.has_required}></p>
+	<{/if}> <{if $bmsurvey.content.form.message}>
+	<p><{$bmsurvey.content.form.message}></p>
+	<{/if}>
+	<hr />
+	<form name="<{$bmsurvey.content.form.name}>"
+		action="<{$bmsurvey.content.form.action}>"
+		enctype="<{$bmsurvey.content.form.enctype}>" method="post">
+		<{foreach from=$bmsurvey.content.hiddens key=hkey item=hitem}> <input
+			type="hidden" name="<{$hkey}>" value="<{$hitem}>" /> <{/foreach}>
+		<{foreach from=$bmsurvey.content.questions key=qkey item=qitem}> <{if
+		$qitem.type_id < 99}>
+		<div>
+			<h2>
+				<{$qitem.qnum}> <{$qitem.content}> <{if $qitem.required == 'Y'}><font
+					color="#ff0000">*</font><{/if}>
+			</h2>
+			<div>
+				<{if $qitem.type_id == 8}>
+				<table>
+					<thead>
+						<tr>
+							<td></td>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+							<td>5</td>
+						</tr>
+					</thead>
+					<tbody>
+						<{foreach from=$qitem.htmlTag item=trTag}>
+						<tr
+							class="bmsurvey-questionnaire-question-table-row-<{cycle values="odd,even"}>
+							"> <{foreach from=$trTag item=tdTag name=tdTag}> <{if
+							$smarty.foreach.tdTag.first}>
+							<td><{$tdTag.value}></td> <{else}>
+							<td><{if $tdTag.type == 'radio'}> <label> <input
+									type="radio" name="<{$tdTag.name}>" value="<{$tdTag.value}>"<{if
+									$tdTag.checked}> checked="checked"<{/if}> />
+							</label> <{/if}>
+							</td> <{/if}> <{/foreach}>
+						</tr>
+						<{/foreach}>
+					</tbody>
+				</table>
+				<{else}> <{include file="db:bmsurvey_form_forms.html"}> <{/if}>
+			</div>
+			<{else}>
+			<div class="bmsurvey-questionnaire-notquestion"><{$qitem.content}></div>
+			<{/if}> <{/foreach}>
+			<hr />
+			<{if $bmsurvey.content.buttons.prev}> <input type="submit"
+				name="<{$bmsurvey.content.buttons.prev.name}>"
+				value="<{$bmsurvey.content.buttons.prev.label}>" /> <{/if}> <{if
+			$bmsurvey.content.buttons.next}> <input type="submit"
+				name="<{$bmsurvey.content.buttons.next.name}>"
+				value="<{$bmsurvey.content.buttons.next.label}>" /> <{/if}> <{if
+			$bmsurvey.content.buttons.save}> <input type="submit"
+				name="<{$bmsurvey.content.buttons.save.name}>"
+				value="<{$bmsurvey.content.buttons.save.label}>" /> <{/if}> <{if
+			$bmsurvey.content.buttons.submit}> <input type="submit"
+				name="<{$bmsurvey.content.buttons.submit.name}>"
+				value="<{$bmsurvey.content.buttons.submit.label}>" /> <{/if}>
+	</form>
+</div>

@@ -1,0 +1,70 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+
+// Note: `.thumbnails` and `.thumbnails > li` are overriden in responsive files
+
+// Make wrapper ul behave like the grid
+.thumbnails {
+  margin-left: -@gridGutterWidth;
+  list-style: none;
+  .clearfix();
+}
+// Fluid rows have no left margin
+.row-fluid .thumbnails {
+  margin-left: 0;
+}
+
+// Float li to make thumbnails appear in a row
+.thumbnails > li {
+  float: left; // Explicity set the float since we don't require .span* classes
+  margin-bottom: @baseLineHeight;
+  margin-left: @gridGutterWidth;
+}
+
+// The actual thumbnail (can be `a` or `div`)
+.thumbnail {
+  display: block;
+  line-height: @baseLineHeight;
+  padding: 4px 20px;
+  background-clip: padding-box;
+  background-color: @white;
+  border: 1px solid #ddd;
+  .border-radius(4px);
+  .box-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+  .transition(all .2s ease-in-out);
+}
+// Add a hover state for linked versions only
+a.thumbnail:hover {
+  border-color: @linkColor;
+  .box-shadow(0 1px 4px rgba(0,105,214,.25));
+}
+
+.thumbnail .header{
+  border-bottom: 1px dotted #DADADA;
+  margin: 10px 0 !important;
+}
+
+.thumbnail .video { position: relative; }
+
+.thumbnail .video a {
+  position: absolute;
+  display: block;
+  //background: url('../images/playimage320.png');
+  height: 40px;
+  width: 60px;
+  top: 42%;
+  left: 42%;
+}
+
+// Images and captions
+.thumbnail >img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 0 auto;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: @gray;
+}

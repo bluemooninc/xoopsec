@@ -1,0 +1,9 @@
+<!-- begin of bmsurvey blog block -->
+<{foreach from=$block.form item=list }>
+<li><{$list.last_update_m}>&nbsp; <a
+	href="<{$block.url}>/webform.php?name=<{$list.name}>">
+		<{$list.title}> </a>
+</li>
+<br />
+<{/foreach}>
+<!-- end of bmsurvey blog block -->

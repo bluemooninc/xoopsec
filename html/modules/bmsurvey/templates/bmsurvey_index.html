@@ -1,0 +1,62 @@
+<h1><{$smarty.const.BMSURVEY_INDEX_PAGETITLE}></h1>
+
+<{if $xoops_isuser}>
+	<a href="EditForm/new"><{$smarty.const._MB_Create_a_New_Form}></a>
+<{/if}>
+<{$smarty.const._MB_ORDER}>
+&nbsp;[&nbsp;
+<{if $bmsurvey.content.sortnavi.sortname eq "name" && $bmsurvey.content.sortnavi.sortorder eq "asc" }>
+	<b><{$smarty.const._MB_LIST_TITLE}></b>
+<{else}>
+	<a href="index.php?sortby=name&order=asc" target="_top"><{$smarty.const._MB_LIST_TITLE}></a>
+<{/if}>
+&nbsp;
+<{if $bmsurvey.content.sortnavi.sortname eq "title" && $bmsurvey.content.sortnavi.sortorder eq "asc" }>
+	<b><{$smarty.const._MB_LIST_SUBTITLE}></b>
+<{else}>
+	<a href="index.php?sortby=title&order=asc" target="_top"><{$smarty.const._MB_LIST_SUBTITLE}></a>
+<{/if}>
+&nbsp;
+<{if $bmsurvey.content.sortnavi.sortname eq "owner" && $bmsurvey.content.sortnavi.sortorder eq "asc" }>
+	<b><{$smarty.const._MB_LIST_OWNER}></b>
+<{else}>
+	<a href="index.php?sortby=owner&order=asc" target="_top"><{$smarty.const._MB_LIST_OWNER}></a>
+<{/if}>
+&nbsp;
+<{if $bmsurvey.content.sortnavi.sortname eq "status" && $bmsurvey.content.sortnavi.sortorder eq "asc" }>
+	<b><{$smarty.const._MB_Status}></b>
+<{else}>
+	<a href="index.php?sortby=status&order=asc" target="_top"><{$smarty.const._MB_Status}></a>
+<{/if}>
+&nbsp;
+<{if $bmsurvey.content.sortnavi.sortname eq "changed" && $bmsurvey.content.sortnavi.sortorder eq "desc" }>
+	<b><{$smarty.const._MB_ORDER_NEW}></b>
+<{else}>
+	<a href="index.php?sortby=changed&order=desc" target="_top"><{$smarty.const._MB_ORDER_NEW}></a>
+<{/if}> &nbsp;]
+
+<form method="GET" action="index.php?sortby=<{$bmsurvey.content.sortnavi.sortname}>&order=<{$bmsurvey.content.sortnavi.sortorder}>">
+	<p>
+		<input class="chkbox" type="checkbox" name="status[]" value="<{$smarty.const._MB_STATUS_ACTIVE}>" <{if strstr($bmsurvey.content.sortnavi.status,'1') }>checked<{/if}> />
+		<{$smarty.const._MB_Active}>&nbsp;&nbsp;
+		<input class="chkbox" type="checkbox" name="status[]" value="<{$smarty.const._MB_STATUS_TEST}>" <{if strstr($bmsurvey.content.sortnavi.status,'8') }>checked<{/if}> />
+		<{$smarty.const._MB_Testing}>&nbsp;&nbsp;
+		<input class="chkbox" type="checkbox" name="status[]" value="<{$smarty.const._MB_STATUS_EDIT}>"<{if strstr($bmsurvey.content.sortnavi.status|cat:"...",'0')}>checked<{/if}> />
+		<{$smarty.const._MB_Editing}>&nbsp;&nbsp;
+		<input class="chkbox" type="checkbox" name="status[]" value="<{$smarty.const._MB_STATUS_DONE}>"<{if strstr($bmsurvey.content.sortnavi.status,'2') }>checked<{/if}> />
+		<{$smarty.const._MB_Ended}>&nbsp;&nbsp;
+		<input class="chkbox" type="checkbox" name="status[]" value="<{$smarty.const._MB_STATUS_DELETED}>" <{if strstr($bmsurvey.content.sortnavi.status,'4') }>checked<{/if}> />
+		<{$smarty.const._MB_Archived}>
+		<script>
+			document.write('<input class="btn btn-primary" id="NarrowScriptEffective" type="submit" value="<{$smarty.const._MB_FILTER_ON}>">');
+			document.write('[<a href="index.php?sortby=<{$bmsurvey.content.sortnavi.sortname}>&order=<{$bmsurvey.content.sortnavi.sortorder}>"><{$smarty.const._MB_FILTER_OFF}></a>]');
+		</script>
+	</p>
+</form>
+
+<{include file="db:bmsurvey_list.html"}>
+
+<{$bmsurvey.content.sortnavi.start}><{$smarty.const._MB_NUMBERSTRING}><{$smarty.const._MB_TILDE}>
+<{$bmsurvey.content.sortnavi.end}><{$smarty.const._MB_NUMBERSTRING}>&nbsp;
+(<{$smarty.const._MB_ALL}>&nbsp;<{$bmsurvey.content.sortnavi.total}><{$smarty.const._MB_NUMBERSTRING}>&nbsp;)
+<{$bmsurvey.content.pagenavi}>

@@ -6,6 +6,16 @@
 <meta http-equiv="content-script-type" content="text/javascript" />
 <meta http-equiv="content-style-type" content="text/css" />
 <title><{$legacy_sitename|xoops_escape}> : <{$smarty.const._CPHOME}> : <{$legacy_pagetitle|xoops_escape}></title>
+
+<!-- bluemoon tune up start -->
+	<link rel="stylesheet" href="<{$xoops_url}>/modules/legacy/admin/theme/css/font-awesome.css" />
+	<link rel="stylesheet" href="<{$xoops_url}>/modules/legacy/admin/theme/css/bootstrap.css">
+	<link rel="stylesheet" href="<{$xoops_url}>/modules/legacy/admin/theme/css/responsive.css">
+	<link rel="stylesheet" href="<{$xoops_url}>/modules/legacy/admin/theme/css/custom-theme/jquery-ui-1.8.16.custom.css" type="text/css">
+	<script src="<{$xoops_url}>/modules/legacy/admin/theme/js/jquery-1.8.2.min.js"></script>
+	<script src="<{$xoops_url}>/modules/legacy/admin/theme/js/bootstrap.min.js"></script>
+<!-- bluemoon tune up end -->
+
 <script type="text/javascript" src="<{$xoops_url}>/include/xoops.js"></script>
 
 <{stylesheet file=style.css static=true}>
@@ -150,31 +160,33 @@ function ccOpenCid()
 <div id="container">
 
 <div id="header">
-
-<div class="logo"><a href="<{$xoops_url}>/admin.php">XOOPS Cube Administration</a></div>
-
-<div class="headerSearch">
-<{* <{$xoops_lblocks.action_search.content}> *}>
-<form action="<{$xoops_url}>/modules/legacy/admin/index.php?action=actSearch" method="post" class="headerSearchForm">
-<input type="text" size="40" name="keywords" />
-<input type="submit" value="Search" />
-</form>
+	<span class="linkadmin">
+	<img src="<{"icons/tool.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=PreferenceList"><{$smarty.const._MI_LEGACY_MENU_PREFERENCE}></a>
+	<img src="<{"icons/theme.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=ThemeList"><{$smarty.const._MI_LEGACY_BLOCK_THEMES_NAME}></a>
+	<img src="<{"icons/module.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=ModuleList"><{$smarty.const._AD_LEGACY_LANG_BLOCK_MOD}></a>
+	<img src="<{"icons/blocks.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=BlockList"><{$smarty.const._MI_LEGACY_MENU_BLOCKLIST}></a>
+	<!--<img src="<{"icons/folder_explore.png"|theme}>" alt="" /> <a href="javascript:openWithSelfMain('<{$xoops_url}>/common/fckeditor/editor/plugins/kfm/index.php', 'filemanager', 750, 600);"><{$smarty.const._IMGMANAGER}></a>-->
+	<img src="<{"icons/group.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/user/admin/index.php"><{$smarty.const._MEMBERS}></a>
+	<img src="<{"icons/comments.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=CommentList"><{$smarty.const._COMMENTS}></a>
+	</span>
 </div>
 
-<div class="topnav">
-<!-- 2008-12-07 Gigamaster, Test Accessibility -->
-<span class="linkadmin">
-<img src="<{"icons/tool.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=PreferenceList"><{$smarty.const._MI_LEGACY_MENU_PREFERENCE}></a> 
-<img src="<{"icons/theme.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=ThemeList"><{$smarty.const._MI_LEGACY_BLOCK_THEMES_NAME}></a> 
-<img src="<{"icons/module.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=ModuleList"><{$smarty.const._AD_LEGACY_LANG_BLOCK_MOD}></a> 
-<img src="<{"icons/blocks.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=BlockList"><{$smarty.const._MI_LEGACY_MENU_BLOCKLIST}></a>
-<!--<img src="<{"icons/folder_explore.png"|theme}>" alt="" /> <a href="javascript:openWithSelfMain('<{$xoops_url}>/common/fckeditor/editor/plugins/kfm/index.php', 'filemanager', 750, 600);"><{$smarty.const._IMGMANAGER}></a>-->
-<img src="<{"icons/group.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/user/admin/index.php"><{$smarty.const._MEMBERS}></a> 
-<img src="<{"icons/comments.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=CommentList"><{$smarty.const._COMMENTS}></a>
-</span> 
+<div class="navbar">
+<div class="navbar-inner">
 
-<span class="linksite"><img src="<{"icons/home.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/"><{$smarty.const._YOURHOME}></a>  
- <img src="<{"icons/logout.png"|theme}>" alt="" /> <a href="<{$xoops_url}>/user.php?op=logout"><{$smarty.const._LOGOUT}></a></span> 
+
+<div class="brand">
+	<a class="brand" href="<{$xoops_url}>/admin.php">
+		<span class="first">XoopsEC</span>
+		<span class="second">Backyard</span>
+	</a>
+</div>
+<div class="pull-right">
+	<span class="linksite">
+	<a href="<{$xoops_url}>/"><i class="icon-home"></i>&nbsp;<{$smarty.const._YOURHOME}></a>
+	<a href="<{$xoops_url}>/user.php?op=logout"><i class="icon-signout"></i>&nbsp;<{$smarty.const._LOGOUT}></a>
+	</span>
+</div>
 </div>
 </div>
 
@@ -182,26 +194,31 @@ function ccOpenCid()
 <table cellspacing="0">
 <tr>
 <td id="leftcolumn">
+<div class="sidebar-nav">
    <span id="toggleall" style="padding:0px 10px;">
    <a href="javascript:void(0)" onclick="ccOpenAll()"><img src="<{"design/menu_openall.png"|theme}>" alt="Click me if you want to open all sidemenu!"  title="Click me if you want to open all sidemenu!" /></a>&nbsp;
    <a href="javascript:void(0)" onclick="ccCloseAll()"><img src="<{"design/menu_closeall.png"|theme}>" alt="Click me if you want to close all sidemenu!" title="Click me if you want to close all sidemenu!"/></a>&nbsp;
    <a href="javascript:void(0)" onclick="ccOpenCid()"><img src="<{"design/menu_openactive.png"|theme}>" alt="Click me if you want to open only the sidemenu of current module!" title="Click me if you want to open only the sidemenu of current module!"/></a>&nbsp;
    <a href="#contentBottom"><img src="<{"design/menu_bottom.png"|theme}>" alt="Go to Bottom" title="Go to Bottom"/></a>&nbsp;
-   <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=Help&amp;dirname=legacy"><img src="<{"design/menu_help.png"|theme}>" alt="Help" title="Help"/></a>&nbsp;
+   <a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=Help&amp;dirname=legacy"><i class="icon-question-sign"></i></a>
    </span>
    <a href="javascript:void(0)" onclick="toggleEffect('leftcolumn', 'minimizelc', 'lcimage')"><img id="lcimage" src="<{"design/menu_minimize.png"|theme}>" alt="Click me if you want to minimize this left-column" title="Click me if you want to minimize this left-column" /></a>
-  <div id="minimizelc" style="display: block;">
+   <div id="minimizelc" style="display: block;">
+	<{* <{$xoops_lblocks.action_search.content}> *}>
+	<form action="<{$xoops_url}>/modules/legacy/admin/index.php?action=actSearch" method="post" class="headerSearchForm">
+		<input type="text" size="40" name="keywords"  placeholder="Search..." />
+		<{* <input type="submit" value="Search" /> *}>
+	</form>
   <{$xoops_lblocks.sidemenu.content}>
-
   <{foreach name=lblock item=block from=$xoops_lblocks}>
-  <{if $block.name != 'action_search' && $block.name != 'sidemenu'}>
-  <{$block.content}>
-  <{/if}>
+  	<{if $block.name != 'action_search' && $block.name != 'sidemenu'}>
+  		<{$block.content}>
+  	<{/if}>
   <{/foreach}>
-   </div>
+  </div>
+</div>
 </td>
 <td id="centercolumn">
-
 <noscript>
   <div id="menunavi">
   <h2><{$currentModule->mXoopsModule->getVar('name')}></h2>
@@ -235,7 +252,9 @@ function ccOpenCid()
   </div>
 </noscript>
 
-  <div id="contentBody"><{$xoops_contents}></div>
+  <div id="contentBody">
+	  <{$xoops_contents}>
+  </div>
   <div id="contentBottom" class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
   
 </td>

@@ -1,0 +1,154 @@
+<ul id="bmsurvey-list-simple">
+	<table id="bmsurvey-list" class="table table-bordered">
+		<tr class="tbl-th">
+			<th><span><{$smarty.const._MB_Status}></span></th>
+			<th>
+			  <span>
+			    <{$smarty.const._MB_LIST_TITLE}>
+			  </span>
+				<{if $manage_on}>
+			<th>
+			  <span>
+			    <{$smarty.const._MB_LIST_OWNER}>
+			  </span>
+			</th>
+			<{/if}>
+			</th>
+			<th width="140">
+				<span><{$smarty.const._MB_LIST_UPDATE}></span><br/>
+				<span><{$smarty.const._MB_FORM_PUBLISHED}></span><br/>
+				<span><{$smarty.const._MB_FORM_EXPIRED}></span>
+			</th>
+			<{if $manage_on}>
+			<th>
+				<span><{$smarty.const._MB_Change_Form_Status}></span>
+			</th>
+			<th>
+				<span><{$bmsurvey.langs.col_results_respondents}></span>
+			</th>
+			<th>
+				<span><{$bmsurvey.langs.col_results_analyze}></span>
+				<{if $xoops_isadmin}>
+				<span><{$bmsurvey.langs.col_results_download}></span>
+				<{/if}>
+			</th>
+			<th><span><{$bmsurvey.langs.form_submitted}></span></th>
+			<{/if}>
+		</tr>
+		<{foreach item=form from=$bmsurvey.content.forms name=forms}>
+		<{if $form.hidelist!=1}>
+		<tr class="<{cycle values='tbl-tr1,tbl-tr2'}>">
+			<td>
+				<{if $form.status==0 }>
+				<{$smarty.const._MB_Editing}>
+				<{elseif $form.status==1 }>
+				<{$smarty.const._MB_Active}>
+				<{elseif $form.status==2 }>
+				<{$smarty.const._MB_Ended}>
+				<{elseif $form.status==4 }>
+				<{$smarty.const._MB_Archived}>
+				<{elseif $form.status==8 }>
+				<{$smarty.const._MB_Testing}>
+				<{/if}>
+			<td>
+				<b>
+					<a href='<{$xoops_url}>/modules/bmsurvey/Form/forge/<{$form.id}>'>
+						<{$form.title}>
+					</a>
+				</b>
+			</td>
+			<{if $manage_on}>
+			<td>
+				<a href="<{$xoops_url}>/userinfo.php?uid=<{$form.uid}>" taget="_top">
+					<{$form.uname}>
+				</a>
+			</td>
+			<{/if}>
+			<td>
+				<span><{$form.changed|date_format:'%Y-%m-%d %H:%M'}></span><br/>
+				<span><{$form.published|date_format:'%Y-%m-%d'}></span><br/>
+				<span><{$form.expired|date_format:'%Y-%m-%d'}></span>
+			</td>
+			<{if $manage_on}>
+			<{* Status *}>
+			<!-- STATUS_ACTIVE=1,STATUS_DONE=2,STATUS_DELETED=4,STATUS_TEST=8 -->
+			<td style="min-width: 16px; min-height: 16px;">
+				<{* Test *}>
+				<{if $form.status==0 || $form.status==2}>
+				<a href="Manage/test/<{$form.id}>" target="_top">
+					<img title="<{$smarty.const._MB_Test}>" alt="<{$smarty.const._MB_Test}>"
+						 src="./images/icon_test.png" width="16" height="16"/>
+				</a>
+				<{/if}>
+				<{* Active *}>
+				<{if $form.status==0}>
+				<a href="Manage/active/<{$form.id}>" target="_top">
+					<img title="<{$smarty.const._MB_Activate}>" alt="<{$smarty.const._MB_Activate}>"
+						 src="./images/icon_public.png" width="16" height="16"/>
+				</a>
+				<{/if}>
+				<{* Delete and public again *}>
+				<{if $form.status==2 }>
+				<a href="Manage/active/<{$form.id}>" target="_top">
+					<img title="<{$smarty.const._MB_Activate}>" alt="<{$smarty.const._MB_Activate}>"
+						 src="./images/icon_public.png" width="16" height="16"/>
+				</a>
+				<{/if}>
+				<{* Stop *}>
+				<{if $form.status!=2}>
+				<a href="Manage/stop/<{$form.id}>" target="_top">
+					<img title="<{$smarty.const._MB_End}>" alt="<{$smarty.const._MB_End}>" src="./images/icon_stop.png"
+						 width="16" height="16"/>
+				</a>
+				<{/if}>
+				<{if $form.status==2 }>
+				<{* Delete*}>
+				<a href="Manage/purge/<{$form.id}>" target="_top">
+					<img title="<{$smarty.const._AM_BMSURVEY_PURGE}>" alt="<{$smarty.const._AM_BMSURVEY_PURGE}>"
+						 src="./images/icon_purge.png" width="16" height="16"/>
+				</a>
+				<{/if}>
+				<{if $form.status!=4 }>
+				<{* Edit *}>
+				<a href="EditForm/general/<{$form.id}>" target="_top">
+					<img title="<{$bmsurvey.langs.col_control_edit}>" alt="<{$bmsurvey.langs.col_control_edit}>"
+						 src="./images/icon_edit.png" width="16" height="16"/>
+				</a>
+				<{/if}>
+				<{* Copy *}>
+				<a href="Manage/copy/<{$form.id}>" target="_top">
+					<img title="<{$bmsurvey.langs.col_control_copy}>" alt="<{$bmsurvey.langs.col_control_copy}>"
+						 src="./images/icon_copy.png" width="16" height="16"/>
+				</a>
+			</td>
+			<td>
+				<{$form.resp}>
+			</td>
+			<{if $manage_on}>
+			<td>
+				<a href="manage.php?where=results&sid=<{$form.id}>" target="_top"><{$bmsurvey.langs.col_results_spreadsheet}></a>
+				<{if $xoops_isadmin}>
+				<br/>
+				<a href="manage.php?where=download&type=csv&sid=<{$form.id}>" target="_blank">CSV</a>
+				<{/if}>
+			</td>
+			<td>
+				<{if $form.submitted}>
+				<img src="images/checked.png" alt="<{$form.submitted|date_format:'%m/%d %H:%M'}>"/>
+				<{else}>
+				--
+				<{/if}>
+			</td>
+			<{/if}>
+			<{/if}>
+			<{/if}>
+			<!--
+			<form action="index.php" method="post">
+			<input type="hidden" name="sid" value="<{$form.id}>" />
+			<button type="submit"><{$smarty.const._MD_BMSURVEY_DETAIL}></button>
+			</form>
+			-->
+		</tr>
+		<{/foreach}>
+	</table>
+</ul>

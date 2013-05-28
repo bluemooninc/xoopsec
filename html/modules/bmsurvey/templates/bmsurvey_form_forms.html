@@ -1,0 +1,24 @@
+<{foreach from=$qitem.htmlTag item=tag}>
+<div class="control-group">
+	<{if $tag.type == 'text'}>
+		<input type="text" name="<{$tag.name}>" value="<{$tag.value}>" <{if $tag.length}> maxlength="<{$tag.length}>"<{/if}> />
+	<{elseif $tag.type == 'textarea'}>
+		<textarea name="<{$tag.name}>"<{if $tag.cols}> wrap="<{$tag.wrap|lower}>"<{/if}><{if $tag.rows}> rows="<{$tag.rows}>"<{/if}>><{$tag.value}></textarea>
+	<{elseif $tag.type == 'radio'}>
+		<input type="radio" name="<{$tag.name}>" value="<{$tag.value}>"<{if $tag.checked}> checked="checked"<{/if}> /> <{$tag.message}>
+	<{elseif $tag.type == 'checkbox'}>
+		<input type="checkbox" name="<{$tag.name}>[]" value="<{$tag.value}>" <{if $tag.checked}> checked="checked"<{/if}> > <{$tag.message}> <{elseif $tag.type == 'select'}>
+		<select name="<{$tag.name}>">
+		<option></option>
+		<{foreach from=$tag.value item=option}>
+			<option value="<{$option.value}>"<{if $option.checked}> selected="selected"<{/if}>><{$option.content}></option>
+		<{/foreach}>
+		</select>
+	<{elseif $tag.type == 'file'}>
+		<input type="hidden" name="MAX_FILE_SIZE" value="<{$tag.max}>" />
+		<input type="file" name="<{$tag.name}>" />
+	<{elseif $tag.type == 'button' && $bmsurvey.config.mode != 'mobile'}>
+		<button type="button" class="btn" name="<{$tag.name}>"<{if $tag.onclick}> onclick="<{$tag.onclick}>"<{/if}>><{$tag.value}></button>
+	<{/if}>
+</div>
+<{/foreach}>

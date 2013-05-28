@@ -1,0 +1,140 @@
+<table id="bmsurvey-list">
+	<thead>
+		<tr>
+			<th><{$bmsurvey.langs.col_data}></th>
+			<th><{$bmsurvey.langs.col_results}></th>
+			<th><{$bmsurvey.langs.col_control}></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="bmsurvey-list-form-status-<{$bmsurvey.content.form.status}> bmsurvey-list-form-public-<{$bmsurvey.content.form.public|lower}> bmsurvey-list-form-<{cycle values="odd,even"}>">
+			<td>
+				<ul class="bmsurvey-list-col-data">
+					<li><span><{$bmsurvey.langs.form_title}></span><a href='webform.php?name=<{$bmsurvey.content.form.name}>'><{$bmsurvey.content.form.title}></a></li>
+					<li><span><{$bmsurvey.langs.form_subtitle}></span><{$bmsurvey.content.form.subtitle}></li>
+					<li><span>ID</span><{$bmsurvey.content.form.id}></li>
+					<li><span><{$bmsurvey.langs.form_name}></span><{$bmsurvey.content.form.name}></li>
+					<li><span><{$bmsurvey.langs.form_owner}></span><a href="<{$xoops_url}>/userinfo.php?uid=<{$bmsurvey.content.form.uid}>" taget="_top"><{$bmsurvey.content.form.uname}></a></li>
+					<li><span><{$bmsurvey.langs.form_updatedat}></span><{$bmsurvey.content.form.last_update_m|replace:'-':'/'}></li>
+					<li>
+						<span><{$bmsurvey.langs.form_submitted}></span>
+						<{if $bmsurvey.content.form.submitted}>
+						<img src="images/checked.png" alt="Checked" /><{$bmsurvey.content.form.submitted|date_format:'%Y/%m/%d %H:%M'}>
+						<{else}>
+						--
+						<{/if}>
+					</li>
+				</ul>
+			</td>
+			<td nowrap="nowrap">
+			<{if $bmsurvey.content.form.viewbygroup }>
+				<ul class="bmsurvey-list-col-results">
+					<li><span><{$bmsurvey.langs.col_results_respondents}></span><{$bmsurvey.content.form.resp}></li>
+					<li>
+						<span><{$bmsurvey.langs.col_results_analyze}></span>
+						<a href="manage.php?where=results&sid=<{$bmsurvey.content.form.id}>" target="_top"><{$bmsurvey.langs.col_results_spreadsheet}></a>
+						<!--<a href="manage.php?where=crossset&sid=<{$bmsurvey.content.form.id}>" target="_top"><{$bmsurvey.langs.col_results_cross}></a>-->
+					</li>
+					<{if $xoops_isadmin}>
+					<li>
+						<span><{$bmsurvey.langs.col_results_download}></span>
+						<a href="manage.php?where=download&type=csv&sid=<{$bmsurvey.content.form.id}>" target="_blank">CSV</a>
+						<!--<a href="manage.php?where=download&type=html&sid=<{$bmsurvey.content.form.id}>" target="_blank">HTML</a>-->
+					</li>
+					<{/if}>
+				</ul>
+			<{/if}>
+			</td>
+			<td nowrap="nowrap">
+			<{if $bmsurvey.content.form.editbyGroup }>
+				<ul class="bmsurvey-list-col-control">
+					<li>
+						<span><{$bmsurvey.langs.col_control_status}></span>
+						<{$bmsurvey.content.form.status_desc}>
+					</li>
+<!--
+					<li>
+						<span><{$bmsurvey.langs.col_control_access}></span>
+						<{if $bmsurvey.content.form.public == 'Y'}><{$bmsurvey.langs.col_control_access_public}><{else}><{$bmsurvey.langs.col_control_access_limited}><{/if}>
+					</li>
+					<li>
+						<span><{$bmsurvey.langs.col_control_modify}></span>
+						<{* Access *}>
+
+						<{if $bmsurvey.content.form.status!=2 && $bmsurvey.content.form.status!=4}>
+							<form action="manage.php" method="post">
+							<input type="hidden" name="sid" value="<{$bmsurvey.content.form.id}>" />
+							<input type="hidden" name="where" value="access" />
+							<input type="hidden" name="op" value="<{if $bmsurvey.content.form.public == 'Y'}>v<{else}>p<{/if}>" />
+							<button type="submit">
+							<{if $bmsurvey.content.form.public == 'Y'}>
+								<{$bmsurvey.langs.col_control_access_2limited}>
+							<{else}>
+								<{$bmsurvey.langs.col_control_access_2public}>
+							<{/if}>
+							</button>
+							</form>
+							<{if $bmsurvey.content.form.public == "N"}>
+								<form action="manage.php" method="post">
+								<input type="hidden" name="sid" value="<{$bmsurvey.content.form.id}>" />
+								<input type="hidden" name="where" value="access" />
+								<button type="submit"><{$bmsurvey.langs.col_control_access_setperm}></button>
+								</form>
+							<{/if}>
+						<{/if}>
+-->
+						<{* Status *}>
+						<!-- STATUS_ACTIVE=1,STATUS_DONE=2,STATUS_DELETED=4,STATUS_TEST=8 -->
+
+						<{if $bmsurvey.content.form.status!=1 && $bmsurvey.content.form.status!=4 }>
+							<form action="manage.php" method="post">
+							<input type="hidden" name="sid" value="<{$bmsurvey.content.form.id}>" />
+							<input type="hidden" name="where" value="status" />
+							<{if $bmsurvey.content.form.status==2 }>
+								<!-- Re Active -->
+								<input type="hidden" name="op" value="r" />
+							<{else}>
+								<input type="hidden" name="op" value="a" />
+							<{/if}>
+							<button type="submit"><{$smarty.const._MB_Activate}></button>
+							</form>
+						<{/if}>
+						<{if $bmsurvey.content.form.status!=2 && $bmsurvey.content.form.status!=4}>
+							<form action="manage.php" method="post">
+							<input type="hidden" name="sid" value="<{$bmsurvey.content.form.id}>" />
+							<input type="hidden" name="where" value="status" />
+							<input type="hidden" name="op" value="e" />
+							<button type="submit"><{$smarty.const._MB_End}></button>
+							</form>
+							<form action="manage.php" method="post">
+							<input type="hidden" name="sid" value="<{$bmsurvey.content.form.id}>" />
+							<input type="hidden" name="where" value="status" />
+							<input type="hidden" name="op" value="d" />
+							<button type="submit"><{$smarty.const._MB_Archive}></button>
+							</form>
+						<{/if}>
+						
+						<{* Edit *}>
+
+						<{if $bmsurvey.content.form.status!=2 && $bmsurvey.content.form.status!=4}>
+							<form action="manage.php" method="post">
+							<input type="hidden" name="newid" value="<{$bmsurvey.content.form.id}>" />
+							<input type="hidden" name="where" value="tab" />
+							<button type="submit"><{$bmsurvey.langs.col_control_edit}></button>
+							</form>
+						<{/if}>
+						
+						<{* Copy *}>
+
+						<form action="manage.php" method="post">
+						<input type="hidden" name="sid" value="<{$bmsurvey.content.form.id}>" />
+						<input type="hidden" name="where" value="copy" />
+						<button type="submit"><{$bmsurvey.langs.col_control_copy}></button>
+						</form>
+					</li>
+				</ul>
+			<{/if}>
+			</td>
+		</tr>
+	</tbody>
+</table>

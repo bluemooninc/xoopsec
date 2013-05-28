@@ -1,0 +1,372 @@
+<style type="text/css">
+table {
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: inherit;
+}
+th {
+    background: none repeat scroll 0 0 #E6E6E6;
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+}
+td {
+    border: 1px solid #CCCCCC;
+}
+</style>
+<{* $Id: bmsurvey_manage_results.html,v 1.0 2009/02/10 makinosuke Exp $
+*}>
+<!-- FormMakeX v.<{$version}> by Bluemoon.inc (http://www.bluemooninc.biz/) -->
+<!-- template: "<{$smarty.template}>", script: "<{$smarty.server.SCRIPT_NAME}>" -->
+
+<{capture assign=respondents_nav}><{strip}>
+<div class="bmsurvey-manage-results-respondentnav">
+	<{if $respondents.prev_rid}> <span><a
+		href="manage.php?where=results&sid=<{$form.sid}>&rid=<{$respondents.prev_rid}>"
+		target="_top">&lt; <{$langs.prev}></a></span> <{/if}>
+	<form action="manage.php" method="get" onchange="this.submit();">
+		<input type="hidden" name="where" value="results" /> <input
+			type="hidden" name="sid" value="<{$form.sid}>" /> <{*
+		<{$smarty.const._AM_BMSURVEY_SEEARESULT}> <select name="rid">
+			<{$respondents.rid_options}>
+		</select> *}>
+		<noscript>
+			<button type="submit">select</button>
+		</noscript>
+	</form>
+	<{if $respondents.next_rid}> <span><a
+		href="manage.php?where=results&sid=<{$form.sid}>&rid=<{$respondents.next_rid}>"
+		target="_top"><{$langs.next}> &gt;</a></span> <{/if}>
+</div>
+<{/strip}><{/capture}> <{$respondents_nav}> <{if
+$respondents.current_rid == ''}> <{capture assign=results_nav}><{strip}>
+<{foreach from=$form.questions item=question name=results_nav}> <{if
+$question.typename != 'sectiontext'}> <{counter assign=nav_i}> <{if
+$nav_i > 1}>&nbsp;|&nbsp;<{/if}>
+<a href="#bmsurvey-sid<{$form.sid}>-results-qid<{$question.qid}>"><{$question.content}></a>
+<{/if}> <{/foreach}> <{/strip}><{/capture}> <{*
+<h3><{$smarty.const.BMSURVEY_LIST_COL_RESULTS_SPREADSHEET}></h3>
+*}> <{foreach from=$form.questions item=question name=questions}>
+<div
+	class="bmsurvey-manage-results-question bmsurvey-manage-results-question-<{$question.typename}>"
+	id="bmsurvey-sid<{$form.sid}>-results-qid<{$question.qid}>">
+	<p class="question-title">
+		<{$question.content}> (<{$question.name}>) <{if $question.required ==
+		'Y'}> <span class="question-required">*</span><{/if}>
+	</p>
+	<{if $question.typename == 'yesno' || $question.typename == 'radio' ||
+	$question.typename == 'dropdown'}>
+	<table class="question-table">
+		<thead>
+			<tr>
+				<th><{$smarty.const._AM_BMSURVEY_VALUE}></th>
+				<th><{$smarty.const._AM_BMSURVEY_COUNT}></th>
+				<th>%</th>
+			</tr>
+		</thead>
+		<tbody>
+			<{foreach from=$question.responses_options item=response}>
+			<tr class="question-table-row-options">
+				<th><{$response.response}></th>
+				<td><{$response.subtotal}></td>
+				<td nowrap="nowrap"><{$response.percentage_countNA|round:1}> %</td>
+			</tr>
+			<{/foreach}> <{foreach from=$question.responses_others
+			item=response}>
+			<tr class="question-table-row-others">
+				<th><{$response.response}></th>
+				<td><{$response.subtotal}></td>
+				<td nowrap="nowrap"><{$response.percentage_countNA|round:1}> %</td>
+			</tr>
+			<{/foreach}>
+			<tr class="question-table-row-na">
+				<th><{$smarty.const._MB_NA}></th>
+				<td><{$question.NA_total}></td>
+				<td nowrap="nowrap"><{$question.NA_total_percentage|round:1}> %</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th><{$smarty.const._MB_SUM}></th>
+				<td><{$question.responses_total_countNA}></td>
+				<td nowrap="nowrap">
+					<{$question.percentages_total_countNA|round:1}>%
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	<{elseif $question.typename == 'checkbox'}>
+	<table class="question-table">
+		<thead>
+			<tr>
+				<th><{$smarty.const._AM_BMSURVEY_VALUE}></th>
+				<th><{$smarty.const._AM_BMSURVEY_COUNT}></th>
+				<th>%</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			<{assign var=subtotal_max value=1}>
+			<{foreach from=$question.responses_options item=response}>
+				<{if $response.subtotal > $subtotal_max}>
+					<{assign var=subtotal_max value=`$response.subtotal`}>
+				<{/if}>
+				<tr class="question-table-row-options">
+				<th><{$response.response}></th>
+				<td><{$response.subtotal}></td>
+				<td nowrap="nowrap"><{$response.percentage|round:1}> %</td>
+				</tr>
+			<{/foreach}>
+			<{foreach from=$question.responses_others item=response}>
+				<{if $response.subtotal > $subtotal_max}>
+					<{assign var=subtotal_max value=`$response.subtotal`}>
+				<{/if}>
+				<tr class="question-table-row-others">
+				<th><{$response.response}></th>
+				<td><{$response.subtotal}></td>
+				<td nowrap="nowrap"><{$response.percentage|round:1}> %</td>
+				</tr>
+			<{/foreach}>
+			<{if $question.NA_total > $subtotal_max}>
+				<{assign var=subtotal_max value=`$question.NA_total`}>
+			<{/if}>
+			<tr class="question-table-row-na">
+				<th><{$smarty.const._MB_NA}></th>
+				<td><{$question.NA_total}></td>
+				<td nowrap="nowrap"><{$question.NA_total_percentage|round:1}> %</td>
+			</tr>
+		</tbody>
+	</table>
+	<{elseif $question.typename == 'textbox' || $question.typename ==
+	'essaybox' || $question.typename == 'attach'}>
+	<table class="question-table">
+		<thead>
+			<tr>
+				<th><{$smarty.const._AM_BMSURVEY_VALUE}></th>
+				<th><{$smarty.const._AM_BMSURVEY_COUNT}></th>
+				<th>%</th>
+			</tr>
+		</thead>
+		<tbody>
+			<{foreach from=$question.responses item=response}>
+			<tr>
+				<th><{$response.response}></th>
+				<td><{$response.subtotal}></td>
+				<td nowrap="nowrap"><{$response.percentage_countNA|round:1}> %</td>
+			</tr>
+			<{/foreach}>
+			<tr>
+				<th><{$smarty.const._MB_NA}></th>
+				<td><{$question.NA_total}></td>
+				<td nowrap="nowrap"><{$question.NA_total_percentage|round:1}> %</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th><{$smarty.const._MB_SUM}></th>
+				<td><{$question.responses_total_countNA}></td>
+				<td nowrap="nowrap"><{$question.percentages_total_countNA|round:1}>
+					%</td>
+			</tr>
+		</tfoot>
+	</table>
+	<{elseif $question.typename == 'numeric'}>
+	<table class="question-table">
+		<thead>
+			<tr>
+				<th><{$smarty.const._AM_BMSURVEY_VALUE}></th>
+				<th><{$smarty.const._AM_BMSURVEY_COUNT}></th>
+				<th>%</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			<{foreach from=$question.responses item=response}>
+			<tr>
+				<th><{$response.response}></th>
+				<td><{$response.subtotal}></td>
+				<td nowrap="nowrap"><{$response.percentage_countNA|round:1}> %</td>
+			</tr>
+			<{/foreach}>
+			<tr>
+				<th><{$smarty.const._MB_NA}></th>
+				<td><{$question.NA_total}></td>
+				<td nowrap="nowrap"><{$question.NA_total_percentage|round:1}> %</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th><{$smarty.const._MB_SUM}></th>
+				<td><{$question.responses_total_countNA}></td>
+				<td nowrap="nowrap"><{$question.percentages_total_countNA|round:1}>
+					%</td>
+			</tr>
+		</tfoot>
+	</table>
+	<table class="question-table">
+		<thead>
+			<tr>
+				<th><{$smarty.const._MB_MAX}></th>
+				<th><{$smarty.const._MB_MIN}></th>
+				<th><{$smarty.const._MB_AVERAGE}></th>
+				<th><{$smarty.const._MB_MEDIAN}></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th><{$question.numeric_responses_max}></th>
+				<td><{$question.numeric_responses_min}></td>
+				<td><{$question.numeric_responses_average|round:1}></td>
+				<td><{$question.numeric_responses_median}></td>
+			</tr>
+		</tbody>
+	</table>
+	<{elseif $question.typename == 'date'}>
+	<table class="question-table">
+		<thead>
+			<tr>
+				<th><{$smarty.const._MB_year}></th>
+				<th><{$smarty.const._MB_count}></th>
+				<th>%</th>
+			</tr>
+		</thead>
+		<tbody>
+			<{foreach from=$question.date_responses_nested key=year_key
+			item=year_data}>
+			<tr>
+				<th rowspan="2"><{$year_key}></th>
+				<td><{$year_data.subtotal}></td>
+				<td rowspan="2" style="width: 50px;"><{$year_data.percentage_countNA|round:1}>%</td>
+			</tr>
+			<tr>
+				<td class="question-table-socket">
+					<table class="question-table" style="border-width: 0;">
+						<thead>
+							<tr>
+								<{*
+								<th style="border-width: 0 1px 1px 0;">month</th> *}>
+								<th style="border-width: 0 1px 1px 0;"><{$smarty.const._MB_month}></th>
+								<{*
+								<th style="border-width: 0 1px 1px;">count</th> *}>
+								<th style="border-width: 0 1px 1px;"><{$smarty.const._MB_count}></th>
+								<th style="border-width: 0 0 1px 1px;">%</th>
+							</tr>
+						</thead>
+						<tbody>
+							<{foreach from=$year_data.month key=month_key item=month_data}>
+							<tr>
+								<th rowspan="2" style="border-width: 1px 1px 0 0;"><{$month_key}></th>
+								<td style="border-width: 1px 1px 0;"><{$month_data.subtotal}></td>
+								<td rowspan="2" style="width: 50px; border-width: 1px 0 0 1px;"><{$month_data.percentage_countNA|round:1}>%</td>
+							</tr>
+							<tr>
+								<td class="question-table-socket"
+									style="border-width: 1px 1px 0;">
+									<table class="question-table" style="border-width: 0;">
+										<thead>
+											<tr>
+												<{*
+												<th style="border-width: 0 1px 1px 0;">day</th> *}> <{*
+												<th style="border-width: 0 1px 1px;">count</th> *}>
+												<th style="border-width: 0 1px 1px 0;"><{$smarty.const._MB_day}></th>
+												<th style="border-width: 0 1px 1px;"><{$smarty.const._MB_count}></th>
+												<th style="border-width: 0 0 1px 1px;">%</th>
+											</tr>
+										</thead>
+										<tbody>
+											<{foreach from=$month_data.day key=day_key item=day_data}>
+											<tr>
+												<th style="border-width: 1px 1px 0 0;"><{$day_key}></th>
+												<td style="border-width: 1px 1px 0;"><{$day_data.subtotal}></td>
+												<td style="width: 50px; border-width: 1px 0 0 1px;"><{$day_data.percentage_countNA|round:1}>%</td>
+											</tr>
+											<{/foreach}>
+											</body>
+									</table>
+								</td>
+							</tr>
+							<{/foreach}>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<{/foreach}>
+			<tr>
+				<th><{$smarty.const._MB_NA}></th>
+				<td><{$question.NA_total}></td>
+				<td nowrap="nowrap"><{$question.NA_total_percentage|round:1}> %</td>
+			</tr>
+		</tbody>
+	</table>
+	<{elseif $question.typename == 'rate'}>
+	<table class="question-table">
+		<thead>
+			<tr>
+				<th><{$smarty.const._MB_SUBJECT}></th>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+				<th><{$smarty.const._MB_AVERAGE}></th>
+				<th><{$smarty.const._MB_NA}></th>
+			</tr>
+		</thead>
+		<tbody>
+			<{foreach from=$question.responses item=response}>
+			<tr class="question-table-row-options">
+				<th><{$response.subject}></th> <{foreach from=$response.rates
+				item=rate}>
+				<td><{$rate.subtotal}> (<{$rate.percentage_countNA|round:1}>%)</td>
+				<{/foreach}>
+				<td><{$response.average|round:1}></td>
+				<td><{$response.NA_total}>
+					(<{$response.NA_total_percentage|round:1}>%)</td>
+			</tr>
+			<{/foreach}>
+		</tbody>
+	</table>
+	<{/if}> <{include file="db:bmsurvey_manage_results_chart.html"}>
+</div>
+<div class="bmsurvey-manage-results-nav">[ <{$results_nav}> ]</div>
+<{/foreach}> <{else}>
+
+<h3><{$langs.respondent}> <{$respondents.current_respondent}>
+	<{$respondents.current_submitted|date_format:'%Y/%m/%d %H:%M'}> (RID:
+	<{$respondents.current_rid}>)</h3>
+<div>
+	<table class="">
+		<thead>
+			<tr>
+				<th>question</th>
+				<th>response</th>
+			</tr>
+		</thead>
+		<tbody>
+			<{foreach from=$form.questions item=question}>
+			<tr>
+				<th><{$question.content}> (<{$question.content}>) <{if
+					$question.required == 'Y'}> <span class="question-required">*</span><{/if}>
+				</th>
+				<td><{foreach from=$question.responses item=response}>
+					<{$response.response}> <{/foreach}></td>
+			</tr>
+			<{/foreach}>
+		</tbody>
+	</table>
+	<form method="post" action="webform.php">
+		<input type="hidden" name="sid" value="<{$form.sid}>" /> <input
+			type="hidden" name="rid" value="<{$respondents.current_rid}>" />
+		<button type="submit"><{$langs.edit_result}></button>
+	</form>
+	<{if $deny.process==3}> <{$langs.deny_result}> <{else}>
+	<form method="post" action="manage.php">
+		<input type="hidden" name="where" value="results" /> <input
+			type="hidden" name="sid" value="<{$form.sid}>" /> <input
+			type="hidden" name="rid" value="<{$respondents.current_rid}>" /> <input
+			type="hidden" name="deny" value="<{$deny.process}>" />
+		<button type="submit"><{$langs.deny_result}></button>
+	</form>
+	<{/if}>
+</div>
+<{/if}> <{$respondents_nav}>

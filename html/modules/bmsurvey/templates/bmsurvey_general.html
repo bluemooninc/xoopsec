@@ -1,0 +1,68 @@
+<table class="table">
+	<tr>
+		<th>
+			<{$smarty.const._MB_Title}>
+			<label class="badge"><{$smarty.const._MB_Required}></label>
+		</th>
+		<td>
+			<input type="text" name='title' value=<{$tpl_vars.formObject->getShow('title')}> />
+			<label>
+			<{$smarty.const._MB_free_form_including_spaces}>
+			<{$smarty.const._MB_This_appears_at}>
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<{$smarty.const._MB_Subtitle}>
+		</th>
+		<td>
+			<input type="text" name='subtitle' value=<{$tpl_vars.formObject->getShow('subtitle')}> />
+			<label>
+			<{$smarty.const._MB_free_form_including_spaces}>
+			<{$smarty.const._MB_Appears_below_the_title}>
+			</label>
+		</td>
+	</tr>
+
+	<tr>
+		<th>
+			<{$smarty.const._MB_Additional_Info}>
+		</th>
+		<td>
+			<textarea name='info' rows=5 cols=60 wrap="VIRTUAL"><{$tpl_vars.formObject->getShow('info')}></textarea>
+			<label>
+			<{$smarty.const._MB_free_form_including_spaces}>
+			<{$smarty.const._MB_Text_to_be_displayed_on_this_form_before_any_fields}>
+			</label>
+		</td>
+	</tr>
+
+	<tr>
+		<th>
+			<{$smarty.const._MB_FORM_PUBLISHED}>
+		</th>
+		<td>
+			<input type="text" name='published' id="published" value=<{$tpl_vars.formObject->getShow('published')|date_format:'%Y-%m-%d'}> />
+		</td>
+	</tr>
+
+	<tr>
+		<th>
+			<{$smarty.const._MB_FORM_EXPIRED}>
+		</th>
+		<td>
+			<input type="text" name='expired' id="expired" value=<{$tpl_vars.formObject->getShow('expired')|date_format:'%Y-%m-%d'}> />
+		</td>
+	</tr>
+
+</table>
+
+<input class="btn btn-warning" type="submit" name="saveGeneral" value="<{$smarty.const._MB_Save}>"/>
+
+<script>
+	$(function(){
+		$('#published').datepicker({dateFormat: 'yy-mm-dd'});
+		$('#expired').datepicker({dateFormat: 'yy-mm-dd'});
+	});
+</script>

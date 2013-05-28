@@ -1,0 +1,153 @@
+<{$bmsurvey.content.error}>
+
+<div id="bmsurvey-form-contents-wrap" class="bmsurvey-contents-wrap">
+	<div class="bmsurvey-contents-wrap-innr">
+		<div class="bmsurvey-contents-head">
+			<h1 id="bmsurvey-form-title">
+				<span><{$bmsurvey.content.form.title}></span>
+			</h1>
+
+			<h2><{$bmsurvey.content.form.subtitle}></h2>
+		</div>
+		<div class="bmsurvey-contents-body">
+			<{if $bmsurvey.content.form.name}>
+			<form name="<{$bmsurvey.content.formtag.name}>"
+				  action="<{$bmsurvey.content.formtag.action}>"
+				  enctype="<{$bmsurvey.content.formtag.enctype}>" method="post">
+				<{foreach from=$bmsurvey.content.hiddens key=hkey item=hitem}> <input
+					type="hidden" name="<{$hkey}>" value="<{$hitem}>"/> <{/foreach}>
+				<{/if}>
+				<div id="bmsurvey-form-infos">
+					<{if $bmsurvey.content.form.info}>
+					<div id="bmsurvey-form-info"
+						 class="bmsurvey-form-infos<{if !$bmsurvey.content.form.has_required && !$bmsurvey.content.form.message}> bmsurvey-form-infos-last<{/if}>">
+						<{$bmsurvey.content.form.info}>
+					</div>
+					<{/if}>
+					<{if $bmsurvey.content.form.has_required}>
+					<div id="bmsurvey-form-hasrequired"
+						 class="bmsurvey-form-infos<{if !$bmsurvey.content.form.message}> bmsurvey-form-infos-last<{/if}>">
+						<{$bmsurvey.content.form.has_required}>
+					</div>
+					<{/if}>
+					<{if $bmsurvey.content.form.message}>
+					<div id="bmsurvey-form-message"
+						 class="bmsurvey-form-infos bmsurvey-form-infos-last"><{$bmsurvey.content.form.message}>
+					</div>
+					<{/if}>
+				</div>
+				<script>
+					$(function () {
+						$("#tabs").tabs();
+					});
+				</script>
+				<div id="bmsurvey-form-questions">
+					<div id="tabs">
+						<{if $bmsurvey.content.sections}>
+						<ul>
+							<{foreach from=$bmsurvey.content.sections key=qkey item=qitem}>
+							<li><a href="#<{$qitem.section_id}>"><{$qitem.content}></a></li>
+							<{/foreach}>
+						</ul>
+						<{/if}>
+						<{foreach from=$bmsurvey.content.questions key=qkey item=qitem}>
+						<{if $qitem.type_id == 100}>
+						<{if $qitem.section_top == 0}>
+					</div>
+					<{/if}>
+					<div id="<{$qitem.section_id}>">
+						<{else}>
+						<div class="bmsurvey-form-question bmsurvey-form-question-type-<{$qitem.type_id}> <{if $qitem.required == 'Y'}>bmsurvey-form-question-required<{/if}>">
+							<{if isset($qitem.content) }>
+							<div class="bmsurvey-form-question-content">
+								<span class="bmsurvey-form-question-number"><{$qitem.qnum}></span>
+								<span><{$qitem.content}></span>
+								<{if $qitem.required == 'Y'}>
+								<span class="bmsurvey-form-question-asterisk">*</span>
+								<{/if}>
+							</div>
+							<{/if}>
+							<div class="bmsurvey-form-question-inputs">
+								<{if $qitem.type_id == 8}>
+								<table class="bmsurvey-form-question-rate-table">
+									<thead>
+									<tr>
+										<td></td>
+										<td></td>
+										<{foreach from=$qitem.th_title item=thTag}>
+										<td class="bmsurvey-form-question-rate-col-1"><{$thTag}></td>
+										<{/foreach}>
+									</tr>
+									</thead>
+									<tbody>
+									<{foreach from=$qitem.htmlTag item=trTag}>
+									<tr class="bmsurvey-form-question-rate-row-<{cycle values=" odd
+									,even"}> ">
+									<{foreach from=$trTag item=tdTag name=tdTag}>
+									<{if $smarty.foreach.tdTag.first}>
+									<td class="bmsurvey-form-question-rate-col-label"><{$tdTag.value}></td>
+									<{else}>
+									<{if $tdTag.type == 'radio'}>
+									<td class="bmsurvey-form-question-rate-col-<{$tdTag.value}>">
+										<input type="radio" name="<{$tdTag.name}>" value="<{$tdTag.value}>"<{if $tdTag.checked}> checked="checked"<{/if}> />
+									</td>
+									<{elseif $tdTag.type == 'button'}>
+									<td>
+										<button type="button" class="btn" name="<{$tdTag.name}>"
+										<{if $tdTag.onclick}>
+										onclick="<{$tdTag.onclick}>"<{/if}>><{$tdTag.value}></button>
+									</td>
+									<{/if}>
+									<{/if}>
+									<{/foreach}>
+									</tr>
+									<{/foreach}>
+									</tbody>
+								</table>
+								<{else}>
+								<{include file="db:bmsurvey_form_forms.html"}>
+								<{/if}>
+							</div>
+						</div>
+						<{/if}>
+						<{/foreach}>
+						<{if $qitem.section_id != ""}>
+					</div>
+					<{/if}>
+				</div>
+				<!--<{if !$preview.button}>-->
+				<div id="bmsurvey-form-buttons" style="text-align: center;">
+					<{if $bmsurvey.content.buttons.prev}>
+						<input class="btn" type="submit" name="<{$bmsurvey.content.buttons.prev.name}>" value="<{$bmsurvey.content.buttons.prev.label}>"/>
+					<{/if}>
+					<{if $bmsurvey.content.buttons.next}>
+						<input class="btn btn-info" type="submit" name="<{$bmsurvey.content.buttons.next.name}>" value="<{$bmsurvey.content.buttons.next.label}>"/>
+					<{/if}>
+					<{if $bmsurvey.content.form.status==1 || $bmsurvey.content.form.status==8 }>
+					  <{if $bmsurvey.content.buttons.save}>
+						<input type="submit" class="btn btn-success" name="<{$bmsurvey.content.buttons.save.name}>" value="<{$bmsurvey.content.buttons.save.label}>"/>
+					  <{/if}>
+					  <{if $bmsurvey.content.buttons.submit}>
+						<input type="submit" class="btn btn-success" name="<{$bmsurvey.content.buttons.submit.name}>" value="<{$bmsurvey.content.buttons.submit.label}>"/>
+					  <{/if}>
+					<{/if}>
+				</div>
+				<!--<{/if}>-->
+				<{if $bmsurvey.content.form.name}>
+			</form>
+			<{/if}>
+		</div>
+		<!--div class="bmsurvey-contents-foot">
+		</div-->
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+	(function () {
+		jQuery(function () {
+			$('.bmsurvey-form-question-type-9').find('input[type=text]').datepicker({
+				dateFormat: 'yy-mm-dd'
+			});
+		});
+	}());
+</script>
