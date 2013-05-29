@@ -1,0 +1,2527 @@
+/*!
+ * Bootstrap Responsive v2.1.0
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+/* line 12, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000312}}
+.clearfix {
+  *zoom: 1;
+}
+/* line 14, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+.clearfix:after {
+  clear: both;
+}
+/* line 106, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003106}}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/* line 154, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003154}}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 8, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\000038}}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+/* line 16, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000316}}
+.visible-phone {
+  display: none !important;
+}
+/* line 17, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000317}}
+.visible-tablet {
+  display: none !important;
+}
+/* line 20, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000320}}
+.hidden-desktop {
+  display: none !important;
+}
+/* line 21, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000321}}
+.visible-desktop {
+  display: inherit !important;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 26, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000326}}
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  /* line 27, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000327}}
+  .visible-desktop {
+    display: none !important ;
+  }
+  /* line 29, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000329}}
+  .visible-tablet {
+    display: inherit !important;
+  }
+  /* line 31, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000331}}
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 37, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000337}}
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  /* line 38, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000338}}
+  .visible-desktop {
+    display: none !important;
+  }
+  /* line 40, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000340}}
+  .visible-phone {
+    display: inherit !important;
+  }
+  /* line 42, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-utilities.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-utilities\.less}line{font-family:\0000342}}
+  .hidden-phone {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 581, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003581}}
+  .row {
+    margin-left: -140px;
+    *zoom: 1;
+  }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+  .row:after {
+    clear: both;
+  }
+  /* line 586, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003586}}
+  [class*="span"] {
+    float: left;
+    margin-left: 140px;
+  }
+  /* line 590, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003590}}
+  [class*="strongSpan"] {
+    float: left;
+    margin-left: 140px;
+  }
+  /* line 596, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003596}}
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 2380px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan12 {
+    width: 2380px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan11 {
+    width: 2170px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan10 {
+    width: 1960px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan9 {
+    width: 1750px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan8 {
+    width: 1540px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan7 {
+    width: 1330px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan6 {
+    width: 1120px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan5 {
+    width: 910px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan4 {
+    width: 700px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan3 {
+    width: 490px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan2 {
+    width: 280px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan1 {
+    width: 70px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span12 {
+    width: 2380px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span11 {
+    width: 2170px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span10 {
+    width: 1960px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span9 {
+    width: 1750px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span8 {
+    width: 1540px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span7 {
+    width: 1330px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span6 {
+    width: 1120px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span5 {
+    width: 910px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span4 {
+    width: 700px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span3 {
+    width: 490px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span2 {
+    width: 280px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span1 {
+    width: 70px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset12 {
+    margin-left: 2660px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset11 {
+    margin-left: 2450px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset10 {
+    margin-left: 2240px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset9 {
+    margin-left: 2030px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset8 {
+    margin-left: 1820px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset7 {
+    margin-left: 1610px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset6 {
+    margin-left: 1400px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset5 {
+    margin-left: 1190px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset4 {
+    margin-left: 980px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset3 {
+    margin-left: 770px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset2 {
+    margin-left: 560px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset1 {
+    margin-left: 350px;
+  }
+  /* line 649, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003649}}
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+  .row-fluid:after {
+    clear: both;
+  }
+  /* line 652, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003652}}
+  .row-fluid [class*="span"] {
+    display: block;
+    width: 100%;
+    min-height: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 1.9607843137254901%;
+  }
+  /* line 658, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003658}}
+  .row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  /* line 661, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003661}}
+  .row-fluid [class*="strongSpan"] {
+    display: block;
+    width: 100%;
+    min-height: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 5.88235294117647%;
+    *margin-left: 5.853113175094599%;
+  }
+  /* line 667, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003667}}
+  .row-fluid [class*="strongSpan"]:first-child {
+    margin-left: 0;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan12 {
+    width: 100%;
+    *width: 99.97076023391813%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan11 {
+    width: 91.17647058823529%;
+    *width: 91.14723082215342%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan10 {
+    width: 82.35294117647058%;
+    *width: 82.32370141038871%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan9 {
+    width: 73.52941176470588%;
+    *width: 73.50017199862401%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan8 {
+    width: 64.70588235294117%;
+    *width: 64.6766425868593%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan7 {
+    width: 55.882352941176464%;
+    *width: 55.85311317509459%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan6 {
+    width: 47.05882352941176%;
+    *width: 47.02958376332989%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan5 {
+    width: 38.23529411764706%;
+    *width: 38.206054351565186%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan4 {
+    width: 29.411764705882348%;
+    *width: 29.382524939800476%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan3 {
+    width: 20.588235294117645%;
+    *width: 20.558995528035773%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan2 {
+    width: 11.76470588235294%;
+    *width: 11.735466116271068%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan1 {
+    width: 2.941176470588235%;
+    *width: 2.9119367045063638%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span12 {
+    width: 101.96078431372548%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span11 {
+    width: 93.13725490196077%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span10 {
+    width: 84.31372549019606%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span9 {
+    width: 75.49019607843137%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span8 {
+    width: 66.66666666666666%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span7 {
+    width: 57.843137254901954%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span6 {
+    width: 49.01960784313725%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span5 {
+    width: 40.19607843137255%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span4 {
+    width: 31.37254901960784%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span3 {
+    width: 22.549019607843135%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span2 {
+    width: 13.72549019607843%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span1 {
+    width: 4.901960784313725%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset12 {
+    margin-left: 111.76470588235294%;
+    *margin-left: 111.7062263501892%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset12:first-child {
+    margin-left: 105.88235294117646%;
+    *margin-left: 105.82387340901272%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset11 {
+    margin-left: 102.94117647058823%;
+    *margin-left: 102.88269693842449%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset11:first-child {
+    margin-left: 97.05882352941175%;
+    *margin-left: 97.00034399724801%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset10 {
+    margin-left: 94.11764705882352%;
+    *margin-left: 94.05916752665978%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset10:first-child {
+    margin-left: 88.23529411764704%;
+    *margin-left: 88.1768145854833%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset9 {
+    margin-left: 85.29411764705883%;
+    *margin-left: 85.23563811489508%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset9:first-child {
+    margin-left: 79.41176470588235%;
+    *margin-left: 79.3532851737186%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset8 {
+    margin-left: 76.47058823529412%;
+    *margin-left: 76.41210870313037%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset8:first-child {
+    margin-left: 70.58823529411764%;
+    *margin-left: 70.5297557619539%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset7 {
+    margin-left: 67.6470588235294%;
+    *margin-left: 67.58857929136566%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset7:first-child {
+    margin-left: 61.764705882352935%;
+    *margin-left: 61.70622635018919%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset6 {
+    margin-left: 58.8235294117647%;
+    *margin-left: 58.76504987960096%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset6:first-child {
+    margin-left: 52.94117647058823%;
+    *margin-left: 52.88269693842449%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset5 {
+    margin-left: 50%;
+    *margin-left: 49.941520467836256%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset5:first-child {
+    margin-left: 44.11764705882353%;
+    *margin-left: 44.059167526659785%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset4 {
+    margin-left: 41.17647058823529%;
+    *margin-left: 41.117991056071546%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset4:first-child {
+    margin-left: 35.29411764705882%;
+    *margin-left: 35.235638114895075%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset3 {
+    margin-left: 32.35294117647059%;
+    *margin-left: 32.29446164430684%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset3:first-child {
+    margin-left: 26.470588235294116%;
+    *margin-left: 26.41210870313037%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset2 {
+    margin-left: 23.52941176470588%;
+    *margin-left: 23.470932232542136%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset2:first-child {
+    margin-left: 17.64705882352941%;
+    *margin-left: 17.588579291365665%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset1 {
+    margin-left: 14.705882352941176%;
+    *margin-left: 14.647402820777431%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset1:first-child {
+    margin-left: 8.823529411764705%;
+    *margin-left: 8.765049879600962%;
+  }
+  /* line 694, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003694}}
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  /* line 701, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003701}}
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 140px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span12, textarea.span12, .uneditable-input.span12 {
+    width: 2366px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span11, textarea.span11, .uneditable-input.span11 {
+    width: 2156px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span10, textarea.span10, .uneditable-input.span10 {
+    width: 1946px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span9, textarea.span9, .uneditable-input.span9 {
+    width: 1736px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span8, textarea.span8, .uneditable-input.span8 {
+    width: 1526px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span7, textarea.span7, .uneditable-input.span7 {
+    width: 1316px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span6, textarea.span6, .uneditable-input.span6 {
+    width: 1106px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span5, textarea.span5, .uneditable-input.span5 {
+    width: 896px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span4, textarea.span4, .uneditable-input.span4 {
+    width: 686px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span3, textarea.span3, .uneditable-input.span3 {
+    width: 476px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 266px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span1, textarea.span1, .uneditable-input.span1 {
+    width: 56px;
+  }
+  /* line 18, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-1200px-min.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-1200px-min\.less}line{font-family:\0000318}}
+  .thumbnails {
+    margin-left: -140px;
+  }
+  /* line 21, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-1200px-min.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-1200px-min\.less}line{font-family:\0000321}}
+  .thumbnails > li {
+    margin-left: 140px;
+  }
+  /* line 24, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-1200px-min.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-1200px-min\.less}line{font-family:\0000324}}
+  .row-fluid .thumbnails {
+    margin-left: 0;
+  }
+  /* line 27, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-1200px-min.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-1200px-min\.less}line{font-family:\0000327}}
+  .container-fluid {
+    padding-right: 140px;
+    padding-left: 140px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 581, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003581}}
+  .row {
+    margin-left: -20px;
+    *zoom: 1;
+  }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+  .row:after {
+    clear: both;
+  }
+  /* line 586, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003586}}
+  [class*="span"] {
+    float: left;
+    margin-left: 20px;
+  }
+  /* line 590, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003590}}
+  [class*="strongSpan"] {
+    float: left;
+    margin-left: 20px;
+  }
+  /* line 596, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003596}}
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 724px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan12 {
+    width: 724px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan11 {
+    width: 662px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan10 {
+    width: 600px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan9 {
+    width: 538px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan8 {
+    width: 476px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan7 {
+    width: 414px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan6 {
+    width: 352px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan5 {
+    width: 290px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan4 {
+    width: 228px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan3 {
+    width: 166px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan2 {
+    width: 104px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan1 {
+    width: 42px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span12 {
+    width: 724px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span11 {
+    width: 662px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span10 {
+    width: 600px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span9 {
+    width: 538px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span8 {
+    width: 476px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span7 {
+    width: 414px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span6 {
+    width: 352px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span5 {
+    width: 290px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span4 {
+    width: 228px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span3 {
+    width: 166px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span2 {
+    width: 104px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span1 {
+    width: 42px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset12 {
+    margin-left: 764px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset11 {
+    margin-left: 702px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset10 {
+    margin-left: 640px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset9 {
+    margin-left: 578px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset8 {
+    margin-left: 516px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset7 {
+    margin-left: 454px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset6 {
+    margin-left: 392px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset5 {
+    margin-left: 330px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset4 {
+    margin-left: 268px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset3 {
+    margin-left: 206px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset2 {
+    margin-left: 144px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset1 {
+    margin-left: 82px;
+  }
+  /* line 649, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003649}}
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+  .row-fluid:after {
+    clear: both;
+  }
+  /* line 652, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003652}}
+  .row-fluid [class*="span"] {
+    display: block;
+    width: 100%;
+    min-height: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 0.9208103130755064%;
+  }
+  /* line 658, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003658}}
+  .row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  /* line 661, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003661}}
+  .row-fluid [class*="strongSpan"] {
+    display: block;
+    width: 100%;
+    min-height: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 2.7624309392265194%;
+    *margin-left: 2.733191173144648%;
+  }
+  /* line 667, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003667}}
+  .row-fluid [class*="strongSpan"]:first-child {
+    margin-left: 0;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan12 {
+    width: 100%;
+    *width: 99.97076023391813%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan11 {
+    width: 91.43646408839778%;
+    *width: 91.40722432231591%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan10 {
+    width: 82.87292817679558%;
+    *width: 82.84368841071371%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan9 {
+    width: 74.30939226519337%;
+    *width: 74.2801524991115%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan8 {
+    width: 65.74585635359117%;
+    *width: 65.7166165875093%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan7 {
+    width: 57.18232044198895%;
+    *width: 57.15308067590708%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan6 {
+    width: 48.61878453038674%;
+    *width: 48.58954476430487%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan5 {
+    width: 40.05524861878453%;
+    *width: 40.02600885270266%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan4 {
+    width: 31.491712707182323%;
+    *width: 31.46247294110045%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan3 {
+    width: 22.92817679558011%;
+    *width: 22.89893702949824%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan2 {
+    width: 14.3646408839779%;
+    *width: 14.335401117896028%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan1 {
+    width: 5.801104972375691%;
+    *width: 5.771865206293819%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span12 {
+    width: 100.9208103130755%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span11 {
+    width: 92.35727440147329%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span10 {
+    width: 83.79373848987109%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span9 {
+    width: 75.23020257826887%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span8 {
+    width: 66.66666666666667%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span7 {
+    width: 58.103130755064456%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span6 {
+    width: 49.53959484346225%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span5 {
+    width: 40.97605893186004%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span4 {
+    width: 32.41252302025783%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span3 {
+    width: 23.848987108655617%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span2 {
+    width: 15.285451197053407%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span1 {
+    width: 6.721915285451197%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset12 {
+    margin-left: 105.52486187845304%;
+    *margin-left: 105.4663823462893%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset12:first-child {
+    margin-left: 102.76243093922652%;
+    *margin-left: 102.70395140706277%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset11 {
+    margin-left: 96.96132596685082%;
+    *margin-left: 96.90284643468708%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset11:first-child {
+    margin-left: 94.1988950276243%;
+    *margin-left: 94.14041549546056%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset10 {
+    margin-left: 88.39779005524862%;
+    *margin-left: 88.33931052308488%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset10:first-child {
+    margin-left: 85.6353591160221%;
+    *margin-left: 85.57687958385836%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset9 {
+    margin-left: 79.8342541436464%;
+    *margin-left: 79.77577461148266%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset9:first-child {
+    margin-left: 77.07182320441989%;
+    *margin-left: 77.01334367225614%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset8 {
+    margin-left: 71.2707182320442%;
+    *margin-left: 71.21223869988046%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset8:first-child {
+    margin-left: 68.50828729281768%;
+    *margin-left: 68.44980776065394%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset7 {
+    margin-left: 62.70718232044199%;
+    *margin-left: 62.64870278827824%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset7:first-child {
+    margin-left: 59.94475138121547%;
+    *margin-left: 59.886271849051724%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset6 {
+    margin-left: 54.14364640883978%;
+    *margin-left: 54.085166876676034%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset6:first-child {
+    margin-left: 51.38121546961326%;
+    *margin-left: 51.322735937449515%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset5 {
+    margin-left: 45.58011049723757%;
+    *margin-left: 45.521630965073825%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset5:first-child {
+    margin-left: 42.81767955801105%;
+    *margin-left: 42.759200025847306%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset4 {
+    margin-left: 37.01657458563536%;
+    *margin-left: 36.95809505347162%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset4:first-child {
+    margin-left: 34.25414364640884%;
+    *margin-left: 34.1956641142451%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset3 {
+    margin-left: 28.45303867403315%;
+    *margin-left: 28.394559141869404%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset3:first-child {
+    margin-left: 25.69060773480663%;
+    *margin-left: 25.632128202642885%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset2 {
+    margin-left: 19.88950276243094%;
+    *margin-left: 19.831023230267196%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset2:first-child {
+    margin-left: 17.12707182320442%;
+    *margin-left: 17.068592291040677%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset1 {
+    margin-left: 11.32596685082873%;
+    *margin-left: 11.267487318664987%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset1:first-child {
+    margin-left: 8.56353591160221%;
+    *margin-left: 8.505056379438466%;
+  }
+  /* line 694, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003694}}
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  /* line 701, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003701}}
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 20px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span12, textarea.span12, .uneditable-input.span12 {
+    width: 710px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span11, textarea.span11, .uneditable-input.span11 {
+    width: 648px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span10, textarea.span10, .uneditable-input.span10 {
+    width: 586px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span9, textarea.span9, .uneditable-input.span9 {
+    width: 524px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span8, textarea.span8, .uneditable-input.span8 {
+    width: 462px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span7, textarea.span7, .uneditable-input.span7 {
+    width: 400px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span6, textarea.span6, .uneditable-input.span6 {
+    width: 338px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span5, textarea.span5, .uneditable-input.span5 {
+    width: 276px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span4, textarea.span4, .uneditable-input.span4 {
+    width: 214px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span3, textarea.span3, .uneditable-input.span3 {
+    width: 152px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 90px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span1, textarea.span1, .uneditable-input.span1 {
+    width: 28px;
+  }
+  /* line 18, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-768px-979px.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-768px-979px\.less}line{font-family:\0000318}}
+  .container-fluid {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 581, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003581}}
+  .row {
+    margin-left: -8px;
+    *zoom: 1;
+  }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+  .row:before,
+  .row:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+  .row:after {
+    clear: both;
+  }
+  /* line 586, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003586}}
+  [class*="span"] {
+    float: left;
+    margin-left: 8px;
+  }
+  /* line 590, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003590}}
+  [class*="strongSpan"] {
+    float: left;
+    margin-left: 8px;
+  }
+  /* line 596, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003596}}
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 448px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan12 {
+    width: 448px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan11 {
+    width: 410px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan10 {
+    width: 372px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan9 {
+    width: 334px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan8 {
+    width: 296px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan7 {
+    width: 258px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan6 {
+    width: 220px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan5 {
+    width: 182px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan4 {
+    width: 144px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan3 {
+    width: 106px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan2 {
+    width: 68px;
+  }
+  /* line 558, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003558}}
+  .strongSpan1 {
+    width: 30px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span12 {
+    width: 448px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span11 {
+    width: 410px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span10 {
+    width: 372px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span9 {
+    width: 334px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span8 {
+    width: 296px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span7 {
+    width: 258px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span6 {
+    width: 220px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span5 {
+    width: 182px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span4 {
+    width: 144px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span3 {
+    width: 106px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span2 {
+    width: 68px;
+  }
+  /* line 552, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003552}}
+  .span1 {
+    width: 30px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset12 {
+    margin-left: 464px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset11 {
+    margin-left: 426px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset10 {
+    margin-left: 388px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset9 {
+    margin-left: 350px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset8 {
+    margin-left: 312px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset7 {
+    margin-left: 274px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset6 {
+    margin-left: 236px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset5 {
+    margin-left: 198px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset4 {
+    margin-left: 160px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset3 {
+    margin-left: 122px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset2 {
+    margin-left: 84px;
+  }
+  /* line 564, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003564}}
+  .offset1 {
+    margin-left: 46px;
+  }
+  /* line 649, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003649}}
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  /* line 14, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000314}}
+  .row-fluid:before,
+  .row-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  /* line 22, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\0000322}}
+  .row-fluid:after {
+    clear: both;
+  }
+  /* line 652, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003652}}
+  .row-fluid [class*="span"] {
+    display: block;
+    width: 100%;
+    min-height: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 0.5952380952380952%;
+  }
+  /* line 658, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003658}}
+  .row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  /* line 661, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003661}}
+  .row-fluid [class*="strongSpan"] {
+    display: block;
+    width: 100%;
+    min-height: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 1.7857142857142856%;
+    *margin-left: 1.7564745196324143%;
+  }
+  /* line 667, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003667}}
+  .row-fluid [class*="strongSpan"]:first-child {
+    margin-left: 0;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan12 {
+    width: 100%;
+    *width: 99.97076023391813%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan11 {
+    width: 91.51785714285714%;
+    *width: 91.48861737677527%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan10 {
+    width: 83.03571428571428%;
+    *width: 83.0064745196324%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan9 {
+    width: 74.55357142857142%;
+    *width: 74.52433166248954%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan8 {
+    width: 66.07142857142857%;
+    *width: 66.0421888053467%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan7 {
+    width: 57.589285714285715%;
+    *width: 57.56004594820384%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan6 {
+    width: 49.10714285714286%;
+    *width: 49.07790309106099%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan5 {
+    width: 40.625%;
+    *width: 40.59576023391813%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan4 {
+    width: 32.14285714285714%;
+    *width: 32.11361737677527%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan3 {
+    width: 23.660714285714285%;
+    *width: 23.631474519632413%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan2 {
+    width: 15.178571428571427%;
+    *width: 15.149331662489555%;
+  }
+  /* line 617, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003617}}
+  .row-fluid .strongSpan1 {
+    width: 6.696428571428571%;
+    *width: 6.6671888053467%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span12 {
+    width: 100.5952380952381%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span11 {
+    width: 92.11309523809524%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span10 {
+    width: 83.63095238095238%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span9 {
+    width: 75.14880952380952%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span8 {
+    width: 66.66666666666667%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span7 {
+    width: 58.18452380952381%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span6 {
+    width: 49.702380952380956%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span5 {
+    width: 41.220238095238095%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span4 {
+    width: 32.738095238095234%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span3 {
+    width: 24.25595238095238%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span2 {
+    width: 15.773809523809522%;
+  }
+  /* line 611, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003611}}
+  .row-fluid .span1 {
+    width: 7.291666666666666%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset12 {
+    margin-left: 103.57142857142857%;
+    *margin-left: 103.51294903926483%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset12:first-child {
+    margin-left: 101.78571428571429%;
+    *margin-left: 101.72723475355055%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset11 {
+    margin-left: 95.08928571428571%;
+    *margin-left: 95.03080618212196%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset11:first-child {
+    margin-left: 93.30357142857143%;
+    *margin-left: 93.24509189640769%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset10 {
+    margin-left: 86.60714285714285%;
+    *margin-left: 86.5486633249791%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset10:first-child {
+    margin-left: 84.82142857142857%;
+    *margin-left: 84.76294903926483%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset9 {
+    margin-left: 78.12499999999999%;
+    *margin-left: 78.06652046783624%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset9:first-child {
+    margin-left: 76.33928571428571%;
+    *margin-left: 76.28080618212196%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset8 {
+    margin-left: 69.64285714285714%;
+    *margin-left: 69.5843776106934%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset8:first-child {
+    margin-left: 67.85714285714286%;
+    *margin-left: 67.79866332497912%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset7 {
+    margin-left: 61.160714285714285%;
+    *margin-left: 61.10223475355054%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset7:first-child {
+    margin-left: 59.375%;
+    *margin-left: 59.316520467836256%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset6 {
+    margin-left: 52.67857142857143%;
+    *margin-left: 52.620091896407686%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset6:first-child {
+    margin-left: 50.892857142857146%;
+    *margin-left: 50.8343776106934%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset5 {
+    margin-left: 44.19642857142857%;
+    *margin-left: 44.137949039264825%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset5:first-child {
+    margin-left: 42.410714285714285%;
+    *margin-left: 42.35223475355054%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset4 {
+    margin-left: 35.71428571428571%;
+    *margin-left: 35.655806182121964%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset4:first-child {
+    margin-left: 33.92857142857142%;
+    *margin-left: 33.87009189640768%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset3 {
+    margin-left: 27.232142857142854%;
+    *margin-left: 27.17366332497911%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset3:first-child {
+    margin-left: 25.44642857142857%;
+    *margin-left: 25.387949039264825%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset2 {
+    margin-left: 18.75%;
+    *margin-left: 18.691520467836256%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset2:first-child {
+    margin-left: 16.96428571428571%;
+    *margin-left: 16.905806182121967%;
+  }
+  /* line 623, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003623}}
+  .row-fluid .offset1 {
+    margin-left: 10.267857142857142%;
+    *margin-left: 10.209377610693398%;
+  }
+  /* line 624, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003624}}
+  .row-fluid .offset1:first-child {
+    margin-left: 8.482142857142858%;
+    *margin-left: 8.423663324979113%;
+  }
+  /* line 694, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003694}}
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0;
+  }
+  /* line 701, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003701}}
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 8px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span12, textarea.span12, .uneditable-input.span12 {
+    width: 434px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span11, textarea.span11, .uneditable-input.span11 {
+    width: 396px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span10, textarea.span10, .uneditable-input.span10 {
+    width: 358px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span9, textarea.span9, .uneditable-input.span9 {
+    width: 320px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span8, textarea.span8, .uneditable-input.span8 {
+    width: 282px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span7, textarea.span7, .uneditable-input.span7 {
+    width: 244px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span6, textarea.span6, .uneditable-input.span6 {
+    width: 206px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span5, textarea.span5, .uneditable-input.span5 {
+    width: 168px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span4, textarea.span4, .uneditable-input.span4 {
+    width: 130px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span3, textarea.span3, .uneditable-input.span3 {
+    width: 92px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 54px;
+  }
+  /* line 681, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/mixins.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/mixins\.less}line{font-family:\00003681}}
+  input.span1, textarea.span1, .uneditable-input.span1 {
+    width: 16px;
+  }
+  /* line 17, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000317}}
+  body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 21, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000321}}
+  .jumbotron {
+    padding: 0;
+  }
+  /* line 24, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000324}}
+  .well.sidebar-nav {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  /* line 29, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000329}}
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  /* line 36, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000336}}
+  .container-fluid {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  /* line 41, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000341}}
+  .hero-unit {
+    height: 60px;
+  }
+  /* line 49, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000349}}
+  .dl-horizontal dt {
+    float: none;
+    clear: none;
+    width: auto;
+    text-align: left;
+  }
+  /* line 55, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000355}}
+  .dl-horizontal dd {
+    margin-left: 0;
+  }
+  /* line 63, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000363}}
+  .container {
+    width: auto;
+  }
+  /* line 67, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000367}}
+  .row-fluid {
+    width: 100%;
+  }
+  /* line 71, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000371}}
+  ul.unstyled li {
+    font-size: 75%;
+  }
+  /* line 74, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000374}}
+  ul.unstyled {
+    list-style: none outside;
+    display: block;
+  }
+  /* line 78, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000378}}
+  ul.unstyled:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+  }
+  /* line 88, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000388}}
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  /* line 92, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000392}}
+  .thumbnails > li {
+    float: none;
+    margin-left: 0;
+  }
+  /* line 96, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000396}}
+  a.thumbnail {
+    line-height: 1em;
+  }
+  /* line 99, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\0000399}}
+  .thumbnail > img {
+    padding-bottom: 5px;
+  }
+  /* line 105, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003105}}
+  [class*="span"],
+  .uneditable-input[class*="span"],
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 114, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003114}}
+  .span12,
+  .row-fluid .span12 {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 119, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003119}}
+  .row-fluid [class*="offset"]:first-child {
+    margin-left: 0;
+  }
+  /* line 126, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003126}}
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    display: block;
+    width: 100%;
+    min-height: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 136, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003136}}
+  .input-prepend input,
+  .input-append input,
+  .input-prepend input[class*="span"],
+  .input-append input[class*="span"] {
+    display: inline-block;
+    width: auto;
+  }
+  /* line 143, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003143}}
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 0;
+  }
+  /* line 148, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003148}}
+  .modal {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    margin: 0;
+  }
+  /* line 155, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003155}}
+  .modal.fade {
+    top: -100px;
+  }
+  /* line 156, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003156}}
+  .modal.fade.in {
+    top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 166, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003166}}
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 170, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003170}}
+  .jumbotron {
+    padding: 0 15px;
+  }
+  /* line 174, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003174}}
+  .hero-unit {
+    height: 1px;
+  }
+  /* line 178, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003178}}
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  /* line 183, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003183}}
+  .page-header h1 small {
+    display: block;
+    line-height: 20px;
+  }
+  /* line 188, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003188}}
+  .well.sidebar-nav {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  /* line 192, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003192}}
+  .accordion {
+    margin-bottom: 10px;
+  }
+  /* line 196, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003196}}
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+  /* line 203, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003203}}
+  .form-horizontal .control-label {
+    float: none;
+    width: auto;
+    padding-top: 0;
+    text-align: left;
+  }
+  /* line 210, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003210}}
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  /* line 214, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003214}}
+  .form-horizontal .control-list {
+    padding-top: 0;
+  }
+  /* line 218, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003218}}
+  .form-horizontal .form-actions {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 226, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003226}}
+  .media .pull-left,
+  .media .pull-right {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  /* line 233, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003233}}
+  .media-object {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  /* line 239, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003239}}
+  .modal {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+  /* line 244, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003244}}
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+  /* line 250, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003250}}
+  a.thumbnail {
+    line-height: 1em;
+    font-size: 60%;
+  }
+  /* line 254, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003254}}
+  .thumbnail > img {
+    padding-bottom: 5px;
+  }
+  /* line 257, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003257}}
+  ul.unstyled li {
+    line-height: 0.999em;
+  }
+  /* line 260, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003260}}
+  ul.unstyled {
+    list-style: none outside;
+    display: block;
+  }
+  /* line 264, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003264}}
+  ul.unstyled:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+  }
+  /* line 272, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003272}}
+  .carousel {
+    height: 100px;
+  }
+  /* line 275, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-767px-max.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-767px-max\.less}line{font-family:\00003275}}
+  .carousel-control {
+    height: 100%;
+    top: 17.5%;
+    width: 20px;
+    font-size: 32px;
+    line-height: 90px;
+  }
+}
+@media (max-width: 979px) {
+  /* line 13, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000313}}
+  body {
+    padding-top: 0;
+  }
+  /* line 17, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000317}}
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    position: static;
+  }
+  /* line 21, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000321}}
+  .navbar-fixed-top {
+    margin-bottom: 20px;
+  }
+  /* line 24, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000324}}
+  .navbar-fixed-bottom {
+    margin-top: 20px;
+  }
+  /* line 27, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000327}}
+  .navbar-fixed-top .navbar-inner,
+  .navbar-fixed-bottom .navbar-inner {
+    padding: 5px;
+  }
+  /* line 31, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000331}}
+  .navbar .container {
+    width: auto;
+    padding: 0;
+  }
+  /* line 36, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000336}}
+  .navbar .brand {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 0 0 -5px;
+  }
+  /* line 45, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000345}}
+  .nav-collapse {
+    clear: both;
+  }
+  /* line 49, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000349}}
+  .nav-collapse .nav {
+    float: none;
+    margin: 0 0 10px;
+  }
+  /* line 53, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000353}}
+  .nav-collapse .nav > li {
+    float: none;
+  }
+  /* line 56, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000356}}
+  .nav-collapse .nav > li > a {
+    margin-bottom: 2px;
+  }
+  /* line 59, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000359}}
+  .nav-collapse .nav > .divider-vertical {
+    display: none;
+  }
+  /* line 62, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000362}}
+  .nav-collapse .nav .nav-header {
+    color: #ffffff;
+    text-shadow: none;
+  }
+  /* line 67, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000367}}
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    padding: 9px 15px;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+  /* line 75, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000375}}
+  .nav-collapse .btn {
+    padding: 4px 10px 4px;
+    font-weight: normal;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  /* line 80, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000380}}
+  .nav-collapse .dropdown-menu li + li a {
+    margin-bottom: 2px;
+  }
+  /* line 83, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000383}}
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .dropdown-menu a:hover {
+    background-color: #151515;
+  }
+  /* line 87, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000387}}
+  .navbar-inverse .nav-collapse .nav > li > a:hover,
+  .navbar-inverse .nav-collapse .dropdown-menu a:hover {
+    background-color: #111111;
+  }
+  /* line 92, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000392}}
+  .nav-collapse.in .btn-group {
+    margin-top: 5px;
+    padding: 0;
+  }
+  /* line 97, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\0000397}}
+  .nav-collapse .dropdown-menu {
+    position: static;
+    top: auto;
+    left: auto;
+    float: none;
+    display: block;
+    max-width: none;
+    margin: 0 15px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 111, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003111}}
+  .nav-collapse .dropdown-menu:before,
+  .nav-collapse .dropdown-menu:after {
+    display: none;
+  }
+  /* line 115, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003115}}
+  .nav-collapse .dropdown-menu .divider {
+    display: none;
+  }
+  /* line 119, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003119}}
+  .nav-collapse .navbar-form,
+  .nav-collapse .navbar-search {
+    float: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-top: 1px solid #151515;
+    border-bottom: 1px solid #151515;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+  }
+  /* line 129, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003129}}
+  .navbar .nav-collapse .nav.pull-right {
+    float: none;
+    margin-left: 0;
+  }
+  /* line 134, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003134}}
+  .nav-collapse,
+  .nav-collapse.collapse {
+    overflow: hidden;
+    height: 0;
+  }
+  /* line 140, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003140}}
+  .navbar .btn-navbar {
+    display: block;
+  }
+  /* line 146, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003146}}
+  .navbar-static .navbar-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 980px) {
+  /* line 161, /Users/bluemooninc/PhpstormProjects/socialmap/html/themes/xoopstrap/less/responsive-navbar.less */
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/bluemooninc\/PhpstormProjects\/socialmap\/html\/themes\/xoopstrap\/less\/responsive-navbar\.less}line{font-family:\00003161}}
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}

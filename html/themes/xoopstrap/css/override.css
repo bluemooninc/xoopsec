@@ -1,0 +1,77 @@
+input, textarea, select {
+	width: auto;
+}
+.btn {
+	margin-bottom:10px;
+}
+@media (min-width:1025px) {
+ .history-back {
+ 	display:block;
+ 	float:right;
+ 	margin-right:10px;
+ }
+}
+@media (max-width:1024px) {
+ .history-back {
+ 	display:none;
+ }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .span1 {
+    width: 60px;
+    display:block;
+    float:left;
+  }
+  .span2 {
+    width: 100px;
+    display:block;
+    float:left;
+}
+.span3 {
+    width: 220px;
+    display:block;
+    float:left;
+}
+.span4 {
+    width: 300px;
+    display:block;
+    float:left;
+}
+.span5 {
+	width:460px;
+	display:block;
+    float:left;
+}
+}
+
+.span6,.span7,.span8,.span9,.span10,.span11,.span12 {
+	display:block;
+    float:left;
+}
+@media (max-width: 599px) {
+  .span1 {
+    width: 60px;
+    display:block;
+    float:left;
+  }
+  .span2 {
+    width: 100px;
+    display:block;
+    float:left;
+}
+.span3 {
+    width: 220px;
+    display:block;
+    float:left;
+}
+.span4 {
+    width: 300px;
+    display:block;
+    float:left;
+}
+.span5, .span6,.span7,.span8,.span9,.span10,.span11,.span12 {
+	display:block;
+    float:left;
+}
+}
