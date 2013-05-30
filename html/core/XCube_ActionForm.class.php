@@ -3,8 +3,8 @@
  *
  * @package XCube
  * @version $Id: XCube_ActionForm.class.php,v 1.4 2008/10/12 04:30:27 minahito Exp $
- * @copyright Copyright 2005-2007 XOOPS Cube Project  <http://xoopscube.sourceforge.net/>
- * @license http://xoopscube.sourceforge.net/license/bsd_licenses.txt Modified BSD license
+ * @copyright Copyright 2005-2007 XOOPS Cube Project  <https://github.com/xoopscube/legacy>
+ * @license https://github.com/xoopscube/legacy/blob/master/docs/bsd_licenses.txt Modified BSD license
  *
  */
 
@@ -19,30 +19,30 @@ require_once XCUBE_CORE_PATH . '/XCube_FormFile.class.php';
 /**
  * @public
  * @brief [Abstract] Fetches input values, valudates fetched values and passes them to some object.
- * 
+ *
  *   This class fetches the input value from the request value through the
- *   current context object and validate those values. It separates fetching & 
+ *   current context object and validate those values. It separates fetching &
  *   validating from your main logic. Such classes is important in web
  *   program.
- * 
+ *
  *   Plus, this action form has features of one time token. It seems one kinds of
  *   validations. The token is registered in templates.
- * 
+ *
  *   This is suggestion of a simple action form. We do not force a module
  *   developer to use this. You can learn more full-scale action forms from JAVA
  *   and .NET and other PHP. And, you must use auto-generating tool when you need
  *   to ActionForm that is sub-class of this class.
- * 
+ *
  *   XCube_ActionForm contains the one-time token feature for CSRF. But, if the
  *   current HTTP request is from the web service, the token isn't needed.
  *   Therefore, this class decides whether to use the token with the information
  *   of the context.
- * 
+ *
  * @remarks
  *     This class is diable for XCube_Service, because the class uses SESSION
  *     directly. XCube_ActionForm will be changed in the near feature. Developers
  *     need to pay attention to spec change.
- * 
+ *
  * @todo The difference of array and no-array is too big.
  * @todo Form object should have getValue(), isNull(), toString().
  * @todo This form is impossible to be used in XCube_Service SOAP mode.
@@ -52,56 +52,56 @@ class XCube_ActionForm
 	/**
 	 * @protected
 	 * @brief [READ ONLY] XCube_HttpContext
-	 * 
+	 *
 	 * The context object. Enables to access the HTTP-request information.
 	 * Basically, this member property is read only. Initialized in the constructor.
 	 */
-	var $mContext = null;
-	
+	var $mContext = NULL;
+
 	/**
 	 * @protected
 	 * @brief [READ ONLY] XCube_Principal
-	 * 
+	 *
 	 * The object which has a interface of XCube_Principal. Enables to check
 	 * permissions of the current HTTP-request through principal object.
 	 * Basically, this member property is read only. Initialized in constructor.
 	 */
-	var $mUser = null;
-	
+	var $mUser = NULL;
+
 	/**
 	 * @protected
 	 * @brief XCube_FormProperty[]
 	 */
 	var $mFormProperties = array();
-	
+
 	/**
 	 * @protected
 	 * @brief XCube_FieldProperty[]
 	 */
 	var $mFieldProperties = array();
-	
+
 	/**
 	 * @protected
 	 * @brief bool
 	 * @attention
 	 *     This is temporary until we will decide the method of managing error.
 	 */
-	var $mErrorFlag = false;
-	
+	var $mErrorFlag = FALSE;
+
 	/**
 	 * @private
 	 * @brief string[]
 	 */
 	var $mErrorMessages = array();
-	
+
 	/**
 	 * @protected
 	 * @brief string
-	 * 
+	 *
 	 * Token string as one time token.
 	 */
-	var $_mToken = null;
-	
+	var $_mToken = NULL;
+
 	/**
 	 * @public
 	 * @brief Constructor.
@@ -112,51 +112,62 @@ class XCube_ActionForm
 		$this->mContext =& $root->getContext();
 		$this->mUser =& $this->mContext->getUser();
 	}
-	
+
 	/**
 	 * @public
 	 * @brief [Abstract] Set up form properties and field properties.
-	 */	
+	 */
 	function prepare()
 	{
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Gets the token name of this actionform's token.
 	 * @return string
-	 * 
+	 *
 	 * Return token name. If the sub-class doesn't override this member
 	 * function, features about one time tokens aren't used.
 	 */
 	function getTokenName()
 	{
-		return null;
+		return NULL;
 	}
-	
+
+	/**
+	 * Set $this->_mToken before getToken()
+	 * Added by bluemooninc.
+	 *
+	 * @param $tokenName
+	 */
+	function setToken($tokenName)
+	{
+		if(isset($_SESSION['XCUBE_TOKEN'][$tokenName])){
+			$this->_mToken = $_SESSION['XCUBE_TOKEN'][$tokenName];
+		}
+	}
+
 	/**
 	 * @public
 	 * @brief Gets the token value of this actionform's token.
 	 * @return string
-	 * 
+	 *
 	 * Generate token value, register it to sessions, return it. This member
 	 * function should be called in templates. The subclass can override this
 	 * to change the logic for generating token value.
 	 */
 	function getToken()
 	{
-		if ($this->_mToken == null) {
+		if ($this->_mToken == NULL) {
 			srand(microtime() * 100000);
 			$root=&XCube_Root::getSingleton();
 			$salt = $root->getSiteConfig('Cube', 'Salt');
-			$this->_mToken = md5($salt . uniqid(rand(), true));
-			
+			$this->_mToken = md5($salt . uniqid(rand(), TRUE));
 			$_SESSION['XCUBE_TOKEN'][$this->getTokenName()] = $this->_mToken;
 		}
-		
 		return $this->_mToken;
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Gets message about the failed validation of token.
@@ -166,19 +177,19 @@ class XCube_ActionForm
 	{
 		return _TOKEN_ERROR;	//< FIXME
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Set raw value as the value of the form property.
-	 * 
+	 *
 	 * This method is overloaded function.
-	 * 
+	 *
 	 * \par XCube_ActionForm::set($name, $value)
 	 *   Set $value to $name property.
 	 *   \code
 	 *     $this->set('name', 'Bob');  // Set 'Bob' to 'name'.
 	 *   \endcode
-	 * 
+	 *
 	 * \par XCube_ActionForm::set($name, $index, $value)
 	 *   Set $value to $name array property[$index].
 	 *   \code
@@ -199,10 +210,10 @@ class XCube_ActionForm
 			}
 		}
 	}
-	
+
 	/**
 	 * @deprecated
-	 */	
+	 */
 	function setVar()
 	{
 		if (isset($this->mFormProperties[func_get_arg(0)])) {
@@ -214,31 +225,31 @@ class XCube_ActionForm
 			}
 		}
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Gets raw value.
 	 * @param $key   string Name of form property.
 	 * @param $index string Subscript for array.
 	 * @return mixed
-	 * 
+	 *
 	 * @attention
 	 *     This method returns raw values. Therefore if the value is used in templates,
 	 *     it must needs escaping.
 	 */
-	function get($key, $index=null)
+	function get($key, $index=NULL)
 	{
-		return isset($this->mFormProperties[$key]) ? $this->mFormProperties[$key]->getValue($index) : null;
+		return isset($this->mFormProperties[$key]) ? $this->mFormProperties[$key]->getValue($index) : NULL;
 	}
-	
+
 	/**
 	 * @deprecated
 	 */
-	function getVar($key,$index=null)
+	function getVar($key,$index=NULL)
 	{
 		return $this->get($key, $index);
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Gets form properties of this member property.
@@ -251,13 +262,13 @@ class XCube_ActionForm
 	{
 		return $this->mFormProperties;
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Fetches values through the request object.
 	 * @return void
 	 * @see getFromRequest
-	 * 
+	 *
 	 *   Fetch the input value, set it and form properties. Those values can be
 	 *   got, through get() method. the sub-class can define own member function
 	 *   to fetch. Define member functions whose name is "fetch" + "form name".
@@ -287,15 +298,15 @@ class XCube_ActionForm
 			}
 		}
 	}
-	
+
 	/**
 	 * @protected
 	 * @brief Validates the token.
 	 * @return void
-	 * 
+	 *
 	 *   Validates the token. This method is deprecated, because XCube_Action will
 	 *   be changed for multi-layer. So this method is called by only this class.
-	 * 
+	 *
 	 * @todo This method has to be remove, because it is using session directly.
 	 */
 	function _validateToken()
@@ -303,55 +314,60 @@ class XCube_ActionForm
 		//
 		// check onetime & transaction token
 		//
-		if ($this->getTokenName() != null) {
+		if ($this->getTokenName() != NULL) {
 			$key = strtr($this->getTokenName(), '.', '_');
-			$token = isset($_REQUEST[$key]) ? $_REQUEST[$key] : null;
-			
+			$token = isset($_REQUEST[$key]) ? $_REQUEST[$key] : NULL;
+
 			if (get_magic_quotes_gpc()) {
 				$token = stripslashes($token);
 			}
-			
-			$flag = true;
-			
+			$flag = TRUE;
 			if (!isset($_SESSION['XCUBE_TOKEN'][$this->getTokenName()])) {
-				$flag = false;
+				$flag = FALSE;
 			}
 			elseif ($_SESSION['XCUBE_TOKEN'][$this->getTokenName()] != $token) {
-				unset($_SESSION['XCUBE_TOKEN'][$this->getTokenName()]);
-				$flag = false;
+				$flag = FALSE;
 			}
-			
+
 			if (!$flag) {
 				$message = $this->getTokenErrorMessage();
-				if ($message == null) {
-					$this->mErrorFlag = true;
-				}
-				else {
+				if ($message == NULL) {
+					$this->mErrorFlag = TRUE;
+				} else {
 					$this->addErrorMessage($message);
 				}
 			}
-			
+			//
+			// Token error guide by bluemooninc
+			//
+			if (!$flag){
+				echo "<h3>Request From Browser</h3>key=".$key."<br/>token=".$token."<br/>";
+				echo "<h3>Session On Server XCUBE_TOKEN</h3>key=".$this->getTokenName()."<br/>token=".$_SESSION['XCUBE_TOKEN'][$this->getTokenName()]."<br/>";
+				echo "<h3>Message</h3>".$message;
+				echo "<h3>XCUBE_TOKEN Array</h3><pre>";var_dump($_SESSION['XCUBE_TOKEN']);echo "</pre>";
+				echo "<h3>Guide</h3>Did you set parent::setToken(getTokenName()); in prepare() on your ActionForm class?<hr>";
+			}
 			//
 			// clear token
 			//
 			unset($_SESSION['XCUBE_TOKEN'][$this->getTokenName()]);
 		}
 	}
-	
-	
+
+
 	/**
 	 * @public
 	 * @brief Validates fetched values.
 	 * @return void
-	 * 
+	 *
 	 *   Execute validation, so if a input value is wrong, error messages are
 	 *   added to error message buffer. The procedure of validation is the
 	 *   following:
-	 * 
+	 *
 	 *   \li 1. If this object have token name, validate one time tokens.
 	 *   \li 2. Call the validation member function of all field properties.
 	 *   \li 3. Call the member function that is defined in the sub-class.
-	 * 
+	 *
 	 *   For a basis, validations are done by functions of each field properties.
 	 *   But, the sub-class can define own validation logic. Define member
 	 *   functions whose name is "validate" + "form name". For example, to
@@ -360,7 +376,7 @@ class XCube_ActionForm
 	function validate()
 	{
 		$this->_validateToken();
-		
+
 		foreach (array_keys($this->mFormProperties) as $name) {
 			if (isset($this->mFieldProperties[$name])) {
 				if ($this->mFormProperties[$name]->isArray()) {
@@ -373,7 +389,7 @@ class XCube_ActionForm
 				}
 			}
 		}
-		
+
 		//
 		// If this class has original validation methods, call it.
 		//
@@ -385,7 +401,7 @@ class XCube_ActionForm
 			}
 		}
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Gets a value indicating whether this action form keeps error messages or error flag.
@@ -395,17 +411,17 @@ class XCube_ActionForm
 	{
 		return (count($this->mErrorMessages) > 0 || $this->mErrorFlag);
 	}
-	
+
 	/**
 	 * @protected
 	 * @brief Adds an message to error message buffer of the form.
 	 * @param $message string
-	 */	
+	 */
 	function addErrorMessage($message)
 	{
 		$this->mErrorMessages[] = $message;
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Gets error messages.
@@ -415,34 +431,34 @@ class XCube_ActionForm
 	{
 		return $this->mErrorMessages;
 	}
-	
+
 	/**
 	 * @public
 	 * @brief [Abstract] Initializes properties' values from an object.
 	 * @param $obj mixed
 	 * @return void
-	 * 
+	 *
 	 *   Set initial values to this action form from a object. This member
 	 *   function mediates between the logic and the validation. For example,
 	 *   developers can use this method to load values from XoopsSimpleObject.
-	 * 
+	 *
 	 *   This member function is abstract. But, the sub-class of this class
 	 *   doesn't have to implement this.
 	 */
 	function load(&$obj)
 	{
 	}
-	
+
 	/**
 	 * @public
 	 * @brief [Abstract] Updates an object with properties's values.
 	 * @param $obj mixed
 	 * @return void
-	 * 
+	 *
 	 *   Set input values to a object from this action form. This member function
 	 *   mediates between the logic and the result of validations. For example,
 	 *   developers can use this method to set values to XoopsSimpleObject.
-	 * 
+	 *
 	 *   This member function is abstract. But, the sub-class of this class
 	 *   doesn't have to implement this.
 	 */
@@ -462,20 +478,20 @@ class XCube_FieldProperty
 	 * @brief XCube_ActionForm - Parent form contains this field property.
 	 */
 	var $mForm;
-	
+
 	/**
 	 * @protected
 	 * @brief XCube_Validator[] - std::map<string, XCube_Validator*>
 	 */
 	var $mDepends;
-	
+
 	/**
 	 * @protected
 	 * @brief Complex Array
 	 * @section section1 Complex Array
 	 *   $mMessages[$name]['message'] - string \n
 	 *   $mMessages[$name]['args'][]  - string
-	 * 
+	 *
 	 * \code
 	 *   // Reference Define
 	 *   typedef std::map<int, string> ArgumentMap;
@@ -484,31 +500,31 @@ class XCube_FieldProperty
 	 *     string Message;
 	 *     ArgumentMap args;
 	 *	 };
-	 * 
+	 *
 	 *   typedef std::map<string, MessageStrage> MessageList;
 	 *   MessageList mMessages;
 	 * \endcode
 	 */
 	var $mMessages;
-	
+
 	/**
 	 * @protected
 	 * @brief Hash-Map Array - std::map<string, mixed>
 	 */
 	var $mVariables;
-	
+
 	/**
 	 * @public
 	 * @brief Constructor.
 	 * @param $form XCube_ActionForm - Parent form.
 	 * @remarks
-     *     Only sub-classes of XCube_ActionForm calles this constructor. 
+	 *     Only sub-classes of XCube_ActionForm calles this constructor.
 	 */
 	function XCube_FieldProperty(&$form)
 	{
 		$this->mForm =& $form;
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Initializes the validator list of this field property with the depend rule name list.
@@ -519,21 +535,21 @@ class XCube_FieldProperty
 	{
 		foreach ($dependsArr as $dependName) {
 			$instance =& XCube_DependClassFactory::factoryClass($dependName);
-			if ($instance !== null) {
+			if ($instance !== NULL) {
 				$this->mDepends[$dependName] =& $instance;
 			}
-			
+
 			unset($instance);
 		}
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Adds an error message which will be used in the case which '$name rule' validation is failed.
 	 * @param $name string - Depend rule name.
 	 * @param $message string - Error message.
 	 * @return void
-	 * 
+	 *
 	 *   It's possible to add 3 or greater parameters.
 	 *   These additional parameters are used by XCube_Utils::formatString().
 	 * \code
@@ -551,18 +567,18 @@ class XCube_FieldProperty
 			}
 		}
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Gets the error message rendered by XCube_Utils::formaString().
 	 * @param $name string - Depend rule name
 	 * @return string
-	 * 
+	 *
 	 *   Gets the error message registered at addMessage(). If the message setting has some
 	 *   arguments, messages are rendered by XCube_Utils::formatString().
 	 * \code
 	 *   $field->addMessage('required', "{0:ucFirst} is requred.", "name");
-	 * 
+	 *
 	 *   // Gets "Name is required."
 	 *   $field->renderMessage('required');
 	 * \endcode
@@ -571,24 +587,24 @@ class XCube_FieldProperty
 	function renderMessage($name)
 	{
 		if (!isset($this->mMessages[$name]))
-			return null;
-		
+			return NULL;
+
 		$message = $this->mMessages[$name]['message'];
-		
+
 		if (isset($this->mMessages[$name]['args'])) {
 			// Use an unity method.
 			$message = XCube_Utils::formatString($message, $this->mMessages[$name]['args']);
 		}
-		
+
 		return $message;
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Adds a virtual variable used by validators.
 	 * @param $name string - A name of the variable.
 	 * @param $value mixed - A value of the variable.
-	 * 
+	 *
 	 *   Virtual varialbes are used for validating by validators. For example,
 	 *   XCube_MinlengthValidator needs a value indicationg a minimum length.
 	 * \code
@@ -599,7 +615,7 @@ class XCube_FieldProperty
 	{
 		$this->mVariables[$name] = $value;
 	}
-	
+
 	/**
 	 * @public
 	 * @brief Validates form-property with validators which this field property holds.
@@ -614,8 +630,8 @@ class XCube_FieldProperty
 				if (!$depend->isValid($form, $this->mVariables)) {
 					// Error
 					// NOTICE: This is temporary until we will decide the method of managing error.
-					$this->mForm->mErrorFlag = true;
-					
+					$this->mForm->mErrorFlag = TRUE;
+
 					// TEST!!
 					$this->mForm->addErrorMessage($this->renderMessage($name));
 				}
@@ -645,14 +661,14 @@ class XCube_DependClassFactory
 	 * @attention
 	 *     Only 'XCube_ActionForm' class should use this class.
 	 */
-	function &factoryClass($dependName)
+	public static function &factoryClass($dependName)
 	{
 		static $_cache;
-		
+
 		if (!is_array($_cache)) {
 			$_cache = array();
 		}
-		
+
 		if (!isset($_cache[$dependName])) {
 			// or switch?
 			$class_name = "XCube_" . ucfirst($dependName) . "Validator";
