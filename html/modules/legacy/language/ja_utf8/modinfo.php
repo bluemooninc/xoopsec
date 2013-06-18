@@ -35,7 +35,7 @@ define('_MI_LEGACY_MENU_PREFERENCE', "プリファレンス");
 define('_MI_LEGACY_MENU_SMILES_MANAGE', "顔アイコンの管理");
 define('_MI_LEGACY_MENU_THEME_MANAGE', "テーマの管理");
 define('_MI_LEGACY_MENU_XOOPS_CONFIG', "XOOPS コンフィグ");
-define('_MI_LEGACY_NAME', "互換モジュール");
+define('_MI_LEGACY_NAME', "システム環境設定");
 define('_MI_LEGACY_NAME_DESC', "XOOPS Cube にXOOPS 2.0.x シリーズの互換性を与えます");
 
 ?>
