@@ -136,7 +136,7 @@ class XCube_ActionForm
 
 	/**
 	 * Set $this->_mToken before getToken()
-	 * Added by bluemooninc.
+	 * for quick token method Added by bluemooninc.
 	 *
 	 * @param $tokenName
 	 */
