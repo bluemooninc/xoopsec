@@ -106,7 +106,7 @@ if ( $_POST['submit'] == "Submit" ) {
   // below can be found at http://www.chuggnutt.com/html2text
   //  bundled in ./extras/
   require_once('../class.html2text.inc');
-  $h2t =& new html2text($body);
+  $h2t = new html2text($body);
   $mail->AltBody = $h2t->get_text();
   //$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test
   $mail->WordWrap   = 80; // set word wrap
@@ -253,7 +253,7 @@ echo '$mail->AddCC(\'' . $value . '\');<br />';
 $mail->Subject  = <?php echo $_POST['Subject']; ?> (PHPMailer test using <?php echo strtoupper($_POST['test_type']); ?>)
 
 require_once('../class.html2text.inc');
-$h2t =& new html2text($body);
+$h2t = new html2text($body);
 $mail->AltBody = $h2t->get_text();
 $mail->WordWrap   = 80; // set word wrap
 

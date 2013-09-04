@@ -20,24 +20,24 @@ class User_BringSessionLogin extends XCube_ActionFilter
 
 		$userHandler =& xoops_getmodulehandler('users', 'user');
 
-		$criteria =& new CriteriaCompo(new Criteria('uname', xoops_getrequest('uname')));
+		$criteria = new CriteriaCompo(new Criteria('uname', xoops_getrequest('uname')));
 		$criteria->add(new Criteria('pass', md5(xoops_getrequest('pass'))));
 		$userArr =& $userHandler->getObjects($criteria);
 
 		if (count($userArr) != 1) {
 			return;
 		}
-		
+
 		if ($userArr[0]->get('level') == 0) {
 			// TODO We should use message "_MD_USER_LANG_NOACTTPADM"
 			return;
 		}
-		
+
 		$handler =& xoops_gethandler('user');
 		$user =& $handler->get($userArr[0]->get('uid'));
-		
+
 		$xoopsUser = $user;
-	
+
 		//
 		// Regist to session
 		//
