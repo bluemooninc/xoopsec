@@ -29,6 +29,7 @@ function b_bmcart_checkedItems_show()
 	}
 	$mListData = array();
 	$i=0;
+	if (is_array($objects)){
 	foreach ($objects as $object) {
 		$item_id = $object->getVar('item_id');
 		$itemObject = $itemHandler->get($item_id);
@@ -48,6 +49,7 @@ function b_bmcart_checkedItems_show()
 			$mListData[$blockNumber][] = $myRow;
 			$i++;
 		}
+	}
 	}
 	$block = array();
 	$block['checkedItemsList'] = $mListData;
