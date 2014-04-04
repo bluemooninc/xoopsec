@@ -127,9 +127,9 @@
 						<{$xoops_uname}>
 					</a>
 					<{else}>
-						<a class="btn btn-primary" href="<{$xoops_url}>/user.php">Login</a>
-						<{if $facbookLogin}><{$facbookLogin}><{/if}>
-						<{if $yahooLogin}><{$yahooLogin}><{/if}>
+					<a class="btn btn-primary" href="<{$xoops_url}>/user.php">Login</a>
+					<{if $facbookLogin}><{$facbookLogin}><{/if}>
+					<{if $yahooLogin}><{$yahooLogin}><{/if}>
 					<{/if}>
 					<{if $xoops_uname}>
 					<ul class="dropdown-menu">
@@ -143,19 +143,20 @@
 					<{/if}>
 					<{* Scroll down button *}>
 				</div>
-			<!--/.nav-collapse -->
-			<div class="GlobalSearchBox pull-right">
-				<form action="<{$xoops_url}>/search.php" method="get">
-					<input id="globalSearch" class="Search-box PngBg" type="text" name="query" size="15"/>
-					<input type="hidden" name="action" value="results"/>
-					<!-- <button name="submit" type="submit" value="search" accesskey="F">Search</button> -->
-				</form>
-			</div>
+				<!--/.nav-collapse -->
+				<div class="GlobalSearchBox pull-right">
+					<form action="<{$xoops_url}>/search.php" method="get">
+						<input id="globalSearch" class="Search-box PngBg" type="text" name="query" size="15"/>
+						<input type="hidden" name="action" value="results"/>
+						<!-- <button name="submit" type="submit" value="search" accesskey="F">Search</button> -->
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <{if empty($xoops_contents)}>
+<!--
 <header class="jumbotron subhead" id="overview">
 	<div class="container-fluid">
 		<h2>
@@ -164,6 +165,7 @@
 		</h2>
 	</div>
 </header>
+-->
 <{/if}>
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -195,9 +197,9 @@
 			<!-- LEFT -->
 			<{if $smartphone}>
 			<div class="accordion" id="accordionlblock">
-			<{foreach name=lblockloop item=block from=$xoops_lblocks}>
+				<{foreach name=lblockloop item=block from=$xoops_lblocks}>
 				<div class="accordion-group">
-				<{assign var="inum" value=$smarty.foreach.lblockloop.iteration}>
+					<{assign var="inum" value=$smarty.foreach.lblockloop.iteration}>
 					<div class="accordion-heading">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionlblock" href="#lBlockCollapse<{$inum}>">
 							<{$block.title}>
@@ -209,15 +211,15 @@
 						</div>
 					</div>
 				</div>
-			<{/foreach}>
+				<{/foreach}>
 			</div>
 			<{else}>
-				<{foreach name=lblockloop item=block from=$xoops_lblocks}>
-				<div class="well sidebar-nav">
-					<h5><{$block.title}></h5>
-					<{$block.content}>
-				</div>
-				<{/foreach}>
+			<{foreach name=lblockloop item=block from=$xoops_lblocks}>
+			<div class="well sidebar-nav">
+				<h5><{$block.title}></h5>
+				<{$block.content}>
+			</div>
+			<{/foreach}>
 			<{/if}>
 		</div>
 		<{/if}>
@@ -231,20 +233,20 @@
 			<{/if}>
 			<!-- BLOCK Center-Center -->
 			<{if isset($xoops_ccblocks)}>
-				<!-- CENTER CENTER -->
-				<{foreach item=block from=$xoops_ccblocks}>
-				<div class="ccblocks">
+			<!-- CENTER CENTER -->
+			<{foreach item=block from=$xoops_ccblocks}>
+			<div class="ccblocks">
 				<!-- <h3><{$block.title}></h3> -->
 				<{$block.content}>
-				</div>
-				<hr />
-				<{/foreach}>
+			</div>
+			<hr />
+			<{/foreach}>
 			<{/if}>
 		</div>
 		<{if isset($xoops_clblocks) || isset($xoops_crblocks)}>
 		<div class="row-fluid">
 			<div class="span12">
-			<hr />
+				<hr />
 			</div>
 			<div class="span6">
 				<!-- BLOCK Center-Left -->
