@@ -80,10 +80,10 @@ function xoopsCodeTarea($textarea_id, $cols=60, $rows=15, $suffix=null)
 */
 function xoopsSmilies($textarea_id)
 {
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $smiles = $myts->getSmileys();
     if (empty($smiles)) {
-        $db =& Database::getInstance();
+        $db = Database::getInstance();
         if ($result = $db->query('SELECT * FROM '.$db->prefix('smiles').' WHERE display=1')) {
             while ($smile = $db->fetchArray($result)) {
             //hack smilies move for the smilies !!

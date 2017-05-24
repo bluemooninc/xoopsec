@@ -45,7 +45,7 @@ class Legacy_NotifyListAction extends Legacy_Action
 		$criteria->setSort('not_modid, not_category, not_itemid');
 		
 		$handler =& xoops_gethandler('notification');
-		$notificationArr =& $handler->getObjects($criteria);
+		$notificationArr = $handler->getObjects($criteria);
 
 		$moduleHandler =& xoops_gethandler('module');
 		

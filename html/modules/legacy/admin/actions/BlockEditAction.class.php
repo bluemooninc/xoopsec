@@ -119,7 +119,7 @@ class Legacy_BlockEditAction extends Legacy_AbstractEditAction
 			$criteria->add(new Criteria('gperm_itemid', $this->mObject->get('bid')));
 			$criteria->add(new Criteria('gperm_name', 'block_read'));
 			
-			$gpermArr =&  $permHandler->getObjects($criteria);
+			$gpermArr =  $permHandler->getObjects($criteria);
 			foreach ($gpermArr as $gperm) {
 				if (!in_array($gperm->get('gperm_groupid'), $currentGroupid)) {
 					$permHandler->delete($gperm);
@@ -177,23 +177,23 @@ class Legacy_BlockEditAction extends Legacy_AbstractEditAction
 		$criteria->add(new Criteria('hasmain', 1));
 		$criteria->add(new Criteria('isactive', 1));
 		
-		$t_Arr =& $handler->getObjects($criteria);
+		$t_Arr = $handler->getObjects($criteria);
 		$moduleArr = array_merge($moduleArr, $t_Arr);
 		$render->setAttribute('moduleArr', $moduleArr);
 		
 		$handler =& xoops_getmodulehandler('columnside');
-		$columnSideArr =& $handler->getObjects();
+		$columnSideArr = $handler->getObjects();
 		$render->setAttribute('columnSideArr', $columnSideArr);
 
 		$handler =& xoops_gethandler('group');
-		$groupArr =& $handler->getObjects();
+		$groupArr = $handler->getObjects();
 		$render->setAttribute('groupArr', $groupArr);
 		
 		//
 		// Build cachetime list and set.
 		//
 		$handler =& xoops_gethandler('cachetime');
-		$cachetimeArr =& $handler->getObjects();
+		$cachetimeArr = $handler->getObjects();
 		$render->setAttribute('cachetimeArr', $cachetimeArr);
 
 		//

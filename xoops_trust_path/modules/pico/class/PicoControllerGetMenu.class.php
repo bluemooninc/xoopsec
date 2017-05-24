@@ -54,7 +54,7 @@ function execute( $request )
 
 	// breadcrumbs and pagetitle
 	$lastnode4assign = @$_GET['page'] == 'menu' ? _MD_PICO_MENU : $GLOBALS['xoopsModule']->getVar('name') ;
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	$breadcrumbsObj->appendPath( '' , $lastnode4assign ) ;
 	$this->assign['xoops_breadcrumbs'] = $breadcrumbsObj->getXoopsbreadcrumbs() ;
 	$this->assign['xoops_pagetitle'] = $lastnode4assign ;

@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'/common_functions.php' ;
 
 function pico_get_content_history_profile( $mydirname , $content_history_id , $content_id = null )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	if( empty( $content_history_id ) && ! empty( $content_id ) ) {
 		// fetch from contents table as the latest content_history
@@ -47,8 +47,8 @@ $ef4display
 // get content_histories for form
 function pico_get_content_histories4assign( $mydirname , $content_id )
 {
-	$db =& Database::getInstance() ;
-	$myts =& MyTextSanitizer::getInstance() ;
+	$db = Database::getInstance() ;
+	$myts = MyTextSanitizer::getInstance() ;
 	
 	$ret = array() ;
 	$sql = "SELECT oh.content_history_id,oh.created_time,oh.modified_time,LENGTH(body) AS body_size,oh.poster_uid,up.uname AS poster_uname,oh.modifier_uid,um.uname AS modifier_uname FROM ".$db->prefix($mydirname."_content_histories")." oh LEFT JOIN ".$db->prefix("users")." up ON oh.poster_uid=up.uid LEFT JOIN ".$db->prefix("users")." um ON oh.modifier_uid=um.uid WHERE oh.content_id=$content_id ORDER BY oh.content_history_id DESC" ;

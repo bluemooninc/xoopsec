@@ -71,7 +71,7 @@ class UserMailjobObject extends XoopsSimpleObject
 	{
 		if (!$this->_mUsersLoadedFlag) {
 			$handler =& xoops_getmodulehandler('mailjob_link', 'user');
-			$this->mUsers =& $handler->getObjects(new Criteria('mailjob_id', $this->get('mailjob_id')));
+			$this->mUsers = $handler->getObjects(new Criteria('mailjob_id', $this->get('mailjob_id')));
 			$this->_mUsersLoadedFlag = true;
 		}
 	}
@@ -88,7 +88,7 @@ class UserMailjobObject extends XoopsSimpleObject
 		$criteria->add(new Criteria('mailjob_id', $this->get('mailjob_id')));
 		$criteria->add(new Criteria('retry', $retry));
 		
-		$arr =& $handler->getObjects($criteria);
+		$arr = $handler->getObjects($criteria);
 		
 		return $arr;
 	}

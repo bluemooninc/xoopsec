@@ -90,7 +90,7 @@ $com_rootid = $comment->getVar('com_rootid');
 // Get the icons of subject.
 //
 $handler =& xoops_gethandler('subjecticon');
-$subjectIcons =& $handler->getObjects();
+$subjectIcons = $handler->getObjects();
 
 if ($xoopsModule->getVar('dirname') != 'system') {
 	if (is_object($xoopsUser) && $xoopsUser->isAdmin()) {

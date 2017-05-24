@@ -12,7 +12,7 @@
     error_reporting(E_ERROR);
     ob_start();
     $module_handler =& xoops_gethandler('module');
-    $modules =& $module_handler->getObjects(null, true);
+    $modules = $module_handler->getObjects(null, true);
     foreach (array_keys($modules) as $mid) {
         echo '<h5>'.$modules[$mid]->getVar('name').'</h5>';
         $dirname = $modules[$mid]->getVar('dirname');

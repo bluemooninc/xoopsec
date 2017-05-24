@@ -66,7 +66,7 @@ function execute( $request )
 	}
 
 	// breadcrumbs
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	$breadcrumbsObj->appendPath( '' , $this->assign['content']['subject'] ) ;
 	$this->assign['xoops_breadcrumbs'] = $breadcrumbsObj->getXoopsbreadcrumbs() ;
 	$this->assign['xoops_pagetitle'] = $this->assign['content']['subject'] ;

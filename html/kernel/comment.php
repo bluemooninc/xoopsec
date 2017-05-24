@@ -320,7 +320,7 @@ class XoopsCommentHandler extends XoopsObjectHandler
      **/
     function &getList($criteria = null)
     {
-        $comments =& $this->getObjects($criteria, true);
+        $comments = $this->getObjects($criteria, true);
         $ret = array();
         foreach (array_keys($comments) as $i) {
             $ret[$i] = $comments[$i]->getVar('com_title');
@@ -396,7 +396,7 @@ class XoopsCommentHandler extends XoopsObjectHandler
             $criteria->add(new Criteria('com_status', (int)$status));
         }
         $criteria->setOrder($order);
-        $ret =& $this->getObjects($criteria);
+        $ret = $this->getObjects($criteria);
         return $ret;
     }
 

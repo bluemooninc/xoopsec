@@ -5,7 +5,7 @@
 // delete a content
 function pico_delete_content( $mydirname , $content_id , $skip_sync = false )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// update the content by blank data
 	$_POST = array() ;
@@ -31,7 +31,7 @@ function pico_delete_category( $mydirname , $cat_id , $delete_also_contents = tr
 {
 	global $xoopsModule ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$cat_id = intval( $cat_id ) ;
 	if( $cat_id <= 0 ) return false ;
@@ -65,7 +65,7 @@ function pico_delete_category( $mydirname , $cat_id , $delete_also_contents = tr
 // store tree informations of categories
 function pico_sync_cattree( $mydirname )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// rebuild tree informations
 	list( $tree_array , $subcattree , $contents_total , $subcategories_total , $subcategories_ids_cs ) = pico_makecattree_recursive( $mydirname , 0 ) ;
@@ -108,7 +108,7 @@ function pico_sync_cattree( $mydirname )
 
 function pico_makecattree_recursive( $mydirname , $cat_id , $order = 'cat_weight' , $parray = array() , $depth = 0 , $cat_title = '' )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// get number of contents of this category
 	list( $contents_count ) = $db->fetchRow( $db->query( "SELECT COUNT(*) FROM ".$db->prefix($mydirname."_contents")." WHERE cat_id=$cat_id AND visible" ) ) ;
@@ -149,7 +149,7 @@ function pico_makecattree_recursive( $mydirname , $cat_id , $order = 'cat_weight
 // store redundant informations to a content from its content_votes
 function pico_sync_content_votes( $mydirname , $content_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$content_id = intval( $content_id ) ;
 
@@ -170,7 +170,7 @@ function pico_sync_content_votes( $mydirname , $content_id )
 // store tags from contents
 function pico_sync_tags( $mydirname )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// get all tags in tags table
 	$all_tags_array = array() ;
@@ -206,7 +206,7 @@ function pico_sync_tags( $mydirname )
 // clear body caches of all contents
 function pico_clear_body_cache( $mydirname )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$db->queryF( "UPDATE ".$db->prefix($mydirname."_contents")." SET body_cached='', for_search='', last_cached_time=0" ) ;
 	return true ;
 }
@@ -215,7 +215,7 @@ function pico_clear_body_cache( $mydirname )
 // sync content_votes and category's tree
 function pico_sync_all( $mydirname )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$module_handler =& xoops_gethandler('module');
 	$module =& $module_handler->getByDirname($mydirname);
@@ -260,7 +260,7 @@ function pico_sync_all( $mydirname )
 // serialize_type conversion from PHP built-in serialize() to var_export()
 function pico_convert_serialized_data( $mydirname )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// update data in content_extras
 	$sql = "SELECT content_extra_id,data FROM ".$db->prefix($mydirname."_content_extras")." WHERE data NOT LIKE 'array%'" ;
@@ -287,8 +287,8 @@ function pico_convert_serialized_data( $mydirname )
 // get requests for category's sql (parse options)
 function pico_get_requests4category( $mydirname , $cat_id = null )
 {
-	$myts =& MyTextSanitizer::getInstance() ;
-	$db =& Database::getInstance() ;
+	$myts = MyTextSanitizer::getInstance() ;
+	$db = Database::getInstance() ;
 
 	include dirname(dirname(__FILE__)).'/include/configs_can_override.inc.php' ;
 	$cat_options = array() ;
@@ -341,7 +341,7 @@ function pico_get_requests4category( $mydirname , $cat_id = null )
 // create a category
 function pico_makecategory( $mydirname )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$requests = pico_get_requests4category( $mydirname ) ;
 	$set = '' ;
@@ -382,7 +382,7 @@ function pico_makecategory( $mydirname )
 // update category
 function pico_updatecategory( $mydirname , $cat_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$requests = pico_get_requests4category( $mydirname , $cat_id ) ;
 	$set = '' ;
@@ -417,8 +417,8 @@ function pico_get_requests4content( $mydirname , &$errors , $auto_approval = tru
 {
 	global $xoopsUser ;
 
-	$myts =& MyTextSanitizer::getInstance() ;
-	$db =& Database::getInstance() ;
+	$myts = MyTextSanitizer::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// get config
 	$module_handler =& xoops_gethandler('module') ;
@@ -587,7 +587,7 @@ function pico_main_get_uid( $text )
 		if( is_object( $user ) ) return $uid ;
 		else return 0 ;
 	} else {
-		$users =& $user_handler->getObjects( new Criteria( 'uname' , addslashes( $text ) ) ) ; // ???
+		$users = $user_handler->getObjects( new Criteria( 'uname' , addslashes( $text ) ) ) ; // ???
 		if( is_object( @$users[0] ) ) return $users[0]->getVar('uid') ;
 		else return 0 ;
 	}
@@ -599,7 +599,7 @@ function pico_makecontent( $mydirname , $auto_approval = true , $isadminormod = 
 {
 	global $xoopsUser ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$uid = is_object( $xoopsUser ) ? $xoopsUser->getVar('uid') : 0 ;
 
 	$requests = pico_get_requests4content( $mydirname , $errors = array() , $auto_approval , $isadminormod ) ;
@@ -648,7 +648,7 @@ function pico_updatecontent( $mydirname , $content_id , $auto_approval = true , 
 {
 	global $xoopsUser ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$requests = pico_get_requests4content( $mydirname , $errors = array() , $auto_approval , $isadminormod , $content_id ) ;
 	unset( $requests['specify_created_time'] , $requests['specify_modified_time'] , $requests['specify_expiring_time'] , $requests['created_time_formatted'] , $requests['modified_time_formatted'] , $requests['expiring_time_formatted'] ) ;
@@ -694,7 +694,7 @@ function pico_updatecontent( $mydirname , $content_id , $auto_approval = true , 
 // sync body_cached as body (HTML tags are stripped) for searching
 function pico_transact_reset_body_cached( $mydirname , $content_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	list( $use_cache , $body ) = $db->fetchRow( $db->query( "SELECT use_cache,body FROM ".$db->prefix($mydirname."_contents")." WHERE content_id=$content_id" ) ) ;
 	if( empty( $body ) ) return ;
 	$body4sql = $use_cache ? '' : mysql_real_escape_string( strip_tags( $body ) ) ;
@@ -707,7 +707,7 @@ function pico_transact_copyfromwaitingcontent( $mydirname , $content_id )
 {
 	global $xoopsUser ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// backup the content, first
 	pico_transact_backupcontent( $mydirname , $content_id ) ;
@@ -726,7 +726,7 @@ function pico_transact_backupcontent( $mydirname , $content_id , $forced = false
 {
 	global $xoopsUser , $xoopsModuleConfig ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$histories_per_content = intval( @$xoopsModuleConfig['histories_per_content'] ) ;
 	$minlifetime_per_history = intval( @$xoopsModuleConfig['minlifetime_per_history'] ) ;

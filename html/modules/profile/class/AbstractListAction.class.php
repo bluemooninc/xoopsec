@@ -53,7 +53,7 @@ class Profile_AbstractListAction extends Profile_AbstractAction
 		$this->mFilter->fetch();
 	
 		$handler =& $this->_getHandler();
-		$this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
+		$this->mObjects = $handler->getObjects($this->mFilter->getCriteria());
 	
 		return PROFILE_FRAME_VIEW_INDEX;
 	}

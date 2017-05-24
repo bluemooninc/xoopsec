@@ -128,7 +128,7 @@ class Xupdate_Admin_ModuleViewAction extends Xupdate_AbstractAction
 		$criteria->setSort('sid');
 		$criteria->setOrder('ASC');
 
-		$storeObjects =& $storeHand->getObjects($criteria,null,null,true);
+		$storeObjects = $storeHand->getObjects($criteria,null,null,true);
 
 		foreach($storeObjects as $sid => $store){
 			$store_mod_arr[$sid]['storeobj']=$store;
@@ -137,7 +137,7 @@ class Xupdate_Admin_ModuleViewAction extends Xupdate_AbstractAction
 			$criteria->add(new Criteria( 'sid', $sid ) );
 			$criteria->setSort('dirname');
 			$criteria->setOrder('ASC');
-			$siteModuleStoreObjects =& $modHand->getObjects($criteria);
+			$siteModuleStoreObjects = $modHand->getObjects($criteria);
 
 			$itemsobj = array();
 			foreach($siteModuleStoreObjects as $key => $mobj){

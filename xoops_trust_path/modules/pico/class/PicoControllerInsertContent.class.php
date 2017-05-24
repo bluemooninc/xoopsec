@@ -34,7 +34,7 @@ function execute( $request )
 
 	// initialize
 	$cat_data = $this->currentCategoryObj->getData() ;
-	$picoPermission =& PicoPermission::getInstance() ;
+	$picoPermission = PicoPermission::getInstance() ;
 
 	// permission check
 	if( empty( $cat_data['can_post'] ) ) {

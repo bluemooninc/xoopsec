@@ -20,8 +20,8 @@ if( ! is_object( @$xoopsUser ) || ! $moduleperm_handler->checkRight( 'module_adm
 
 
 // initials
-$db =& Database::getInstance();
-$myts =& MyTextSanitizer::getInstance() ;
+$db = Database::getInstance();
+$myts = MyTextSanitizer::getInstance() ;
 
 // language file
 altsys_include_language_file( 'mytplsadmin' ) ;
@@ -196,7 +196,7 @@ xoops_cp_header() ;
 altsys_include_mymenu() ;
 
 // breadcrumbs
-$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 if( $breadcrumbsObj->hasPaths() ) {
 	$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=mytplsadmin' , _MI_ALTSYS_MENU_MYTPLSADMIN ) ;
 	$breadcrumbsObj->appendPath( '' , $target_mname ) ;

@@ -48,7 +48,7 @@ class Legacy_CommentDeleteAction extends Legacy_AbstractDeleteAction
 		//
 		$handler =& xoops_getmodulehandler('comment');
 		$criteria =new Criteria('com_pid', $this->mObject->get('com_id'));
-		$children =& $handler->getObjects($criteria);
+		$children = $handler->getObjects($criteria);
 
 		if (count($children) > 0) {
 			foreach (array_keys($children) as $key) {

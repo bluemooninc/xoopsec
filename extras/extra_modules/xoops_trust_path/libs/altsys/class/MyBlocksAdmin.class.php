@@ -21,7 +21,7 @@ function MyBlocksAadmin()
 
 function construct()
 {
-	$this->db =& Database::getInstance() ;
+	$this->db = Database::getInstance() ;
 	$this->lang = @$GLOBALS['xoopsConfig']['language'] ;
 
 	$this->cachetime_options = array(
@@ -96,7 +96,7 @@ function init( $xoopsModule )
 			$this->target_dirname = $target_module->getVar( 'dirname' ) ;
 			$modinfo = $target_module->getInfo() ;
 			// breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=myblocksadmin' , '_MI_ALTSYS_MENU_MYBLOCKSADMIN' ) ;
 			$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=myblocksadmin&amp;dirname='.$this->target_dirname , $this->target_mname ) ;
 		} else {
@@ -105,7 +105,7 @@ function init( $xoopsModule )
 			$this->target_mname = _MI_ALTSYS_MENU_CUSTOMBLOCKS ;
 			$this->target_dirname = '__CustomBlocks__' ;
 			// breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=myblocksadmin' , '_MI_ALTSYS_MENU_MYBLOCKSADMIN' ) ;
 			$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=myblocksadmin&amp;dirname='.$this->target_dirname , '_MI_ALTSYS_MENU_CUSTOMBLOCKS' ) ;
 		}
@@ -116,7 +116,7 @@ function init( $xoopsModule )
 		$this->target_dirname = $xoopsModule->getVar( 'dirname' ) ;
 		$mod_url = XOOPS_URL.'/modules/'.$xoopsModule->getVar('dirname') ;
 		$modinfo = $xoopsModule->getInfo() ;
-		$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+		$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 		$breadcrumbsObj->appendPath( $mod_url.'/'.@$modinfo['adminindex'] , $this->target_mname ) ;
 		$breadcrumbsObj->appendPath( $mod_url.'/admin/index.php?mode=admin&amp;lib=altsys&amp;page=myblocksadmin' , _MD_A_MYBLOCKSADMIN_BLOCKADMIN ) ;
 	}
@@ -590,7 +590,7 @@ function do_order()
 function fetchRequest4Block( $bid )
 {
 	$bid = intval( $bid ) ;
-	$myts =& MyTextSanitizer::getInstance() ;
+	$myts = MyTextSanitizer::getInstance() ;
 
 	if( @$_POST['extra_sides'][$bid] > 0 ) {
 		$_POST['sides'][$bid] = intval( $_POST['extra_sides'][$bid] ) ;
@@ -666,7 +666,7 @@ function form_delete( $bid )
 	if( ! $this->canDelete( $block ) ) die( 'Cannot delete this block' ) ;
 
 	// breadcrumbs
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	$breadcrumbsObj->appendPath( '' , _DELETE ) ;
 
 	xoops_confirm( array( 'op' => 'delete_ok' ) + $GLOBALS['xoopsGTicket']->getTicketArray( __LINE__ , 1800 , 'myblocksadmin' ) , "?mode=admin&amp;lib=altsys&amp;page=myblocksadmin&amp;dirname=$this->target_dirname&amp;bid=$bid" , sprintf( _MD_A_MYBLOCKSADMIN_FMT_REMOVEBLOCK , $block->getVar('title') ) ) ;
@@ -813,7 +813,7 @@ function form_edit( $bid , $mode = 'edit' )
 			$button_value = _MD_A_MYBLOCKSADMIN_BTN_CLONE ;
 			$next_op = 'clone_ok' ;
 			// breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			$breadcrumbsObj->appendPath( '' , _MD_A_MYBLOCKSADMIN_CLONEFORM ) ;
 			break ;
 		case 'new' :
@@ -821,7 +821,7 @@ function form_edit( $bid , $mode = 'edit' )
 			$button_value = _MD_A_MYBLOCKSADMIN_BTN_NEW ;
 			$next_op = 'new_ok' ;
 			// breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			$breadcrumbsObj->appendPath( '' , _MD_A_MYBLOCKSADMIN_NEWFORM ) ;
 			break ;
 		case 'edit' :
@@ -830,7 +830,7 @@ function form_edit( $bid , $mode = 'edit' )
 			$button_value = _MD_A_MYBLOCKSADMIN_BTN_EDIT ;
 			$next_op = 'edit_ok' ;
 			// breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			$breadcrumbsObj->appendPath( '' , _MD_A_MYBLOCKSADMIN_EDITFORM ) ;
 			break ;
 	}

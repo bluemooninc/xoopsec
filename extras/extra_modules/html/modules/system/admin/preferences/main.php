@@ -43,7 +43,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
     }
     if ($op == 'list') {
         $confcat_handler =& xoops_gethandler('configcategory');
-        $confcats =& $confcat_handler->getObjects();
+        $confcats = $confcat_handler->getObjects();
         $catcount = count($confcats);
         xoops_cp_header();
         echo '<h4 style="text-align:left">'._MD_AM_SITEPREF.'</h4><ul>';
@@ -78,7 +78,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
             $title = (!defined($config[$i]->getVar('conf_desc')) || constant($config[$i]->getVar('conf_desc')) == '') ? constant($config[$i]->getVar('conf_title')) : constant($config[$i]->getVar('conf_title')).'<br /><br /><span style="font-weight:normal;">'.constant($config[$i]->getVar('conf_desc')).'</span>';
             switch ($config[$i]->getVar('conf_formtype')) {
             case 'textarea':
-                $myts =& MyTextSanitizer::getInstance();
+                $myts = MyTextSanitizer::getInstance();
                 if ($config[$i]->getVar('conf_valuetype') == 'array') {
                     // this is exceptional.. only when value type is arrayneed a smarter way for this
                     
@@ -175,7 +175,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
                 break;
             case 'module_cache':
                 $module_handler =& xoops_gethandler('module');
-                $modules =& $module_handler->getObjects(new Criteria('hasmain', 1), true);
+                $modules = $module_handler->getObjects(new Criteria('hasmain', 1), true);
                 $currrent_val = $config[$i]->getConfValueForOutput();
                 $cache_options = array('0' => _NOCACHE, '30' => sprintf(_SECONDS, 30), '60' => _MINUTE, '300' => sprintf(_MINUTES, 5), '1800' => sprintf(_MINUTES, 30), '3600' => _HOUR, '18000' => sprintf(_HOURS, 5), '86400' => _DAY, '259200' => sprintf(_DAYS, 3), '604800' => _WEEK);
                 if (count($modules) > 0) {
@@ -196,12 +196,12 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
                 $ele->addOptionArray(array('0' => _NOCACHE, '30' => sprintf(_SECONDS, 30), '60' => _MINUTE, '300' => sprintf(_MINUTES, 5), '1800' => sprintf(_MINUTES, 30), '3600' => _HOUR, '18000' => sprintf(_HOURS, 5), '86400' => _DAY, '259200' => sprintf(_DAYS, 3), '604800' => _WEEK));
                 break;
             case 'password':
-                $myts =& MyTextSanitizer::getInstance();
+                $myts = MyTextSanitizer::getInstance();
                 $ele = new XoopsFormPassword($title, $config[$i]->getVar('conf_name'), 50, 255, $myts->htmlspecialchars($config[$i]->getConfValueForOutput()));
                 break;
             case 'textbox':
             default:
-                $myts =& MyTextSanitizer::getInstance();
+                $myts = MyTextSanitizer::getInstance();
                 $ele = new XoopsFormText($title, $config[$i]->getVar('conf_name'), 50, 255, $myts->htmlspecialchars($config[$i]->getConfValueForOutput()));
                 break;
             }
@@ -259,7 +259,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
             $title = (!defined($config[$i]->getVar('conf_desc')) || constant($config[$i]->getVar('conf_desc')) == '') ? constant($config[$i]->getVar('conf_title')) : constant($config[$i]->getVar('conf_title')).'<br /><br /><span style="font-weight:normal;">'.constant($config[$i]->getVar('conf_desc')).'</span>';
             switch ($config[$i]->getVar('conf_formtype')) {
             case 'textarea':
-                $myts =& MyTextSanitizer::getInstance();
+                $myts = MyTextSanitizer::getInstance();
                 if ($config[$i]->getVar('conf_valuetype') == 'array') {
                     // this is exceptional.. only when value type is arrayneed a smarter way for this
                     $ele = ($config[$i]->getVar('conf_value') != '') ? new XoopsFormTextArea($title, $config[$i]->getVar('conf_name'), $myts->htmlspecialchars(implode('|', $config[$i]->getConfValueForOutput())), 5, 50) : new XoopsFormTextArea($title, $config[$i]->getVar('conf_name'), '', 5, 50);
@@ -311,12 +311,12 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
                 $ele = new XoopsFormSelectUser($title, $config[$i]->getVar('conf_name'), false, $config[$i]->getConfValueForOutput(), 5, true);
                 break;
             case 'password':
-                $myts =& MyTextSanitizer::getInstance();
+                $myts = MyTextSanitizer::getInstance();
                 $ele = new XoopsFormPassword($title, $config[$i]->getVar('conf_name'), 50, 255, $myts->htmlspecialchars($config[$i]->getConfValueForOutput()));
                 break;
             case 'textbox':
             default:
-                $myts =& MyTextSanitizer::getInstance();
+                $myts = MyTextSanitizer::getInstance();
                 $ele = new XoopsFormText($title, $config[$i]->getVar('conf_name'), 50, 255, $myts->htmlspecialchars($config[$i]->getConfValueForOutput()));
                 break;
             }
@@ -404,7 +404,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
 
                             // generate image cache files from image binary data, save them under cache/
                             $image_handler =& xoops_gethandler('imagesetimg');
-                            $imagefiles =& $image_handler->getObjects(new Criteria('tplset_name', $newtplset), true);
+                            $imagefiles = $image_handler->getObjects(new Criteria('tplset_name', $newtplset), true);
                             foreach (array_keys($imagefiles) as $i) {
                                 if (!$fp = fopen(XOOPS_CACHE_PATH.'/'.$newtplset.'_'.$imagefiles[$i]->getVar('imgsetimg_file'), 'wb')) {
                                 } else {

@@ -434,7 +434,7 @@ class FormTable {
 	private function _isGroupsOfUser( &$gulHandler, $uid ){
 		$criteria =new CriteriaCompo();
 		$criteria->add(new Criteria('uid', $uid));
-		$objs =& $gulHandler->getObjects($criteria);
+		$objs = $gulHandler->getObjects($criteria);
 		return (count($objs) > 0 && is_object($objs[0]));
 	}
 	/**
@@ -806,7 +806,7 @@ class FormTable {
 
 
 	function convert2sqlString($text){
-		$ts =& MyTextSanitizer::getInstance();
+		$ts = MyTextSanitizer::getInstance();
 		if(!is_object($ts)){
 			exit();
 		}

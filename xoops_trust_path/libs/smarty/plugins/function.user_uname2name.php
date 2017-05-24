@@ -18,7 +18,7 @@
 function smarty_function_user_uname2name($params, &$smarty)
 {
 	$handler = xoops_gethandler('user');
-	$user =& $handler->getObjects(new Criteria('uname',$params['uname']));
+	$user = $handler->getObjects(new Criteria('uname',$params['uname']));
 
 	if(! count($user)>0){
 		return "guest";

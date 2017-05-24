@@ -168,7 +168,7 @@ function form_edit( $bid , $mode = 'edit' )
 			$button_value = _MD_A_MYBLOCKSADMIN_BTN_CLONE ;
 			$next_op = 'clone_ok' ;
 			// breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			$breadcrumbsObj->appendPath( '' , _MD_A_MYBLOCKSADMIN_CLONEFORM ) ;
 			break ;
 		case 'new' :
@@ -176,7 +176,7 @@ function form_edit( $bid , $mode = 'edit' )
 			$button_value = _MD_A_MYBLOCKSADMIN_BTN_NEW ;
 			$next_op = 'new_ok' ;
 			// breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			$breadcrumbsObj->appendPath( '' , _MD_A_MYBLOCKSADMIN_NEWFORM ) ;
 			break ;
 		case 'edit' :
@@ -185,7 +185,7 @@ function form_edit( $bid , $mode = 'edit' )
 			$button_value = _MD_A_MYBLOCKSADMIN_BTN_EDIT ;
 			$next_op = 'edit_ok' ;
 			// breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			$breadcrumbsObj->appendPath( '' , _MD_A_MYBLOCKSADMIN_EDITFORM ) ;
 			break ;
 	}
@@ -280,7 +280,7 @@ function form_edit( $bid , $mode = 'edit' )
 function fetchRequest4Block( $bid )
 {
 	$bid = intval( $bid ) ;
-	$myts =& MyTextSanitizer::getInstance() ;
+	$myts = MyTextSanitizer::getInstance() ;
 
 	if( @$_POST['extra_sides'][$bid] > 0 ) {
 		$_POST['sides'][$bid] = intval( $_POST['extra_sides'][$bid] ) ;
@@ -339,11 +339,11 @@ function previewContent( $block_data )
 		ob_end_clean();
 		$ret = str_replace('{X_SITEURL}', XOOPS_URL . '/', $content);
 	} else if ($c_type == 'S') {
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$content = str_replace('{X_SITEURL}', XOOPS_URL . '/', $block->getVar('content', 'N'));
 		$ret = $myts->displayTarea($content, 1, 1);
 	} else {
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$content = str_replace('{X_SITEURL}', XOOPS_URL . '/', $block->getVar('content', 'N'));
 		$ret = $myts->displayTarea($content, 1, 0);
 	}

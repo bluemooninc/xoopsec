@@ -19,7 +19,7 @@ function PicoAutoRegisterWraps( $mydirname , $config )
 // public
 function updateContent( $content_id , $vpath )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$content_id = intval( $content_id ) ;
 	$file_info = $this->getFileInfo( $vpath ) ;
 
@@ -45,7 +45,7 @@ function updateContent( $content_id , $vpath )
 // protected
 function getRegisteringWeight( $cat_id , $vpath )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	list( $weight ) = $db->fetchRow( $db->query( "SELECT MAX(weight) FROM ".$db->prefix($this->mydirname."_contents")." WHERE `cat_id`=$cat_id" ) ) ;
 
@@ -66,7 +66,7 @@ function getInsertSQL( $cat_id , $vpath )
 // public
 function registerContent( $cat_id , $vpath )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$cat_id = intval( $cat_id ) ;
 

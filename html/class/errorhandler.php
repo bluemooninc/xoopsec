@@ -199,7 +199,7 @@ function XoopsErrorHandler_HandleError($errNo, $errStr, $errFile, $errLine)
         'errfile' => preg_replace("|^" . XOOPS_ROOT_PATH . "/|", '', $errFile),
         'errline' => $errLine
         );
-    $error_handler =& XoopsErrorHandler::getInstance();
+    $error_handler = XoopsErrorHandler::getInstance();
     $error_handler->handleError($new_error);
 }
 
@@ -211,7 +211,7 @@ function XoopsErrorHandler_HandleError($errNo, $errStr, $errFile, $errLine)
  */
 function XoopsErrorHandler_Shutdown()
 {
-    $error_handler =& XoopsErrorHandler::getInstance();
+    $error_handler = XoopsErrorHandler::getInstance();
     echo $error_handler->renderErrors();
 }
 

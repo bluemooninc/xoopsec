@@ -18,28 +18,28 @@ altsys_include_language_file( 'myblocksadmin' ) ;
 switch( altsys_get_core_type() ) {
 	case ALTSYS_CORE_TYPE_X22 :
 		include_once dirname(__FILE__).'/class/MyBlocksAdminForX22.class.php' ;
-		$myba =& MyBlocksAdminForX22::getInstance() ;
+		$myba = MyBlocksAdminForX22::getInstance() ;
 		break ;
 	case ALTSYS_CORE_TYPE_X25 :
 		include_once dirname(__FILE__).'/class/MyBlocksAdminForX25.class.php' ;
-		$myba =& MyBlocksAdminForX25::getInstance() ;
+		$myba = MyBlocksAdminForX25::getInstance() ;
 		break ;
 	case ALTSYS_CORE_TYPE_XCL21 :
 		include_once dirname(__FILE__).'/class/MyBlocksAdminForXCL21.class.php' ;
-		$myba =& MyBlocksAdminForXCL21::getInstance() ;
+		$myba = MyBlocksAdminForXCL21::getInstance() ;
 		break ;
 	case ALTSYS_CORE_TYPE_ICMS :
 		include_once dirname(__FILE__).'/class/MyBlocksAdminForICMS.class.php' ;
-		$myba =& MyBlocksAdminForICMS::getInstance() ;
+		$myba = MyBlocksAdminForICMS::getInstance() ;
 		break ;
 	case ALTSYS_CORE_TYPE_X20S :
 	case ALTSYS_CORE_TYPE_X23P :
 		include_once dirname(__FILE__).'/class/MyBlocksAdminForX20S.class.php' ;
-		$myba =& MyBlocksAdminForX20S::getInstance() ;
+		$myba = MyBlocksAdminForX20S::getInstance() ;
 		break ;
 	default :
 		include_once dirname(__FILE__).'/class/MyBlocksAdmin.class.php' ;
-		$myba =& MyBlocksAdmin::getInstance() ;
+		$myba = MyBlocksAdmin::getInstance() ;
 		break ;
 }
 // permission

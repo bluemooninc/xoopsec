@@ -343,13 +343,13 @@ class XoopsObject extends AbstractXoopsObject
 			case 'show':
 			case 'e':
 			case 'edit':
-				$ts =& MyTextSanitizer::getInstance();
+				$ts = MyTextSanitizer::getInstance();
 				return $ts->htmlSpecialChars($ret);
 			case 'p':
 			case 'preview':
 			case 'f':
 			case 'formpreview':
-				$ts =& MyTextSanitizer::getInstance();
+				$ts = MyTextSanitizer::getInstance();
 				return $ts->htmlSpecialChars($ts->stripSlashesGPC($ret));
 			default:
 				return $ret;
@@ -358,7 +358,7 @@ class XoopsObject extends AbstractXoopsObject
 			switch (strtolower($format)) {
 			case 's':
 			case 'show':
-				$ts =& MyTextSanitizer::getInstance();
+				$ts = MyTextSanitizer::getInstance();
 				$vars =&$this->vars;
 				$html = !empty($vars['dohtml']['value']) ? 1 : 0;
 				$xcode = (!isset($vars['doxcode']['value']) || $vars['doxcode']['value'] == 1) ? 1 : 0;
@@ -372,7 +372,7 @@ class XoopsObject extends AbstractXoopsObject
 				return $ret;
 			case 'p':
 			case 'preview':
-				$ts =& MyTextSanitizer::getInstance();
+				$ts = MyTextSanitizer::getInstance();
 				$vars =&$this->vars;
 				$html = !empty($vars['dohtml']['value']) ? 1 : 0;
 				$xcode = (!isset($vars['doxcode']['value']) || $vars['doxcode']['value'] == 1) ? 1 : 0;
@@ -382,7 +382,7 @@ class XoopsObject extends AbstractXoopsObject
 				return $ts->previewTarea($ret, $html, $smiley, $xcode, $image, $br);
 			case 'f':
 			case 'formpreview':
-				$ts =& MyTextSanitizer::getInstance();
+				$ts = MyTextSanitizer::getInstance();
 				return htmlspecialchars($ts->stripSlashesGPC($ret), ENT_QUOTES);
 			default:
 				return $ret;
@@ -396,11 +396,11 @@ class XoopsObject extends AbstractXoopsObject
 				return htmlspecialchars($ret, ENT_QUOTES);
 			case 'p':
 			case 'preview':
-				$ts =& MyTextSanitizer::getInstance();
+				$ts = MyTextSanitizer::getInstance();
 				return $ts->stripSlashesGPC($ret);
 			case 'f':
 			case 'formpreview':
-				$ts =& MyTextSanitizer::getInstance();
+				$ts = MyTextSanitizer::getInstance();
 				$ret = htmlspecialchars($ts->stripSlashesGPC($ret), ENT_QUOTES);
 				return $ret;
 			default:
@@ -486,7 +486,7 @@ class XoopsObject extends AbstractXoopsObject
 	 */
 	function cleanVars()
 	{
-		$ts =& MyTextSanitizer::getInstance();
+		$ts = MyTextSanitizer::getInstance();
 		foreach ($this->vars as $k => $v) {
 			$cleanv = $v['value'];
 			if (!$v['changed']) {

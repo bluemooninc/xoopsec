@@ -28,7 +28,7 @@ public static function &getInstance()
 function renderCell4BlockOptions( $block_data )
 {
 	if( $this->target_dirname && substr( $this->target_dirname , 0 , 1 ) != '_' ) {
-		$langman =& D3LanguageManager::getInstance() ;
+		$langman = D3LanguageManager::getInstance() ;
 		$langman->read( 'admin.php' , $this->target_dirname ) ;
 	}
 

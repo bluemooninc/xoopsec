@@ -1,7 +1,7 @@
 <?php
 
 require_once dirname(dirname(__FILE__)).'/class/gtickets.php' ;
-$db =& Database::getInstance() ;
+$db = Database::getInstance() ;
 
 // COPY TABLES
 if( ! empty( $_POST['copy'] ) && ! empty( $_POST['old_prefix'] ) ) {

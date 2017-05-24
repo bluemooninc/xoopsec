@@ -61,7 +61,7 @@ if ($com_itemid > 0) {
 		if (isset($com_replytext)) {
 			themecenterposts($com_replytitle, $com_replytext);
 		}
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$com_title = $myts->htmlSpecialChars($com_replytitle);
 		if (!preg_match("/^re:/i", $com_title)) {
 			$com_title = "Re: ".xoops_substr($com_title, 0, 56);
@@ -122,7 +122,7 @@ $actionForm->load($comment);
 // Get the icons of subject.
 //
 $handler =& xoops_gethandler('subjecticon');
-$subjectIcons =& $handler->getObjects();
+$subjectIcons = $handler->getObjects();
 
 //
 // Render comment-form to render buffer with using Legacy_RenderSystem.

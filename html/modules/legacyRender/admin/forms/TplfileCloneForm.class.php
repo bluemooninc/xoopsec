@@ -39,7 +39,7 @@ class LegacyRender_TplfileCloneForm extends LegacyRender_TplfileEditForm
 
 		$handler =& xoops_getmodulehandler('tplset', 'legacyRender');
 		$criteria =new Criteria('tplset_name', $this->get('tpl_tplset'));
-		$objs =& $handler->getObjects($criteria);
+		$objs = $handler->getObjects($criteria);
 		
 		if (count($objs) == 0) {
 			$this->addErrorMessage(_AD_LEGACYRENDER_ERROR_TPLSET_WRONG);

@@ -3,7 +3,7 @@
 if( ! defined( 'XOOPS_ROOT_PATH' ) ) exit ;
 
 $core_type = altsys_get_core_type() ;
-$db =& Database::getInstance() ;
+$db = Database::getInstance() ;
 
 $current_dirname = preg_replace( '/[^0-9a-zA-Z_-]/' , '' , @$_GET['dirname'] ) ;
 if( $current_dirname == '__CustomBlocks__' ) return ;
@@ -12,7 +12,7 @@ if( $current_dirname == '__CustomBlocks__' ) return ;
 	$criteria4menu = new CriteriaCompo(new Criteria('isactive', 1));
 	//$criteria4menu->add(new Criteria('hasmain', 1));
 	$criteria4menu->add(new Criteria('mid', '1', '>'));
-	$modules4menu =& $module_handler4menu->getObjects($criteria4menu, true);
+	$modules4menu = $module_handler4menu->getObjects($criteria4menu, true);
 	$system_module =& $module_handler4menu->get(1) ;
 	if( is_object( $system_module ) ) array_unshift( $modules4menu , $system_module ) ;
 

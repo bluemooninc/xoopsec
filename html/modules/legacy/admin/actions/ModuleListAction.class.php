@@ -33,7 +33,7 @@ class Legacy_ModuleListAction extends Legacy_Action
 		$this->mFilter->fetch();
 
 		$moduleHandler =& xoops_gethandler('module');
-		$this->mModuleObjects =& $moduleHandler->getObjects($this->mFilter->getCriteria());
+		$this->mModuleObjects = $moduleHandler->getObjects($this->mFilter->getCriteria());
 
 		return LEGACY_FRAME_VIEW_INDEX;
 	}
@@ -59,7 +59,7 @@ class Legacy_ModuleListAction extends Legacy_Action
 	function _processConfirm(&$controller,&$xoopsUser)
 	{
 		$moduleHandler =& xoops_gethandler('module');
-		$t_objectArr =& $moduleHandler->getObjects();
+		$t_objectArr = $moduleHandler->getObjects();
 
 		//
 		// Do mapping.
@@ -76,7 +76,7 @@ class Legacy_ModuleListAction extends Legacy_Action
     {
         $moduleHandler =& xoops_gethandler('module');
     	$blockHandler =& xoops_gethandler('block');
-        $t_objectArr =& $moduleHandler->getObjects();
+        $t_objectArr = $moduleHandler->getObjects();
 
         $successFlag = true;
         foreach($t_objectArr as $module) {

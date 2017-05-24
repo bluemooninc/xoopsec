@@ -59,7 +59,7 @@ class LegacyRenderThemeHandler extends XoopsObjectGenericHandler
 	function &getByName($themeName)
 	{
 		$criteria = new Criteria('name', $themeName);
-		$obj =& $this->getObjects($criteria);
+		$obj = $this->getObjects($criteria);
 		if (count($obj) > 0) {
 			return $obj[0];
 		}
@@ -115,7 +115,7 @@ class LegacyRenderThemeHandler extends XoopsObjectGenericHandler
 	function updateThemeList()
 	{
 		$diskThemeNames = $this->searchThemes();
-		$DBthemes =& $this->getObjects();
+		$DBthemes = $this->getObjects();
 
 		//
 		// At first, check new theme.

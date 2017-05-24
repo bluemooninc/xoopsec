@@ -28,7 +28,7 @@ function mb_enabled()
  */
 function _et($message) 
 {
-    $ctl =& Ethna_Controller::getInstance();
+    $ctl = Ethna_Controller::getInstance();
     $i18n =& $ctl->getI18N();
     return $i18n->get($message);
 }
@@ -89,7 +89,7 @@ class Ethna_I18N
         $this->locale_dir = $locale_dir;
         $this->appid = $appid;
 
-        $this->ctl =& Ethna_Controller::getInstance();
+        $this->ctl = Ethna_Controller::getInstance();
         $config =& $this->ctl->getConfig();
         $this->logger =& $this->ctl->getLogger();
         $this->use_gettext = $config->get('use_gettext') ? true : false;

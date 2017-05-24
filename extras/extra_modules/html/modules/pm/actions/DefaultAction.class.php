@@ -42,7 +42,7 @@ class Pm_DefaultAction extends Pm_AbstractAction
 		$this->mPageNavi->setTotalItems($total);
 		$this->mPageNavi->fetch();
 
-		$this->mPmObjects =& $pmHandler->getObjectsByFromUid($xoopsUser->uid(), $this->mPageNavi->getStart());
+		$this->mPmObjects = $pmHandler->getObjectsByFromUid($xoopsUser->uid(), $this->mPageNavi->getStart());
 
 		return PM_FRAME_VIEW_INDEX;
 	}

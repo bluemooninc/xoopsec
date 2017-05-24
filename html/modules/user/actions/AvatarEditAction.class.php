@@ -191,7 +191,7 @@ class User_AvatarEditAction extends User_AbstractEditAction
 		$this->mFilter->fetch();
 		
 		$criteria = $this->mFilter->getCriteria();
-		$t_avatarArr =& $handler->getObjects($criteria);
+		$t_avatarArr = $handler->getObjects($criteria);
 		foreach (array_keys($t_avatarArr) as $key) {
 			$this->mSystemAvatars[] =& $t_avatarArr[$key];
 		}
@@ -247,7 +247,7 @@ class User_AvatarEditAction extends User_AbstractEditAction
 		if ($this->mActionForm->mOldAvatarFilename != null && $this->mActionForm->mOldAvatarFilename != "blank.gif") {
 			$avatarHandler =& xoops_getmodulehandler('avatar', 'user');
 			$criteria =new Criteria('avatar_file', $this->mActionForm->mOldAvatarFilename);
-			$avatarArr =& $avatarHandler->getObjects($criteria);
+			$avatarArr = $avatarHandler->getObjects($criteria);
 			if (count($avatarArr) > 0 && is_object($avatarArr[0]) && $avatarArr[0]->get('avatar_type') == 'C') {
 				$avatarHandler->delete($avatarArr[0]);
 			}

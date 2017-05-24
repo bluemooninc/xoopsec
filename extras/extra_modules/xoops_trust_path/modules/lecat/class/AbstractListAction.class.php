@@ -98,7 +98,7 @@ abstract class Lecat_AbstractListAction extends Lecat_AbstractAction
         $this->mFilter->fetch();
     
         $handler =& $this->_getHandler();
-        $this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
+        $this->mObjects = $handler->getObjects($this->mFilter->getCriteria());
     
         return LECAT_FRAME_VIEW_INDEX;
     }

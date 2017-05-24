@@ -17,7 +17,7 @@ class Legacy_Waiting extends XCube_ActionFilter {
     }
     
     function callbackWaitingShow(&$modules) {
-        $xoopsDB =& Database::getInstance();
+        $xoopsDB = Database::getInstance();
         // for News Module
         $module_handler =& xoops_gethandler('module');
         if ($module_handler->getCount(new Criteria('dirname', 'news'))) {

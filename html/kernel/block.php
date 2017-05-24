@@ -146,10 +146,10 @@ class XoopsBlock extends XoopsObject
                 ob_end_clean();
                 $ret = str_replace('{X_SITEURL}', XOOPS_URL.'/', $content);
             } elseif ( $c_type == 'S' ) {
-                $myts =& MyTextSanitizer::getInstance();
+                $myts = MyTextSanitizer::getInstance();
                 $ret = str_replace('{X_SITEURL}', XOOPS_URL.'/', $myts->displayTarea($this->get('content'), 1, 1));
             } else {
-                $myts =& MyTextSanitizer::getInstance();
+                $myts = MyTextSanitizer::getInstance();
                 $ret = str_replace('{X_SITEURL}', XOOPS_URL.'/', $myts->displayTarea($this->get('content'), 1, 0));
             }
             break;
@@ -564,7 +564,7 @@ class XoopsBlockHandler extends XoopsObjectHandler
      **/
     function &getList($criteria = null)
     {
-        $blocks =& $this->getObjects($criteria, true);
+        $blocks = $this->getObjects($criteria, true);
         $ret = array();
         foreach (array_keys($blocks) as $i) {
             $name = ($blocks[$i]->get('block_type') != 'C') ? $blocks[$i]->getVar('name') : $blocks[$i]->getVar('title');

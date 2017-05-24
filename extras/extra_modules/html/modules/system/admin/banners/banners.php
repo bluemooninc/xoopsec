@@ -38,7 +38,7 @@ if (!is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin($
 function BannersAdmin()
 {
     global $xoopsConfig, $xoopsModule;
-    $xoopsDB =& Database::getInstance();
+    $xoopsDB = Database::getInstance();
     xoops_cp_header();
     // Banners List
     echo "<a name='top'></a>";
@@ -53,7 +53,7 @@ function BannersAdmin()
     <td align='center'>"._AM_CLINAME."</td>
     <td align='center'>"._AM_FUNCTION."</td></tr><tr align='center'>";
     $result = $xoopsDB->query("SELECT bid, cid, imptotal, impmade, clicks, date FROM ".$xoopsDB->prefix("banner")." ORDER BY bid");
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     while(list($bid, $cid, $imptotal, $impmade, $clicks, $date) = $xoopsDB->fetchRow($result)) {
         $result2 = $xoopsDB->query("SELECT cid, name FROM ".$xoopsDB->prefix("bannerclient")." WHERE cid=$cid");
         list($cid, $name) = $xoopsDB->fetchRow($result2);
@@ -204,8 +204,8 @@ function BannerDelete($bid)
 {
     $bid = intval($bid);
     global $xoopsConfig, $xoopsModule;
-    $xoopsDB =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $xoopsDB = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     xoops_cp_header();
     $result=$xoopsDB->query("SELECT cid, imptotal, impmade, clicks, imageurl, clickurl, htmlbanner, htmlcode FROM ".$xoopsDB->prefix("banner")." where bid=$bid");
     $imageurl = !empty($imageurl) ? htmlspecialchars($imageurl,ENT_QUOTES) : '';
@@ -262,8 +262,8 @@ function BannerEdit($bid)
     $bid = intval($bid);
     global $xoopsConfig, $xoopsModule;
     xoops_cp_header();
-    $xoopsDB =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $xoopsDB = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $result=$xoopsDB->query("SELECT cid, imptotal, impmade, clicks, imageurl, clickurl, htmlbanner, htmlcode FROM ".$xoopsDB->prefix("banner")." where bid=$bid");
     list($cid, $imptotal, $impmade, $clicks, $imageurl, $clickurl, $htmlbanner, $htmlcode) = $xoopsDB->fetchRow($result);
     echo"<table width='100%' border='0' cellspacing='1' class='outer'><tr><td class=\"odd\">";
@@ -336,8 +336,8 @@ function BannerClientDelete($cid)
 {
     global $xoopsConfig, $xoopsModule;
     $cid = intval($cid);
-    $xoopsDB =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $xoopsDB = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     xoops_cp_header();
     $result = $xoopsDB->query("SELECT cid, name FROM ".$xoopsDB->prefix("bannerclient")." WHERE cid=$cid");
     list($cid, $name) = $xoopsDB->fetchRow($result);
@@ -388,8 +388,8 @@ function BannerClientEdit($cid)
     $token=&XoopsSingleTokenHandler::quickCreate('banners_ClientChange');
 
     global $xoopsConfig, $xoopsModule;
-    $xoopsDB =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $xoopsDB = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     xoops_cp_header();
     $result = $xoopsDB->query("SELECT name, contact, email, login, passwd, extrainfo FROM ".$xoopsDB->prefix("bannerclient")." WHERE cid=$cid");
     list($name, $contact, $email, $login, $passwd, $extrainfo) = $xoopsDB->fetchRow($result);

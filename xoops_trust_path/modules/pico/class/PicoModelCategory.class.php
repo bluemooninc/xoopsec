@@ -14,14 +14,14 @@ function PicoCategoryHandler( $mydirname , $permissions = null )
 	if( $permissions ) {
 		$this->permissions = $permissions ;
 	} else {
-		$picoPermission =& PicoPermission::getInstance() ;
+		$picoPermission = PicoPermission::getInstance() ;
 		$this->permissions = $picoPermission->getPermissions( $mydirname ) ;
 	}
 }
 
 function getAllCategories( $return_prohibited_also = false )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$sql = "SELECT cat_id FROM ".$db->prefix($this->mydirname."_categories")." WHERE 1 ORDER BY cat_order_in_tree" ;
 	if( ! $crs = $db->query( $sql ) ) {
@@ -41,7 +41,7 @@ function getAllCategories( $return_prohibited_also = false )
 
 function getSubCategories( $cat_id , $return_prohibited_also = false )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$cat_id = intval( $cat_id ) ;
 	$sql = "SELECT cat_id FROM ".$db->prefix($this->mydirname."_categories")." WHERE pid=$cat_id ORDER BY cat_order_in_tree" ;
@@ -70,7 +70,7 @@ function &get( $cat_id )
 
 function touchVpathMtime( $cat_id , $mtime = null )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$mtime = empty( $mtime ) ? time() : intval( $mtime ) ;
 	$db->queryF( "UPDATE ".$db->prefix($this->mydirname."_categories")." SET `cat_vpath_mtime`=$mtime WHERE cat_id=$cat_id" ) ;
@@ -96,7 +96,7 @@ function PicoCategory( $mydirname , $cat_id , $permissions , $allow_makenew = fa
 {
 	$this->mydirname = $mydirname ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// get this "category" from given $cat_id
 	$sql = "SELECT * FROM ".$db->prefix($mydirname."_categories")." WHERE cat_id=$cat_id" ;
@@ -149,7 +149,7 @@ function getData()
 
 function getData4html()
 {
-	$myts =& PicoTextSanitizer::getInstance() ;
+	$myts = PicoTextSanitizer::getInstance() ;
 
 	return array(
 		'link' => pico_common_make_category_link4html( $this->mod_config , $this->data ) ,

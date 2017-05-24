@@ -35,7 +35,7 @@ function to_array($v)
  */
 function is_error($name = null)
 {
-    $c =& Ethna_Controller::getInstance();
+    $c = Ethna_Controller::getInstance();
     $action_error =& $c->getActionError();
     if ($name !== null) {
         return $action_error->isError($name);
@@ -119,7 +119,7 @@ class Ethna_Util
      */
     function isDuplicatePost()
     {
-        $c =& Ethna_Controller::getInstance();
+        $c = Ethna_Controller::getInstance();
 
         // use raw post data
         if (isset($_POST['uniqid'])) {
@@ -161,7 +161,7 @@ class Ethna_Util
      */
     function clearDuplicatePost()
     {
-        $c =& Ethna_Controller::getInstance();
+        $c = Ethna_Controller::getInstance();
 
         // use raw post data
         if (isset($_POST['uniqid'])) {
@@ -193,7 +193,7 @@ class Ethna_Util
      */
     function isCsrfSafe()
     {
-        $c =& Ethna_Controller::getInstance();
+        $c = Ethna_Controller::getInstance();
         $name = $c->config->get('csrf');
         
         if (is_null($name)) {
@@ -215,7 +215,7 @@ class Ethna_Util
      */
     function setCsrfID()
     {
-        $c =& Ethna_Controller::getInstance();
+        $c = Ethna_Controller::getInstance();
         $name = $c->config->get('csrf');
         
         if (is_null($name)) {
@@ -794,7 +794,7 @@ class Ethna_Util
      */
     function purgeTmp($prefix, $timeout)
     {
-        $c =& Ethna_Controller::getInstance();
+        $c = Ethna_Controller::getInstance();
 
         $dh = opendir($c->getDirectory('tmp'));
         if ($dh) {

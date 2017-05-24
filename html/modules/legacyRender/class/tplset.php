@@ -44,7 +44,7 @@ class LegacyRenderTplsetObject extends XoopsSimpleObject
 		// get module list
 		//
 		$moduleHandler =& xoops_gethandler('module');
-		$modules =& $moduleHandler->getObjects();
+		$modules = $moduleHandler->getObjects();
 		
 		$tplfileHandler =& xoops_getmodulehandler('tplfile', 'legacyRender');
 		
@@ -85,7 +85,7 @@ class LegacyRenderTplsetHandler extends XoopsObjectGenericHandler
 		//
 		$handler =& xoops_getmodulehandler('tplfile', 'legacyRender');
 		
-		$files =& $handler->getObjects(new Criteria('tpl_tplset', $original->get('tplset_name')));
+		$files = $handler->getObjects(new Criteria('tpl_tplset', $original->get('tplset_name')));
 		foreach ($files as $file) {
 			$cloneFile =& $file->createClone($clone->get('tplset_name'));
 			$handler->insert($cloneFile);

@@ -148,7 +148,7 @@ if ( $op == "form" ) {
 }
 
 if ( $op == "submit" ) {
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $criteria = new CriteriaCompo();
     if ( !empty($_POST['user_uname']) ) {
         $match = (!empty($_POST['user_uname_match'])) ? intval($_POST['user_uname_match']) : XOOPS_MATCH_START;

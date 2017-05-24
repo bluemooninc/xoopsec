@@ -30,7 +30,7 @@ class UserGroups_users_linkHandler extends XoopsObjectGenericHandler
 		$criteria->add(new Criteria('groupid', $groupid));
 		$criteria->add(new Criteria('uid', $uid));
 		
-		$objs =& $this->getObjects($criteria);
+		$objs = $this->getObjects($criteria);
 		return (count($objs) > 0 && is_object($objs[0]));
 	}
 }

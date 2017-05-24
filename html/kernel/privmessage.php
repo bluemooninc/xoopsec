@@ -227,7 +227,7 @@ class XoopsPrivmessageHandler extends XoopsObjectHandler
 		$criteria->addSort('msg_time', $order);
 		$criteria->setStart($start);
 		$criteria->setLimit($limit);
-		$ret =& $this->getObjects($criteria);
+		$ret = $this->getObjects($criteria);
 		
 		return $ret;
 	}

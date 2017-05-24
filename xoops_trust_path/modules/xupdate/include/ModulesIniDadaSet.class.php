@@ -370,7 +370,7 @@ class Xupdate_ModulesIniDadaSet
 		ksort($this->stores);
 		
 		//この該当サイト登録済みデータを全部確認する
-		$storeObjects =& $this->storeHand->getObjects(null,null,null,true);
+		$storeObjects = $this->storeHand->getObjects(null,null,null,true);
 		//echo('<pre>');var_dump($storeObjects);exit;
 		foreach($storeObjects as $sid => $store){
 			if (isset($this->stores[$sid]) && $this->stores[$sid]['contents'] !== 'disabled'){
@@ -385,7 +385,7 @@ class Xupdate_ModulesIniDadaSet
 				// delete items
 				$criteria = new CriteriaCompo();
 				$criteria->add(new Criteria( 'sid', $sid ) );
-				$siteModuleStoreObjects =& $this->modHand[$caller]->getObjects($criteria, null, null, true);
+				$siteModuleStoreObjects = $this->modHand[$caller]->getObjects($criteria, null, null, true);
 				foreach($siteModuleStoreObjects as $id => $mobj){
 					$this->modHand[$caller]->delete($mobj ,true);
 				}
@@ -446,7 +446,7 @@ class Xupdate_ModulesIniDadaSet
 				$sid = (int)$obj->getVar('sid');
 				$criteria = new CriteriaCompo();
 				$criteria->add(new Criteria( 'sid', $sid ) );
-				$siteModuleStoreObjects =& $this->modHand[$olddata['contents']]->getObjects($criteria, null, null, true);
+				$siteModuleStoreObjects = $this->modHand[$olddata['contents']]->getObjects($criteria, null, null, true);
 				foreach($siteModuleStoreObjects as $mobj) {
 					$this->modHand[$olddata['contents']]->delete($mobj,true);
 				}
@@ -463,7 +463,7 @@ class Xupdate_ModulesIniDadaSet
 		$criteria = new CriteriaCompo();
 		$criteria->add(new Criteria( 'sid', $sid ) );
 
-		$siteModuleStoreObjects =& $this->modHand[$caller]->getObjects($criteria, null, null, true);
+		$siteModuleStoreObjects = $this->modHand[$caller]->getObjects($criteria, null, null, true);
 
 		$approved = $this->approved[$sid];
 		foreach($siteModuleStoreObjects as $mobj){

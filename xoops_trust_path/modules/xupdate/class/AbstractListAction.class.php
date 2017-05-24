@@ -92,7 +92,7 @@ abstract class Xupdate_AbstractListAction extends Xupdate_AbstractAction
         $this->mFilter->fetch();
     
         $handler =& $this->_getHandler();
-        $this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
+        $this->mObjects = $handler->getObjects($this->mFilter->getCriteria());
     
         return XUPDATE_FRAME_VIEW_INDEX;
     }

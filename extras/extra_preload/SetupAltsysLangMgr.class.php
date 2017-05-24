@@ -37,7 +37,7 @@ class AltsysLangMgr_LanguageManager extends Legacy_LanguageManager
 		$langmanpath = XOOPS_TRUST_PATH.'/libs/altsys/class/D3LanguageManager.class.php' ;
 		if( ! file_exists( $langmanpath ) ) die( 'install the latest altsys' ) ;
 		require_once( $langmanpath ) ;
-		$this->langman =& D3LanguageManager::getInstance() ;
+		$this->langman = D3LanguageManager::getInstance() ;
 		$this->langman->language = $this->mLanguageName ;
 
 		parent::prepare();

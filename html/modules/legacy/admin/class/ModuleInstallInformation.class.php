@@ -814,7 +814,7 @@ class Legacy_ModinfoX2DBReader extends Legacy_AbstractModinfoReader
 		$criteria->add(new Criteria('dirname', $this->_mDirname));
 		$criteria->add(new Criteria('block_type', 'M'));
 		
-		$blockArr =& $handler->getObjects($criteria);
+		$blockArr = $handler->getObjects($criteria);
 		
 		foreach (array_keys($blockArr) as $idx) {
 			$info =& $this->_createBlockInformation($blockArr[$idx]);

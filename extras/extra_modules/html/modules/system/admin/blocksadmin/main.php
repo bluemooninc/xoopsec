@@ -69,7 +69,7 @@ if (isset($_POST['previewblock'])) {
         $myblock = new XoopsBlock();
         $myblock->setVar('block_type', 'C');
     }
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $myblock->setVar('title', $myts->stripSlashesGPC($_POST['btitle']));
     $myblock->setVar('content', $myts->stripSlashesGPC($_POST['bcontent']));
     $dummyhtml = '<html><head><meta http-equiv="content-type" content="text/html; charset='._CHARSET.'" /><meta http-equiv="content-language" content="'._LANGCODE.'" /><title>'.htmlspecialchars($xoopsConfig['sitename']).'</title><link rel="stylesheet" type="text/css" media="all" href="'.getcss($xoopsConfig['theme_set']).'" /></head><body><table><tr><th>'.$myblock->getVar('title').'</th></tr><tr><td>'.$myblock->getContent('S', $_POST['bctype']).'</td></tr></table></body></html>';
@@ -164,7 +164,7 @@ if ( $op == "save" ) {
         xoops_cp_footer();
         exit();
     }
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
     foreach ($_POST['bmodule'] as $bmid) {
         $sql = 'INSERT INTO '.$db->prefix('block_module_link').' (block_id, module_id) VALUES ('.$newid.', '.intval($bmid).')';
             $db->query($sql);
@@ -234,7 +234,7 @@ if ( $op == "update" ) {
     }
     $msg = _AM_DBUPDATED;
     if ($myblock->store() != false) {
-        $db =& Database::getInstance();
+        $db = Database::getInstance();
         $sql = sprintf("DELETE FROM %s WHERE block_id = %u", $db->prefix('block_module_link'), $bid);
         $db->query($sql);
         foreach ($_POST['bmodule'] as $bmid) {

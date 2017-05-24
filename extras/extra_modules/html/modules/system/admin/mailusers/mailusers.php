@@ -174,7 +174,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
 		if ( $added_count > 0 ) {
 			$mail_start = !empty($_POST['mail_start']) ? $_POST['mail_start'] : 0;
 			$mail_end = ($added_count > ($mail_start + SEND_SIM_PROCESS_AMMO)) ? ($mail_start + SEND_SIM_PROCESS_AMMO) : $added_count;
-			$myts =& MyTextSanitizer::getInstance();
+			$myts = MyTextSanitizer::getInstance();
 			$xoopsMailer =& getMailer();
 			for ( $i = $mail_start; $i < $mail_end; $i++) {
 				$xoopsMailer->setToUsers($added[$i]);

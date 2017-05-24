@@ -47,7 +47,7 @@ class Legacy_ImageEditAction extends Legacy_ImageCreateAction
 		$handler =& xoops_getmodulehandler('imagecategory', 'legacy');
 		$t_category = $handler->get($this->mObject->get('imgcat_id'));
 		
-		$categoryArr =& $handler->getObjects(new Criteria('imgcat_storetype', $t_category->get('imgcat_storetype')));
+		$categoryArr = $handler->getObjects(new Criteria('imgcat_storetype', $t_category->get('imgcat_storetype')));
 		$render->setAttribute('categoryArr', $categoryArr);
 	}
 	

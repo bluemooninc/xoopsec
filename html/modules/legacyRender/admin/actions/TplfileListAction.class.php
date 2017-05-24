@@ -54,10 +54,10 @@ class LegacyRender_TplfileListAction extends LegacyRender_AbstractListAction
 		$criteria = $this->mFilter->getCriteria();
 		
 		if (isset($_REQUEST['tpl_tplset'])) {
-			$this->mObjects =& $handler->getObjectsWithOverride($criteria, xoops_getrequest('tpl_tplset'));
+			$this->mObjects = $handler->getObjectsWithOverride($criteria, xoops_getrequest('tpl_tplset'));
 		}
 		else {
-			$this->mObjects =& $handler->getObjects($criteria);
+			$this->mObjects = $handler->getObjects($criteria);
 		}
 	
 		return LEGACYRENDER_FRAME_VIEW_INDEX;
@@ -170,11 +170,11 @@ class LegacyRender_TplfileListAction extends LegacyRender_AbstractListAction
 		// fetch module objects, assign to template for pull-down menu.
 		//
 		$moduleHandler =& xoops_gethandler('module');
-		$modules =& $moduleHandler->getObjects();
+		$modules = $moduleHandler->getObjects();
 		$render->setAttribute('modules', $modules);
 
 		$handler =& xoops_getmodulehandler('tplset');
-		$tplsets =& $handler->getObjects();
+		$tplsets = $handler->getObjects();
 		$render->setAttribute('tplsets', $tplsets);
 	}
 	

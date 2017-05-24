@@ -31,7 +31,7 @@ function bmcart_onupdate_base($module, $myDirName)
 	} else {
 		if (!is_array($msgs)) $msgs = array();
 	}
-	$db =& Database::getInstance();
+	$db = Database::getInstance();
 	// 0.11 -> 0.12
 	$tblName = $db->prefix("users");
 	$check_sql = "SELECT user_yconnect FROM " . $tblName;

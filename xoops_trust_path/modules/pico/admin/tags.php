@@ -8,8 +8,8 @@ require_once dirname(dirname(__FILE__)).'/include/history_functions.php' ;
 require_once dirname(dirname(__FILE__)).'/class/pico.textsanitizer.php' ;
 require_once dirname(dirname(__FILE__)).'/class/gtickets.php' ;
 require_once XOOPS_ROOT_PATH.'/class/pagenav.php' ;
-$myts =& PicoTextSanitizer::getInstance() ;
-$db =& Database::getInstance() ;
+$myts = PicoTextSanitizer::getInstance() ;
+$db = Database::getInstance() ;
 
 $allowed_orders = array( 'count ASC' , 'count DESC' , 'weight ASC' , 'weight DESC' , 'label ASC' , 'label DESC' ) ;
 

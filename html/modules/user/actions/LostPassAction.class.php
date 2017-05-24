@@ -59,7 +59,7 @@ class User_LostPassAction extends User_Action
 		$userHandler =& xoops_gethandler('user');
 		$criteria =new CriteriaCompo(new Criteria('email', $this->mActionForm->get('email')));
 		$criteria->add(new Criteria('pass', $this->mActionForm->get('code'), '=', '', 'LEFT(%s, 5)'));
-		$lostUserArr =& $userHandler->getObjects($criteria);
+		$lostUserArr = $userHandler->getObjects($criteria);
 		
 		if (is_array($lostUserArr) && count($lostUserArr) > 0) {
 			$lostUser =& $lostUserArr[0];
@@ -94,7 +94,7 @@ class User_LostPassAction extends User_Action
 		}
 		
 		$userHandler =& xoops_gethandler('user');
-		$lostUserArr =& $userHandler->getObjects(new Criteria('email', $this->mActionForm->get('email')));
+		$lostUserArr = $userHandler->getObjects(new Criteria('email', $this->mActionForm->get('email')));
 
 		if (is_array($lostUserArr) && count($lostUserArr) > 0) {
 			$lostUser =& $lostUserArr[0];

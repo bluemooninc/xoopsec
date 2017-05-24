@@ -65,7 +65,7 @@ class LegacyRender_TplsetDownloadAction extends LegacyRender_Action
 			   "  <generator>" . XOOPS_VERSION. "</generator>" . "\n";
 
 		$handler =& xoops_getmodulehandler('tplfile');
-		$files =& $handler->getObjects(new Criteria('tpl_tplset', $this->mTplset->get('tplset_name')));
+		$files = $handler->getObjects(new Criteria('tpl_tplset', $this->mTplset->get('tplset_name')));
 		
 		$count = count($files);
 		

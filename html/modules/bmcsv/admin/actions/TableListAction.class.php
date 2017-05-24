@@ -32,7 +32,7 @@ class bmcsv_TableListAction extends bmcsv_AbstractListAction
 		$this->mFilter->fetch();
 		$moduleHandler =& xoops_gethandler('module');
 		$criteria = new Criteria('isactive', 1);
-		$moduleObjects =& $moduleHandler->getObjects($criteria);
+		$moduleObjects = $moduleHandler->getObjects($criteria);
 		foreach ($moduleObjects as $moduleObject) {
 			$mod_dir = $moduleObject->get('dirname');
 			$mod_object = $moduleHandler->getByDirname($mod_dir);

@@ -33,7 +33,7 @@ class Emaillogin extends XCube_ActionFilter
     }
     $criteria->add(new Criteria('pass', md5(xoops_getrequest('pass'))));
     
-    $userArr =& $userHandler->getObjects($criteria);
+    $userArr = $userHandler->getObjects($criteria);
     if (count($userArr) != 1) {
       return;
     }

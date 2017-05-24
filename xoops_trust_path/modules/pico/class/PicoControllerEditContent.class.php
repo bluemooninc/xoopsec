@@ -69,7 +69,7 @@ function execute( $request )
 	$this->assign['content']['wraps_files'] = array( '' => '---' ) + pico_main_get_wraps_files_recursively( $this->mydirname , '/' ) ;
 
 	// breadcrumbs
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	if( $page == 'makecontent' ) {
 		$breadcrumbsObj->appendPath( '' , _MD_PICO_LINK_MAKECONTENT ) ;
 		$this->assign['xoops_pagetitle'] = _MD_PICO_LINK_MAKECONTENT ;

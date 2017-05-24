@@ -49,7 +49,7 @@ case "SmilesUpdate":
         redirect_header('admin.php?fct=smilies',3,"Ticket Error");
     }
     $count = (!empty($_POST['smile_id']) && is_array($_POST['smile_id'])) ? count($_POST['smile_id']) : 0;
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
     for ($i = 0; $i < $count; $i++) {
         $smile_id = intval($_POST['smile_id'][$i]);
         if (empty($smile_id)) {
@@ -67,8 +67,8 @@ case "SmilesAdd":
     if (!XoopsMultiTokenHandler::quickValidate('smilies_SmilesAdd')) {
         redirect_header('admin.php?fct=smilies',3,"Ticket Error");
     }
-    $db =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $db = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     include_once XOOPS_ROOT_PATH.'/class/uploader.php';
     $uploader = new XoopsMediaUploader(XOOPS_UPLOAD_PATH, array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/x-png'), 100000, 120, 120);
     $uploader->setAllowedExtensions(array('gif', 'jpeg', 'jpg', 'png'));
@@ -111,11 +111,11 @@ case "SmilesSave":
     if ($id <= 0 || !XoopsMultiTokenHandler::quickValidate('smilies_SmilesSave')) {
         redirect_header('admin.php?fct=smilies',3,"Ticket Error");
     }
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $smile_code = $myts->stripSlashesGPC($_POST['smile_code']);
     $smile_desc = $myts->stripSlashesGPC($_POST['smile_desc']);
     $smile_display = intval($_POST['smile_display']) > 0 ? 1 : 0;
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
     if (!empty($_POST['smile_url'])) {
         include_once XOOPS_ROOT_PATH.'/class/uploader.php';
         $uploader = new XoopsMediaUploader(XOOPS_UPLOAD_PATH, array('image/gif', 'image/jpeg', 'image/pjpeg', 'image/x-png'), 100000, 120, 120);
@@ -168,7 +168,7 @@ case "SmilesDelOk":
     if ($id <= 0 || !xoops_confirm_validate()) {
         redirect_header('admin.php?fct=smilies',3,"Ticket Error");
     }
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
     $sql = sprintf("DELETE FROM %s WHERE id = %u", $db->prefix('smiles'), $id);
     $db->query($sql);
     redirect_header("admin.php?fct=smilies&amp;op=SmilesAdmin",2,_AM_DBUPDATED);

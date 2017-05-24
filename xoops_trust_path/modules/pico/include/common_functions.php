@@ -13,7 +13,7 @@ if( ! defined( '_MD_PICO_WRAPBASE' ) ) require_once dirname(__FILE__).'/constant
 // get $cat_id from $content_id
 function pico_common_get_cat_id_from_content_id( $mydirname , $content_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	list( $cat_id ) = $db->fetchRow( $db->query( "SELECT cat_id FROM ".$db->prefix($mydirname."_contents")." WHERE content_id=".intval($content_id) ) ) ;
 
@@ -24,7 +24,7 @@ function pico_common_get_cat_id_from_content_id( $mydirname , $content_id )
 // get both $categoryObj and $contentObj from specified content_id
 function pico_common_get_objects_from_content_id( $mydirname , $content_id )
 {
-	$picoPermission =& PicoPermission::getInstance() ;
+	$picoPermission = PicoPermission::getInstance() ;
 	$permissions = $picoPermission->getPermissions( $mydirname ) ;
 	$cat_id = pico_common_get_cat_id_from_content_id( $mydirname , $content_id ) ;
 	$categoryObj = new PicoCategory( $mydirname , intval( $cat_id ) , $permissions ) ;
@@ -41,7 +41,7 @@ function pico_get_categories_can_read( $mydirname ) { return pico_common_get_cat
 // deprecated
 function pico_common_get_categories_can_read( $mydirname , $uid = null )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	if( $uid > 0 ) {
 		$user_handler =& xoops_gethandler( 'user' ) ;
@@ -85,7 +85,7 @@ function pico_common_make_content_link4html( $mod_config , $content_row , $mydir
 		// wraps mode 
 		if( ! is_array( $content_row ) && ! empty( $mydirname ) ) {
 			// specify content by content_id instead of content_row
-			$db =& Database::getInstance() ;
+			$db = Database::getInstance() ;
 			$content_row = $db->fetchArray( $db->query( "SELECT content_id,vpath FROM ".$db->prefix($mydirname."_contents")." WHERE content_id=".intval($content_row) ) ) ;
 		}
 
@@ -109,7 +109,7 @@ function pico_common_make_category_link4html( $mod_config , $cat_row , $mydirnam
 		if( empty( $cat_row ) || is_array( $cat_row ) && $cat_row['cat_id'] == 0 ) return '' ;
 		if( ! is_array( $cat_row ) && ! empty( $mydirname ) ) {
 			// specify category by cat_id instead of cat_row
-			$db =& Database::getInstance() ;
+			$db = Database::getInstance() ;
 			$cat_row = $db->fetchArray( $db->query( "SELECT cat_id,cat_vpath FROM ".$db->prefix($mydirname."_categories")." WHERE cat_id=".intval($cat_row) ) ) ;
 		}
 		if( ! empty( $cat_row['cat_vpath'] ) ) {
@@ -140,8 +140,8 @@ function pico_common_get_submenu( $mydirname , $caller = 'xoops_version' )
 	$config_handler =& xoops_gethandler('config') ;
 	$mod_config =& $config_handler->getConfigsByCat( 0 , $module->getVar('mid') ) ;
 
-	$db =& Database::getInstance() ;
-	$myts =& MyTextSanitizer::getInstance();
+	$db = Database::getInstance() ;
+	$myts = MyTextSanitizer::getInstance();
 
 	$whr_read = '`cat_id` IN (' . implode( "," , pico_common_get_categories_can_read( $mydirname ) ) . ')' ;
 	$categories = array( 0 => array( 'pid' => -1 , 'name' => '' , 'url' => '' , 'sub' => array() ) ) ;
@@ -219,7 +219,7 @@ function pico_common_utf8_encode_recursive( &$data )
 // create category options as array
 function pico_common_get_cat_options( $mydirname )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$crs = $db->query( "SELECT c.cat_id,c.cat_title,c.cat_depth_in_tree,COUNT(o.content_id) FROM ".$db->prefix($mydirname."_categories")." c LEFT JOIN ".$db->prefix($mydirname."_contents")." o ON c.cat_id=o.cat_id GROUP BY c.cat_id ORDER BY c.cat_order_in_tree" ) ;
 	$cat_options = array( 0 => _MD_PICO_TOP ) ;

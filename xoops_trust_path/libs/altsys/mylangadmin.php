@@ -21,9 +21,9 @@ if( ! is_object( @$xoopsUser ) || ! $moduleperm_handler->checkRight( 'module_adm
 
 
 // initials
-$db =& Database::getInstance();
-$myts =& MyTextSanitizer::getInstance() ;
-$langman =& D3LanguageManager::getInstance() ;
+$db = Database::getInstance();
+$myts = MyTextSanitizer::getInstance() ;
+$langman = D3LanguageManager::getInstance() ;
 
 // language file of this controller
 altsys_include_language_file( 'mylangadmin' ) ;
@@ -229,7 +229,7 @@ if( altsys_get_core_type() == ALTSYS_CORE_TYPE_XCL21 ) {
             }
         }</strike>
         require_once XOOPS_TRUST_PATH."/libs/altsys/class/D3LanguageManager.class.php" ;
-        $langman =& D3LanguageManager::getInstance() ;
+        $langman = D3LanguageManager::getInstance() ;
         $langman->read( "main.php" , $xoopsModule->getVar("dirname") ) ;
 		</pre>
 	' ;
@@ -247,7 +247,7 @@ xoops_cp_header() ;
 altsys_include_mymenu() ;
 
 // breadcrumbs
-$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 if( $breadcrumbsObj->hasPaths() ) {
 	$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=mylangadmin' , _MI_ALTSYS_MENU_MYLANGADMIN ) ;
 	$breadcrumbsObj->appendPath( '' , $target_mname ) ;

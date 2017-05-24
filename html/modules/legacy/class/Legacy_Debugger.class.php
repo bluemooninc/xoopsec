@@ -90,7 +90,7 @@ class Legacy_PHPDebugger extends Legacy_AbstractDebugger
 	function prepare()
 	{
 		error_reporting(E_ALL);
-		$GLOBALS['xoopsErrorHandler'] =& XoopsErrorHandler::getInstance();
+		$GLOBALS['xoopsErrorHandler'] = XoopsErrorHandler::getInstance();
 		$GLOBALS['xoopsErrorHandler']->activate(true);
 	}
 }
@@ -103,7 +103,7 @@ class Legacy_MysqlDebugger extends Legacy_AbstractDebugger
 {
 	function prepare()
 	{
-		$GLOBALS['xoopsErrorHandler'] =& XoopsErrorHandler::getInstance();
+		$GLOBALS['xoopsErrorHandler'] = XoopsErrorHandler::getInstance();
 		$GLOBALS['xoopsErrorHandler']->activate(true);
 	}
 	
@@ -139,7 +139,7 @@ class Legacy_SmartyDebugger extends Legacy_AbstractDebugger
 {
 	function prepare()
 	{
-		$GLOBALS['xoopsErrorHandler'] =& XoopsErrorHandler::getInstance();
+		$GLOBALS['xoopsErrorHandler'] = XoopsErrorHandler::getInstance();
 		$GLOBALS['xoopsErrorHandler']->activate(true);
 	}
 	

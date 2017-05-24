@@ -98,7 +98,7 @@ function triggerEvent( $mydirname , $mytrustdirname , $category , $item_id , $ev
 		}
 		$criteria->add($user_criteria);
 	}
-	$notifications =& $notification_handler->getObjects($criteria);
+	$notifications = $notification_handler->getObjects($criteria);
 	if (empty($notifications)) {
 		return;
 	}

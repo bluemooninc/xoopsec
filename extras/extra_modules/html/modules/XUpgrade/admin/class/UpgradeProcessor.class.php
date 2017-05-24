@@ -225,7 +225,7 @@ class XUpgrade_UpgradeProcessor
 			$criteria->add(new Criteria('tpl_tplset', 'default', '<>'));
 			$criteria->add(new Criteria('tpl_file', $srcName));
 				
-			$src_tplfileArr =& $handler->getObjects($criteria);
+			$src_tplfileArr = $handler->getObjects($criteria);
 			
 			foreach ($src_tplfileArr as $src_tplfile) {
 				$src_tplfile->loadSource();
@@ -235,7 +235,7 @@ class XUpgrade_UpgradeProcessor
 				$criteria->add(new Criteria('tpl_tplset', $src_tplfile->get('tpl_tplset')));
 				$criteria->add(new Criteria('tpl_file', $descName));
 				
-				$desc_tplfileArr =& $handler->getObjects($criteria);
+				$desc_tplfileArr = $handler->getObjects($criteria);
 				
 				//
 				// count($sec_tplfileArr) is 1. But, use foreach() here, to skip error checks.
@@ -370,7 +370,7 @@ class XUpgrade_UpgradeProcessor
 		$criteria->add(new Criteria('isactive', 0));
 		$criteria->add(new Criteria('hasmain', 0));
 		
-		$modules =& $handler->getObjects($criteria);
+		$modules = $handler->getObjects($criteria);
 		foreach ($modules as $module) {
 			$module->set('isactive', 1);
 			$handler->insert($module);

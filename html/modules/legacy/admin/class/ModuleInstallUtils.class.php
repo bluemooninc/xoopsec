@@ -467,7 +467,7 @@ class Legacy_ModuleInstallUtils
 		$handler =& xoops_gethandler('block');
 		$criteria = new Criteria('mid', $module->get('mid'));
 
-		$blockArr =& $handler->getObjectsDirectly($criteria);
+		$blockArr = $handler->getObjectsDirectly($criteria);
 		
 		$successFlag = true;
 		
@@ -643,7 +643,7 @@ class Legacy_ModuleInstallUtils
 		$criteria->add(new Criteria('tpl_tplset', 'default'));
 		$criteria->add(new Criteria('tpl_module', $module->get('dirname')));
 		$criteria->add(new Criteria('tpl_file', $block->get('template')));
-		$tplfiles =& $tplHandler->getObjects($criteria);
+		$tplfiles = $tplHandler->getObjects($criteria);
 
 		if (count($tplfiles) > 0) {
 			$tplfile =& $tplfiles[0];
@@ -1005,7 +1005,7 @@ class Legacy_ModuleInstallUtils
 		$criteria->add(new Criteria('dirname', $module->get('dirname')));
 		$criteria->add(new Criteria('func_num', $info->mFuncNum));
 		
-		$blockArr =& $handler->getObjects($criteria);
+		$blockArr = $handler->getObjects($criteria);
 		foreach (array_keys($blockArr) as $idx) {
 			Legacy_ModuleInstallUtils::clearBlockTemplateForUpdate($blockArr[$idx], $module, $log);
 			Legacy_ModuleInstallUtils::installBlockTemplate($blockArr[$idx], $module, $log);
@@ -1020,7 +1020,7 @@ class Legacy_ModuleInstallUtils
 		$criteria->add(new Criteria('dirname', $module->get('dirname')));
 		$criteria->add(new Criteria('func_num', $info->mFuncNum));
 		
-		$blockArr =& $handler->getObjects($criteria);
+		$blockArr = $handler->getObjects($criteria);
 		foreach (array_keys($blockArr) as $idx) {
 			$blockArr[$idx]->set('options', $info->mOptions);
 			$blockArr[$idx]->set('name', $info->mName);
@@ -1170,7 +1170,7 @@ class Legacy_ModuleInstallUtils
 		$criteria->add(new Criteria('dirname', $module->get('dirname')));
 		$criteria->add(new Criteria('func_num', $func_num));
 		
-		$blockArr =& $handler->getObjects($criteria);
+		$blockArr = $handler->getObjects($criteria);
 		foreach (array_keys($blockArr) as $idx) {
 			if ($handler->delete($blockArr[$idx])) {
 				$log->addReport(XCube_Utils::formatMessage(_AD_LEGACY_MESSAGE_UNINSTALLATION_BLOCK_SUCCESSFUL, $blockArr[$idx]->get('name')));

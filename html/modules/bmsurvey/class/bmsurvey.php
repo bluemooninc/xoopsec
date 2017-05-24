@@ -11,7 +11,7 @@ class BmSurvey extends XoopsObject{
 
 	function BmSurvey( $formName )
 	{
-		$this->db =& Database::getInstance();
+		$this->db = Database::getInstance();
 		$this->table = $this->db->prefix( "bmsurvey_form" ) ;
 
 		$this->initVar("id", XOBJ_DTYPE_INT, null, false);

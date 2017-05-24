@@ -44,7 +44,7 @@ class LegacyRender_BannerEditAction extends LegacyRender_AbstractEditAction
 		$render->setAttribute('object', $this->mObject);
 		
 		$bannerclientHandler =& xoops_getmodulehandler('bannerclient');
-		$bannerclientArr =& $bannerclientHandler->getObjects();
+		$bannerclientArr = $bannerclientHandler->getObjects();
 		foreach (array_keys($bannerclientArr) as $key) {
 			$bannerclientArr[$key]->loadBanner();
 		}

@@ -557,8 +557,8 @@ if ( !defined("XOOPS_LISTS_INCLUDED") ) {
 
         function &getUserRankList()
         {
-            $db =& Database::getInstance();
-            $myts =& MyTextSanitizer::getInstance();
+            $db = Database::getInstance();
+            $myts = MyTextSanitizer::getInstance();
             $sql = "SELECT rank_id, rank_title FROM ".$db->prefix("ranks")." WHERE rank_special = 1";
             $ret = array();
             $result = $db->query($sql);

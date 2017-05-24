@@ -26,7 +26,7 @@ class User_AvatarSelectAction extends User_AbstractEditAction
 
 		$handler =& xoops_getmodulehandler('avatar', 'user');
 		$criteria =new Criteria('avatar_file', $xoopsUser->get('user_avatar'));
-		$avatarArr =& $handler->getObjects($criteria);
+		$avatarArr = $handler->getObjects($criteria);
 		if (count($avatarArr) > 0) {
 			$this->mOldAvatar =& $avatarArr[0];
 		}
@@ -111,7 +111,7 @@ class User_AvatarSelectAction extends User_AbstractEditAction
 			// Insert new link.
 			//
 			$criteria =new Criteria('avatar_file', $this->mObject->get('user_avatar'));
-			$avatarArr =& $avatarHandler->getObjects($criteria);
+			$avatarArr = $avatarHandler->getObjects($criteria);
 			if (is_array($avatarArr) && is_object($avatarArr[0])) {
 				$link =& $linkHandler->create();
 				$link->set('avatar_id', $avatarArr[0]->get('avatar_id'));

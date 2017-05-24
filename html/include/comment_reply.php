@@ -119,7 +119,7 @@ $actionForm->load($res_comment);
 // Get the icons of subject.
 //
 $handler =& xoops_gethandler('subjecticon');
-$subjectIcons =& $handler->getObjects();
+$subjectIcons = $handler->getObjects();
 
 themecenterposts($comment->getVar('com_title'), $r_text);
 

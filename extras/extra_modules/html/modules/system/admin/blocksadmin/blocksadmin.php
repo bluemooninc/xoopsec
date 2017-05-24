@@ -166,7 +166,7 @@ if ( $xoopsUser->isAdmin($xoopsModule->mid()) ) {
     function edit_block($bid)
     {
         $myblock = new XoopsBlock($bid);
-        $db =& Database::getInstance();
+        $db = Database::getInstance();
         $sql = 'SELECT module_id FROM '.$db->prefix('block_module_link').' WHERE block_id='.intval($bid);
         $result = $db->query($sql);
         $modules = array();
@@ -233,7 +233,7 @@ if ( $xoopsUser->isAdmin($xoopsModule->mid()) ) {
         global $xoopsConfig;
         xoops_cp_header();
         $myblock = new XoopsBlock($bid);
-        $db =& Database::getInstance();
+        $db = Database::getInstance();
         $sql = 'SELECT module_id FROM '.$db->prefix('block_module_link').' WHERE block_id='.intval($bid);
         $result = $db->query($sql);
         $modules = array();
@@ -293,7 +293,7 @@ if ( $xoopsUser->isAdmin($xoopsModule->mid()) ) {
                 $tplman->insert($tplclone);
             }
         }
-        $db =& Database::getInstance();
+        $db = Database::getInstance();
         foreach ($bmodule as $bmid) {
             $sql = 'INSERT INTO '.$db->prefix('block_module_link').' (block_id, module_id) VALUES ('.$newid.', '.$bmid.')';
             $db->query($sql);

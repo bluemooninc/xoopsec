@@ -213,7 +213,7 @@ class Legacy_TextFilter extends XCube_TextFilter
 	function getSmileys() {
 		if (count($this->mSmileys) == 0) {
 			$this->mSmileysConvTable[0] = $this->mSmileysConvTable[1] = array();
-			$db =& Database::getInstance();
+			$db = Database::getInstance();
 			if ($getsmiles = $db->query("SELECT * FROM ".$db->prefix("smiles"))){
 				while ($smile = $db->fetchArray($getsmiles)) {
 					$this->mSmileys[] = $smile;

@@ -230,7 +230,7 @@ class QuickManageBlock extends XCube_ActionFilter
 			$blockIds[] = $block['id'];
 		}
 
-		$db =& Database::getInstance();
+		$db = Database::getInstance();
 		$sqlBase  = "SELECT `bid`, `block_type` FROM `%s` WHERE `bid` IN (%s)";
 		$table    = $db->prefix('newblocks');
 		$blockIds = array_map('intval', $blockIds);

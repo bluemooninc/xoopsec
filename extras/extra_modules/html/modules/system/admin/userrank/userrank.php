@@ -35,7 +35,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
 
 function RankForumAdmin()
 {
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
     xoops_cp_header();
     echo "<h4 style='text-align:left;'>"._AM_RANKSSETTINGS."</h4>
     <table width='100%' class='outer' cellpadding='4' cellspacing='1'>
@@ -89,8 +89,8 @@ function RankForumAdmin()
 
 function RankForumEdit($rank_id)
 {
-    $db =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $db = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     xoops_cp_header();
     echo '<a href="admin.php?fct=userrank">'. _AM_RANKSSETTINGS .'</a>&nbsp;<span style="font-weight:bold;">&raquo;&raquo;</span>&nbsp;'._AM_EDITRANK.'<br /><br />';
     $result = $db->query("SELECT * FROM ".$db->prefix("ranks")." WHERE rank_id=".$rank_id);

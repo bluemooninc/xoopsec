@@ -113,7 +113,7 @@ class XoopsFormDhtmlTextArea extends XoopsFormTextArea
     function _renderSmileys()
     {
 		$handler =& xoops_getmodulehandler('smiles', 'legacy');
-		$smilesArr =& $handler->getObjects(new Criteria('display', 1));
+		$smilesArr = $handler->getObjects(new Criteria('display', 1));
 		
 		$root =& XCube_Root::getSingleton();
 		$renderSystem =& $root->getRenderSystem(XOOPSFORM_DEPENDENCE_RENDER_SYSTEM);

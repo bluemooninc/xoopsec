@@ -83,7 +83,7 @@ class XoopsObjectGenericHandler extends XoopsObjectHandler
 			$criteria =new Criteria($this->mPrimary, $id);
 		}
 		// Bluemoon hack end
-		$objArr =& $this->getObjects($criteria);
+		$objArr = $this->getObjects($criteria);
 		
 		if (count($objArr) == 1) {
 			$ret =& $objArr[0];
@@ -469,7 +469,7 @@ class XoopsObjectGenericHandler extends XoopsObjectHandler
 	 */
 	function deleteAll($criteria, $force = false)
 	{
-		$objs =& $this->getObjects($criteria);
+		$objs = $this->getObjects($criteria);
 		
 		$flag = true;
 		

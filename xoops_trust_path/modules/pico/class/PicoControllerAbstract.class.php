@@ -23,7 +23,7 @@ function PicoControllerAbstract( &$currentCategoryObj )
 	$this->mod_config = $currentCategoryObj->getOverriddenModConfig() ;
 	$this->uid = is_object( $xoopsUser ) ? $xoopsUser->getVar('uid') : 0 ;
 
-	$picoPermission =& PicoPermission::getInstance() ;
+	$picoPermission = PicoPermission::getInstance() ;
 	$this->permissions = $picoPermission->getPermissions( $this->mydirname ) ;
 	$this->assign = array(
 		'mymodname' => htmlspecialchars( $currentCategoryObj->mod_name , ENT_QUOTES ) ,

@@ -127,7 +127,7 @@ function updateConfIntoDb( $name , $value )
 {
 	$constpref = '_MI_' . strtoupper( $this->mydirname ) ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$db->queryF( "UPDATE `".$db->prefix("config")."` SET `conf_value`='".addslashes($value)."' WHERE `conf_title` like '".$constpref."%' AND `conf_name`='".addslashes($name)."' LIMIT 1" ) ;
 	$this->updateConfFromDB() ;
 }
@@ -1108,7 +1108,7 @@ function disable_features()
 function call_filter( $type , $dying_message = '' )
 {
 	require_once dirname(__FILE__).'/ProtectorFilter.php' ;
-	$filter_handler =& ProtectorFilterHandler::getInstance() ;
+	$filter_handler = ProtectorFilterHandler::getInstance() ;
 	$ret = $filter_handler->execute( $type ) ;
 	if( $ret == false && $dying_message ) {
 		die( $dying_message ) ;

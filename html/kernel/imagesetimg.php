@@ -176,7 +176,7 @@ class XoopsImagesetimgHandler extends XoopsObjectHandler
  **/
     function &getByImageset($imgset_id, $id_as_key = false)
     {
-        $ret =& $this->getObjects(new Criteria('imgsetimg_imgset', (int)$imgset_id), $id_as_key);
+        $ret = $this->getObjects(new Criteria('imgsetimg_imgset', (int)$imgset_id), $id_as_key);
         return $ret;
     }
 

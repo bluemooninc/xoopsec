@@ -70,7 +70,7 @@ case "RankForumDelGo":
     if ($rank_id <= 0 || !xoops_confirm_validate()) {
         redirect_header("admin.php?fct=userrank");
     }
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
     $sql = sprintf("DELETE FROM %s WHERE rank_id = %u", $db->prefix("ranks"), $rank_id);
     $db->query($sql);
     redirect_header("admin.php?fct=userrank&amp;op=ForumAdmin",1,_AM_DBUPDATED);
@@ -80,8 +80,8 @@ case "RankForumAdd":
     if (!XoopsMultiTokenHandler::quickValidate('userrank_RankForumAdd')) {
         redirect_header("admin.php?fct=userrank");
     }
-    $db =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $db = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $rank_special = isset($_POST['rank_special']) && intval($_POST['rank_special']) ? 1 : 0;
     $rank_title = $myts->stripSlashesGPC($_POST['rank_title']);
     $rank_image = '';
@@ -114,8 +114,8 @@ case "RankForumSave":
     if ($rank_id <= 0 || !XoopsMultiTokenHandler::quickValidate('userrank_RankForumSave')) {
         redirect_header("admin.php?fct=userrank");
     }
-    $db =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $db = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $rank_special = isset($_POST['rank_special']) && intval($_POST['rank_special']) ? 1 : 0;
     $rank_title = $myts->stripSlashesGPC($_POST['rank_title']);
     $delete_old_image = false;

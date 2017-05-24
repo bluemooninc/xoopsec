@@ -46,7 +46,7 @@ class XoopsTopic
 
 	function XoopsTopic($table, $topicid=0)
 	{
-		$this->db =& Database::getInstance();
+		$this->db = Database::getInstance();
 		$this->table = $table;
 		if ( is_array($topicid) ) {
 			$this->makeTopic($topicid);
@@ -94,7 +94,7 @@ class XoopsTopic
 
 	function store()
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$title = "";
 		$imgurl = "";
 		if ( isset($this->topic_title) && $this->topic_title != "" ) {
@@ -204,7 +204,7 @@ class XoopsTopic
 
 	function topic_title($format="S")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		switch($format){
 			case "S":
 				$title = $myts->makeTboxData4Show($this->topic_title);
@@ -224,7 +224,7 @@ class XoopsTopic
 
 	function topic_imgurl($format="S")
 	{
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		switch($format){
 			case "S":
 				$imgurl= $myts->makeTboxData4Show($this->topic_imgurl);
@@ -319,7 +319,7 @@ class XoopsTopic
 	{
 		$result = $this->db->query('SELECT topic_id, topic_pid, topic_title FROM '.$this->table);
 		$ret = array();
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		while ($myrow = $this->db->fetchArray($result)) {
 			$ret[$myrow['topic_id']] = array('title' => $myts->htmlSpecialChars($myrow['topic_title']), 'pid' => $myrow['topic_pid']);
 		}

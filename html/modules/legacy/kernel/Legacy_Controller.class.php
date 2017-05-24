@@ -770,7 +770,7 @@ class Legacy_Controller extends XCube_Controller
 			$moduleHandler = xoops_gethandler('module');
 			$criteria = new Criteria('isactive', 1);
 			$this->mActiveModules =
-			$moduleObjects =& $moduleHandler->getObjects($criteria);
+			$moduleObjects = $moduleHandler->getObjects($criteria);
 			}
 			foreach ($moduleObjects as $moduleObject) {
 				$mod_dir = $moduleObject->getVar('dirname');

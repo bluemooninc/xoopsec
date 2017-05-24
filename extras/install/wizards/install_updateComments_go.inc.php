@@ -24,7 +24,7 @@
             $criteria->setOrder('DESC');
             $criteria->setSort('com_id');
             $criteria->setLimit(1);
-            $last_comment =& $comment_handler->getObjects($criteria);
+            $last_comment = $comment_handler->getObjects($criteria);
             $offset = (is_array($last_comment) && count($last_comment) > 0) ? $last_comment[0]->getVar('com_id') : 0;
             $xc = new XoopsComments($xoopsDB->prefix($com_table));
             $top_comments =& $xc->getAllComments(array('pid=0'));

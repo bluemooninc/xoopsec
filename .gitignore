@@ -1,2 +1,5 @@
-.DS_Store
-.idea
+# no backup files, editor temp
+*~
+\#*
+*.bak
+.idea/

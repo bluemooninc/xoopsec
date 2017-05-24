@@ -31,7 +31,7 @@ function bmcart_onupdate_base($module, $myDirName)
 	} else {
 		if (!is_array($msgs)) $msgs = array();
 	}
-	$db =& Database::getInstance();
+	$db = Database::getInstance();
 	// 0.11 -> 0.12
 	$check_sql = "SELECT barcode FROM " . $db->prefix($myDirName . "_item");
 	if (!$db->query($check_sql)) {

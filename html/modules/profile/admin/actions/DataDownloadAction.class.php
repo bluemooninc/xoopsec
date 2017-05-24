@@ -109,13 +109,13 @@ class Profile_Admin_DataDownloadAction extends Profile_AbstractListAction
 			/*
 			 * Output Group
 			 */
-        	$groupRows =& $groupHandler->getObjects(new Criteria('uid', $userRow->get('uid')));
+        	$groupRows = $groupHandler->getObjects(new Criteria('uid', $userRow->get('uid')));
         	$groupStr = "";
         	foreach($groupRows as $groupRow){
 				$groupStr .= $groupRow->get('groupid') . '|';
 			}
 			$export_data .= '"'.$groupStr.'",';
-        	$profRow =& $profHandler->getObjects(new Criteria('uid', $userRow->get('uid')));
+        	$profRow = $profHandler->getObjects(new Criteria('uid', $userRow->get('uid')));
 			/*
 			 * Output Profile
 			 */

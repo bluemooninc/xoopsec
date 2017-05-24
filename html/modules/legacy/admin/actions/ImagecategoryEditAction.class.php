@@ -49,7 +49,7 @@ class Legacy_ImagecategoryEditAction extends Legacy_AbstractEditAction
 		$render->setAttribute('object', $this->mObject);
 		
 		$handler =& xoops_gethandler('group');
-		$groupArr =& $handler->getObjects();
+		$groupArr = $handler->getObjects();
 		$render->setAttribute('groupArr', $groupArr);
 	}
 

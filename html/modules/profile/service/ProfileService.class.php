@@ -10,7 +10,7 @@ class Profile_DataObj extends XCube_Object
 	function getPropertyDefinition()
 	{
 		$handler =& xoops_getmodulehandler('definitions', 'profile');
-		$defArr =& $handler->getObjects();
+		$defArr = $handler->getObjects();
 		$ret = array(
 			S_PUBLIC_VAR("int uid")
 		);
@@ -120,7 +120,7 @@ class Profile_Service extends XCube_Service
 		$this->addFunction(S_PUBLIC_FUNC('bool setProfile(string field_name, string value, int uid)'));
 	
 		$handler =& xoops_getmodulehandler('definitions', 'profile');
-		$defArr =& $handler->getObjects();
+		$defArr = $handler->getObjects();
 		$fieldDef = "";
 		foreach(array_keys($defArr) as $key){
 			$fieldDef .= $defArr[$key]->getServiceField() .',';
@@ -160,7 +160,7 @@ class Profile_Service extends XCube_Service
 			$criteria->add(new Criteria('show_form', '1'));
 		}
 		$handler =& xoops_getmodulehandler('definitions', 'profile');
-		$definitions =& $handler->getObjects($criteria);
+		$definitions = $handler->getObjects($criteria);
 		foreach(array_keys($definitions) as $key){
 			if($uid>0 && $request_uid==$uid){
 				$def = $definitions[$key]->gets();
@@ -225,7 +225,7 @@ class Profile_Service extends XCube_Service
 		$handler =& xoops_getmodulehandler('data', 'profile');
 		$criteria = new CriteriaCompo();
 		$criteria->add(new Criteria($field_name, $value));
-		$dataArr =& $handler->getObjects($criteria);
+		$dataArr = $handler->getObjects($criteria);
 		foreach(array_keys($dataArr) as $key){
 			$dataList[$key] = $dataArr[$key]->gets();
 		}
@@ -269,7 +269,7 @@ class Profile_Service extends XCube_Service
 		$uid = $root->mContext->mRequest->getRequest('uid');
 	
 		$defHandler =& xoops_getmodulehandler('definitions', 'profile');
-		$defArr =& $defHandler->getObjects();
+		$defArr = $defHandler->getObjects();
 	
 		$dataHandler =& xoops_getmodulehandler('data', 'profile');
 		$dataObj =& $dataHandler->get($uid);

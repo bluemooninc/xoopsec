@@ -124,7 +124,7 @@ class User_GroupPropertyAction extends User_Action
 		}
 		
 		$moduleHandler =& xoops_gethandler('module');
-		$this->_mActiveModules =& $moduleHandler->getObjects(new Criteria('isactive', 1));
+		$this->_mActiveModules = $moduleHandler->getObjects(new Criteria('isactive', 1));
 		
 		$this->_mActiveModulesLoadedFlag = true;
 	}
