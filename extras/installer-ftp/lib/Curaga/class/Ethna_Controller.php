@@ -2198,7 +2198,7 @@ class Ethna_Controller
  */
 function _Ethna_XmlrpcGateway($method_stub, $param)
 {
-    $ctl =& Ethna_Controller::getInstance();
+    $ctl = Ethna_Controller::getInstance();
     $method = $ctl->getXmlrpcMethodName();
     $r = $ctl->trigger_XMLRPC($method, $param);
     if (Ethna::isError($r)) {

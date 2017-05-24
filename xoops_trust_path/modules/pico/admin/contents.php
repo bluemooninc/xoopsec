@@ -7,8 +7,8 @@ require_once dirname(dirname(__FILE__)).'/include/import_functions.php' ;
 require_once dirname(dirname(__FILE__)).'/include/history_functions.php' ;
 require_once dirname(dirname(__FILE__)).'/class/pico.textsanitizer.php' ;
 require_once dirname(dirname(__FILE__)).'/class/gtickets.php' ;
-$myts =& PicoTextSanitizer::getInstance() ;
-$db =& Database::getInstance() ;
+$myts = PicoTextSanitizer::getInstance() ;
+$db = Database::getInstance() ;
 
 
 define( 'SPECIAL_CAT_ID_ALL' , -1 ) ;
@@ -17,7 +17,7 @@ define( 'SPECIAL_CAT_ID_DELETED' , -2 ) ;
 
 // get exportable modules
 $module_handler =& xoops_gethandler( 'module' ) ;
-$modules =& $module_handler->getObjects() ;
+$modules = $module_handler->getObjects() ;
 $exportable_modules = array( '0' => '----' ) ;
 foreach( $modules as $module ) {
 	$mid = $module->getVar('mid') ;

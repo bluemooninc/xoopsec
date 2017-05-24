@@ -20,7 +20,7 @@ class PicoPreloadBase extends XCube_ActionFilter
 /*		$mydirname = $this->mydirname ;
 		$module_handler =& xoops_gethandler( 'module' ) ;
 		$xoopsModule =& $module_handler->getByDirname( $this->mydirname ) ;
-		$xoopsDB =& Database::getInstance() ;
+		$xoopsDB = Database::getInstance() ;
 		$_GET['page'] = 'rss' ;
 		include dirname(__FILE__).'/main/index.php' ;
 

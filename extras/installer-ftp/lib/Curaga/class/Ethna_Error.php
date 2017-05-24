@@ -57,7 +57,7 @@ function ethna_error_handler($errno, $errstr, $errfile, $errline)
     }
 
     // $logger->log()
-    $c =& Ethna_Controller::getInstance();
+    $c = Ethna_Controller::getInstance();
     if ($c !== null) {
         $logger =& $c->getLogger();
         $logger->log($level, sprintf("[PHP] %s: %s in %s on line %d",
@@ -144,7 +144,7 @@ class Ethna_Error
      */
     function Ethna_Error($message = null, $code = null, $mode = null, $options = null)
     {
-        $controller =& Ethna_Controller::getInstance();
+        $controller = Ethna_Controller::getInstance();
         if ($controller !== null) {
             $this->i18n =& $controller->getI18N();
         }

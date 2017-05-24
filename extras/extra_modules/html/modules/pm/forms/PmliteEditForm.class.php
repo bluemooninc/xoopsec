@@ -150,7 +150,7 @@ class Pm_PmliteDirectEditForm extends Pm_PmliteEditForm
 		if ($this->get('to_uname')) {
 			$handler =& xoops_gethandler('user');
 			$criteria =& new Criteria("uname", $this->get("to_uname"));
-			$userArr =& $handler->getObjects($criteria);
+			$userArr = $handler->getObjects($criteria);
 
 			if (count($userArr) > 0 && is_object($userArr[0]) && $userArr[0]->isActive()) {
 				$this->_mUid = $userArr[0]->get('uid');

@@ -11,7 +11,7 @@ if( empty( $xoopsModule ) ) {
 require XOOPS_ROOT_PATH.'/include/cp_functions.php' ;
 
 // breadcrumbs
-$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 $breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php' , $GLOBALS['xoopsModule']->getVar( 'name' ) ) ;
 
 // get page

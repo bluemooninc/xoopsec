@@ -52,17 +52,17 @@ class User_UserEditAction extends User_AbstractEditAction
 		// Get some objects for input form.
 		//
 		$tzoneHandler =& xoops_gethandler('timezone');
-		$timezones =& $tzoneHandler->getObjects();
+		$timezones = $tzoneHandler->getObjects();
 		
 		$render->setAttribute('timezones', $timezones);
 
 		$rankHandler =& xoops_getmodulehandler('ranks');
-		$ranks =& $rankHandler->getObjects(new Criteria('rank_special', 1));
+		$ranks = $rankHandler->getObjects(new Criteria('rank_special', 1));
 
 		$render->setAttribute('ranks', $ranks);
 		
 		$groupHandler =& xoops_gethandler('group');
-		$groups =& $groupHandler->getObjects(null, true);
+		$groups = $groupHandler->getObjects(null, true);
 		
 		$groupOptions = array();
 		foreach ($groups as $gid => $group) {

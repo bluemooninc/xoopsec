@@ -18,12 +18,12 @@ function pico_notify_base( $mydirname , $category , $item_id )
 {
 	include_once dirname(__FILE__).'/include/common_functions.php' ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$module_handler =& xoops_gethandler( 'module' ) ;
 	$module =& $module_handler->getByDirname( $mydirname ) ;
 
-	$picoPermission =& PicoPermission::getInstance() ;
+	$picoPermission = PicoPermission::getInstance() ;
 	$permissions = $picoPermission->getPermissions( $mydirname ) ;
 
 	// global

@@ -212,7 +212,7 @@ xoops_cp_header() ;
 altsys_include_mymenu() ;
 
 // breadcrumbs
-$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 $breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=compilehookadmin' , _MI_ALTSYS_MENU_COMPILEHOOKADMIN ) ;
 
 echo "

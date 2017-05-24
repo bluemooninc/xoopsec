@@ -8,7 +8,7 @@ class PicoD3commentContent extends D3commentAbstract {
 
 function fetchSummary( $external_link_id )
 {
-	$myts =& MyTextsanitizer::getInstance() ;
+	$myts = MyTextsanitizer::getInstance() ;
 
 	$module_handler =& xoops_gethandler( 'module' ) ;
 	$module =& $module_handler->getByDirname( $this->mydirname ) ;
@@ -67,7 +67,7 @@ function onUpdate( $mode , $link_id , $forum_id , $topic_id , $post_id = 0 )
 	$content_id = intval( $link_id ) ;
 	$mydirname = $this->mydirname ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	list( $count ) = $db->fetchRow( $db->query( "SELECT COUNT(*) FROM ".$db->prefix($this->d3forum_dirname."_posts")." p LEFT JOIN ".$db->prefix($this->d3forum_dirname."_topics")." t ON t.topic_id=p.topic_id WHERE t.forum_id=$forum_id AND t.topic_external_link_id='$content_id'" ) ) ;
 	$db->queryF( "UPDATE ".$db->prefix($mydirname."_contents")." SET comments_count=$count WHERE content_id=$content_id" ) ;

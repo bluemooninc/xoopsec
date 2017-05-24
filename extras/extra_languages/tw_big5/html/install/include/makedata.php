@@ -45,7 +45,7 @@ function make_groups(&$dbm){
 }
 function make_data(&$dbm, &$cm, $adminname, $adminpass, $adminmail, $language, $gruops){
 
-    $myts =& textSanitizer::getInstance();
+    $myts = textSanitizer::getInstance();
 
     $tables = array();
 
@@ -57,7 +57,7 @@ function make_data(&$dbm, &$cm, $adminname, $adminpass, $adminmail, $language, $
     // default theme
 
     $time = time();
-    $dbm->insert('tplset', " VALUES (1, 'default', 'XOOPS Cube ¹w³]¼ËªO', '', ".$time.")");
+    $dbm->insert('tplset', " VALUES (1, 'default', 'XOOPS Cube ï¿½wï¿½]ï¿½ËªO', '', ".$time.")");
 
     // data for table 'config'
 

@@ -133,7 +133,7 @@ class XoopsMemberHandler{
 	{
 		$returnUser = null;
 
-		$myts =& MyTextSanitizer::getInstance();	///< @todo not depends
+		$myts = MyTextSanitizer::getInstance();	///< @todo not depends
 		$users =& $this->getUsers(new Criteria('email', $myts->addSlashes($email)));
 
 		if(!is_array($users)) {
@@ -219,7 +219,7 @@ class XoopsMemberHandler{
      */
     function &getGroups($criteria = null, $id_as_key = false)
     {
-        $groups =& $this->_gHandler->getObjects($criteria, $id_as_key);
+        $groups = $this->_gHandler->getObjects($criteria, $id_as_key);
         return $groups;
     }
 
@@ -232,7 +232,7 @@ class XoopsMemberHandler{
      */
     function &getUsers($criteria = null, $id_as_key = false)
     {
-        $users =& $this->_uHandler->getObjects($criteria, $id_as_key);
+        $users = $this->_uHandler->getObjects($criteria, $id_as_key);
         return $users;
     }
 
@@ -244,7 +244,7 @@ class XoopsMemberHandler{
      */
     function &getGroupList($criteria = null)
     {
-        $groups =& $this->_gHandler->getObjects($criteria, true);
+        $groups = $this->_gHandler->getObjects($criteria, true);
         $ret = array();
         foreach (array_keys($groups) as $i) {
             $ret[$i] = $groups[$i]->getVar('name');
@@ -260,7 +260,7 @@ class XoopsMemberHandler{
      */
     function getUserList($criteria = null)
     {
-        $users =& $this->_uHandler->getObjects($criteria, true);
+        $users = $this->_uHandler->getObjects($criteria, true);
         $ret = array();
         foreach (array_keys($users) as $i) {
             $ret[$i] = $users[$i]->getVar('uname');
@@ -401,7 +401,7 @@ class XoopsMemberHandler{
     {
         $criteria = new CriteriaCompo(new Criteria('uname', $uname));
         $criteria->add(new Criteria('pass', md5($pwd)));
-        $user =& $this->_uHandler->getObjects($criteria, false);
+        $user = $this->_uHandler->getObjects($criteria, false);
         if (!$user || count($user) != 1) {
 			$ret = false;
             return $ret;
@@ -420,7 +420,7 @@ class XoopsMemberHandler{
     {
         $criteria = new CriteriaCompo(new Criteria('uname', $uname));
         $criteria->add(new Criteria('pass', $md5pwd));
-        $user =& $this->_uHandler->getObjects($criteria, false);
+        $user = $this->_uHandler->getObjects($criteria, false);
         if (!$user || count($user) != 1) {
             $ret = false;
             return $ret;

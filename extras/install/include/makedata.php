@@ -45,7 +45,7 @@ function make_groups(&$dbm){
 }
 function make_data(&$dbm, &$cm, $adminname, $adminpass, $adminmail, $language, $gruops, $timezone){
 
-	$myts =& textSanitizer::getInstance();
+	$myts = textSanitizer::getInstance();
 
 	$tables = array();
 

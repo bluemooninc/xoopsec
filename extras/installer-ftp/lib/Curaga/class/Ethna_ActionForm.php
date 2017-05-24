@@ -767,7 +767,7 @@ class Ethna_ActionForm
         }
 
         // Ethna_Backendの設定
-        $c =& Ethna_Controller::getInstance();
+        $c = Ethna_Controller::getInstance();
         $this->backend =& $c->getBackend();
 
         return to_array($this->get($name));

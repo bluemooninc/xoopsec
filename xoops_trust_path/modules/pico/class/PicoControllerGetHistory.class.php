@@ -26,7 +26,7 @@ function execute( $request )
 	parent::execute( $request ) ;
 
 	$cat_data = $this->currentCategoryObj->getData() ;
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 
 	$this->contentObj = new PicoContent( $this->mydirname , $request['content_id'] , $this->currentCategoryObj ) ;
 

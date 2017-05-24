@@ -29,7 +29,7 @@ function execute( $request )
 	parent::execute( $request ) ;
 
 	// $categoryObj (not parent)
-	$picoPermission =& PicoPermission::getInstance() ;
+	$picoPermission = PicoPermission::getInstance() ;
 	$categoryObj = new PicoCategory( $this->mydirname , $request['cat_id'] , $picoPermission->getPermissions( $this->mydirname ) ) ;
 
 	// check existence

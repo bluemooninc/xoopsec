@@ -77,7 +77,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
         $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
         $criteria->setStart($start);
         $criteria->setLimit(10);
-        $avatars =& $avt_handler->getObjects($criteria, true);
+        $avatars = $avt_handler->getObjects($criteria, true);
 
         $token =& XoopsMultiTokenHandler::quickCreate('avatars_save');
 

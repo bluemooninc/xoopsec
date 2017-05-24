@@ -51,7 +51,7 @@ function execute( $request )
 	$this->assign['query'] = $query4assign ;
 
 	// breadcrumbs
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	$breadcrumbsObj->appendPath( '' , $query4assign['title'] ) ;
 	$this->assign['xoops_breadcrumbs'] = $breadcrumbsObj->getXoopsbreadcrumbs() ;
 	$this->assign['xoops_pagetitle'] = $query4assign['title'] ;

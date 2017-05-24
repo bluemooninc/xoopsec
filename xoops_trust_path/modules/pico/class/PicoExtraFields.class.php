@@ -42,7 +42,7 @@ function PicoExtraFields( $mydirname , $mod_config , $auto_approval , $isadminor
 function getSerializedRequestsFromPost()
 {
 	$ret = array() ;
-	$myts =& MyTextSanitizer::getInstance() ;
+	$myts = MyTextSanitizer::getInstance() ;
 
 	// text fields
 	foreach( $_POST as $key => $val ) {
@@ -180,7 +180,7 @@ function removeUnlinkedImages( $current_id )
 	$glob_pattern = '*'.substr($current_id,-1).'.*' ; // 1/16 random match
 	//$glob_pattern = '*' ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	foreach( glob( $this->images_path.'/'.$glob_pattern ) as $filename ) {
 		if( strstr( $filename , $current_id ) ) continue ;

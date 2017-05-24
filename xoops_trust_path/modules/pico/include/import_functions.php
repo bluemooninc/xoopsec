@@ -108,7 +108,7 @@ $GLOBALS['pico_tables'] = array(
 
 function pico_import_errordie()
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	echo _MD_A_PICO_ERR_SQLONIMPORT ;
 	echo $db->logger->dumpQueries() ;
@@ -119,7 +119,7 @@ function pico_import_errordie()
 
 function pico_import_from_smartsection( $mydirname , $import_mid )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$import_mid = intval( $import_mid ) ;
 
 	// get name of `contents` table 
@@ -170,7 +170,7 @@ function pico_import_from_smartsection( $mydirname , $import_mid )
 
 function pico_import_from_tinyd( $mydirname , $import_mid )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// get name of `contents` table 
 	$module_handler =& xoops_gethandler( 'module' ) ;
@@ -217,7 +217,7 @@ function pico_import_from_tinyd( $mydirname , $import_mid )
 
 function pico_import_from_pico( $mydirname , $import_mid )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$module_handler =& xoops_gethandler( 'module' ) ;
 	$from_module =& $module_handler->get( $import_mid ) ;
@@ -236,7 +236,7 @@ function pico_import_from_pico( $mydirname , $import_mid )
 // just import a content (contents and content_votes only)
 function pico_import_a_content_from_pico( $mydirname , $import_mid , $content_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$module_handler =& xoops_gethandler( 'module' ) ;
 	$from_module =& $module_handler->get( $import_mid ) ;

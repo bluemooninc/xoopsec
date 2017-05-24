@@ -55,7 +55,7 @@ function xoops_module_list()
     <tr align='center'><th>"._MD_AM_MODULE."</th><th>"._MD_AM_VERSION."</th><th>"._MD_AM_LASTUP."</th><th>"._MD_AM_ACTIVE."</th><th>"._MD_AM_ORDER."<br /><small>"._MD_AM_ORDER0."</small></th><th>"._MD_AM_ACTION."</th></tr>
     ";
     $module_handler =& xoops_gethandler('module');
-    $installed_mods =& $module_handler->getObjects(new CriteriaCompo());
+    $installed_mods = $module_handler->getObjects(new CriteriaCompo());
     $listed_mods = array();
     $count = 0;
     foreach ( $installed_mods as $module ) {
@@ -144,7 +144,7 @@ function xoops_module_install($dirname)
 {
     global $xoopsUser, $xoopsConfig;
     $dirname = trim($dirname);
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
  $reservedTables = array('avatar', 'avatar_users_link', 'block_module_link', 'xoopscomments', 'config', 'configcategory', 'configoption', 'image', 'imagebody', 'imagecategory', 'imgset', 'imgset_tplset_link', 'imgsetimg', 'groups','groups_users_link','group_permission', 'online', 'bannerclient', 'banner', 'bannerfinish', 'priv_msgs', 'ranks', 'session', 'smiles', 'users', 'newblocks', 'modules', 'tplfile', 'tplset', 'tplsource', 'xoopsnotifications', 'banner', 'bannerclient', 'bannerfinish');
     $module_handler =& xoops_gethandler('module');
     if ($module_handler->getCount(new Criteria('dirname', $dirname)) == 0) {
@@ -541,7 +541,7 @@ function xoops_module_uninstall($dirname)
 {
     global $xoopsConfig;
     $reservedTables = array('avatar', 'avatar_users_link', 'block_module_link', 'xoopscomments', 'config', 'configcategory', 'configoption', 'image', 'imagebody', 'imagecategory', 'imgset', 'imgset_tplset_link', 'imgsetimg', 'groups','groups_users_link','group_permission', 'online', 'bannerclient', 'banner', 'bannerfinish', 'priv_msgs', 'ranks', 'session', 'smiles', 'users', 'newblocks', 'modules', 'tplfile', 'tplset', 'tplsource', 'xoopsnotifications', 'banner', 'bannerclient', 'bannerfinish');
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
     $module_handler =& xoops_gethandler('module');
     $module =& $module_handler->getByDirname($dirname);
     include_once XOOPS_ROOT_PATH.'/class/template.php';
@@ -743,7 +743,7 @@ function xoops_module_change($mid, $weight, $name)
     $module =& $module_handler->get($mid);
     $module->setVar('weight', $weight);
     $module->setVar('name', $name);
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     if (!$module_handler->insert($module)) {
         $ret = "<p>".sprintf(_MD_AM_FAILORDER, "<b>".$myts->stripSlashesGPC($name)."</b>")."&nbsp;"._MD_AM_ERRORSC."<br />";
         $ret .= $module->getHtmlErrors()."</p>";

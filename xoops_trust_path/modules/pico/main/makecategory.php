@@ -10,11 +10,11 @@ require_once dirname(dirname(__FILE__)).'/class/PicoModelContent.class.php' ;
 require_once XOOPS_TRUST_PATH.'/libs/altsys/class/AltsysBreadcrumbs.class.php' ;
 
 // breadcrumbs
-$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 $breadcrumbsObj->appendPath( XOOPS_URL.'/modules/'.$mydirname.'/index.php' , $xoopsModule->getVar( 'name' ) ) ;
 
 // permissions
-$picoPermission =& PicoPermission::getInstance() ;
+$picoPermission = PicoPermission::getInstance() ;
 $permissions = $picoPermission->getPermissions( $mydirname ) ;
 
 // current category object (this "current" means "parent"

@@ -34,9 +34,9 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
 }
 function SmilesAdmin()
 {
-    $db =& Database::getInstance();
+    $db = Database::getInstance();
     $url_smiles = XOOPS_UPLOAD_URL;
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     xoops_cp_header();
     echo "<h4 style='text-align:left;'>"._AM_SMILESCONTROL."</h4>";
 
@@ -97,8 +97,8 @@ function SmilesAdmin()
 
 function SmilesEdit($id)
 {
-    $db =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $db = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     xoops_cp_header();
     echo '<a href="admin.php?fct=smilies">'._AM_SMILESCONTROL .'</a>&nbsp;<span style="font-weight:bold;">&raquo;&raquo;</span>&nbsp;'._AM_EDITSMILE.'<br /><br />';
     if ($getsmiles = $db->query("SELECT * FROM ".$db->prefix("smiles")." WHERE id = $id")) {

@@ -89,7 +89,7 @@ class LegacyRenderTplfileObject extends XoopsSimpleObject
 		$criteria->add(new Criteria('tpl_tplset', $tplset));
 		$criteria->add(new Criteria('tpl_file', $this->get('tpl_file')));
 		
-		$objs =& $handler->getObjects($criteria);
+		$objs = $handler->getObjects($criteria);
 		if (count($objs) > 0) {
 			$this->mOverride =& $objs[0];
 		}
@@ -131,7 +131,7 @@ class LegacyRenderTplfileHandler extends XoopsObjectGenericHandler
 	 */
 	function &getObjectsWithOverride($criteria, $tplset)
 	{
-		$objs =& $this->getObjects($criteria);
+		$objs = $this->getObjects($criteria);
 		
 		$ret = array();
 		$dobjs = array();
@@ -177,7 +177,7 @@ class LegacyRenderTplfileHandler extends XoopsObjectGenericHandler
 		$criteria->setSort('tpl_lastmodified');
 		$criteria->setOrder('DESC');
 		
-		$objs =& $this->getObjects($criteria);
+		$objs = $this->getObjects($criteria);
 		
 		return $objs;
 	}
@@ -210,7 +210,7 @@ class LegacyRenderTplfileHandler extends XoopsObjectGenericHandler
 			$criteria->add(new Criteria('tpl_file', $file));
 		}
 		
-		$objs =& $this->getObjects($criteria);
+		$objs = $this->getObjects($criteria);
 		return $objs;
 	}
 }

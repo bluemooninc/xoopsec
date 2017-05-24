@@ -111,7 +111,7 @@ class Legacy_PreferenceEditAction extends Legacy_Action
 		//
 		if (in_array('timezone', $formtypeArr)) {
 			$handler =& xoops_gethandler('timezone');
-			$timezoneArr =& $handler->getObjects();
+			$timezoneArr = $handler->getObjects();
 			$render->setAttribute('timezoneArr', $timezoneArr);
 		}
 		
@@ -120,7 +120,7 @@ class Legacy_PreferenceEditAction extends Legacy_Action
 		//
 		if (in_array('group', $formtypeArr)||in_array('group_multi', $formtypeArr)) {
 			$handler =& xoops_gethandler('group');
-			$groupArr =& $handler->getObjects();
+			$groupArr = $handler->getObjects();
 			$render->setAttribute('groupArr', $groupArr);
 		}
 
@@ -129,7 +129,7 @@ class Legacy_PreferenceEditAction extends Legacy_Action
 		//
 		if (in_array('tplset', $formtypeArr)) {
 			$handler =& xoops_gethandler('tplset');
-			$tplsetArr =& $handler->getObjects();
+			$tplsetArr = $handler->getObjects();
 			$render->setAttribute('tplsetArr', $tplsetArr);
 		}
 		
@@ -165,7 +165,7 @@ class Legacy_PreferenceEditAction extends Legacy_Action
 		//
 		if (in_array('theme', $formtypeArr)||in_array('theme_multi', $formtypeArr)) {
 			$handler =& xoops_getmodulehandler('theme');
-			$themeArr =& $handler->getObjects();
+			$themeArr = $handler->getObjects();
 			$render->setAttribute('themeArr', $themeArr);
 		}
 		

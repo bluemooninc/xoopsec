@@ -44,7 +44,7 @@ class User_AvatarEditAction extends User_AbstractEditAction
 				if (!$this->mObject->isNew()) {
 					$linkHandler =& xoops_getmodulehandler('avatar_user_link');
 					$criteria =new Criteria('avatar_id', $this->mObject->get('avatar_id'));
-					$linkArr =& $linkHandler->getObjects($criteria);
+					$linkArr = $linkHandler->getObjects($criteria);
 
 					$userHandler =& xoops_gethandler('user');
 					foreach ($linkArr as $link) {

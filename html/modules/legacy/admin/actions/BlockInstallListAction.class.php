@@ -62,7 +62,7 @@ class Legacy_BlockInstallListAction extends Legacy_AbstractListAction
 		$render->setAttribute("objects", $this->mObjects);
 		$render->setAttribute("pageNavi", $this->mFilter->mNavi);
 		$moduleHandler =& xoops_gethandler('module');
-		$modules =& $moduleHandler->getObjects(new Criteria('isactive', 1));
+		$modules = $moduleHandler->getObjects(new Criteria('isactive', 1));
 		$render->setAttribute('modules', $modules);
 		$render->setAttribute('filterForm', $this->mFilter);
 		$render->setAttribute('pageArr', $this->mpageArr);		

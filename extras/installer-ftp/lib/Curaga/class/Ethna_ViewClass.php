@@ -386,7 +386,7 @@ class Ethna_ViewClass
 
         //    現在のアクションと等しければ、対応する
         //    アクションフォームを設定
-        $ctl =& Ethna_Controller::getInstance();
+        $ctl = Ethna_Controller::getInstance();
         if ($action === $ctl->getCurrentActionName()) {
             $this->helper_action_form[$action] =& $this->af;
         } else {

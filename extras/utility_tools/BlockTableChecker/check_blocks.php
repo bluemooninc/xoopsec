@@ -308,7 +308,7 @@ function &_get_module_objects()
 	$criteria = new CriteriaCompo();
 	$criteria->add( new Criteria('isactive', '1', '=') );
 	$module_handler =& xoops_gethandler('module');
-	$objs           =& $module_handler->getObjects( $criteria );
+	$objs           = $module_handler->getObjects( $criteria );
 	return $objs;
 }
 
@@ -393,7 +393,7 @@ function _detect_xoops_version()
 
 include XOOPS_ROOT_PATH.'/header.php';
 
-$xoops_block_check =& xoops_block_check::getInstance();
+$xoops_block_check = xoops_block_check::getInstance();
 
 if ( !$xoops_block_check->is_admin() )
 {

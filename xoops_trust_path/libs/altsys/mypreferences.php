@@ -16,8 +16,8 @@ if( ! is_object( $xoopsUser ) || ! is_object( $xoopsModule ) || ! $xoopsUser->is
 
 
 // initials
-$db =& Database::getInstance();
-$myts =& MyTextSanitizer::getInstance() ;
+$db = Database::getInstance();
+$myts = MyTextSanitizer::getInstance() ;
 
 // language file
 altsys_include_language_file( 'mypreferences' ) ;
@@ -76,7 +76,7 @@ if ($op == 'showmod') {
 		$title = '' ; // GIJ
 		switch ($config[$i]->getVar('conf_formtype')) {
 		case 'textarea':
-			$myts =& MyTextSanitizer::getInstance();
+			$myts = MyTextSanitizer::getInstance();
 			if ($config[$i]->getVar('conf_valuetype') == 'array') {
 				// this is exceptional.. only when value type is arrayneed a smarter way for this
 				$ele = ($config[$i]->getVar('conf_value') != '') ? new XoopsFormTextArea($title, $config[$i]->getVar('conf_name'), $myts->htmlspecialchars(implode('|', $config[$i]->getConfValueForOutput())), 5, 50) : new XoopsFormTextArea($title, $config[$i]->getVar('conf_name'), '', 5, 50);
@@ -125,12 +125,12 @@ if ($op == 'showmod') {
 			$ele = new XoopsFormSelectUser($title, $config[$i]->getVar('conf_name'), false, $config[$i]->getConfValueForOutput(), 5, true);
 			break;
 		case 'password':
-			$myts =& MyTextSanitizer::getInstance();
+			$myts = MyTextSanitizer::getInstance();
 			$ele = new XoopsFormPassword($title, $config[$i]->getVar('conf_name'), 50, 255, $myts->htmlspecialchars($config[$i]->getConfValueForOutput()));
 			break;
 		case 'textbox':
 		default:
-			$myts =& MyTextSanitizer::getInstance();
+			$myts = MyTextSanitizer::getInstance();
 			$ele = new XoopsFormText($title, $config[$i]->getVar('conf_name'), 50, 255, $myts->htmlspecialchars($config[$i]->getConfValueForOutput()));
 			break;
 		}
@@ -151,7 +151,7 @@ if ($op == 'showmod') {
 
 	// GIJ patch start
 	altsys_include_mymenu() ;
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	if( $breadcrumbsObj->hasPaths() ) {
 		$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=mypreferences' , _PREFERENCES ) ;
 	}
@@ -239,7 +239,7 @@ if ($op == 'save') {
 
 						// generate image cache files from image binary data, save them under cache/
 						$image_handler =& xoops_gethandler('imagesetimg');
-						$imagefiles =& $image_handler->getObjects(new Criteria('tplset_name', $newtplset), true);
+						$imagefiles = $image_handler->getObjects(new Criteria('tplset_name', $newtplset), true);
 						foreach (array_keys($imagefiles) as $i) {
 							if (!$fp = fopen(XOOPS_CACHE_PATH.'/'.$newtplset.'_'.$imagefiles[$i]->getVar('imgsetimg_file'), 'wb')) {
 							} else {

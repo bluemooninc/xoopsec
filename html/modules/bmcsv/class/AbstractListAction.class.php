@@ -50,7 +50,7 @@ class bmcsv_AbstractListAction extends bmcsv_Action
 
 		$handler =& $this->_getHandler();
 		if ($handler){
-			$this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
+			$this->mObjects = $handler->getObjects($this->mFilter->getCriteria());
 		}
 
 		return BMCSV_FRAME_VIEW_INDEX;

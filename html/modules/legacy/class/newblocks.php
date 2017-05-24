@@ -75,7 +75,7 @@ class LegacyNewblocksObject extends XoopsSimpleObject
 		$criteria->add(new Criteria('gperm_itemid', $this->get('bid')));
 		$criteria->add(new Criteria('gperm_name', 'block_read'));
 		
-		$gpermArr =&  $handler->getObjects($criteria);
+		$gpermArr =  $handler->getObjects($criteria);
 		
 		$handler =& xoops_gethandler('group');
 		foreach ($gpermArr as $gperm) {
@@ -88,7 +88,7 @@ class LegacyNewblocksObject extends XoopsSimpleObject
 		$handler =& xoops_getmodulehandler('block_module_link', 'legacy');
 		$criteria =new Criteria('block_id', $this->get('bid'));
 		
-		$this->mBmodule =& $handler->getObjects($criteria);
+		$this->mBmodule = $handler->getObjects($criteria);
 	}
 	
 	function loadColumn()

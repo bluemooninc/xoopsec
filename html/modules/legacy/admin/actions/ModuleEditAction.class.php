@@ -93,7 +93,7 @@ class Legacy_ModuleEditAction extends Legacy_AbstractEditAction
 			$criteria->add(new Criteria('gperm_itemid', $this->mObject->get('mid')));
 			$criteria->add(new Criteria('gperm_name', 'module_read'));
 			
-			$gpermArr =&  $permHandler->getObjects($criteria);
+			$gpermArr =  $permHandler->getObjects($criteria);
 			foreach ($gpermArr as $gperm) {
 				if (!in_array($gperm->get('gperm_groupid'), $currentReadGroupid)) {
 					if (!$permHandler->delete($gperm) ) {
@@ -127,7 +127,7 @@ class Legacy_ModuleEditAction extends Legacy_AbstractEditAction
 			$criteria->add(new Criteria('gperm_itemid', $this->mObject->get('mid')));
 			$criteria->add(new Criteria('gperm_name', 'module_admin'));
 			
-			$gpermArr =&  $permHandler->getObjects($criteria);
+			$gpermArr =  $permHandler->getObjects($criteria);
 			foreach ($gpermArr as $gperm) {
 				if (!in_array($gperm->get('gperm_groupid'), $currentAdminGroupid)) {
 					if ( !$permHandler->delete($gperm) ) {
@@ -194,14 +194,14 @@ class Legacy_ModuleEditAction extends Legacy_AbstractEditAction
 		
 		$handler =& xoops_gethandler('groupperm');
 		$grouphandler =& xoops_gethandler('group');
-		$groupArr =& $grouphandler->getObjects();
+		$groupArr = $grouphandler->getObjects();
 		$render->setAttribute('groupArr', $groupArr);
 		
 		$criteria =new CriteriaCompo();
 		$criteria->add(new Criteria('gperm_modid', 1));
 		$criteria->add(new Criteria('gperm_itemid', $this->mObject->get('mid')));
 		$criteria->add(new Criteria('gperm_name', 'module_read'));
-		$gpermReadArr =&  $handler->getObjects($criteria);
+		$gpermReadArr =  $handler->getObjects($criteria);
 		$readgroupid = array();
 		foreach ($gpermReadArr as $gpermRead) {
 			$readgroupid[] = $gpermRead->get('gperm_groupid');
@@ -212,7 +212,7 @@ class Legacy_ModuleEditAction extends Legacy_AbstractEditAction
 		$criteria->add(new Criteria('gperm_modid', 1));
 		$criteria->add(new Criteria('gperm_itemid', $this->mObject->get('mid')));
 		$criteria->add(new Criteria('gperm_name', 'module_admin'));
-		$gpermAdminArr =&  $handler->getObjects($criteria);
+		$gpermAdminArr =  $handler->getObjects($criteria);
 		$admingroupid = array();
 		foreach ($gpermAdminArr as $gpermAdmin) {
 			$admingroupid[] = $gpermAdmin->get('gperm_groupid');
@@ -220,7 +220,7 @@ class Legacy_ModuleEditAction extends Legacy_AbstractEditAction
 		$render->setAttribute('admingroupidArr', $admingroupid);
 		//for modulecache
 		$cachehandler =& xoops_gethandler('cachetime');
-		$cachetimeArr =& $cachehandler->getObjects();
+		$cachetimeArr = $cachehandler->getObjects();
 		$render->setAttribute('cachetimeArr', $cachetimeArr);
 
 	}

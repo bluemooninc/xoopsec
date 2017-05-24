@@ -72,7 +72,7 @@ class UserUsersObject extends XoopsSimpleObject
 	{
 		if (!$this->_mGroupsLoadedFlag) {
 			$handler =& xoops_getmodulehandler('groups_users_link', 'user');
-			$links =& $handler->getObjects(new Criteria('uid', $this->get('uid')));
+			$links = $handler->getObjects(new Criteria('uid', $this->get('uid')));
 			foreach ($links as $link) {
 				$this->Groups[] = $link->get('groupid');
 			}
@@ -123,7 +123,7 @@ class UserUsersHandler extends XoopsObjectGenericHandler
 	
 	function &getObjects($criteria = null, $limit = null, $start = null, $id_as_key = false)
 	{
-		$objects =& parent::getObjects($criteria, $limit, $start, $id_as_key);
+		$objects = parent::getObjects($criteria, $limit, $start, $id_as_key);
 
 		if (count($objects)) {
 			foreach (array_keys($objects) as $key) {
@@ -188,7 +188,7 @@ class UserUsersHandler extends XoopsObjectGenericHandler
 			$user->_loadGroups();
 
 			$handler =& xoops_getmodulehandler('groups_users_link', 'user');
-			$oldLinkArr =& $handler->getObjects(new Criteria('uid', $user->get('uid')), $force);
+			$oldLinkArr = $handler->getObjects(new Criteria('uid', $user->get('uid')), $force);
 			
 			//
 			// Delete

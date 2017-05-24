@@ -52,13 +52,13 @@ case "updateUser":
     if(!XoopsMultiTokenHandler::quickValidate('users_updateUser'))
         system_users_error("Ticket Error");
 
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $uid = !empty($_POST['uid']) ? intval($_POST['uid']) : 0;
     $username = !empty($_POST['username']) ? $myts->stripSlashesGPC(trim($_POST['username'])) : '';
     if ($uid > 0 && $username != '') {
         $member_handler =& xoops_gethandler('member');
         $edituser =& $member_handler->getUser($uid);
-        $myts =& MyTextSanitizer::getInstance();
+        $myts = MyTextSanitizer::getInstance();
         if ($edituser->getVar('uname', 'n') != $username && $member_handler->getUserCount(new Criteria('uname', addslashes($username))) > 0) {
             xoops_cp_header();
             echo 'User name '.htmlspecialchars($username).' already exists';
@@ -226,7 +226,7 @@ case "addUser":
     if(!XoopsMultiTokenHandler::quickValidate('users_addUser'))
         system_users_error("Ticket Error");
 
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $username = !empty($_POST['username']) ? $myts->stripSlashesGPC(trim($_POST['username'])) : '';
     $email = !empty($_POST['email']) ? $myts->stripSlashesGPC(trim($_POST['email'])) : '';
     $password = !empty($_POST['pass']) ? $myts->stripSlashesGPC(trim($_POST['pass'])) : '';

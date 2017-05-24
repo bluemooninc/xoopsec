@@ -482,7 +482,7 @@ class Ethna_Plugin
      */
     function includePlugin($type, $name, $appid = null)
     {
-        $ctl =& Ethna_Controller::getInstance();
+        $ctl = Ethna_Controller::getInstance();
         $plugin =& $ctl->getPlugin();
 
         if ($appid === null) {

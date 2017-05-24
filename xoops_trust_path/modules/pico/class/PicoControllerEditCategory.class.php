@@ -26,7 +26,7 @@ function execute( $request )
 	$page = empty( $request['makecategory'] ) ? 'categorymanager' : 'makecategory' ;
 
 	// $categoryObj (not parent)
-	$picoPermission =& PicoPermission::getInstance() ;
+	$picoPermission = PicoPermission::getInstance() ;
 	$categoryObj = new PicoCategory( $this->mydirname , $request['cat_id'] , $picoPermission->getPermissions( $this->mydirname ) , $page == 'makecategory' , $this->currentCategoryObj ) ;
 
 	// check existence
@@ -64,7 +64,7 @@ function execute( $request )
 	}
 
 	// breadcrumbs
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	if( $page == 'makecategory' ) {
 		$breadcrumbsObj->appendPath( '' , _MD_PICO_LINK_MAKECATEGORY ) ;
 		$this->assign['xoops_pagetitle'] = _MD_PICO_LINK_MAKECATEGORY ;

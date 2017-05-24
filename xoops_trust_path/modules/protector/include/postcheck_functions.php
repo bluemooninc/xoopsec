@@ -20,8 +20,8 @@ function protector_postcommon()
 
 	// Protector object
 	require_once dirname(dirname(__FILE__)).'/class/protector.php' ;
-	$db =& Database::getInstance() ;
-	$protector =& Protector::getInstance() ;
+	$db = Database::getInstance() ;
+	$protector = Protector::getInstance() ;
 	$protector->setConn( $db->conn ) ;
 	$protector->updateConfFromDb() ;
 	$conf = $protector->getConf() ;

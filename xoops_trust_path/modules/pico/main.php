@@ -9,7 +9,7 @@ $mytrustdirpath = dirname( __FILE__ ) ;
 $langmanpath = XOOPS_TRUST_PATH.'/libs/altsys/class/D3LanguageManager.class.php' ;
 if( ! file_exists( $langmanpath ) ) die( 'install the latest altsys' ) ;
 require_once( $langmanpath ) ;
-$langman =& D3LanguageManager::getInstance() ;
+$langman = D3LanguageManager::getInstance() ;
 $langman->read( 'main.php' , $mydirname , $mytrustdirname ) ;
 
 // get page name (new in 2008-03-24)

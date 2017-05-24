@@ -23,8 +23,8 @@ if( ! is_object( @$xoopsUser ) || ! $moduleperm_handler->checkRight( 'module_adm
 //$xoops_system_path = XOOPS_ROOT_PATH . '/modules/system' ;
 
 // initials
-$db =& Database::getInstance();
-$myts =& MyTextSanitizer::getInstance() ;
+$db = Database::getInstance();
+$myts = MyTextSanitizer::getInstance() ;
 
 // language file
 altsys_include_language_file( 'mytplsform' ) ;
@@ -59,7 +59,7 @@ if( empty( $_GET['tpl_file'] ) || $_GET['tpl_file'] == '_custom' ) {
 	) ;
 
 	// breadcrumbs
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=mytplsadmin' , '_MI_ALTSYS_MENU_MYTPLSADMIN' ) ;
 	$breadcrumbsObj->appendPath( XOOPS_URL.'/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=mytplsadmin&amp;dirname=_custom' , _MYTPLSADMIN_CUSTOMTEMPLATE ) ;
 	$breadcrumbsObj->appendPath( '' , '_MYTPLSADMIN_CREATENEWCUSTOMTEMPLATE' ) ;
@@ -85,7 +85,7 @@ if( empty( $_GET['tpl_file'] ) || $_GET['tpl_file'] == '_custom' ) {
 	}
 
 	// breadcrumbs
-	$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+	$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 	if( $mydirname != 'altsys' && is_object( $target_module ) ) {
 		// mytplsform in each modules
 		$mod_url = XOOPS_URL.'/modules/'.$target_module->getVar('dirname') ;

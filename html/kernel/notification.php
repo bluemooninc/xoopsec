@@ -575,7 +575,7 @@ class XoopsNotificationHandler extends XoopsObjectHandler
         if (isset($order)) {
             $criteria->setOrder($order);
         }
-        $ret =& $this->getObjects($criteria);
+        $ret = $this->getObjects($criteria);
         return $ret;
     }
 
@@ -706,7 +706,7 @@ class XoopsNotificationHandler extends XoopsObjectHandler
 			}
 			$criteria->add($user_criteria);
 		}
-        $notifications =& $this->getObjects($criteria);
+        $notifications = $this->getObjects($criteria);
         if (empty($notifications)) {
             return;
         }

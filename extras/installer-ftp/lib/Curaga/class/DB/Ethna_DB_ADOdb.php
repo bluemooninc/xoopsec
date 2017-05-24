@@ -16,7 +16,7 @@ define('ADODB_OUTP', 'ethna_adodb_logger'); //disable output error
 require_once 'adodb/adodb.inc.php';
 
 function ethna_adodb_logger ($msg, $newline) {
-    $c =& Ethna_Controller::getInstance();
+    $c = Ethna_Controller::getInstance();
     $logger =& $c->getLogger();
     
     $logger->log(LOG_DEBUG, strip_tags(str_replace("\n", "", $msg)));

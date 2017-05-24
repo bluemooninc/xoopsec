@@ -78,7 +78,7 @@ class Pm_ReadAction extends Pm_AbstractAction
 		$criteria->setLimit(1);
 		$criteria->setSort('msg_time');
 		$criteria->setOrder('DESC');
-		$t_objArr =& $pmHandler->getObjects($criteria);
+		$t_objArr = $pmHandler->getObjects($criteria);
 		if (count($t_objArr) > 0 && is_object($t_objArr[0])) {
 			$this->mPreviousMessage =& $t_objArr[0];
 		}
@@ -90,7 +90,7 @@ class Pm_ReadAction extends Pm_AbstractAction
 		$criteria->add(new Criteria('to_userid', $xoopsUser->get('uid')));
 		$criteria->setLimit(1);
 		$criteria->setSort('msg_time');
-		$t_objArr =& $pmHandler->getObjects($criteria);
+		$t_objArr = $pmHandler->getObjects($criteria);
 		if (count($t_objArr) > 0 && is_object($t_objArr[0])) {
 			$this->mNextMessage =& $t_objArr[0];
 		}

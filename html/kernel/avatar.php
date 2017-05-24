@@ -228,7 +228,7 @@ class XoopsAvatarHandler extends XoopsObjectHandler
         if (isset($avatar_display)) {
             $criteria->add(new Criteria('avatar_display', (int)$avatar_display));
         }
-        $avatars =& $this->getObjects($criteria, true);
+        $avatars = $this->getObjects($criteria, true);
         $ret = array('blank.gif' => _NONE);
         foreach (array_keys($avatars) as $i) {
             $ret[$avatars[$i]->getVar('avatar_file')] = $avatars[$i]->getVar('avatar_name');

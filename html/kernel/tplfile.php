@@ -325,7 +325,7 @@ class XoopsTplfileHandler extends XoopsObjectHandler
                 $criteria->add(new Criteria('tpl_type', addslashes(trim($type))));
             }
         }
-        $ret =& $this->getObjects($criteria, $getsource, false);
+        $ret = $this->getObjects($criteria, $getsource, false);
         return $ret;
     }
 

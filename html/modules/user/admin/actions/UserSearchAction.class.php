@@ -31,7 +31,7 @@ class User_UserSearchAction extends User_Action
 		$render->setAttribute("actionForm", $this->mActionForm);
 		
 		$groupHandler =& xoops_gethandler('group');
-		$groups =& $groupHandler->getObjects(null, true);
+		$groups = $groupHandler->getObjects(null, true);
 		
 		$groupOptions = array();
 		foreach ($groups as $gid => $group) {

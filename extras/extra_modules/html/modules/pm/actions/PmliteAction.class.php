@@ -74,7 +74,7 @@ class Pm_PmliteAction extends Pm_AbstractEditAction
 		//
 		if ($this->_mSendType == 0 && $this->mActionForm->getVar('to_userid') == 0) {
 			$handler =& xoops_gethandler('user');
-			$userObjectArr =& $handler->getObjectsByLevel(0);
+			$userObjectArr = $handler->getObjectsByLevel(0);
 			$render->setAttribute("userList", $userObjectArr);
 		}
 	}

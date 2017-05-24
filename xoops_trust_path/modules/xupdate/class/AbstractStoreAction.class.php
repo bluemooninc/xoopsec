@@ -161,7 +161,7 @@ class Xupdate_AbstractStoreAction extends Xupdate_AbstractListAction
 				break;
 		}
 		
-		$this->mModuleObjects =& $modHand->getObjects($criteria);
+		$this->mModuleObjects = $modHand->getObjects($criteria);
 		
 		if (!empty($this->sid)) {
 			$storeHand =  & $this->_getStoreHandler();
@@ -244,7 +244,7 @@ class Xupdate_AbstractStoreAction extends Xupdate_AbstractListAction
 		if (!empty( $this->sid)){
 			$criteria->add(new Criteria( 'sid', $this->sid ) );
 		}
-		$this->mModuleObjects =& $modHand->getObjects($criteria ,null , null , true);
+		$this->mModuleObjects = $modHand->getObjects($criteria ,null , null , true);
 
 		return XUPDATE_FRAME_VIEW_INPUT;
 	}
@@ -278,11 +278,11 @@ class Xupdate_AbstractStoreAction extends Xupdate_AbstractListAction
 	{
 		$modHand = & $this->_getHandler();
 		if (empty( $this->sid)){
-			$t_objectArr =& $modHand->getObjects(null,null,null,true);
+			$t_objectArr = $modHand->getObjects(null,null,null,true);
 		}else{
 			$criteria = new CriteriaCompo();
 			$criteria->add(new Criteria( 'sid', $this->sid ) );
-			$t_objectArr =& $modHand->getObjects($criteria,null,null,true);
+			$t_objectArr = $modHand->getObjects($criteria,null,null,true);
 		}
 
 		$successFlag = true;

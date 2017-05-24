@@ -69,13 +69,13 @@ class Legacy_CommentEditAction extends Legacy_AbstractEditAction
 		$render->setAttribute('object', $this->mObject);
 		
 		$subjectHandler =& xoops_gethandler('subjecticon');
-		$subjectIconArr =& $subjectHandler->getObjects();
+		$subjectIconArr = $subjectHandler->getObjects();
 		
 		$render->setAttribute('subjectIconArr', $subjectIconArr);
 
 		$statusHandler =& xoops_getmodulehandler('commentstatus');
 		if ($this->mObject->get('com_status') == XOOPS_COMMENT_PENDING) {
-			$statusArr =& $statusHandler->getObjects();
+			$statusArr = $statusHandler->getObjects();
 		}
 		else {
 			$statusArr = array();

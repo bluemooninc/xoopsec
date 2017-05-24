@@ -32,7 +32,7 @@
 if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin($xoopsModule->mid()) ) {
     exit("Access Denied");
 } else {
-    $myts =& MyTextsanitizer::getInstance();
+    $myts = MyTextsanitizer::getInstance();
     $op = 'list';
     if (isset($_GET['op'])) {
         $op = trim($_GET['op']);
@@ -67,7 +67,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
     switch ($op) {
     case 'list':
         $tplset_handler =& xoops_gethandler('tplset');
-        $tplsets =& $tplset_handler->getObjects();
+        $tplsets = $tplset_handler->getObjects();
         xoops_cp_header();
         echo '<h4 style="text-align:left">'._MD_TPLMAIN.'</h4>';
         $installed = array();
@@ -403,7 +403,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
         $msgs = array();
         if ($tplset !== '' && $tplset != 'default' && $tplset !== $xoopsConfig['template_set']) {
             $tpltpl_handler =& xoops_gethandler('tplfile');
-            $templates =& $tpltpl_handler->getObjects(new Criteria('tpl_tplset', addslashes($tplset)));
+            $templates = $tpltpl_handler->getObjects(new Criteria('tpl_tplset', addslashes($tplset)));
             $tcount = count($templates);
             if ($tcount > 0) {
                 $msgs[] = 'Deleting template files...';
@@ -417,7 +417,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
             }
 /*
             $image_handler =& xoops_gethandler('imagesetimg');
-            $imagefiles =& $image_handler->getObjects(new Criteria('tplset_name', $tplset));
+            $imagefiles = $image_handler->getObjects(new Criteria('tplset_name', $tplset));
             $icount = count($imagefiles);
             if ($icount > 0) {
                 $msgs[] = 'Deleting image files...';
@@ -430,7 +430,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
                 }
             }
             $imageset_handler =& xoops_gethandler('imageset');
-            $imagesets =& $imageset_handler->getObjects(new Criteria('tplset_name', $tplset));
+            $imagesets = $imageset_handler->getObjects(new Criteria('tplset_name', $tplset));
             $scount = count($imagesets);
             if ($scount > 0) {
                 $msgs[] = 'Deleting image set data...';
@@ -449,7 +449,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
             }
 */
             $tplset_handler =& xoops_gethandler('tplset');
-            $tplsets =& $tplset_handler->getObjects(new Criteria('tplset_name', addslashes($tplset)));
+            $tplsets = $tplset_handler->getObjects(new Criteria('tplset_name', addslashes($tplset)));
             if (count($tplsets) > 0 && is_object($tplsets[0])) {
                 $msgs[] = 'Deleting template set data...';
                 if (!$tplset_handler->delete($tplsets[0])) {
@@ -510,7 +510,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
                 $msgs[] = '<span style="color:#ff0000;">ERROR: Could not create template set <b>'.htmlspecialchars($newtheme, ENT_QUOTES).'</b>.</span><br />';
             } else {
                 $tplsetid = $tplsetobj->getVar('tplset_id');
-                $templates =& $tpltpl_handler->getObjects(new Criteria('tpl_tplset', addslashes($tplset)), true);
+                $templates = $tpltpl_handler->getObjects(new Criteria('tpl_tplset', addslashes($tplset)), true);
                 $tcount = count($templates);
                 if ($tcount > 0) {
                     $msgs[] = 'Copying template files...';
@@ -529,7 +529,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
                     }
 /*
                     $imageset_handler =& xoops_gethandler('imageset');
-                    $orig_imgset =& $imageset_handler->getObjects(new Criteria('tplset_name', $tplset));
+                    $orig_imgset = $imageset_handler->getObjects(new Criteria('tplset_name', $tplset));
                     $msgs[] = 'Copying image files...';
                     $imgsetcount = count($orig_imgset);
                     for ($i = 0; $i < $imgsetcount; $i++) {
@@ -739,7 +739,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
             exit();
         }
         $image_handler =& xoops_gethandler('imagesetimg');
-        $image =& $image_handler->getObjects(new Criteria('imgsetimg_id', $image_id));
+        $image = $image_handler->getObjects(new Criteria('imgsetimg_id', $image_id));
         if (count($image) > 0) {
             $mimetypes = array('gif' => 'image/gif', "jpe"=>"image/jpeg", "jpeg"=>"image/jpeg", "jpg"=>"image/jpeg", "png"=>"image/png", "swf"=>"application/x-shockwave-flash", "tif"=>"image/tiff", "tiff"=>"image/tiff", "bmp" => 'image/bmp');
             $ext = substr(strtolower(strrchr($image[0]->getVar('imgsetimg_file'), '.')), 1);
@@ -965,7 +965,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
                 $tplsetobj =& $tplset_handler->getByName($tplset);
                 $xml = "<"."?xml version=\"1.0\"?".">\r\n<tplset>\r\n  <name>".$tplset."</name>\r\n  <dateCreated>".$tplsetobj->getVar('tplset_created')."</dateCreated>\r\n  <credits>\r\n".$tplsetobj->getVar('tplset_credits')."\r\n  </credits>\r\n  <generator>".XOOPS_VERSION."</generator>\r\n  <templates>";
                 $tpltpl_handler =& xoops_gethandler('tplfile');
-                $files =& $tpltpl_handler->getObjects(new Criteria('tpl_tplset', addslashes($tplset)), true);
+                $files = $tpltpl_handler->getObjects(new Criteria('tpl_tplset', addslashes($tplset)), true);
                 $fcount = count($files);
                 if ($fcount > 0) {
                     for ($i = 0; $i < $fcount; $i++) {
@@ -985,7 +985,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
                     $image_handler =& xoops_gethandler('imagesetimg');
                     $criteria = new CriteriaCompo(new Criteria('l.tplset_name', $tplset));
                     $criteria->add(new Criteria('s.imgset_refid', 0));
-                    $ifiles =& $image_handler->getObjects($criteria);
+                    $ifiles = $image_handler->getObjects($criteria);
                     $fcount = count($ifiles);
                     for ($i = 0; $i < $fcount; $i++) {
                         $dummyimage = XOOPS_CACHE_PATH.'/_dummyimage'.$i.time();

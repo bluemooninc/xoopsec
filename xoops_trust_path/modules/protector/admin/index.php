@@ -2,8 +2,8 @@
 
 require_once XOOPS_ROOT_PATH.'/class/pagenav.php' ;
 require_once dirname(dirname(__FILE__)).'/class/gtickets.php' ;
-$myts =& MyTextSanitizer::getInstance() ;
-$db =& Database::getInstance() ;
+$myts = MyTextSanitizer::getInstance() ;
+$db = Database::getInstance() ;
 
 // GET vars
 $pos = empty( $_GET[ 'pos' ] ) ? 0 : intval( $_GET[ 'pos' ] ) ;
@@ -14,8 +14,8 @@ $log_table = $db->prefix( $mydirname."_log" ) ;
 
 // Protector object
 require_once dirname(dirname(__FILE__)).'/class/protector.php' ;
-$db =& Database::getInstance() ;
-$protector =& Protector::getInstance( $db->conn ) ;
+$db = Database::getInstance() ;
+$protector = Protector::getInstance( $db->conn ) ;
 $conf = $protector->getConf() ;
 
 

@@ -12,7 +12,7 @@ function PicoTagHandler( $mydirname )
 // get content_ids separated by comma 1,2,4,16
 function getContentIdsCS( $label )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$sql = "SELECT content_ids FROM ".$db->prefix($this->mydirname."_tags")." WHERE label='".mysql_real_escape_string( $label )."'" ;
 	if( ! $trs = $db->query( $sql ) ) {

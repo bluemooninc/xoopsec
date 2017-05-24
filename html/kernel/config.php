@@ -186,7 +186,7 @@ class XoopsConfigHandler
      */
     function &getConfigs($criteria = null, $id_as_key = false, $with_options = false)
     {
-        $config =& $this->_cHandler->getObjects($criteria, $id_as_key);
+        $config = $this->_cHandler->getObjects($criteria, $id_as_key);
         return $config;
     }
 
@@ -288,7 +288,7 @@ class XoopsConfigHandler
      */
     function &getConfigOptions($criteria = null, $id_as_key = false)
     {
-        $ret =& $this->_oHandler->getObjects($criteria, $id_as_key);
+        $ret = $this->_oHandler->getObjects($criteria, $id_as_key);
         return $ret;
     }
 
@@ -321,7 +321,7 @@ class XoopsConfigHandler
         	if (empty($conf_catid)) {
             	$criteria->add(new Criteria('conf_catid', $conf_catid));
         	}
-        	$configs =& $this->_cHandler->getObjects($criteria);
+        	$configs = $this->_cHandler->getObjects($criteria);
         	$confcount = count($configs);
         	$ret = array();
         	for ($i = 0; $i < $confcount; $i++) {

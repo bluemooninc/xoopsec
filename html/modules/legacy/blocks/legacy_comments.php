@@ -32,10 +32,10 @@ function b_legacy_comments_show($options) {
     $criteria->setLimit(intval($options[0]));
     $criteria->setSort('com_created');
     $criteria->setOrder('DESC');
-    $comments =& $comment_handler->getObjects($criteria, true);
+    $comments = $comment_handler->getObjects($criteria, true);
     $member_handler =& xoops_gethandler('member');
     $module_handler =& xoops_gethandler('module');
-    $modules =& $module_handler->getObjects(new Criteria('hascomments', 1), true);
+    $modules = $module_handler->getObjects(new Criteria('hascomments', 1), true);
     $comment_config = array();
     foreach (array_keys($comments) as $i) {
         $mid = $comments[$i]->getVar('com_modid');

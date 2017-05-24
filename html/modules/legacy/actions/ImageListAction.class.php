@@ -78,7 +78,7 @@ class Legacy_ImageListAction extends Legacy_AbstractListAction
 		else {
 			$groups = array(XOOPS_GROUP_ANONYMOUS);
 		}
-		$categoryArr =& $handler->getObjectsWithReadPerm($groups, 1);
+		$categoryArr = $handler->getObjectsWithReadPerm($groups, 1);
 		
 		$render->setAttribute('categoryArr', $categoryArr);
 		

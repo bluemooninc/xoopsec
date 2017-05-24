@@ -105,7 +105,7 @@ class Legacy_ImageCreateAction extends Legacy_AbstractEditAction
 		$render->setAttribute('object', $this->mObject);
 		
 		$handler =& xoops_getmodulehandler('imagecategory', 'legacy');
-		$categoryArr =& $handler->getObjects();
+		$categoryArr = $handler->getObjects();
 		$render->setAttribute('categoryArr', $categoryArr);
 	}
 

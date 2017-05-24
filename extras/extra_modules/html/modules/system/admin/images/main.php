@@ -57,7 +57,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
     }
     if ($op == 'list') {
         $imgcat_handler = xoops_gethandler('imagecategory');
-        $imagecategorys =& $imgcat_handler->getObjects();
+        $imagecategorys = $imgcat_handler->getObjects();
         xoops_cp_header();
         echo '<h4 style="text-align:left">'._IMGMANAGER.'</h4><ul>';
         $catcount = count($imagecategorys);
@@ -127,7 +127,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
         $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
         $criteria->setStart($start);
         $criteria->setLimit(20);
-        $images =& $image_handler->getObjects($criteria, true, false);
+        $images = $image_handler->getObjects($criteria, true, false);
 
         $token =& XoopsSingleTokenHandler::quickCreate('images_save');
 
@@ -478,7 +478,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
             exit();
         }
         $image_handler =& xoops_gethandler('image');
-        $images =& $image_handler->getObjects(new Criteria('imgcat_id', $imgcat_id), true, false);
+        $images = $image_handler->getObjects(new Criteria('imgcat_id', $imgcat_id), true, false);
         $errors = array();
         foreach (array_keys($images) as $i) {
             if (!$image_handler->delete($images[$i])) {

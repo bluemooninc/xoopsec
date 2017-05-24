@@ -52,7 +52,7 @@ function pico_main_make_treeinformations( $data )
 // get permissions of current user
 function pico_main_get_category_permissions_of_current_user( $mydirname , $uid = null )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	if( $uid > 0 ) {
 		$user_handler =& xoops_gethandler( 'user' ) ;
@@ -91,7 +91,7 @@ function pico_main_get_category_permissions_of_current_user( $mydirname , $uid =
 // moderator groups
 function pico_main_get_category_moderate_groups4show( $mydirname , $cat_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$cat_id = intval( $cat_id ) ;
 
@@ -113,7 +113,7 @@ function pico_main_get_category_moderate_groups4show( $mydirname , $cat_id )
 // moderator users
 function pico_main_get_category_moderate_users4show( $mydirname , $cat_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$cat_id = intval( $cat_id ) ;
 
@@ -137,7 +137,7 @@ function pico_main_make_cat_jumpbox_options( $mydirname , $whr4cat , $cat_select
 {
 	global $myts ;
 
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	$ret = "" ;
 	$sql = "SELECT c.cat_id, c.cat_title, c.cat_depth_in_tree FROM ".$db->prefix($mydirname."_categories")." c WHERE ($whr4cat) ORDER BY c.cat_order_in_tree" ;
@@ -159,7 +159,7 @@ function pico_main_trigger_event( $mydirname , $category , $item_id , $event , $
 {
 	require_once XOOPS_TRUST_PATH.'/libs/altsys/class/D3NotificationHandler.class.php' ;
 
-	$not_handler =& D3NotificationHandler::getInstance() ;
+	$not_handler = D3NotificationHandler::getInstance() ;
 	$not_handler->triggerEvent( $mydirname , 'pico' , $category , $item_id , $event , $extra_tags , $user_list , $omit_user_id ) ;
 }
 
@@ -167,7 +167,7 @@ function pico_main_trigger_event( $mydirname , $category , $item_id , $event , $
 // get category's moderators as array
 function pico_main_get_moderators( $mydirname , $cat_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$cat_id = intval( $cat_id ) ;
 	$cat_uids = array() ;
 
@@ -201,7 +201,7 @@ function pico_main_get_moderators( $mydirname , $cat_id )
 // get top $content_id from $cat_id
 function pico_main_get_top_content_id_from_cat_id( $mydirname , $cat_id )
 {
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	list( $content_id ) = $db->fetchRow( $db->query( "SELECT o.content_id FROM ".$db->prefix($mydirname."_contents")." o WHERE o.cat_id=".intval($cat_id)." AND o.visible AND o.created_time <= UNIX_TIMESTAMP() AND o.expiring_time > UNIX_TIMESTAMP() ORDER BY o.weight,o.content_id LIMIT 1" ) ) ;
 
@@ -332,7 +332,7 @@ function pico_main_get_wraps_directories_recursively( $mydirname , $dir_path = '
 	$full_dir_path4disp = htmlspecialchars( 'XOOPS_TRUST_PATH'._MD_PICO_WRAPBASE.'/'.$mydirname.$dir_path4key , ENT_QUOTES ) ;
 
 	// make an option will be displayed
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$myrow = $db->fetchArray( $db->query( "SELECT cat_title,cat_depth_in_tree FROM ".$db->prefix($mydirname."_categories")." WHERE cat_vpath='".addslashes($dir_path4key)."'" ) ) ;
 	$ret[ $dir_path4key ] = empty( $myrow ) ? $full_dir_path4disp : $full_dir_path4disp.' ('.str_repeat('--',$myrow['cat_depth_in_tree']).htmlspecialchars( $myrow['cat_title'] , ENT_QUOTES ).')' ;
 
@@ -362,7 +362,7 @@ function pico_main_get_wraps_files_recursively( $mydirname , $dir_path = '/' )
 	$full_dir_path = XOOPS_TRUST_PATH._MD_PICO_WRAPBASE.'/'.$mydirname.$dir_path ;	if( ! is_dir( $full_dir_path ) ) return array() ;
 
 	$ret = array() ;
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 
 	// parse currenct directry
 	$dir_tmps = array() ;

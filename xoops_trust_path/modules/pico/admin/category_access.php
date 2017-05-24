@@ -2,8 +2,8 @@
 
 require_once dirname(dirname(__FILE__)).'/include/common_functions.php' ;
 require_once dirname(dirname(__FILE__)).'/class/gtickets.php' ;
-$myts =& MyTextSanitizer::getInstance() ;
-$db =& Database::getInstance() ;
+$myts = MyTextSanitizer::getInstance() ;
+$db = Database::getInstance() ;
 
 // get info of the category
 $cat_id = intval( @$_GET['cat_id'] ) ;
@@ -123,7 +123,7 @@ foreach( $pico_category_permissions as $perm_name ) {
 
 // create group form
 $group_handler =& xoops_gethandler( 'group' ) ;
-$groups =& $group_handler->getObjects() ;
+$groups = $group_handler->getObjects() ;
 $groups4assign = array() ;
 foreach( $groups as $group ) {
 	$gid = $group->getVar('groupid') ;

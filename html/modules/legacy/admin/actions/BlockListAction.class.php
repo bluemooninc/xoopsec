@@ -75,12 +75,12 @@ class Legacy_BlockListAction extends Legacy_AbstractListAction
         // Load cache-time pattern objects and set.
         //
         $handler =& xoops_gethandler('cachetime');
-        $cachetimeArr =& $handler->getObjects();
+        $cachetimeArr = $handler->getObjects();
         $render->setAttribute('cachetimeArr', $cachetimeArr);
         $render->setAttribute('actionForm', $this->mActionForm);
         //
         $handler =& xoops_getmodulehandler('columnside');
-        $columnSideArr =& $handler->getObjects();
+        $columnSideArr = $handler->getObjects();
         $render->setAttribute('columnSideArr', $columnSideArr);
 
         $block_handler =& $this->_getHandler();
@@ -202,10 +202,10 @@ class Legacy_BlockListAction extends Legacy_AbstractListAction
         $render->setAttribute('bids', array_keys($t_arr));
 
         $handler =& xoops_getmodulehandler('columnside');
-        $columnSideArr =& $handler->getObjects($criteria = null, $id_as_key = true);
+        $columnSideArr = $handler->getObjects($criteria = null, $id_as_key = true);
         $render->setAttribute('columnSideArr', $columnSideArr);
         $handler =& xoops_gethandler('cachetime');
-        $cachetimeArr =& $handler->getObjects($criteria = null, $id_as_key = true);
+        $cachetimeArr = $handler->getObjects($criteria = null, $id_as_key = true);
         $render->setAttribute('cachetimeArr', $cachetimeArr);
 
     }

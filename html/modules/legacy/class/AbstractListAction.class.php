@@ -42,7 +42,7 @@ class Legacy_AbstractListAction extends Legacy_Action
 		$this->mFilter->fetch();
 		
 		$handler =& $this->_getHandler();
-		$this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
+		$this->mObjects = $handler->getObjects($this->mFilter->getCriteria());
 		
 		return LEGACY_FRAME_VIEW_INDEX;
 	}

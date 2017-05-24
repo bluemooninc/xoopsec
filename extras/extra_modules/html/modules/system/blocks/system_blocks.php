@@ -118,7 +118,7 @@ function b_system_main_show()
     $criteria = new CriteriaCompo(new Criteria('hasmain', 1));
     $criteria->add(new Criteria('isactive', 1));
     $criteria->add(new Criteria('weight', 0, '>'));
-    $modules =& $module_handler->getObjects($criteria, true);
+    $modules = $module_handler->getObjects($criteria, true);
     $moduleperm_handler =& xoops_gethandler('groupperm');
     $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
     $read_allowed = $moduleperm_handler->getItemIds('module_read', $groups);
@@ -183,7 +183,7 @@ function b_system_user_show()
 function b_system_waiting_show()
 {
     global $xoopsUser;
-    $xoopsDB =& Database::getInstance();
+    $xoopsDB = Database::getInstance();
     $module_handler =& xoops_gethandler('module');
     $block = array();
     if ($module_handler->getCount(new Criteria('dirname', 'news'))) {
@@ -246,8 +246,8 @@ function b_system_waiting_show()
 function b_system_info_show($options)
 {
     global $xoopsConfig, $xoopsUser;
-    $xoopsDB =& Database::getInstance();
-    $myts =& MyTextSanitizer::getInstance();
+    $xoopsDB = Database::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $block = array();
     if (!empty($options[3])) {
         $block['showgroups'] = true;
@@ -347,10 +347,10 @@ function b_system_comments_show($options)
     $criteria->setLimit(intval($options[0]));
     $criteria->setSort('com_created');
     $criteria->setOrder('DESC');
-    $comments =& $comment_handler->getObjects($criteria, true);
+    $comments = $comment_handler->getObjects($criteria, true);
     $member_handler =& xoops_gethandler('member');
     $module_handler =& xoops_gethandler('module');
-    $modules =& $module_handler->getObjects(new Criteria('hascomments', 1), true);
+    $modules = $module_handler->getObjects(new Criteria('hascomments', 1), true);
     $comment_config = array();
     foreach (array_keys($comments) as $i) {
         $mid = $comments[$i]->getVar('com_modid');

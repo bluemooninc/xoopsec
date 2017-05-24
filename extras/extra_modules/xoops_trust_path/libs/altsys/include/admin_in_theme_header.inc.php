@@ -79,7 +79,7 @@ include_once XOOPS_ROOT_PATH.'/class/xoopsblock.php';
 			$xoopsTpl->assign(array('xoops_pagetitle' => $target_module->getVar('name'), 'xoops_modulename' => $target_module->getVar('name'), 'xoops_dirname' => $target_module->getVar('dirname')));
 
 			// xoops_breadcrumbs
-			$breadcrumbsObj =& AltsysBreadcrumbs::getInstance() ;
+			$breadcrumbsObj = AltsysBreadcrumbs::getInstance() ;
 			if( $breadcrumbsObj->hasPaths() ) {
 				$xoops_breadcrumbs = $breadcrumbsObj->getXoopsbreadcrumbs() ;
 			} else {
@@ -127,7 +127,7 @@ include_once XOOPS_ROOT_PATH.'/class/xoopsblock.php';
 	} else exit ;
 
 	// get block_arr
-	$db =& Database::getInstance() ;
+	$db = Database::getInstance() ;
 	$sql = "SELECT DISTINCT gperm_itemid FROM ".$db->prefix('group_permission')." WHERE gperm_name = 'block_read' AND gperm_modid = 1 AND gperm_groupid IN (".implode(',',$xoopsUser->getGroups()).")" ;
 	$result = $db->query($sql);
 

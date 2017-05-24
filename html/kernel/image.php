@@ -262,7 +262,7 @@ class XoopsImageHandler extends XoopsObjectHandler
         if (isset($image_display)) {
             $criteria->add(new Criteria('image_display', (int)$image_display));
         }
-        $images =& $this->getObjects($criteria, false, true);
+        $images = $this->getObjects($criteria, false, true);
         $ret = array();
         foreach (array_keys($images) as $i) {
             $ret[$images[$i]->getVar('image_name')] = $images[$i]->getVar('image_nicename');

@@ -33,7 +33,7 @@ class LegacyRender_AbstractListAction extends LegacyRender_Action
 		$this->mFilter->fetch();
 		
 		$handler =& $this->_getHandler();
-		$this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
+		$this->mObjects = $handler->getObjects($this->mFilter->getCriteria());
 		
 		return LEGACYRENDER_FRAME_VIEW_INDEX;
 	}

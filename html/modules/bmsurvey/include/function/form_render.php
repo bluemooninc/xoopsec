@@ -198,7 +198,7 @@ function form_render_email($sid, $section = 1, $message = '', $hide_question = 0
 		$body .= "\r\n";
 	}
 	// end of questions
-	$myts =& MyTextSanitizer::getInstance();
+	$myts = MyTextSanitizer::getInstance();
 	$ret['title']=$title;
 	$ret['body']=$myts->stripSlashesGPC($body);
 	return $ret;

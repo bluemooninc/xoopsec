@@ -40,7 +40,7 @@ class LegacyRenderBannerclientObject extends XoopsSimpleObject
 	{
 		if ($this->_mBannersLoadedFlag == false) {
 			$handler =& xoops_getmodulehandler('banner', 'legacyRender');
-			$this->mBanners =& $handler->getObjects(new Criteria('cid', $this->get('cid')));
+			$this->mBanners = $handler->getObjects(new Criteria('cid', $this->get('cid')));
 			$this->_mBannersLoadedFlag = true;
 		}
 	}
@@ -66,7 +66,7 @@ class LegacyRenderBannerclientObject extends XoopsSimpleObject
 	{
 		if ($this->_mFinishBannersLoadedFlag == false) {
 			$handler =& xoops_getmodulehandler('bannerfinish', 'legacyRender');
-			$this->mFinishBanners =& $handler->getObjects(new Criteria('cid', $this->get('cid')));
+			$this->mFinishBanners = $handler->getObjects(new Criteria('cid', $this->get('cid')));
 			$this->_mFinishBannersLoadedFlag = true;
 		}
 	}

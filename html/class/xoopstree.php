@@ -42,7 +42,7 @@ class XoopsTree
 	//sets the names of table, unique id, and parend id
 	function XoopsTree($table_name, $id_name, $pid_name)
 	{
-		$this->db =& Database::getInstance();
+		$this->db = Database::getInstance();
 		$this->table = $table_name;
 		$this->id = $id_name;
 		$this->pid = $pid_name;
@@ -128,7 +128,7 @@ class XoopsTree
 			return $path;
 		}
 		list($parentid,$name) = $this->db->fetchRow($result);
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$name = $myts->makeTboxData4Show($name);
 		$path = "/".$name.$path."";
 		if ( $parentid == 0 ) {
@@ -146,7 +146,7 @@ class XoopsTree
 		if ( $sel_name == "" ) {
 			$sel_name = $this->id;
 		}
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		echo "<select name='".$sel_name."'";
 		if ( $onchange != "" ) {
 			echo " onchange='".$onchange."'";
@@ -190,7 +190,7 @@ class XoopsTree
 			return $path;
 		}
 		list($parentid,$name) = $this->db->fetchRow($result);
-		$myts =& MyTextSanitizer::getInstance();
+		$myts = MyTextSanitizer::getInstance();
 		$name = $myts->makeTboxData4Show($name);
 		$path = "<a href='".$funcURL."&amp;".$this->id."=".$sel_id."'>".$name."</a>&nbsp;:&nbsp;".$path."";
 		if ( $parentid == 0 ) {

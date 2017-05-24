@@ -79,7 +79,7 @@ class Legacy_CommentListAction extends Legacy_AbstractListAction
 		
 		$statusArr = array();
 		$statusHandler =& xoops_getmodulehandler('commentstatus');
-		$statusArr =& $statusHandler->getObjects();
+		$statusArr = $statusHandler->getObjects();
 		
 		$render->setTemplateName("comment_list.html");
 		$render->setAttribute("objects", $this->mObjects);

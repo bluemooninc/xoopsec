@@ -75,7 +75,7 @@ if ( !is_object($xoopsUser) || !is_object($xoopsModule) || !$xoopsUser->isAdmin(
             $criteria->setOrder($order);
             $criteria->setLimit($limit);
             $criteria->setStart($start);
-            $comments =& $comment_handler->getObjects($criteria, true);
+            $comments = $comment_handler->getObjects($criteria, true);
         } else {
             $start = 0;
             $limit = 0;

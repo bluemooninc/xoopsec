@@ -1,6 +1,6 @@
 <?php
 
-$db =& Database::getInstance() ;
+$db = Database::getInstance() ;
 
 // beggining of Output
 xoops_cp_header();
@@ -90,7 +90,7 @@ echo "</dl>\n" ;
 
 // patch to databasefactory.php
 echo "<dl><dt>'databasefactory.php' : " ;
-$db =& Database::getInstance() ;
+$db = Database::getInstance() ;
 if( strtolower( get_class( $db ) ) != 'protectormysqldatabase' ) {
 	echo "<span style='color:red;font-weight:bold;'>"._AM_ADV_DBFACTORYUNPATCHED."</span></dt>\n" ;
 } else {

@@ -475,7 +475,7 @@ class Xupdate_ModuleStoreHandler extends Legacy_AbstractClientObjectHandler
 	{
 		$ret = array();
 
-		$mObjects =& parent::getObjects($criteria ,$limit,$start, $id_as_key);
+		$mObjects = parent::getObjects($criteria ,$limit,$start, $id_as_key);
 		//return $mObjects;
 
 		foreach($mObjects as $key => $mobj){

@@ -233,7 +233,7 @@ class User_LegacypageFunctions
 		$criteria->add(new Criteria('uname', xoops_getrequest('uname')));
 		$criteria->add(new Criteria('pass', md5(xoops_getrequest('pass'))));
 		
-		$userArr =& $userHandler->getObjects($criteria);
+		$userArr = $userHandler->getObjects($criteria);
 		
 		if (count($userArr) != 1) {
 			return;

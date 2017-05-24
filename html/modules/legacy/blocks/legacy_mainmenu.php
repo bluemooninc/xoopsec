@@ -31,7 +31,7 @@ function b_legacy_mainmenu_show( $options ) {
     $criteria = new CriteriaCompo(new Criteria('hasmain', 1));
     $criteria->add(new Criteria('isactive', 1));
     $criteria->add(new Criteria('weight', 0, '>'));
-    $modules =& $module_handler->getObjects($criteria, true);
+    $modules = $module_handler->getObjects($criteria, true);
     $moduleperm_handler =& xoops_gethandler('groupperm');
     $groups = is_object($xoopsUser) ? $xoopsUser->getGroups() : XOOPS_GROUP_ANONYMOUS;
     $read_allowed = $moduleperm_handler->getItemIds('module_read', $groups);

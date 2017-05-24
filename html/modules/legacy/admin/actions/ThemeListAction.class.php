@@ -52,7 +52,7 @@ class Legacy_ThemeListAction extends Legacy_Action
 	function _setupObject()
 	{
 		$handler =& xoops_getmodulehandler('theme');
-		$this->mThemes =& $handler->getObjects();
+		$this->mThemes = $handler->getObjects();
 	}
 
 	function _setupActionForm()

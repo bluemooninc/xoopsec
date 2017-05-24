@@ -197,7 +197,7 @@ class Legacy_ImageUploadAction extends Legacy_Action
 		$this->mCategory =& $handler->get($cat_id);
 		$render->setAttribute("category", $this->mCategory);		
 		}
-		$categoryArr =& $handler->getObjects();
+		$categoryArr = $handler->getObjects();
 		$render->setAttribute('categoryArr', $categoryArr);
 	}
 

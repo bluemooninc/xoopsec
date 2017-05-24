@@ -140,7 +140,7 @@ class User_AvatarListAction extends User_AbstractListAction
 			$avatar =& $avatarHandler->get($aid);
 			if (is_object($avatar)) {
 				$criteria =new Criteria('avatar_id', $aid);
-				$linkArr =& $linkHandler->getObjects($criteria);
+				$linkArr = $linkHandler->getObjects($criteria);
 		
 				if ($avatarHandler->delete($avatar)) {
 					if (count($linkArr) > 0) {

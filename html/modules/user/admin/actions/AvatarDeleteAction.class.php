@@ -32,7 +32,7 @@ class User_AvatarDeleteAction extends User_AbstractDeleteAction
 	{
 		$linkHandler =& xoops_getmodulehandler('avatar_user_link');
 		$criteria =new Criteria('avatar_id', $this->mObject->get('avatar_id'));
-		$linkArr =& $linkHandler->getObjects($criteria);
+		$linkArr = $linkHandler->getObjects($criteria);
 		
 		if ($this->mObjectHandler->delete($this->mObject)) {
 			//
