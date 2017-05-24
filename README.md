@@ -13,7 +13,7 @@ Apache2.0(mode-rewrite) /  PHP Ver5.3 (or later) / MySQL5.5 (or later)
 
 DEMO Site
 ---------
-Live Demo site : https://www.xoopsec.com
+Live Demo site : http://www.xoopsec.com
 
 Document for Powerpoint
 -----------------------
